@@ -47,6 +47,7 @@ tokens {
     COLORINT;
     COLORHEX;
     COLORPRCTJ;
+    LIST_ATTR;
 }
 
 @header {
@@ -96,7 +97,6 @@ instruction
         |   return_stmt     // Return statement
         |   read            // Read a variable
         |   write           // Write a string or an expression
-        
         |   create          // create an object
         |   destroy         // destroy an object
         |   move            // move an object
@@ -110,7 +110,7 @@ instruction
         ;
 
 // Assignment
-assign  :   ID eq=EQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
+assign  :   ID eq=EEQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
         ;
 
 // if-then-else (else is optional)
@@ -135,35 +135,35 @@ write   :   WRITE^ (expr | STRING )
 
 // Cosas Bonitas
 
-create  :   CREATE obj_type ID expr expr list_attributes
+create  :   CREATE^ ID '('! obj_type ','! expr ','! expr (','! list_attributes )?')'!
         ;
 
-destroy :   DESTROY ID
+destroy :   DESTROY^ '('! ID ')'!
         ;
 
 move    :   move_time | move_no_time
         ;
 // "move" id x y time
-move_time : MOVE_T ID expr expr time
+move_time : MOVE_T^ ID  time '('! expr ','! expr  ')'!
         ;
 // "move" id x y
-move_no_time : MOVE ID expr expr
+move_no_time : MOVE^ ID '('! expr ','! expr ')'!
         ;
 
 modify    :   modify_time | modify_no_time
         ;
 // "modify" id x y time
-modify_time : MODIFY_T^ ID list_attributes time
+modify_time : MODIFY_T^ ID time list_attributes
         ;
 // "modify" id x y
-modify_no_time : MODIFY^ ID list_attributes
+modify_no_time : MODIFY^ ID list_attributes 
         ;
 
-list_attributes : '('! attribute (','! attribute)* ')'!
+list_attributes : '(' attribute (',' attribute)* ')' -> ^(LIST_ATTR attribute+)
         ;
 
-attribute   :   attribute_name_color ':' color
-            |   attribute_name_expr ':' expr
+attribute   :   attribute_name_color^ ':'! color
+            |   attribute_name_expr^ ':'! expr
             ;
 
 attribute_name_color    : COLOR
@@ -179,15 +179,17 @@ color   :   HASHTAG hexadigit hexadigit hexadigit (hexadigit hexadigit hexadigit
         |   color_keyword
         ;
 
-hexadigit   :   '0'..'9'
-            |   'A'..'F'
-            |   'a'..'f';
+hexadigit   :   ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
+            |   'A' | 'B' | 'C' | 'D' | 'E' | 'F'
+            |   'a' | 'b' | 'c' | 'd' | 'e' | 'f')
+            ;
 
 color_keyword : RED | WHITE | BLACK | BLUE | GREEN;
 
-obj_type : CIRCLE | RECTANGLE | TEXT;
+obj_type : CIRCLE | RECTANGLE | TEXT
+         ;
 
-time :  expr 's'; // o ms. token para cat uno
+time :  INT 's'^; // o ms. token para cat uno
 
 // Grammar for expressions with boolean, relational and aritmetic operators
 expr    :   boolterm (OR^ boolterm)*
@@ -228,7 +230,8 @@ expr_list:  expr (','! expr)*
 
 // Basic tokens
 HASHTAG : '#';
-EQUAL   : '=' ;
+EEQUAL  : '=';  
+EQUAL   : '==' ;
 NOT_EQUAL: '!=' ;
 LT      : '<' ;
 LE      : '<=';
@@ -278,8 +281,8 @@ CIRCLE  : 'circle';
 RECTANGLE : 'rectangle';
 TEXT : 'text';
 
-ID      :   ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 INT     :   '0'..'9'+ ;
+ID      :   ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 
 // C-style comments
 COMMENT : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
