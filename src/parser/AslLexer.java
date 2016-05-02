@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-02 08:17:40
+// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-02 09:32:46
 
 package parser;
 
@@ -11,13 +11,15 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__73=73;
-    public static final int T__74=74;
-    public static final int T__75=75;
-    public static final int T__76=76;
-    public static final int T__77=77;
-    public static final int T__78=78;
     public static final int T__79=79;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
+    public static final int T__84=84;
+    public static final int T__85=85;
+    public static final int T__86=86;
+    public static final int T__87=87;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -31,62 +33,68 @@ public class AslLexer extends Lexer {
     public static final int COLORPRCTJ=14;
     public static final int COMMENT=15;
     public static final int CREATE=16;
-    public static final int DESTROY=17;
-    public static final int DIV=18;
-    public static final int DO=19;
-    public static final int EEQUAL=20;
-    public static final int ELSE=21;
-    public static final int ENDFUNC=22;
-    public static final int ENDIF=23;
-    public static final int ENDWHILE=24;
-    public static final int EQUAL=25;
-    public static final int ESC_SEQ=26;
-    public static final int FALSE=27;
-    public static final int FUNC=28;
-    public static final int FUNCALL=29;
-    public static final int GE=30;
-    public static final int GREEN=31;
-    public static final int GT=32;
-    public static final int HASHTAG=33;
-    public static final int HEXADIGIT=34;
-    public static final int ID=35;
-    public static final int IF=36;
-    public static final int INT=37;
-    public static final int LE=38;
-    public static final int LIST_ATTR=39;
-    public static final int LIST_FUNCTIONS=40;
-    public static final int LIST_INSTR=41;
-    public static final int LT=42;
-    public static final int MINUS=43;
-    public static final int MOD=44;
-    public static final int MODIFY=45;
-    public static final int MODIFY_T=46;
-    public static final int MOVE=47;
-    public static final int MOVE_T=48;
-    public static final int MUL=49;
-    public static final int NOT=50;
-    public static final int NOT_EQUAL=51;
-    public static final int OR=52;
-    public static final int PARAMS=53;
-    public static final int PLUS=54;
-    public static final int POSX=55;
-    public static final int POSY=56;
-    public static final int PREF=57;
-    public static final int PVALUE=58;
-    public static final int READ=59;
-    public static final int RECTANGLE=60;
-    public static final int RED=61;
-    public static final int RETURN=62;
-    public static final int RGB=63;
-    public static final int RGBPRCTJ=64;
-    public static final int STRING=65;
-    public static final int TEXT=66;
-    public static final int THEN=67;
-    public static final int TRUE=68;
-    public static final int WHILE=69;
-    public static final int WHITE=70;
-    public static final int WRITE=71;
-    public static final int WS=72;
+    public static final int DELAY=17;
+    public static final int DESTROY=18;
+    public static final int DIV=19;
+    public static final int DO=20;
+    public static final int EEQUAL=21;
+    public static final int ELSE=22;
+    public static final int ENDFUNC=23;
+    public static final int ENDIF=24;
+    public static final int ENDWHILE=25;
+    public static final int EQUAL=26;
+    public static final int ESC_SEQ=27;
+    public static final int FALSE=28;
+    public static final int FUNC=29;
+    public static final int FUNCALL=30;
+    public static final int GE=31;
+    public static final int GREEN=32;
+    public static final int GT=33;
+    public static final int HASHTAG=34;
+    public static final int HEXADIGIT=35;
+    public static final int HIDE=36;
+    public static final int HIDET=37;
+    public static final int ID=38;
+    public static final int IF=39;
+    public static final int INT=40;
+    public static final int LE=41;
+    public static final int LIST_ATTR=42;
+    public static final int LIST_FUNCTIONS=43;
+    public static final int LIST_INSTR=44;
+    public static final int LT=45;
+    public static final int MINUS=46;
+    public static final int MOD=47;
+    public static final int MODIFY=48;
+    public static final int MODIFY_T=49;
+    public static final int MOVE=50;
+    public static final int MOVE_T=51;
+    public static final int MUL=52;
+    public static final int NOT=53;
+    public static final int NOT_EQUAL=54;
+    public static final int OR=55;
+    public static final int PARALLEL=56;
+    public static final int PARAMS=57;
+    public static final int PLUS=58;
+    public static final int POSX=59;
+    public static final int POSY=60;
+    public static final int PREF=61;
+    public static final int PVALUE=62;
+    public static final int READ=63;
+    public static final int RECTANGLE=64;
+    public static final int RED=65;
+    public static final int RETURN=66;
+    public static final int RGB=67;
+    public static final int RGBPRCTJ=68;
+    public static final int SHOW=69;
+    public static final int SHOWT=70;
+    public static final int STRING=71;
+    public static final int TEXT=72;
+    public static final int THEN=73;
+    public static final int TRUE=74;
+    public static final int WHILE=75;
+    public static final int WHITE=76;
+    public static final int WRITE=77;
+    public static final int WS=78;
 
     // delegates
     // delegators
@@ -103,10 +111,10 @@ public class AslLexer extends Lexer {
     }
     public String getGrammarFileName() { return "/home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g"; }
 
-    // $ANTLR start "T__73"
-    public final void mT__73() throws RecognitionException {
+    // $ANTLR start "T__79"
+    public final void mT__79() throws RecognitionException {
         try {
-            int _type = T__73;
+            int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:6:7: ( '&' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:6:9: '&'
@@ -122,12 +130,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__73"
+    // $ANTLR end "T__79"
 
-    // $ANTLR start "T__74"
-    public final void mT__74() throws RecognitionException {
+    // $ANTLR start "T__80"
+    public final void mT__80() throws RecognitionException {
         try {
-            int _type = T__74;
+            int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:7:7: ( '(' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:7:9: '('
@@ -143,12 +151,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__74"
+    // $ANTLR end "T__80"
 
-    // $ANTLR start "T__75"
-    public final void mT__75() throws RecognitionException {
+    // $ANTLR start "T__81"
+    public final void mT__81() throws RecognitionException {
         try {
-            int _type = T__75;
+            int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:8:7: ( ')' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:8:9: ')'
@@ -164,12 +172,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__75"
+    // $ANTLR end "T__81"
 
-    // $ANTLR start "T__76"
-    public final void mT__76() throws RecognitionException {
+    // $ANTLR start "T__82"
+    public final void mT__82() throws RecognitionException {
         try {
-            int _type = T__76;
+            int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:9:7: ( ',' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:9:9: ','
@@ -185,12 +193,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__76"
+    // $ANTLR end "T__82"
 
-    // $ANTLR start "T__77"
-    public final void mT__77() throws RecognitionException {
+    // $ANTLR start "T__83"
+    public final void mT__83() throws RecognitionException {
         try {
-            int _type = T__77;
+            int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:10:7: ( ':' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:10:9: ':'
@@ -206,12 +214,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__77"
+    // $ANTLR end "T__83"
 
-    // $ANTLR start "T__78"
-    public final void mT__78() throws RecognitionException {
+    // $ANTLR start "T__84"
+    public final void mT__84() throws RecognitionException {
         try {
-            int _type = T__78;
+            int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:11:7: ( ';' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:11:9: ';'
@@ -227,12 +235,12 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__78"
+    // $ANTLR end "T__84"
 
-    // $ANTLR start "T__79"
-    public final void mT__79() throws RecognitionException {
+    // $ANTLR start "T__85"
+    public final void mT__85() throws RecognitionException {
         try {
-            int _type = T__79;
+            int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:7: ( 's' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:9: 's'
@@ -248,15 +256,57 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__79"
+    // $ANTLR end "T__85"
+
+    // $ANTLR start "T__86"
+    public final void mT__86() throws RecognitionException {
+        try {
+            int _type = T__86;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:7: ( '{' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:9: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__86"
+
+    // $ANTLR start "T__87"
+    public final void mT__87() throws RecognitionException {
+        try {
+            int _type = T__87;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:7: ( '}' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:9: '}'
+            {
+            match('}'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__87"
 
     // $ANTLR start "HASHTAG"
     public final void mHASHTAG() throws RecognitionException {
         try {
             int _type = HASHTAG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:236:9: ( '#' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:236:11: '#'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:9: ( '#' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:11: '#'
             {
             match('#'); 
 
@@ -276,8 +326,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EEQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:237:9: ( '=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:237:11: '='
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:264:9: ( '=' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:264:11: '='
             {
             match('='); 
 
@@ -297,8 +347,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:9: ( '==' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:11: '=='
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:265:9: ( '==' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:265:11: '=='
             {
             match("=="); 
 
@@ -320,8 +370,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:239:10: ( '!=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:239:12: '!='
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:266:10: ( '!=' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:266:12: '!='
             {
             match("!="); 
 
@@ -343,8 +393,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:240:9: ( '<' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:240:11: '<'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:9: ( '<' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:11: '<'
             {
             match('<'); 
 
@@ -364,8 +414,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:9: ( '<=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:11: '<='
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:9: ( '<=' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:11: '<='
             {
             match("<="); 
 
@@ -387,8 +437,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:242:9: ( '>' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:242:11: '>'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:9: ( '>' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:11: '>'
             {
             match('>'); 
 
@@ -408,8 +458,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:243:9: ( '>=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:243:11: '>='
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:9: ( '>=' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:11: '>='
             {
             match(">="); 
 
@@ -431,8 +481,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:9: ( '+' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:11: '+'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:9: ( '+' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:11: '+'
             {
             match('+'); 
 
@@ -452,8 +502,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:245:9: ( '-' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:245:11: '-'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:9: ( '-' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:11: '-'
             {
             match('-'); 
 
@@ -473,8 +523,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:246:9: ( '*' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:246:11: '*'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:9: ( '*' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:11: '*'
             {
             match('*'); 
 
@@ -494,8 +544,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:247:9: ( '/' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:247:11: '/'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:9: ( '/' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:11: '/'
             {
             match('/'); 
 
@@ -515,8 +565,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:248:9: ( '%' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:248:11: '%'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:275:9: ( '%' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:275:11: '%'
             {
             match('%'); 
 
@@ -536,8 +586,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:249:9: ( 'not' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:249:11: 'not'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:9: ( 'not' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:11: 'not'
             {
             match("not"); 
 
@@ -559,8 +609,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:250:9: ( 'and' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:250:11: 'and'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:9: ( 'and' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:11: 'and'
             {
             match("and"); 
 
@@ -582,8 +632,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:251:9: ( 'or' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:251:11: 'or'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:9: ( 'or' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:11: 'or'
             {
             match("or"); 
 
@@ -605,8 +655,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:9: ( 'if' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:11: 'if'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:9: ( 'if' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:11: 'if'
             {
             match("if"); 
 
@@ -628,8 +678,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:9: ( 'then' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:11: 'then'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:9: ( 'then' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:11: 'then'
             {
             match("then"); 
 
@@ -651,8 +701,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:254:9: ( 'else' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:254:11: 'else'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:9: ( 'else' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:11: 'else'
             {
             match("else"); 
 
@@ -674,8 +724,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:255:9: ( 'endif' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:255:11: 'endif'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:9: ( 'endif' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:11: 'endif'
             {
             match("endif"); 
 
@@ -697,8 +747,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:256:9: ( 'while' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:256:11: 'while'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:9: ( 'while' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:11: 'while'
             {
             match("while"); 
 
@@ -720,8 +770,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:257:9: ( 'do' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:257:11: 'do'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:9: ( 'do' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:11: 'do'
             {
             match("do"); 
 
@@ -743,8 +793,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:258:9: ( 'endwhile' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:258:11: 'endwhile'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:9: ( 'endwhile' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -766,8 +816,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:9: ( 'func' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:11: 'func'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:9: ( 'func' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:11: 'func'
             {
             match("func"); 
 
@@ -789,8 +839,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:260:9: ( 'endfunc' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:260:11: 'endfunc'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:287:9: ( 'endfunc' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:287:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -812,8 +862,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:261:9: ( 'return' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:261:11: 'return'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:288:9: ( 'return' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:288:11: 'return'
             {
             match("return"); 
 
@@ -835,8 +885,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:262:9: ( 'read' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:262:11: 'read'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:9: ( 'read' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:11: 'read'
             {
             match("read"); 
 
@@ -858,8 +908,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:9: ( 'write' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:11: 'write'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:9: ( 'write' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:11: 'write'
             {
             match("write"); 
 
@@ -881,8 +931,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:264:9: ( 'true' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:264:11: 'true'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:291:9: ( 'true' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:291:11: 'true'
             {
             match("true"); 
 
@@ -904,8 +954,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:265:9: ( 'false' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:265:11: 'false'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:9: ( 'false' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:11: 'false'
             {
             match("false"); 
 
@@ -927,8 +977,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = CREATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:9: ( 'create' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:11: 'create'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:294:9: ( 'create' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:294:11: 'create'
             {
             match("create"); 
 
@@ -950,8 +1000,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DESTROY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:9: ( 'destroy' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:11: 'destroy'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:295:9: ( 'destroy' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:295:11: 'destroy'
             {
             match("destroy"); 
 
@@ -973,8 +1023,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOVE_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:9: ( 'movet' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:11: 'movet'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:296:9: ( 'movet' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:296:11: 'movet'
             {
             match("movet"); 
 
@@ -996,8 +1046,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:9: ( 'move' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:11: 'move'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:9: ( 'move' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:11: 'move'
             {
             match("move"); 
 
@@ -1019,8 +1069,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MODIFY_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:9: ( 'modifyt' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:11: 'modifyt'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:9: ( 'modifyt' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:11: 'modifyt'
             {
             match("modifyt"); 
 
@@ -1042,8 +1092,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MODIFY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:9: ( 'modify' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:11: 'modify'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:299:9: ( 'modify' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:299:11: 'modify'
             {
             match("modify"); 
 
@@ -1065,8 +1115,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RGBPRCTJ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:9: ( 'rgbp' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:11: 'rgbp'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:300:9: ( 'rgbp' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:300:11: 'rgbp'
             {
             match("rgbp"); 
 
@@ -1088,8 +1138,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RGB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:9: ( 'rgb' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:11: 'rgb'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:301:9: ( 'rgb' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:301:11: 'rgb'
             {
             match("rgb"); 
 
@@ -1106,13 +1156,151 @@ public class AslLexer extends Lexer {
     }
     // $ANTLR end "RGB"
 
+    // $ANTLR start "SHOWT"
+    public final void mSHOWT() throws RecognitionException {
+        try {
+            int _type = SHOWT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:303:9: ( 'showt' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:303:11: 'showt'
+            {
+            match("showt"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "SHOWT"
+
+    // $ANTLR start "SHOW"
+    public final void mSHOW() throws RecognitionException {
+        try {
+            int _type = SHOW;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:304:9: ( 'show' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:304:11: 'show'
+            {
+            match("show"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "SHOW"
+
+    // $ANTLR start "HIDET"
+    public final void mHIDET() throws RecognitionException {
+        try {
+            int _type = HIDET;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:9: ( 'hidet' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:11: 'hidet'
+            {
+            match("hidet"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "HIDET"
+
+    // $ANTLR start "HIDE"
+    public final void mHIDE() throws RecognitionException {
+        try {
+            int _type = HIDE;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:306:9: ( 'hide' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:306:11: 'hide'
+            {
+            match("hide"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "HIDE"
+
+    // $ANTLR start "DELAY"
+    public final void mDELAY() throws RecognitionException {
+        try {
+            int _type = DELAY;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:9: ( 'delay' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:11: 'delay'
+            {
+            match("delay"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "DELAY"
+
+    // $ANTLR start "PARALLEL"
+    public final void mPARALLEL() throws RecognitionException {
+        try {
+            int _type = PARALLEL;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:309:9: ( 'parallel' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:309:11: 'parallel'
+            {
+            match("parallel"); 
+
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "PARALLEL"
+
     // $ANTLR start "COLOR"
     public final void mCOLOR() throws RecognitionException {
         try {
             int _type = COLOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:9: ( 'color' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:11: 'color'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:9: ( 'color' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:11: 'color'
             {
             match("color"); 
 
@@ -1134,8 +1322,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:9: ( 'white' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:11: 'white'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:312:9: ( 'white' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:312:11: 'white'
             {
             match("white"); 
 
@@ -1157,8 +1345,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = BLACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:9: ( 'black' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:11: 'black'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:313:9: ( 'black' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:313:11: 'black'
             {
             match("black"); 
 
@@ -1180,8 +1368,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = BLUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:9: ( 'blue' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:11: 'blue'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:314:9: ( 'blue' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:314:11: 'blue'
             {
             match("blue"); 
 
@@ -1203,8 +1391,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:9: ( 'red' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:11: 'red'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:315:9: ( 'red' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:315:11: 'red'
             {
             match("red"); 
 
@@ -1226,8 +1414,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GREEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:9: ( 'green' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:11: 'green'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:316:9: ( 'green' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:316:11: 'green'
             {
             match("green"); 
 
@@ -1249,8 +1437,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = POSX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:9: ( 'x' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:11: 'x'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:317:9: ( 'x' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:317:11: 'x'
             {
             match('x'); 
 
@@ -1270,8 +1458,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = POSY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:9: ( 'y' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:11: 'y'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:318:9: ( 'y' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:318:11: 'y'
             {
             match('y'); 
 
@@ -1291,8 +1479,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = CIRCLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:9: ( 'circle' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:11: 'circle'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:319:9: ( 'circle' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:319:11: 'circle'
             {
             match("circle"); 
 
@@ -1314,8 +1502,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RECTANGLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:11: ( 'rectangle' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:13: 'rectangle'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:320:11: ( 'rectangle' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:320:13: 'rectangle'
             {
             match("rectangle"); 
 
@@ -1337,8 +1525,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TEXT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:6: ( 'text' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:8: 'text'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:321:6: ( 'text' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:321:8: 'text'
             {
             match("text"); 
 
@@ -1360,10 +1548,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:9: ( ( '0' .. '9' )+ )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:13: ( '0' .. '9' )+
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:324:9: ( ( '0' .. '9' )+ )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:324:13: ( '0' .. '9' )+
             {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:13: ( '0' .. '9' )+
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:324:13: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -1418,8 +1606,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:13: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:325:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:325:13: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1431,7 +1619,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:37: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:325:37: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop2:
             do {
                 int alt2=2;
@@ -1481,8 +1669,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COLORHEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:9: ( '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )? )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:11: '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )?
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:327:9: ( '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )? )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:327:11: '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )?
             {
             match('#'); 
 
@@ -1495,7 +1683,7 @@ public class AslLexer extends Lexer {
             mHEXADIGIT(); 
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:45: ( HEXADIGIT HEXADIGIT HEXADIGIT )?
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:327:45: ( HEXADIGIT HEXADIGIT HEXADIGIT )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1504,7 +1692,7 @@ public class AslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:46: HEXADIGIT HEXADIGIT HEXADIGIT
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:327:46: HEXADIGIT HEXADIGIT HEXADIGIT
                     {
                     mHEXADIGIT(); 
 
@@ -1535,7 +1723,7 @@ public class AslLexer extends Lexer {
     // $ANTLR start "HEXADIGIT"
     public final void mHEXADIGIT() throws RecognitionException {
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:295:10: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:330:10: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -1563,7 +1751,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1593,13 +1781,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:16: (~ ( '\\n' | '\\r' ) )*
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:16: (~ ( '\\n' | '\\r' ) )*
                     loop4:
                     do {
                         int alt4=2;
@@ -1633,7 +1821,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:30: ( '\\r' )?
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:30: ( '\\r' )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1642,7 +1830,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:297:30: '\\r'
+                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:30: '\\r'
                             {
                             match('\r'); 
 
@@ -1659,13 +1847,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:11: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:333:11: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:16: ( options {greedy=false; } : . )*
+                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:333:16: ( options {greedy=false; } : . )*
                     loop6:
                     do {
                         int alt6=2;
@@ -1690,7 +1878,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:44: .
+                    	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:333:44: .
                     	    {
                     	    matchAny(); 
 
@@ -1727,12 +1915,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop8:
             do {
                 int alt8=3;
@@ -1748,7 +1936,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:18: ESC_SEQ
+            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -1756,7 +1944,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:28: ~ ( '\\\\' | '\"' )
+            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -1793,8 +1981,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:308:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:308:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:343:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:343:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -1823,8 +2011,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:11: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:346:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:346:11: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -1850,500 +2038,564 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
-        int alt9=62;
+        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOWT | SHOW | HIDET | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
+        int alt9=70;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:10: T__73
-                {
-                mT__73(); 
-
-
-                }
-                break;
-            case 2 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:16: T__74
-                {
-                mT__74(); 
-
-
-                }
-                break;
-            case 3 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:22: T__75
-                {
-                mT__75(); 
-
-
-                }
-                break;
-            case 4 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:28: T__76
-                {
-                mT__76(); 
-
-
-                }
-                break;
-            case 5 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:34: T__77
-                {
-                mT__77(); 
-
-
-                }
-                break;
-            case 6 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:40: T__78
-                {
-                mT__78(); 
-
-
-                }
-                break;
-            case 7 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:46: T__79
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:10: T__79
                 {
                 mT__79(); 
 
 
                 }
                 break;
+            case 2 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:16: T__80
+                {
+                mT__80(); 
+
+
+                }
+                break;
+            case 3 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:22: T__81
+                {
+                mT__81(); 
+
+
+                }
+                break;
+            case 4 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:28: T__82
+                {
+                mT__82(); 
+
+
+                }
+                break;
+            case 5 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:34: T__83
+                {
+                mT__83(); 
+
+
+                }
+                break;
+            case 6 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:40: T__84
+                {
+                mT__84(); 
+
+
+                }
+                break;
+            case 7 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:46: T__85
+                {
+                mT__85(); 
+
+
+                }
+                break;
             case 8 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:52: HASHTAG
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:52: T__86
+                {
+                mT__86(); 
+
+
+                }
+                break;
+            case 9 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:58: T__87
+                {
+                mT__87(); 
+
+
+                }
+                break;
+            case 10 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:64: HASHTAG
                 {
                 mHASHTAG(); 
 
 
                 }
                 break;
-            case 9 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:60: EEQUAL
+            case 11 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:72: EEQUAL
                 {
                 mEEQUAL(); 
 
 
                 }
                 break;
-            case 10 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:67: EQUAL
+            case 12 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:79: EQUAL
                 {
                 mEQUAL(); 
 
 
                 }
                 break;
-            case 11 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:73: NOT_EQUAL
+            case 13 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:85: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
 
                 }
                 break;
-            case 12 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:83: LT
+            case 14 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:95: LT
                 {
                 mLT(); 
 
 
                 }
                 break;
-            case 13 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:86: LE
+            case 15 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:98: LE
                 {
                 mLE(); 
 
 
                 }
                 break;
-            case 14 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:89: GT
+            case 16 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:101: GT
                 {
                 mGT(); 
 
 
                 }
                 break;
-            case 15 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:92: GE
+            case 17 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:104: GE
                 {
                 mGE(); 
 
 
                 }
                 break;
-            case 16 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:95: PLUS
+            case 18 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:107: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 17 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:100: MINUS
+            case 19 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:112: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 18 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:106: MUL
+            case 20 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:118: MUL
                 {
                 mMUL(); 
 
 
                 }
                 break;
-            case 19 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:110: DIV
+            case 21 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:122: DIV
                 {
                 mDIV(); 
 
 
                 }
                 break;
-            case 20 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:114: MOD
+            case 22 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:126: MOD
                 {
                 mMOD(); 
 
 
                 }
                 break;
-            case 21 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:118: NOT
+            case 23 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:130: NOT
                 {
                 mNOT(); 
 
 
                 }
                 break;
-            case 22 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:122: AND
+            case 24 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:134: AND
                 {
                 mAND(); 
 
 
                 }
                 break;
-            case 23 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:126: OR
+            case 25 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:138: OR
                 {
                 mOR(); 
 
 
                 }
                 break;
-            case 24 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:129: IF
+            case 26 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:141: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 25 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:132: THEN
+            case 27 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:144: THEN
                 {
                 mTHEN(); 
 
 
                 }
                 break;
-            case 26 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:137: ELSE
+            case 28 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:149: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 27 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:142: ENDIF
+            case 29 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:154: ENDIF
                 {
                 mENDIF(); 
 
 
                 }
                 break;
-            case 28 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:148: WHILE
+            case 30 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:160: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 29 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:154: DO
+            case 31 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:166: DO
                 {
                 mDO(); 
 
 
                 }
                 break;
-            case 30 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:157: ENDWHILE
+            case 32 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:169: ENDWHILE
                 {
                 mENDWHILE(); 
 
 
                 }
                 break;
-            case 31 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:166: FUNC
+            case 33 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:178: FUNC
                 {
                 mFUNC(); 
 
 
                 }
                 break;
-            case 32 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:171: ENDFUNC
+            case 34 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:183: ENDFUNC
                 {
                 mENDFUNC(); 
 
 
                 }
                 break;
-            case 33 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:179: RETURN
+            case 35 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:191: RETURN
                 {
                 mRETURN(); 
 
 
                 }
                 break;
-            case 34 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:186: READ
+            case 36 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:198: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 35 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:191: WRITE
+            case 37 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:203: WRITE
                 {
                 mWRITE(); 
 
 
                 }
                 break;
-            case 36 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:197: TRUE
+            case 38 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:209: TRUE
                 {
                 mTRUE(); 
 
 
                 }
                 break;
-            case 37 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:202: FALSE
+            case 39 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:214: FALSE
                 {
                 mFALSE(); 
 
 
                 }
                 break;
-            case 38 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:208: CREATE
+            case 40 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:220: CREATE
                 {
                 mCREATE(); 
 
 
                 }
                 break;
-            case 39 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:215: DESTROY
+            case 41 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:227: DESTROY
                 {
                 mDESTROY(); 
 
 
                 }
                 break;
-            case 40 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:223: MOVE_T
+            case 42 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:235: MOVE_T
                 {
                 mMOVE_T(); 
 
 
                 }
                 break;
-            case 41 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:230: MOVE
+            case 43 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:242: MOVE
                 {
                 mMOVE(); 
 
 
                 }
                 break;
-            case 42 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:235: MODIFY_T
+            case 44 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:247: MODIFY_T
                 {
                 mMODIFY_T(); 
 
 
                 }
                 break;
-            case 43 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:244: MODIFY
+            case 45 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:256: MODIFY
                 {
                 mMODIFY(); 
 
 
                 }
                 break;
-            case 44 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:251: RGBPRCTJ
+            case 46 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:263: RGBPRCTJ
                 {
                 mRGBPRCTJ(); 
 
 
                 }
                 break;
-            case 45 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:260: RGB
+            case 47 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:272: RGB
                 {
                 mRGB(); 
 
 
                 }
                 break;
-            case 46 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:264: COLOR
+            case 48 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:276: SHOWT
+                {
+                mSHOWT(); 
+
+
+                }
+                break;
+            case 49 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:282: SHOW
+                {
+                mSHOW(); 
+
+
+                }
+                break;
+            case 50 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:287: HIDET
+                {
+                mHIDET(); 
+
+
+                }
+                break;
+            case 51 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:293: HIDE
+                {
+                mHIDE(); 
+
+
+                }
+                break;
+            case 52 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:298: DELAY
+                {
+                mDELAY(); 
+
+
+                }
+                break;
+            case 53 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:304: PARALLEL
+                {
+                mPARALLEL(); 
+
+
+                }
+                break;
+            case 54 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:313: COLOR
                 {
                 mCOLOR(); 
 
 
                 }
                 break;
-            case 47 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:270: WHITE
+            case 55 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:319: WHITE
                 {
                 mWHITE(); 
 
 
                 }
                 break;
-            case 48 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:276: BLACK
+            case 56 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:325: BLACK
                 {
                 mBLACK(); 
 
 
                 }
                 break;
-            case 49 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:282: BLUE
+            case 57 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:331: BLUE
                 {
                 mBLUE(); 
 
 
                 }
                 break;
-            case 50 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:287: RED
+            case 58 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:336: RED
                 {
                 mRED(); 
 
 
                 }
                 break;
-            case 51 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:291: GREEN
+            case 59 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:340: GREEN
                 {
                 mGREEN(); 
 
 
                 }
                 break;
-            case 52 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:297: POSX
+            case 60 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:346: POSX
                 {
                 mPOSX(); 
 
 
                 }
                 break;
-            case 53 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:302: POSY
+            case 61 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:351: POSY
                 {
                 mPOSY(); 
 
 
                 }
                 break;
-            case 54 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:307: CIRCLE
+            case 62 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:356: CIRCLE
                 {
                 mCIRCLE(); 
 
 
                 }
                 break;
-            case 55 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:314: RECTANGLE
+            case 63 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:363: RECTANGLE
                 {
                 mRECTANGLE(); 
 
 
                 }
                 break;
-            case 56 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:324: TEXT
+            case 64 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:373: TEXT
                 {
                 mTEXT(); 
 
 
                 }
                 break;
-            case 57 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:329: INT
+            case 65 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:378: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 58 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:333: ID
+            case 66 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:382: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 59 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:336: COLORHEX
+            case 67 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:385: COLORHEX
                 {
                 mCOLORHEX(); 
 
 
                 }
                 break;
-            case 60 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:345: COMMENT
+            case 68 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:394: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 61 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:353: STRING
+            case 69 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:402: STRING
                 {
                 mSTRING(); 
 
 
                 }
                 break;
-            case 62 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:360: WS
+            case 70 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:409: WS
                 {
                 mWS(); 
 
@@ -2358,257 +2610,295 @@ public class AslLexer extends Lexer {
 
     protected DFA9 dfa9 = new DFA9(this);
     static final String DFA9_eotS =
-        "\7\uffff\1\46\1\47\1\52\1\uffff\1\54\1\56\3\uffff\1\60\1\uffff\16"+
-        "\43\1\110\1\111\17\uffff\2\43\1\114\1\115\7\43\1\125\13\43\2\uffff"+
-        "\1\146\1\147\2\uffff\7\43\1\uffff\5\43\1\167\1\43\1\172\10\43\2"+
-        "\uffff\1\u0083\1\u0084\1\u0085\1\u0086\7\43\1\u008e\2\43\1\u0091"+
-        "\1\uffff\1\43\1\u0093\1\uffff\3\43\1\u0098\2\43\1\u009b\1\43\4\uffff"+
-        "\1\u009d\2\43\1\u00a0\1\u00a1\1\u00a2\1\43\1\uffff\1\u00a4\1\43"+
-        "\1\uffff\1\43\1\uffff\1\43\1\u00a8\1\43\1\u00aa\1\uffff\1\43\1\u00ac"+
-        "\1\uffff\1\u00ad\1\uffff\2\43\3\uffff\1\43\1\uffff\1\u00b1\1\43"+
-        "\1\u00b3\1\uffff\1\u00b4\1\uffff\1\u00b6\2\uffff\1\43\1\u00b8\1"+
-        "\u00b9\1\uffff\1\43\2\uffff\1\u00bb\1\uffff\1\u00bc\2\uffff\1\43"+
-        "\2\uffff\1\u00be\1\uffff";
+        "\7\uffff\1\53\2\uffff\1\54\1\57\1\uffff\1\61\1\63\3\uffff\1\65\1"+
+        "\uffff\20\47\1\117\1\120\4\uffff\1\47\13\uffff\2\47\1\124\1\125"+
+        "\7\47\1\135\15\47\2\uffff\1\47\1\162\1\163\2\uffff\7\47\1\uffff"+
+        "\6\47\1\u0084\1\47\1\u0087\12\47\1\u0093\2\uffff\1\u0094\1\u0095"+
+        "\1\u0096\1\u0097\10\47\1\u00a0\2\47\1\u00a3\1\uffff\1\47\1\u00a5"+
+        "\1\uffff\3\47\1\u00aa\1\47\1\u00ad\2\47\1\u00b0\1\47\1\u00b2\5\uffff"+
+        "\1\u00b3\2\47\1\u00b6\1\u00b7\1\u00b8\1\47\1\u00ba\1\uffff\1\u00bb"+
+        "\1\47\1\uffff\1\47\1\uffff\1\47\1\u00bf\1\47\1\u00c1\1\uffff\1\47"+
+        "\1\u00c3\1\uffff\1\47\1\u00c5\1\uffff\1\u00c6\2\uffff\2\47\3\uffff"+
+        "\1\47\2\uffff\1\u00ca\1\47\1\u00cc\1\uffff\1\u00cd\1\uffff\1\u00cf"+
+        "\1\uffff\1\47\2\uffff\1\47\1\u00d2\1\u00d3\1\uffff\1\47\2\uffff"+
+        "\1\u00d5\1\uffff\1\47\1\u00d7\2\uffff\1\47\1\uffff\1\u00d9\1\uffff"+
+        "\1\u00da\2\uffff";
     static final String DFA9_eofS =
-        "\u00bf\uffff";
+        "\u00db\uffff";
     static final String DFA9_minS =
-        "\1\11\6\uffff\2\60\1\75\1\uffff\2\75\3\uffff\1\52\1\uffff\1\157"+
-        "\1\156\1\162\1\146\1\145\1\154\1\150\1\145\1\141\1\145\1\151\1\157"+
-        "\1\154\1\162\2\60\17\uffff\1\164\1\144\2\60\1\145\1\165\1\170\1"+
-        "\163\1\144\2\151\1\60\1\163\1\156\1\154\1\141\1\142\1\145\1\154"+
-        "\1\162\1\144\1\141\1\145\2\uffff\2\60\2\uffff\1\156\1\145\1\164"+
-        "\1\145\1\146\1\154\1\164\1\uffff\1\164\1\143\1\163\1\165\1\144\1"+
-        "\60\1\164\1\60\1\141\1\157\1\143\1\145\1\151\1\143\2\145\2\uffff"+
-        "\4\60\1\146\1\150\1\165\3\145\1\162\1\60\1\145\1\162\1\60\1\uffff"+
-        "\1\141\1\60\1\uffff\1\164\1\162\1\154\1\60\1\146\1\153\1\60\1\156"+
-        "\4\uffff\1\60\1\151\1\156\3\60\1\157\1\uffff\1\60\1\156\1\uffff"+
-        "\1\156\1\uffff\1\145\1\60\1\145\1\60\1\uffff\1\171\1\60\1\uffff"+
-        "\1\60\1\uffff\1\154\1\143\3\uffff\1\171\1\uffff\1\60\1\147\1\60"+
-        "\1\uffff\1\60\1\uffff\1\60\2\uffff\1\145\2\60\1\uffff\1\154\2\uffff"+
-        "\1\60\1\uffff\1\60\2\uffff\1\145\2\uffff\1\60\1\uffff";
+        "\1\11\6\uffff\1\60\2\uffff\1\60\1\75\1\uffff\2\75\3\uffff\1\52\1"+
+        "\uffff\1\157\1\156\1\162\1\146\1\145\1\154\1\150\1\145\1\141\1\145"+
+        "\1\151\1\157\1\151\1\141\1\154\1\162\2\60\4\uffff\1\157\13\uffff"+
+        "\1\164\1\144\2\60\1\145\1\165\1\170\1\163\1\144\2\151\1\60\1\154"+
+        "\1\156\1\154\1\141\1\142\1\145\1\154\1\162\2\144\1\162\1\141\1\145"+
+        "\2\uffff\1\167\2\60\2\uffff\1\156\1\145\1\164\1\145\1\146\1\154"+
+        "\1\164\1\uffff\1\164\1\141\1\143\1\163\1\165\1\144\1\60\1\164\1"+
+        "\60\1\141\1\157\1\143\1\145\1\151\1\145\1\141\1\143\2\145\1\60\2"+
+        "\uffff\4\60\1\146\1\150\1\165\3\145\1\162\1\171\1\60\1\145\1\162"+
+        "\1\60\1\uffff\1\141\1\60\1\uffff\1\164\1\162\1\154\1\60\1\146\1"+
+        "\60\1\154\1\153\1\60\1\156\1\60\5\uffff\1\60\1\151\1\156\3\60\1"+
+        "\157\1\60\1\uffff\1\60\1\156\1\uffff\1\156\1\uffff\1\145\1\60\1"+
+        "\145\1\60\1\uffff\1\171\1\60\1\uffff\1\154\1\60\1\uffff\1\60\2\uffff"+
+        "\1\154\1\143\3\uffff\1\171\2\uffff\1\60\1\147\1\60\1\uffff\1\60"+
+        "\1\uffff\1\60\1\uffff\1\145\2\uffff\1\145\2\60\1\uffff\1\154\2\uffff"+
+        "\1\60\1\uffff\1\154\1\60\2\uffff\1\145\1\uffff\1\60\1\uffff\1\60"+
+        "\2\uffff";
     static final String DFA9_maxS =
-        "\1\172\6\uffff\1\172\1\146\1\75\1\uffff\2\75\3\uffff\1\57\1\uffff"+
-        "\1\157\1\156\1\162\1\146\1\162\1\156\1\162\1\157\1\165\1\147\1\162"+
-        "\1\157\1\154\1\162\2\172\17\uffff\1\164\1\144\2\172\1\145\1\165"+
-        "\1\170\1\163\1\144\2\151\1\172\1\163\1\156\1\154\1\164\1\142\1\145"+
-        "\1\154\1\162\1\166\1\165\1\145\2\uffff\2\172\2\uffff\1\156\1\145"+
-        "\1\164\1\145\1\167\2\164\1\uffff\1\164\1\143\1\163\1\165\1\144\1"+
-        "\172\1\164\1\172\1\141\1\157\1\143\1\145\1\151\1\143\2\145\2\uffff"+
-        "\4\172\1\146\1\150\1\165\3\145\1\162\1\172\1\145\1\162\1\172\1\uffff"+
-        "\1\141\1\172\1\uffff\1\164\1\162\1\154\1\172\1\146\1\153\1\172\1"+
-        "\156\4\uffff\1\172\1\151\1\156\3\172\1\157\1\uffff\1\172\1\156\1"+
-        "\uffff\1\156\1\uffff\1\145\1\172\1\145\1\172\1\uffff\1\171\1\172"+
-        "\1\uffff\1\172\1\uffff\1\154\1\143\3\uffff\1\171\1\uffff\1\172\1"+
-        "\147\1\172\1\uffff\1\172\1\uffff\1\172\2\uffff\1\145\2\172\1\uffff"+
-        "\1\154\2\uffff\1\172\1\uffff\1\172\2\uffff\1\145\2\uffff\1\172\1"+
-        "\uffff";
+        "\1\175\6\uffff\1\172\2\uffff\1\146\1\75\1\uffff\2\75\3\uffff\1\57"+
+        "\1\uffff\1\157\1\156\1\162\1\146\1\162\1\156\1\162\1\157\1\165\1"+
+        "\147\1\162\1\157\1\151\1\141\1\154\1\162\2\172\4\uffff\1\157\13"+
+        "\uffff\1\164\1\144\2\172\1\145\1\165\1\170\1\163\1\144\2\151\1\172"+
+        "\1\163\1\156\1\154\1\164\1\142\1\145\1\154\1\162\1\166\1\144\1\162"+
+        "\1\165\1\145\2\uffff\1\167\2\172\2\uffff\1\156\1\145\1\164\1\145"+
+        "\1\167\2\164\1\uffff\1\164\1\141\1\143\1\163\1\165\1\144\1\172\1"+
+        "\164\1\172\1\141\1\157\1\143\1\145\1\151\1\145\1\141\1\143\2\145"+
+        "\1\172\2\uffff\4\172\1\146\1\150\1\165\3\145\1\162\1\171\1\172\1"+
+        "\145\1\162\1\172\1\uffff\1\141\1\172\1\uffff\1\164\1\162\1\154\1"+
+        "\172\1\146\1\172\1\154\1\153\1\172\1\156\1\172\5\uffff\1\172\1\151"+
+        "\1\156\3\172\1\157\1\172\1\uffff\1\172\1\156\1\uffff\1\156\1\uffff"+
+        "\1\145\1\172\1\145\1\172\1\uffff\1\171\1\172\1\uffff\1\154\1\172"+
+        "\1\uffff\1\172\2\uffff\1\154\1\143\3\uffff\1\171\2\uffff\1\172\1"+
+        "\147\1\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\145\2\uffff\1\145"+
+        "\2\172\1\uffff\1\154\2\uffff\1\172\1\uffff\1\154\1\172\2\uffff\1"+
+        "\145\1\uffff\1\172\1\uffff\1\172\2\uffff";
     static final String DFA9_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\3\uffff\1\13\2\uffff\1\20\1\21"+
-        "\1\22\1\uffff\1\24\20\uffff\1\71\1\72\1\75\1\76\1\7\1\10\1\73\1"+
-        "\12\1\11\1\15\1\14\1\17\1\16\1\74\1\23\27\uffff\1\64\1\65\2\uffff"+
-        "\1\27\1\30\7\uffff\1\35\20\uffff\1\25\1\26\17\uffff\1\62\2\uffff"+
-        "\1\55\10\uffff\1\31\1\44\1\70\1\32\7\uffff\1\37\2\uffff\1\42\1\uffff"+
-        "\1\54\4\uffff\1\51\2\uffff\1\61\1\uffff\1\33\2\uffff\1\34\1\57\1"+
-        "\43\1\uffff\1\45\3\uffff\1\56\1\uffff\1\50\1\uffff\1\60\1\63\3\uffff"+
-        "\1\41\1\uffff\1\46\1\66\1\uffff\1\53\1\uffff\1\40\1\47\1\uffff\1"+
-        "\52\1\36\1\uffff\1\67";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\uffff\1\10\1\11\2\uffff\1\15"+
+        "\2\uffff\1\22\1\23\1\24\1\uffff\1\26\22\uffff\1\101\1\102\1\105"+
+        "\1\106\1\uffff\1\7\1\12\1\103\1\14\1\13\1\17\1\16\1\21\1\20\1\104"+
+        "\1\25\31\uffff\1\74\1\75\3\uffff\1\31\1\32\7\uffff\1\37\24\uffff"+
+        "\1\27\1\30\20\uffff\1\72\2\uffff\1\57\13\uffff\1\61\1\33\1\46\1"+
+        "\100\1\34\10\uffff\1\41\2\uffff\1\44\1\uffff\1\56\4\uffff\1\53\2"+
+        "\uffff\1\63\2\uffff\1\71\1\uffff\1\60\1\35\2\uffff\1\36\1\67\1\45"+
+        "\1\uffff\1\64\1\47\3\uffff\1\66\1\uffff\1\52\1\uffff\1\62\1\uffff"+
+        "\1\70\1\73\3\uffff\1\43\1\uffff\1\50\1\76\1\uffff\1\55\2\uffff\1"+
+        "\42\1\51\1\uffff\1\54\1\uffff\1\40\1\uffff\1\65\1\77";
     static final String DFA9_specialS =
-        "\u00bf\uffff}>";
+        "\u00db\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\2\45\2\uffff\1\45\22\uffff\1\45\1\12\1\44\1\10\1\uffff\1\21"+
-            "\1\1\1\uffff\1\2\1\3\1\17\1\15\1\4\1\16\1\uffff\1\20\12\42\1"+
-            "\5\1\6\1\13\1\11\1\14\2\uffff\32\43\4\uffff\1\43\1\uffff\1\23"+
-            "\1\36\1\34\1\31\1\27\1\32\1\37\1\43\1\25\3\43\1\35\1\22\1\24"+
-            "\2\43\1\33\1\7\1\26\2\43\1\30\1\40\1\41\1\43",
+            "\2\51\2\uffff\1\51\22\uffff\1\51\1\14\1\50\1\12\1\uffff\1\23"+
+            "\1\1\1\uffff\1\2\1\3\1\21\1\17\1\4\1\20\1\uffff\1\22\12\46\1"+
+            "\5\1\6\1\15\1\13\1\16\2\uffff\32\47\4\uffff\1\47\1\uffff\1\25"+
+            "\1\42\1\36\1\33\1\31\1\34\1\43\1\40\1\27\3\47\1\37\1\24\1\26"+
+            "\1\41\1\47\1\35\1\7\1\30\2\47\1\32\1\44\1\45\1\47\1\10\1\uffff"+
+            "\1\11",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\50\7\uffff\6\50\32\uffff\6\50",
-            "\1\51",
-            "",
-            "\1\53",
-            "\1\55",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\7\47\1\52\22\47",
             "",
             "",
+            "\12\55\7\uffff\6\55\32\uffff\6\55",
+            "\1\56",
             "",
-            "\1\57\4\uffff\1\57",
-            "",
-            "\1\61",
+            "\1\60",
             "\1\62",
-            "\1\63",
-            "\1\64",
-            "\1\67\2\uffff\1\65\11\uffff\1\66",
-            "\1\70\1\uffff\1\71",
-            "\1\72\11\uffff\1\73",
-            "\1\75\11\uffff\1\74",
-            "\1\77\23\uffff\1\76",
-            "\1\100\1\uffff\1\101",
-            "\1\104\5\uffff\1\103\2\uffff\1\102",
-            "\1\105",
-            "\1\106",
-            "\1\107",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             "",
             "",
             "",
+            "\1\64\4\uffff\1\64",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\66",
+            "\1\67",
+            "\1\70",
+            "\1\71",
+            "\1\74\2\uffff\1\72\11\uffff\1\73",
+            "\1\75\1\uffff\1\76",
+            "\1\77\11\uffff\1\100",
+            "\1\102\11\uffff\1\101",
+            "\1\104\23\uffff\1\103",
+            "\1\105\1\uffff\1\106",
+            "\1\111\5\uffff\1\110\2\uffff\1\107",
             "\1\112",
             "\1\113",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\114",
+            "\1\115",
             "\1\116",
-            "\1\117",
-            "\1\120",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "",
+            "",
+            "",
             "\1\121",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\122",
             "\1\123",
-            "\1\124",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\126",
             "\1\127",
             "\1\130",
-            "\1\132\1\uffff\1\134\1\133\17\uffff\1\131",
-            "\1\135",
-            "\1\136",
-            "\1\137",
+            "\1\131",
+            "\1\132",
+            "\1\133",
+            "\1\134",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\137\6\uffff\1\136",
             "\1\140",
-            "\1\142\21\uffff\1\141",
-            "\1\143\23\uffff\1\144",
-            "\1\145",
-            "",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "",
+            "\1\141",
+            "\1\143\1\uffff\1\145\1\144\17\uffff\1\142",
+            "\1\146",
+            "\1\147",
             "\1\150",
             "\1\151",
-            "\1\152",
-            "\1\153",
-            "\1\156\2\uffff\1\154\15\uffff\1\155",
-            "\1\157\7\uffff\1\160",
-            "\1\161",
+            "\1\153\21\uffff\1\152",
+            "\1\154",
+            "\1\155",
+            "\1\156\23\uffff\1\157",
+            "\1\160",
             "",
-            "\1\162",
-            "\1\163",
+            "",
+            "\1\161",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "",
             "\1\164",
             "\1\165",
             "\1\166",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\170",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\17\43\1\171\12\43",
-            "\1\173",
-            "\1\174",
+            "\1\167",
+            "\1\172\2\uffff\1\170\15\uffff\1\171",
+            "\1\173\7\uffff\1\174",
             "\1\175",
+            "",
             "\1\176",
             "\1\177",
             "\1\u0080",
             "\1\u0081",
             "\1\u0082",
-            "",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\u0087",
+            "\1\u0083",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u0085",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\17\47\1\u0086\12"+
+            "\47",
             "\1\u0088",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
             "\1\u008c",
             "\1\u008d",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\u008e",
             "\1\u008f",
             "\1\u0090",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\u0091",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u0092\6\47",
             "",
-            "\1\u0092",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
             "",
-            "\1\u0094",
-            "\1\u0095",
-            "\1\u0096",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\23\43\1\u0097\6\43",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u0098",
             "\1\u0099",
             "\1\u009a",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\u009b",
             "\1\u009c",
-            "",
-            "",
-            "",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\u009d",
             "\1\u009e",
             "\1\u009f",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\u00a3",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00a1",
+            "\1\u00a2",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\u00a5",
+            "\1\u00a4",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "\1\u00a6",
-            "",
             "\1\u00a7",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\u00a9",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
+            "\1\u00a8",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00a9\6\47",
             "\1\u00ab",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00ac\6\47",
             "\1\u00ae",
             "\1\u00af",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00b1",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "",
             "",
-            "\1\u00b0",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\1\u00b2",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\23\43\1\u00b5\6\43",
             "",
             "",
-            "\1\u00b7",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00b4",
+            "\1\u00b5",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00b9",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\1\u00ba",
-            "",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
-            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00bc",
             "",
             "\1\u00bd",
             "",
+            "\1\u00be",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00c0",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\12\43\7\uffff\32\43\4\uffff\1\43\1\uffff\32\43",
+            "\1\u00c2",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\u00c4",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "",
+            "\1\u00c7",
+            "\1\u00c8",
+            "",
+            "",
+            "",
+            "\1\u00c9",
+            "",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00cb",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00ce\6\47",
+            "",
+            "\1\u00d0",
+            "",
+            "",
+            "\1\u00d1",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\u00d4",
+            "",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\u00d6",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "",
+            "\1\u00d8",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
             ""
     };
 
@@ -2642,7 +2932,7 @@ public class AslLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOWT | SHOW | HIDET | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
         }
     }
  

@@ -82,14 +82,19 @@ param   :   '&' id=ID -> ^(PREF[$id,$id.text])
         |   id=ID -> ^(PVALUE[$id,$id.text])
         ;
 
+
+
+
 // A list of instructions, all of them gouped in a subtree
 block_instructions
-        :    instruction (';' instruction)*
+        :    instruction +
             -> ^(LIST_INSTR instruction+)
         ;
 
+instruction : (instruction_spc ';'!) | instructions_brack;
+
 // The different types of instructions
-instruction
+instruction_spc
         :   assign          // Assignment
         |   ite_stmt        // if-then-else
         |   while_stmt      // while statement
@@ -102,12 +107,13 @@ instruction
         |   move            // move an object
         |   modify          // modify attribute of an object
    //     |   source          // source another scriptfile
-  //      |   parallel        // execute things
- //       |   show
-//        |   hide
- //       |   delay
+        |   show
+        |   hide
+        |   delay
         |                   // Nothing
         ;
+
+instructions_brack : parallel;
 
 // Assignment
 assign  :   ID eq=EEQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
@@ -159,12 +165,42 @@ modify_time : MODIFY_T^ ID time list_attributes
 modify_no_time : MODIFY^ ID list_attributes 
         ;
 
+parallel : parallel_time | parallel_no_time;
+
+instructions_notime : move_no_time | modify_no_time | show_no_time | hide_no_time;
+
+block_instructions_notime: instructions_notime';' ( instructions_notime ';')*
+                            -> ^(LIST_INSTR instructions_notime+);
+
+parallel_time : PARALLEL^ time '{'! block_instructions_notime '}'!;
+
+instructions_time : move_time | modify_time | show_time | hide_time;
+
+block_instructions_time: instructions_time ';' ( instructions_time';')*
+                            -> ^(LIST_INSTR instructions_time+);
+
+parallel_no_time : PARALLEL^ '{'! block_instructions_time '}'!;
+
 list_attributes : '(' attribute (',' attribute)* ')' -> ^(LIST_ATTR attribute+)
         ;
 
 attribute   :   attribute_name_color^ ':'! color
             |   attribute_name_expr^ ':'! expr
             ;
+
+show : show_time | show_no_time;
+
+show_time : SHOWT^ ID time;
+
+show_no_time :  SHOW^ ID;
+
+hide : hide_time | hide_no_time;
+
+hide_time : HIDET^ ID time;
+
+hide_no_time :  HIDE^ ID;
+
+delay: DELAY^ time;
 
 attribute_name_color    : COLOR
                         ;
@@ -263,6 +299,14 @@ MODIFY_T: 'modifyt';
 MODIFY  : 'modify';
 RGBPRCTJ: 'rgbp';
 RGB     : 'rgb';
+
+SHOWT   : 'showt';
+SHOW    : 'show';
+HIDET   : 'hidet';
+HIDE    : 'hide';
+DELAY   : 'delay';
+
+PARALLEL: 'parallel';
 
 COLOR   : 'color';
 WHITE   : 'white';
