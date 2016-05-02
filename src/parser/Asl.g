@@ -45,7 +45,7 @@ tokens {
     PVALUE;     // Parameter by value in the list of parameters
     PREF;       // Parameter by reference in the list of parameters
     COLORINT;
-    COLORHEX;
+//    COLORHEX;
     COLORPRCTJ;
     LIST_ATTR;
 }
@@ -173,16 +173,11 @@ attribute_name_expr : POSX
                     | POSY
                     ;
 
-color   :   HASHTAG hexadigit hexadigit hexadigit (hexadigit hexadigit hexadigit)? -> ^(COLORHEX  hexadigit hexadigit hexadigit (hexadigit hexadigit hexadigit)?)
+color   :   COLORHEX 
         |   RGB '(' expr ',' expr ',' expr ')' -> ^(COLORINT expr expr expr)
         |   RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^(COLORPRCTJ expr expr expr)
         |   color_keyword
         ;
-
-hexadigit   :   ('0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9'
-            |   'A' | 'B' | 'C' | 'D' | 'E' | 'F'
-            |   'a' | 'b' | 'c' | 'd' | 'e' | 'f')
-            ;
 
 color_keyword : RED | WHITE | BLACK | BLUE | GREEN;
 
@@ -281,8 +276,13 @@ CIRCLE  : 'circle';
 RECTANGLE : 'rectangle';
 TEXT : 'text';
 
+
 INT     :   '0'..'9'+ ;
 ID      :   ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
+
+COLORHEX: '#' HEXADIGIT HEXADIGIT HEXADIGIT (HEXADIGIT HEXADIGIT HEXADIGIT)?;
+fragment
+HEXADIGIT: '0'..'9'|'a'..'f'|'A'..'F';
 
 // C-style comments
 COMMENT : '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
