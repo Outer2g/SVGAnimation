@@ -38,17 +38,24 @@ package interp;
  */
 
 import parser.*;
+import java.util.HashMap;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER;}
+    public enum Type {VOID, BOOLEAN, INTEGER,OBJECT;}
 
     /** Type of data*/
     private Type type;
 
     /** Value of the data */
     private int value; 
-
+    
+    /** Values Object types **/
+    private HashMap<String,String> attributes;
+    
+    /** Constructor for objects **/
+    Data(HashMap<String,String> att){type = Type.OBJECT; attributes = att;}
+    
     /** Constructor for integers */
     Data(int v) { type = Type.INTEGER; value = v; }
 
@@ -59,11 +66,17 @@ public class Data {
     Data() {type = Type.VOID; }
 
     /** Copy constructor */
-    Data(Data d) { type = d.type; value = d.value; }
+    Data(Data d) { 
+      type = d.type;
+      if (type != Type.OBJECT) value = d.value;
+      else attributes = d.attributes;
+    }
 
     /** Returns the type of data */
     public Type getType() { return type; }
-
+    
+    /** Indicates wether the data is an Object */
+    public boolean isObject() { return type == Type.OBJECT; }
     /** Indicates whether the data is Boolean */
     public boolean isBoolean() { return type == Type.BOOLEAN; }
 
@@ -72,7 +85,17 @@ public class Data {
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
-
+    
+    /** Gets the attributes hashmap **/
+    public HashMap<String,String> getListAttributes(){
+      assert type == Type.OBJECT;
+      return attributes;
+    }
+    /** Gets the specified attribute **/
+    public String getAttribute(String name){
+      assert type == Type.OBJECT;
+      return attributes.get(name);
+    }
     /**
      * Gets the value of an integer data. The method asserts that
      * the data is an integer.
@@ -90,7 +113,8 @@ public class Data {
         assert type == Type.BOOLEAN;
         return value == 1;
     }
-
+    /** Defines an Attribute for the data **/
+    public void setAttribute(String name,String value) { assert type == Type.OBJECT; attributes.put(name,value);}
     /** Defines a Boolean value for the data */
     public void setValue(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
 

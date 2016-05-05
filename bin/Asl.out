@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec java -enableassertions -jar /home/outer2g/Documentos/FIB/Q6/CL/Interpreter/Asl/bin/Asl.jar "$@"
