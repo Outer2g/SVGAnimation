@@ -30,6 +30,7 @@ package interp;
 import parser.*;
 
 import java.util.ArrayList;
+import java.util.*;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
@@ -40,6 +41,7 @@ public class Interp {
 
     /** Memory of the virtual machine. */
     private Stack Stack;
+    private PrintWriter fileOutput;
 
     /**
      * Map between function names (keys) and ASTs (values).
@@ -148,7 +150,20 @@ public class Interp {
 
     /** Defines the current line number with a specific value */
     private void setLineNumber(int l) { linenumber = l;}
-    
+    private void printInit(){
+	try{
+	  fileOutput = new PrintWriter("generated.html", "UTF-8");
+	}
+	catch(Exception e){
+	  e.printStackTrace();
+	}
+	fileOutput.println("!DOCTYPE html> \n <html> \n <body> \n <svg height=800 width=600>\n");
+	
+    }
+    private void printEnd(){
+	fileOutput.println("</svg>\n </body> \n </html>");
+	fileOutput.close();
+    }
     /**
      * Executes a function.
      * @param funcname The name of the function.
@@ -159,6 +174,7 @@ public class Interp {
         // Get the AST of the function
         AslTree f = FuncName2Tree.get(funcname);
         if (f == null) throw new RuntimeException(" function " + funcname + " not declared");
+        if (funcname.equals("main")) printInit();
 
         // Gather the list of arguments of the caller. This function
         // performs all the checks required for the compatibility of
@@ -186,7 +202,7 @@ public class Interp {
 
         // Execute the instructions
         Data result = executeListInstructions (f.getChild(2));
-
+        if (funcname.equals("main")) printEnd();
         // If the result is null, then the function returns void
         if (result == null) result = new Data();
         
@@ -217,6 +233,20 @@ public class Interp {
         }
         return null;
     }
+    private void showObject(Data objecte){
+	String toPrint = "<";
+	HashMap<String,String> att = objecte.getListAttributes();
+	toPrint += att.get("objectType") + " ";
+	Set<String> keys = att.keySet();
+	for (String attribute : keys){
+	if (!attribute.equals("objectType"))
+	    if (!attribute.equals("color"))
+	   toPrint += attribute + "=\"" + att.get(attribute)+ "\" ";
+	   else toPrint += "fill=\"" + att.get(attribute)+ "\" ";
+	}
+	toPrint += "/>";
+	fileOutput.println(toPrint);
+    }
     
     /**
      * Executes an instruction. 
@@ -228,13 +258,30 @@ public class Interp {
      */
     private Data executeInstruction (AslTree t) {
         assert t != null;
-        
+        System.out.println("hola");
         setLineNumber(t);
         Data value; // The returned value
 
         // A big switch for all type of instructions
         switch (t.getType()) {
-
+	    case AslLexer.CREATE:
+		System.out.println("adio");
+		HashMap<String,String> att = new HashMap<String,String>();
+		att.put("objectType",t.getChild(1).getText());
+		att.put("cx",t.getChild(2).getText());
+		att.put("cy",t.getChild(3).getText());
+		AslTree listAttributes = t.getChild(4);
+		for (int i = 0; i< t.getChild(4).getChildCount();++i){
+		  att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+		}
+		Data objecte = new Data(att);
+		Stack.defineVariable(t.getChild(0).getText(),objecte);
+		return null;
+		
+	    case AslLexer.SHOW:
+		System.out.println("buenos dias");
+		showObject(Stack.getVariable(t.getChild(0).getText()));
+		return null;
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));

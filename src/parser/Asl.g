@@ -203,10 +203,12 @@ hide_no_time :  HIDE^ ID;
 delay: DELAY^ time;
 
 attribute_name_color    : COLOR
+						| STROKE
                         ;
 
 attribute_name_expr : POSX
                     | POSY
+                    | 'r'
                     ;
 
 color   :   COLORHEX 
@@ -317,6 +319,7 @@ GREEN   : 'green';
 POSX    : 'x';
 POSY    : 'y';
 CIRCLE  : 'circle';
+STROKE : 'stroke';
 RECTANGLE : 'rectangle';
 TEXT : 'text';
 
