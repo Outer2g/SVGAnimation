@@ -1,9 +1,17 @@
-!DOCTYPE html> 
+<!DOCTYPE html> 
  <html> 
  <body> 
  <svg height=800 width=600>
 
-<circle r="40" fill="#129fa3" cx="50" cy="300" stroke="black" />
+<circle>
+<animate attributeName="cx" attributeType="XML" begin="0.0s" dur="0.001s" fill="freeze" from="" to="50" />
+<animate attributeName="cy" attributeType="XML" begin="0.0s" dur="0.001s" fill="freeze" from="" to="300" />
+<animate attributeName="fill" attributeType="XML" begin="0.0s" dur="0.001s" fill="freeze" from="" to="#129fa3" />
+<animate attributeName="r" attributeType="XML" begin="0.0s" dur="0.001s" fill="freeze" from="" to="40" />
+<animate attributeName="stroke" attributeType="XML" begin="0.0s" dur="0.001s" fill="freeze" from="" to="black" />
+<animate attributeName="opacity" attributeType="XML" begin="1.0s" dur="1.0s" fill="freeze" from="1" to="0" />
+<animate attributeName="opacity" attributeType="XML" begin="3.0s" dur="1.0s" fill="freeze" from="0" to="1" />
+</circle>
 </svg>
  </body> 
  </html>

@@ -39,6 +39,12 @@ import java.io.*;
 
 public class Interp {
 
+    Double deltaTime = 0.0;
+
+    ArrayList<ArrayList<String>> states = new ArrayList<ArrayList<String>>();
+
+    HashMap<String,Integer> changePos = new HashMap<String,Integer>();
+
     /** Memory of the virtual machine. */
     private Stack Stack;
     private PrintWriter fileOutput;
@@ -157,10 +163,15 @@ public class Interp {
 	catch(Exception e){
 	  e.printStackTrace();
 	}
-	fileOutput.println("!DOCTYPE html> \n <html> \n <body> \n <svg height=800 width=600>\n");
+	fileOutput.println("<!DOCTYPE html> \n <html> \n <body> \n <svg height=800 width=600>\n");
 	
     }
     private void printEnd(){
+    for (int i = 0; i < states.size(); ++i) {
+        for (String s : states.get(i)) {
+            fileOutput.println(s);
+        }
+    }
 	fileOutput.println("</svg>\n </body> \n </html>");
 	fileOutput.close();
     }
@@ -261,27 +272,91 @@ public class Interp {
         System.out.println("hola");
         setLineNumber(t);
         Data value; // The returned value
+        Integer nChange;
+        Double elapsedTime;
+        String opacityFrom;
 
         // A big switch for all type of instructions
         switch (t.getType()) {
-	    case AslLexer.CREATE:
-		System.out.println("adio");
-		HashMap<String,String> att = new HashMap<String,String>();
-		att.put("objectType",t.getChild(1).getText());
-		att.put("cx",t.getChild(2).getText());
-		att.put("cy",t.getChild(3).getText());
-		AslTree listAttributes = t.getChild(4);
-		for (int i = 0; i< t.getChild(4).getChildCount();++i){
-		  att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
-		}
-		Data objecte = new Data(att);
-		Stack.defineVariable(t.getChild(0).getText(),objecte);
-		return null;
+    	    case AslLexer.CREATE:
+                String prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
+
+                nChange = states.size();
+                changePos.put(t.getChild(0).getText(),nChange);
+                states.add(new ArrayList<String>());
+                AslTree listAttributes = t.getChild(4);
+                states.get(nChange).add("<"+t.getChild(1).getText()+">");
+                states.get(nChange).add("</"+t.getChild(1).getText()+">");
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "",t.getChild(2).getText()));
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "",t.getChild(3).getText()));
+                for (int i = 0; i< t.getChild(4).getChildCount();++i){
+                  states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
+                }
+
+                System.out.println(states.get(nChange));
+
+                System.out.println("adio");
+                HashMap<String,String> att = new HashMap<String,String>();
+                att.put("objectType",t.getChild(1).getText());
+                att.put(prefixPosition+"x",t.getChild(2).getText());
+                att.put(prefixPosition+"y",t.getChild(3).getText());
+                // AslTree listAttributes = t.getChild(4);
+                for (int i = 0; i< t.getChild(4).getChildCount();++i){
+                  att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                }
+        		Data objecte = new Data(att);
+        		Stack.defineVariable(t.getChild(0).getText(),objecte);
+        		return null;
 		
-	    case AslLexer.SHOW:
-		System.out.println("buenos dias");
-		showObject(Stack.getVariable(t.getChild(0).getText()));
-		return null;
+	       case AslLexer.SHOW:
+                System.out.println("buenos dias");
+                // showObject(Stack.getVariable(t.getChild(0).getText()));
+                nChange = changePos.get(t.getChild(0).getText());
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "1"));
+
+                // Modificar la opcidad del objecto en cuestion
+                return null;
+
+            case AslLexer.SHOWT:
+                System.out.println("buenos dias compiyogui");
+                // showObject(Stack.getVariable(t.getChild(0).getText()));
+                nChange = changePos.get(t.getChild(0).getText());
+                elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                opacityFrom = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
+                if (opacityFrom == null) opacityFrom = "0";
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, opacityFrom, "1"));
+                deltaTime += elapsedTime;
+
+                // Modificar la opcidad del objecto en cuestion
+                return null;
+
+            case AslLexer.HIDE:
+                System.out.println("buenas noches");
+                // showObject(Stack.getVariable(t.getChild(0).getText()));
+                nChange = changePos.get(t.getChild(0).getText());
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "0"));
+
+                // Modificar la opcidad del objecto en cuestion
+                return null;
+
+            case AslLexer.HIDET:
+                System.out.println("buenas noches compiyogui");
+                // showObject(Stack.getVariable(t.getChild(0).getText()));
+                nChange = changePos.get(t.getChild(0).getText());
+                elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                opacityFrom = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
+                if (opacityFrom == null) opacityFrom = "1";
+                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, opacityFrom, "0"));
+                deltaTime += elapsedTime;
+
+                // Modificar la opcidad del objecto en cuestion
+                return null;
+
+            case AslLexer.DELAY:
+                deltaTime += Double.parseDouble(t.getChild(0).getChild(0).getText()) * (t.getChild(0).getText().equals("ms") ? 0.001 : 1);
+                return null;
+
+                
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
@@ -613,5 +688,30 @@ public class Interp {
         
         trace.println(" <line " + lineNumber() + ">");
         if (function_nesting < 0) trace.close();
+    }
+}
+
+
+
+class Change {
+    // String attribute;
+    // Double duration;
+    // Double start;
+    // String from;
+    // String to;
+
+    // Change (String attribute, Double start, Double duration, String from, String to) {
+    //     this.attribute = attribute;
+    //     this.duration = duration;
+    //     this.start = start;
+    //     this.from = from;
+    //     this.to = to;
+    // }
+
+    static public String toString(String attribute, Double start, Double duration, String from, String to) {
+        return "<animate attributeName=\""+(attribute.equals("color") ? "fill" : attribute)
+                +"\" attributeType=\"XML\" begin=\""+start
+                +"s\" dur=\""+duration
+                +"s\" fill=\"freeze\" from=\""+from+"\" to=\""+to+"\" />";
     }
 }
