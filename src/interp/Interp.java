@@ -347,8 +347,14 @@ public class Interp {
                 System.out.println("buenas noches compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 nChange = changePos.get(t.getChild(0).getText());
+
+                System.out.println("0");
                 elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+
+                System.out.println("1");
                 opacityFrom = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
+
+                System.out.println("2");
                 if (opacityFrom == null) opacityFrom = "1";
                 states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, opacityFrom, "0"));
                 deltaTime += elapsedTime;
@@ -381,7 +387,7 @@ public class Interp {
                         System.out.println("test " + treeAux.getText() + " " + treeAux.getType());
                         treeAux.myType = treeAux.getType() + 1; // Esto depnede del AslLexer. Si se generan los "static final int .... en orden diferente, peta"
                         System.out.println("size " + treeAux.getChildCount());
-                        treeAux.addChild(0,t.getChild(0));
+                        treeAux.addChild(1,t.getChild(0));
                         System.out.println("size " + treeAux.getChildCount());
                         useless = executeInstruction(treeAux);
                     }
