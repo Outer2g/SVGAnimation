@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-11 20:12:23
+// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-12 18:16:01
 
 package parser;
 
@@ -54,7 +54,7 @@ public class AslLexer extends Lexer {
     public static final int HASHTAG=34;
     public static final int HEXADIGIT=35;
     public static final int HIDE=36;
-    public static final int HIDET=37;
+    public static final int HIDE_T=37;
     public static final int ID=38;
     public static final int IF=39;
     public static final int INT=40;
@@ -87,7 +87,7 @@ public class AslLexer extends Lexer {
     public static final int RGB=67;
     public static final int RGBPRCTJ=68;
     public static final int SHOW=69;
-    public static final int SHOWT=70;
+    public static final int SHOW_T=70;
     public static final int STRING=71;
     public static final int STROKE=72;
     public static final int TEXT=73;
@@ -1179,13 +1179,13 @@ public class AslLexer extends Lexer {
     }
     // $ANTLR end "RGB"
 
-    // $ANTLR start "SHOWT"
-    public final void mSHOWT() throws RecognitionException {
+    // $ANTLR start "SHOW_T"
+    public final void mSHOW_T() throws RecognitionException {
         try {
-            int _type = SHOWT;
+            int _type = SHOW_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:9: ( 'showt' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:11: 'showt'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:10: ( 'showt' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:12: 'showt'
             {
             match("showt"); 
 
@@ -1200,7 +1200,7 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "SHOWT"
+    // $ANTLR end "SHOW_T"
 
     // $ANTLR start "SHOW"
     public final void mSHOW() throws RecognitionException {
@@ -1225,13 +1225,13 @@ public class AslLexer extends Lexer {
     }
     // $ANTLR end "SHOW"
 
-    // $ANTLR start "HIDET"
-    public final void mHIDET() throws RecognitionException {
+    // $ANTLR start "HIDE_T"
+    public final void mHIDE_T() throws RecognitionException {
         try {
-            int _type = HIDET;
+            int _type = HIDE_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:9: ( 'hidet' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:11: 'hidet'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:10: ( 'hidet' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:12: 'hidet'
             {
             match("hidet"); 
 
@@ -1246,7 +1246,7 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "HIDET"
+    // $ANTLR end "HIDE_T"
 
     // $ANTLR start "HIDE"
     public final void mHIDE() throws RecognitionException {
@@ -2084,7 +2084,7 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOWT | SHOW | HIDET | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
+        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
         int alt9=72;
         alt9 = dfa9.predict(input);
         switch (alt9) {
@@ -2473,15 +2473,15 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 49 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:282: SHOWT
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:282: SHOW_T
                 {
-                mSHOWT(); 
+                mSHOW_T(); 
 
 
                 }
                 break;
             case 50 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:288: SHOW
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:289: SHOW
                 {
                 mSHOW(); 
 
@@ -2489,15 +2489,15 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 51 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:293: HIDET
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:294: HIDE_T
                 {
-                mHIDET(); 
+                mHIDE_T(); 
 
 
                 }
                 break;
             case 52 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:299: HIDE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:301: HIDE
                 {
                 mHIDE(); 
 
@@ -2505,7 +2505,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 53 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:304: DELAY
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:306: DELAY
                 {
                 mDELAY(); 
 
@@ -2513,7 +2513,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 54 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:310: PARALLEL
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:312: PARALLEL
                 {
                 mPARALLEL(); 
 
@@ -2521,7 +2521,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 55 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:319: COLOR
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:321: COLOR
                 {
                 mCOLOR(); 
 
@@ -2529,7 +2529,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 56 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:325: WHITE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:327: WHITE
                 {
                 mWHITE(); 
 
@@ -2537,7 +2537,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 57 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:331: BLACK
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:333: BLACK
                 {
                 mBLACK(); 
 
@@ -2545,7 +2545,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 58 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:337: BLUE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:339: BLUE
                 {
                 mBLUE(); 
 
@@ -2553,7 +2553,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 59 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:342: RED
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:344: RED
                 {
                 mRED(); 
 
@@ -2561,7 +2561,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 60 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:346: GREEN
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:348: GREEN
                 {
                 mGREEN(); 
 
@@ -2569,7 +2569,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 61 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:352: POSX
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:354: POSX
                 {
                 mPOSX(); 
 
@@ -2577,7 +2577,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 62 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:357: POSY
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:359: POSY
                 {
                 mPOSY(); 
 
@@ -2585,7 +2585,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 63 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:362: CIRCLE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:364: CIRCLE
                 {
                 mCIRCLE(); 
 
@@ -2593,7 +2593,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 64 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:369: STROKE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:371: STROKE
                 {
                 mSTROKE(); 
 
@@ -2601,7 +2601,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 65 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:376: RECTANGLE
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:378: RECTANGLE
                 {
                 mRECTANGLE(); 
 
@@ -2609,7 +2609,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 66 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:386: TEXT
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:388: TEXT
                 {
                 mTEXT(); 
 
@@ -2617,7 +2617,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 67 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:391: INT
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:393: INT
                 {
                 mINT(); 
 
@@ -2625,7 +2625,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 68 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:395: ID
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:397: ID
                 {
                 mID(); 
 
@@ -2633,7 +2633,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 69 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:398: COLORHEX
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:400: COLORHEX
                 {
                 mCOLORHEX(); 
 
@@ -2641,7 +2641,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 70 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:407: COMMENT
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:409: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -2649,7 +2649,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 71 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:415: STRING
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:417: STRING
                 {
                 mSTRING(); 
 
@@ -2657,7 +2657,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 72 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:422: WS
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:424: WS
                 {
                 mWS(); 
 
@@ -3003,7 +3003,7 @@ public class AslLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOWT | SHOW | HIDET | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
         }
     }
  

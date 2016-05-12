@@ -269,12 +269,13 @@ public class Interp {
      */
     private Data executeInstruction (AslTree t) {
         assert t != null;
-        System.out.println("hola");
+        System.out.println("hola" + t.getType());
         setLineNumber(t);
         Data value; // The returned value
         Integer nChange;
         Double elapsedTime;
         String opacityFrom;
+
 
         // A big switch for all type of instructions
         switch (t.getType()) {
@@ -315,9 +316,10 @@ public class Interp {
                 states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "1"));
 
                 // Modificar la opcidad del objecto en cuestion
+                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
                 return null;
 
-            case AslLexer.SHOWT:
+            case AslLexer.SHOW_T:
                 System.out.println("buenos dias compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 nChange = changePos.get(t.getChild(0).getText());
@@ -328,6 +330,7 @@ public class Interp {
                 deltaTime += elapsedTime;
 
                 // Modificar la opcidad del objecto en cuestion
+                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
                 return null;
 
             case AslLexer.HIDE:
@@ -337,9 +340,10 @@ public class Interp {
                 states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "0"));
 
                 // Modificar la opcidad del objecto en cuestion
+                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
                 return null;
 
-            case AslLexer.HIDET:
+            case AslLexer.HIDE_T:
                 System.out.println("buenas noches compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 nChange = changePos.get(t.getChild(0).getText());
@@ -350,10 +354,38 @@ public class Interp {
                 deltaTime += elapsedTime;
 
                 // Modificar la opcidad del objecto en cuestion
+                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
                 return null;
 
             case AslLexer.DELAY:
                 deltaTime += Double.parseDouble(t.getChild(0).getChild(0).getText()) * (t.getChild(0).getText().equals("ms") ? 0.001 : 1);
+                return null;
+
+            case AslLexer.PARALLEL:
+                Double currentDeltaTime = deltaTime;
+                Data useless;
+                Double lastDeltaTime = 0.0;
+                if (t.getChildCount() == 1) {
+                    for (int i = 0; i < t.getChild(0).getChildCount(); ++i) {
+                        deltaTime = currentDeltaTime;
+                        useless = executeInstruction(t.getChild(0).getChild(i));
+                        lastDeltaTime = Math.max(lastDeltaTime,deltaTime);
+                    }
+                    deltaTime = lastDeltaTime;
+                }
+                else {
+                    elapsedTime = Double.parseDouble(t.getChild(0).getChild(0).getText()) * (t.getChild(0).getText().equals("ms") ? 0.001 : 1);
+                    for (int i = 0; i < t.getChild(1).getChildCount(); ++i) {
+                        deltaTime = currentDeltaTime;
+                        AslTree treeAux = t.getChild(1).getChild(i);
+                        System.out.println("test " + treeAux.getText() + " " + treeAux.getType());
+                        treeAux.myType = treeAux.getType() + 1; // Esto depnede del AslLexer. Si se generan los "static final int .... en orden diferente, peta"
+                        System.out.println("size " + treeAux.getChildCount());
+                        treeAux.addChild(0,t.getChild(0));
+                        System.out.println("size " + treeAux.getChildCount());
+                        useless = executeInstruction(treeAux);
+                    }
+                }
                 return null;
 
                 

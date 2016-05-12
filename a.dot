@@ -30,28 +30,95 @@ digraph {
   n15 [label="stroke"];
   n15 [label="stroke"];
   n16 [label="black"];
-  n17 [label="delay"];
-  n17 [label="delay"];
-  n18 [label="s"];
-  n18 [label="s"];
-  n19 [label="1"];
-  n20 [label="hidet"];
-  n20 [label="hidet"];
-  n21 [label="dos"];
-  n22 [label="s"];
-  n22 [label="s"];
-  n23 [label="1"];
-  n24 [label="delay"];
-  n24 [label="delay"];
-  n25 [label="s"];
-  n25 [label="s"];
-  n26 [label="1"];
-  n27 [label="showt"];
-  n27 [label="showt"];
-  n28 [label="dos"];
-  n29 [label="s"];
-  n29 [label="s"];
-  n30 [label="1"];
+  n17 [label="create"];
+  n17 [label="create"];
+  n18 [label="tres"];
+  n19 [label="circle"];
+  n20 [label="200"];
+  n21 [label="400"];
+  n22 [label="LIST_ATTR"];
+  n22 [label="LIST_ATTR"];
+  n23 [label="color"];
+  n23 [label="color"];
+  n24 [label="#123"];
+  n25 [label="r"];
+  n25 [label="r"];
+  n26 [label="20"];
+  n27 [label="stroke"];
+  n27 [label="stroke"];
+  n28 [label="blue"];
+  n29 [label="delay"];
+  n29 [label="delay"];
+  n30 [label="s"];
+  n30 [label="s"];
+  n31 [label="1"];
+  n32 [label="parallel"];
+  n32 [label="parallel"];
+  n33 [label="s"];
+  n33 [label="s"];
+  n34 [label="2"];
+  n35 [label="LIST_INSTR"];
+  n35 [label="LIST_INSTR"];
+  n36 [label="hide"];
+  n36 [label="hide"];
+  n37 [label="dos"];
+  n38 [label="hide"];
+  n38 [label="hide"];
+  n39 [label="tres"];
+  n40 [label="show"];
+  n40 [label="show"];
+  n41 [label="dos"];
+  n42 [label="show"];
+  n42 [label="show"];
+  n43 [label="tres"];
+  n44 [label="parallel"];
+  n44 [label="parallel"];
+  n45 [label="LIST_INSTR"];
+  n45 [label="LIST_INSTR"];
+  n46 [label="hidet"];
+  n46 [label="hidet"];
+  n47 [label="dos"];
+  n48 [label="s"];
+  n48 [label="s"];
+  n49 [label="1"];
+  n50 [label="hidet"];
+  n50 [label="hidet"];
+  n51 [label="tres"];
+  n52 [label="s"];
+  n52 [label="s"];
+  n53 [label="2"];
+  n54 [label="delay"];
+  n54 [label="delay"];
+  n55 [label="s"];
+  n55 [label="s"];
+  n56 [label="1"];
+  n57 [label="showt"];
+  n57 [label="showt"];
+  n58 [label="dos"];
+  n59 [label="s"];
+  n59 [label="s"];
+  n60 [label="1"];
+  n61 [label="showt"];
+  n61 [label="showt"];
+  n62 [label="dos"];
+  n63 [label="s"];
+  n63 [label="s"];
+  n64 [label="1"];
+  n65 [label="hidet"];
+  n65 [label="hidet"];
+  n66 [label="dos"];
+  n67 [label="s"];
+  n67 [label="s"];
+  n68 [label="1"];
+  n69 [label="hidet"];
+  n69 [label="hidet"];
+  n70 [label="dos"];
+  n71 [label="s"];
+  n71 [label="s"];
+  n72 [label="1"];
+  n73 [label="show"];
+  n73 [label="show"];
+  n74 [label="dos"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -69,19 +136,63 @@ digraph {
   n13 -> n14 // "r" -> "40"
   n10 -> n15 // "LIST_ATTR" -> "stroke"
   n15 -> n16 // "stroke" -> "black"
-  n4 -> n17 // "LIST_INSTR" -> "delay"
-  n17 -> n18 // "delay" -> "s"
-  n18 -> n19 // "s" -> "1"
-  n4 -> n20 // "LIST_INSTR" -> "hidet"
-  n20 -> n21 // "hidet" -> "dos"
-  n20 -> n22 // "hidet" -> "s"
-  n22 -> n23 // "s" -> "1"
-  n4 -> n24 // "LIST_INSTR" -> "delay"
-  n24 -> n25 // "delay" -> "s"
-  n25 -> n26 // "s" -> "1"
-  n4 -> n27 // "LIST_INSTR" -> "showt"
-  n27 -> n28 // "showt" -> "dos"
-  n27 -> n29 // "showt" -> "s"
-  n29 -> n30 // "s" -> "1"
+  n4 -> n17 // "LIST_INSTR" -> "create"
+  n17 -> n18 // "create" -> "tres"
+  n17 -> n19 // "create" -> "circle"
+  n17 -> n20 // "create" -> "200"
+  n17 -> n21 // "create" -> "400"
+  n17 -> n22 // "create" -> "LIST_ATTR"
+  n22 -> n23 // "LIST_ATTR" -> "color"
+  n23 -> n24 // "color" -> "#123"
+  n22 -> n25 // "LIST_ATTR" -> "r"
+  n25 -> n26 // "r" -> "20"
+  n22 -> n27 // "LIST_ATTR" -> "stroke"
+  n27 -> n28 // "stroke" -> "blue"
+  n4 -> n29 // "LIST_INSTR" -> "delay"
+  n29 -> n30 // "delay" -> "s"
+  n30 -> n31 // "s" -> "1"
+  n4 -> n32 // "LIST_INSTR" -> "parallel"
+  n32 -> n33 // "parallel" -> "s"
+  n33 -> n34 // "s" -> "2"
+  n32 -> n35 // "parallel" -> "LIST_INSTR"
+  n35 -> n36 // "LIST_INSTR" -> "hide"
+  n36 -> n37 // "hide" -> "dos"
+  n35 -> n38 // "LIST_INSTR" -> "hide"
+  n38 -> n39 // "hide" -> "tres"
+  n4 -> n40 // "LIST_INSTR" -> "show"
+  n40 -> n41 // "show" -> "dos"
+  n4 -> n42 // "LIST_INSTR" -> "show"
+  n42 -> n43 // "show" -> "tres"
+  n4 -> n44 // "LIST_INSTR" -> "parallel"
+  n44 -> n45 // "parallel" -> "LIST_INSTR"
+  n45 -> n46 // "LIST_INSTR" -> "hidet"
+  n46 -> n47 // "hidet" -> "dos"
+  n46 -> n48 // "hidet" -> "s"
+  n48 -> n49 // "s" -> "1"
+  n45 -> n50 // "LIST_INSTR" -> "hidet"
+  n50 -> n51 // "hidet" -> "tres"
+  n50 -> n52 // "hidet" -> "s"
+  n52 -> n53 // "s" -> "2"
+  n4 -> n54 // "LIST_INSTR" -> "delay"
+  n54 -> n55 // "delay" -> "s"
+  n55 -> n56 // "s" -> "1"
+  n4 -> n57 // "LIST_INSTR" -> "showt"
+  n57 -> n58 // "showt" -> "dos"
+  n57 -> n59 // "showt" -> "s"
+  n59 -> n60 // "s" -> "1"
+  n4 -> n61 // "LIST_INSTR" -> "showt"
+  n61 -> n62 // "showt" -> "dos"
+  n61 -> n63 // "showt" -> "s"
+  n63 -> n64 // "s" -> "1"
+  n4 -> n65 // "LIST_INSTR" -> "hidet"
+  n65 -> n66 // "hidet" -> "dos"
+  n65 -> n67 // "hidet" -> "s"
+  n67 -> n68 // "s" -> "1"
+  n4 -> n69 // "LIST_INSTR" -> "hidet"
+  n69 -> n70 // "hidet" -> "dos"
+  n69 -> n71 // "hidet" -> "s"
+  n71 -> n72 // "s" -> "1"
+  n4 -> n73 // "LIST_INSTR" -> "show"
+  n73 -> n74 // "show" -> "dos"
 
 }

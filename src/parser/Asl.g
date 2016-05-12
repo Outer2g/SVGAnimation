@@ -190,13 +190,13 @@ attribute   :   attribute_name_color^ ':'! color
 
 show : show_time | show_no_time;
 
-show_time : SHOWT^ ID time;
+show_time : SHOW_T^ ID time;
 
 show_no_time :  SHOW^ ID;
 
 hide : hide_time | hide_no_time;
 
-hide_time : HIDET^ ID time;
+hide_time : HIDE_T^ ID time;
 
 hide_no_time :  HIDE^ ID;
 
@@ -302,9 +302,9 @@ MODIFY  : 'modify';
 RGBPRCTJ: 'rgbp';
 RGB     : 'rgb';
 
-SHOWT   : 'showt';
+SHOW_T   : 'showt';
 SHOW    : 'show';
-HIDET   : 'hidet';
+HIDE_T   : 'hidet';
 HIDE    : 'hide';
 DELAY   : 'delay';
 

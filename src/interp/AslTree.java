@@ -45,6 +45,8 @@ public class AslTree extends CommonTree {
     /** Field to store string literals (without the enclosing quotes) */
     private String strValue;
 
+    public Integer myType = null;
+
     /** Constructor of the class */
     public AslTree(Token t) {
         super(t);
@@ -80,5 +82,14 @@ public class AslTree extends CommonTree {
         String s = getText();
         // Do not store the " at the extremes of the string
         strValue = s.substring(1,s.length()-1);
+    }
+
+    public int getType() {
+        if (myType != null) return myType;
+        return super.getType();
+    }
+
+    public void addChild(int i, AslTree child) {
+        children.add(i,child);
     }
 }

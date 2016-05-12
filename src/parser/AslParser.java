@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-11 20:12:23
+// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-12 18:16:00
 
 package parser;
 import interp.AslTree;
@@ -41,7 +41,7 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BLACK", "BLUE", "BOOLEAN", "CIRCLE", "COLOR", "COLORHEX", "COLORINT", "COLORPRCTJ", "COMMENT", "CREATE", "DELAY", "DESTROY", "DIV", "DO", "EEQUAL", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FALSE", "FUNC", "FUNCALL", "GE", "GREEN", "GT", "HASHTAG", "HEXADIGIT", "HIDE", "HIDET", "ID", "IF", "INT", "LE", "LIST_ATTR", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MODIFY", "MODIFY_T", "MOVE", "MOVE_T", "MUL", "NOT", "NOT_EQUAL", "OR", "PARALLEL", "PARAMS", "PLUS", "POSX", "POSY", "PREF", "PVALUE", "READ", "RECTANGLE", "RED", "RETURN", "RGB", "RGBPRCTJ", "SHOW", "SHOWT", "STRING", "STROKE", "TEXT", "THEN", "TRUE", "WHILE", "WHITE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'r'", "'s'", "'{'", "'}'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BLACK", "BLUE", "BOOLEAN", "CIRCLE", "COLOR", "COLORHEX", "COLORINT", "COLORPRCTJ", "COMMENT", "CREATE", "DELAY", "DESTROY", "DIV", "DO", "EEQUAL", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FALSE", "FUNC", "FUNCALL", "GE", "GREEN", "GT", "HASHTAG", "HEXADIGIT", "HIDE", "HIDE_T", "ID", "IF", "INT", "LE", "LIST_ATTR", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MODIFY", "MODIFY_T", "MOVE", "MOVE_T", "MUL", "NOT", "NOT_EQUAL", "OR", "PARALLEL", "PARAMS", "PLUS", "POSX", "POSY", "PREF", "PVALUE", "READ", "RECTANGLE", "RED", "RETURN", "RGB", "RGBPRCTJ", "SHOW", "SHOW_T", "STRING", "STROKE", "TEXT", "THEN", "TRUE", "WHILE", "WHITE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'r'", "'s'", "'{'", "'}'"
     };
 
     public static final int EOF=-1;
@@ -88,7 +88,7 @@ public class AslParser extends Parser {
     public static final int HASHTAG=34;
     public static final int HEXADIGIT=35;
     public static final int HIDE=36;
-    public static final int HIDET=37;
+    public static final int HIDE_T=37;
     public static final int ID=38;
     public static final int IF=39;
     public static final int INT=40;
@@ -121,7 +121,7 @@ public class AslParser extends Parser {
     public static final int RGB=67;
     public static final int RGBPRCTJ=68;
     public static final int SHOW=69;
-    public static final int SHOWT=70;
+    public static final int SHOW_T=70;
     public static final int STRING=71;
     public static final int STROKE=72;
     public static final int TEXT=73;
@@ -762,7 +762,7 @@ public TreeAdaptor getTreeAdaptor() {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( ((LA5_0 >= CREATE && LA5_0 <= DESTROY)||(LA5_0 >= HIDE && LA5_0 <= IF)||(LA5_0 >= MODIFY && LA5_0 <= MOVE_T)||LA5_0==PARALLEL||LA5_0==READ||LA5_0==RETURN||(LA5_0 >= SHOW && LA5_0 <= SHOWT)||LA5_0==WHILE||LA5_0==WRITE||LA5_0==85) ) {
+                if ( ((LA5_0 >= CREATE && LA5_0 <= DESTROY)||(LA5_0 >= HIDE && LA5_0 <= IF)||(LA5_0 >= MODIFY && LA5_0 <= MOVE_T)||LA5_0==PARALLEL||LA5_0==READ||LA5_0==RETURN||(LA5_0 >= SHOW && LA5_0 <= SHOW_T)||LA5_0==WHILE||LA5_0==WRITE||LA5_0==85) ) {
                     alt5=1;
                 }
 
@@ -880,7 +880,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( ((LA6_0 >= CREATE && LA6_0 <= DESTROY)||(LA6_0 >= HIDE && LA6_0 <= IF)||(LA6_0 >= MODIFY && LA6_0 <= MOVE_T)||LA6_0==READ||LA6_0==RETURN||(LA6_0 >= SHOW && LA6_0 <= SHOWT)||LA6_0==WHILE||LA6_0==WRITE||LA6_0==85) ) {
+            if ( ((LA6_0 >= CREATE && LA6_0 <= DESTROY)||(LA6_0 >= HIDE && LA6_0 <= IF)||(LA6_0 >= MODIFY && LA6_0 <= MOVE_T)||LA6_0==READ||LA6_0==RETURN||(LA6_0 >= SHOW && LA6_0 <= SHOW_T)||LA6_0==WHILE||LA6_0==WRITE||LA6_0==85) ) {
                 alt6=1;
             }
             else if ( (LA6_0==PARALLEL) ) {
@@ -1072,13 +1072,13 @@ public TreeAdaptor getTreeAdaptor() {
                 }
                 break;
             case SHOW:
-            case SHOWT:
+            case SHOW_T:
                 {
                 alt7=12;
                 }
                 break;
             case HIDE:
-            case HIDET:
+            case HIDE_T:
                 {
                 alt7=13;
                 }
@@ -3222,12 +3222,12 @@ public TreeAdaptor getTreeAdaptor() {
                 alt17=2;
                 }
                 break;
-            case SHOWT:
+            case SHOW_T:
                 {
                 alt17=3;
                 }
                 break;
-            case HIDET:
+            case HIDE_T:
                 {
                 alt17=4;
                 }
@@ -3372,7 +3372,7 @@ public TreeAdaptor getTreeAdaptor() {
                 int alt18=2;
                 int LA18_0 = input.LA(1);
 
-                if ( (LA18_0==HIDET||LA18_0==MODIFY_T||LA18_0==MOVE_T||LA18_0==SHOWT) ) {
+                if ( (LA18_0==HIDE_T||LA18_0==MODIFY_T||LA18_0==MOVE_T||LA18_0==SHOW_T) ) {
                     alt18=1;
                 }
 
@@ -3827,7 +3827,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt21=2;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==SHOWT) ) {
+            if ( (LA21_0==SHOW_T) ) {
                 alt21=1;
             }
             else if ( (LA21_0==SHOW) ) {
@@ -3902,7 +3902,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "show_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:1: show_time : SHOWT ^ ID time ;
+    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:1: show_time : SHOW_T ^ ID time ;
     public final AslParser.show_time_return show_time() throws RecognitionException {
         AslParser.show_time_return retval = new AslParser.show_time_return();
         retval.start = input.LT(1);
@@ -3910,26 +3910,26 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token SHOWT136=null;
+        Token SHOW_T136=null;
         Token ID137=null;
         AslParser.time_return time138 =null;
 
 
-        AslTree SHOWT136_tree=null;
+        AslTree SHOW_T136_tree=null;
         AslTree ID137_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:11: ( SHOWT ^ ID time )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:13: SHOWT ^ ID time
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:11: ( SHOW_T ^ ID time )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:193:13: SHOW_T ^ ID time
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            SHOWT136=(Token)match(input,SHOWT,FOLLOW_SHOWT_in_show_time1548); 
-            SHOWT136_tree = 
-            (AslTree)adaptor.create(SHOWT136)
+            SHOW_T136=(Token)match(input,SHOW_T,FOLLOW_SHOW_T_in_show_time1548); 
+            SHOW_T136_tree = 
+            (AslTree)adaptor.create(SHOW_T136)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(SHOWT136_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(SHOW_T136_tree, root_0);
 
 
             ID137=(Token)match(input,ID,FOLLOW_ID_in_show_time1551); 
@@ -4062,7 +4062,7 @@ public TreeAdaptor getTreeAdaptor() {
             int alt22=2;
             int LA22_0 = input.LA(1);
 
-            if ( (LA22_0==HIDET) ) {
+            if ( (LA22_0==HIDE_T) ) {
                 alt22=1;
             }
             else if ( (LA22_0==HIDE) ) {
@@ -4137,7 +4137,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "hide_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:1: hide_time : HIDET ^ ID time ;
+    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:1: hide_time : HIDE_T ^ ID time ;
     public final AslParser.hide_time_return hide_time() throws RecognitionException {
         AslParser.hide_time_return retval = new AslParser.hide_time_return();
         retval.start = input.LT(1);
@@ -4145,26 +4145,26 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token HIDET143=null;
+        Token HIDE_T143=null;
         Token ID144=null;
         AslParser.time_return time145 =null;
 
 
-        AslTree HIDET143_tree=null;
+        AslTree HIDE_T143_tree=null;
         AslTree ID144_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:11: ( HIDET ^ ID time )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:13: HIDET ^ ID time
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:11: ( HIDE_T ^ ID time )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:199:13: HIDE_T ^ ID time
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            HIDET143=(Token)match(input,HIDET,FOLLOW_HIDET_in_hide_time1585); 
-            HIDET143_tree = 
-            (AslTree)adaptor.create(HIDET143)
+            HIDE_T143=(Token)match(input,HIDE_T,FOLLOW_HIDE_T_in_hide_time1585); 
+            HIDE_T143_tree = 
+            (AslTree)adaptor.create(HIDE_T143)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(HIDET143_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(HIDE_T143_tree, root_0);
 
 
             ID144=(Token)match(input,ID,FOLLOW_ID_in_hide_time1588); 
@@ -6429,14 +6429,14 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_expr_in_attribute1515 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_show_time_in_show1536 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_show_no_time_in_show1540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SHOWT_in_show_time1548 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_SHOW_T_in_show_time1548 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_ID_in_show_time1551 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_time_in_show_time1553 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_SHOW_in_show_no_time1562 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_ID_in_show_no_time1565 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_hide_time_in_hide1573 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_hide_no_time_in_hide1577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_HIDET_in_hide_time1585 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_HIDE_T_in_hide_time1585 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_ID_in_hide_time1588 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_time_in_hide_time1590 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_HIDE_in_hide_no_time1599 = new BitSet(new long[]{0x0000004000000000L});
