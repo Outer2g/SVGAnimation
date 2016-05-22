@@ -122,7 +122,7 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
 
     /** Copies the value from another data */
-    public void setData(Data d) { type = d.type; value = d.value; }
+    public void setData(Data d) { type = d.type; value = d.value; attributes = d.attributes; }
     
     /** Returns a string representing the data in textual form. */
     public String toString() {

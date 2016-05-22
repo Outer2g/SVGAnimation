@@ -274,25 +274,23 @@ public class Interp {
         Data value; // The returned value
         Integer nChange;
         Double elapsedTime;
-        String opacityFrom;
+        String from;
+        String prefixPosition;
 
 
         // A big switch for all type of instructions
         switch (t.getType()) {
     	    case AslLexer.CREATE:
-                String prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
+                prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
 
                 nChange = states.size();
                 changePos.put(t.getChild(0).getText(),nChange);
                 states.add(new ArrayList<String>());
-                AslTree listAttributes = t.getChild(4);
+
                 states.get(nChange).add("<"+t.getChild(1).getText()+">");
                 states.get(nChange).add("</"+t.getChild(1).getText()+">");
                 states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "",t.getChild(2).getText()));
                 states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "",t.getChild(3).getText()));
-                for (int i = 0; i< t.getChild(4).getChildCount();++i){
-                  states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
-                }
 
                 System.out.println(states.get(nChange));
 
@@ -301,66 +299,150 @@ public class Interp {
                 att.put("objectType",t.getChild(1).getText());
                 att.put(prefixPosition+"x",t.getChild(2).getText());
                 att.put(prefixPosition+"y",t.getChild(3).getText());
-                // AslTree listAttributes = t.getChild(4);
-                for (int i = 0; i< t.getChild(4).getChildCount();++i){
-                  att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                if (t.getChildCount() == 5) {
+                    AslTree listAttributes = t.getChild(4);
+                    for (int i = 0; i< t.getChild(4).getChildCount();++i){
+                      states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
+                    }
+
+                    // AslTree listAttributes = t.getChild(4);
+                    for (int i = 0; i< t.getChild(4).getChildCount();++i){
+                      att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                    }
                 }
         		Data objecte = new Data(att);
         		Stack.defineVariable(t.getChild(0).getText(),objecte);
         		return null;
+
+            case AslLexer.DESTROY:
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    changePos.put(t.getChild(0).getText(),-1);
+                    states.get(nChange).add(states.get(nChange).size()-1,Change.toString("opacity", deltaTime, 0.001, "","0"));
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().clear();
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
+                return null;
+
+            case AslLexer.MOVE:
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                    
+                    value = evaluateExpression(t.getChild(1));
+                    checkInteger(value);
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "", value.toString()));
+                    
+                    value = evaluateExpression(t.getChild(2));
+                    checkInteger(value);
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "", value.toString()));
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
+                return null;
+
+            case AslLexer.MOVE_T:
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                    prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                    
+                    value = evaluateExpression(t.getChild(2));
+                    checkInteger(value);
+                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"x");
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime,elapsedTime, from, value.toString()));
+                    
+                    value = evaluateExpression(t.getChild(3));
+                    checkInteger(value);
+                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"y");
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, elapsedTime, from, value.toString()));
+                    deltaTime += elapsedTime;
+        
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
+                return null;
 		
 	       case AslLexer.SHOW:
                 System.out.println("buenos dias");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
-                nChange = changePos.get(t.getChild(0).getText());
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "1"));
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "1"));
 
-                // Modificar la opcidad del objecto en cuestion
-                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
+                    // Modificar la opcidad del objecto en cuestion
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
                 return null;
 
             case AslLexer.SHOW_T:
                 System.out.println("buenos dias compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
-                nChange = changePos.get(t.getChild(0).getText());
-                elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
-                opacityFrom = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
-                if (opacityFrom == null) opacityFrom = "0";
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, opacityFrom, "1"));
-                deltaTime += elapsedTime;
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
+                    if (from == null) from = "0";
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, from, "1"));
+                    deltaTime += elapsedTime;
 
-                // Modificar la opcidad del objecto en cuestion
-                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
+                    // Modificar la opcidad del objecto en cuestion
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
                 return null;
 
             case AslLexer.HIDE:
                 System.out.println("buenas noches");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
-                nChange = changePos.get(t.getChild(0).getText());
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "0"));
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "0"));
 
-                // Modificar la opcidad del objecto en cuestion
-                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
+                    // Modificar la opcidad del objecto en cuestion
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
                 return null;
 
             case AslLexer.HIDE_T:
                 System.out.println("buenas noches compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
-                nChange = changePos.get(t.getChild(0).getText());
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+                    System.out.println("0");
+                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
 
-                System.out.println("0");
-                elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                    System.out.println("1");
+                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
 
-                System.out.println("1");
-                opacityFrom = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
+                    System.out.println("2");
+                    if (from == null) from = "1";
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, from, "0"));
+                    deltaTime += elapsedTime;
 
-                System.out.println("2");
-                if (opacityFrom == null) opacityFrom = "1";
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, opacityFrom, "0"));
-                deltaTime += elapsedTime;
+                    // Modificar la opcidad del objecto en cuestion
+                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }
 
-                // Modificar la opcidad del objecto en cuestion
-                Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
                 return null;
 
             case AslLexer.DELAY:
@@ -398,6 +480,29 @@ public class Interp {
             // Assignment
             case AslLexer.ASSIGN:
                 value = evaluateExpression(t.getChild(1));
+                if (value.getType() == Data.Type.OBJECT) {
+                    try {
+                        // Remove the last object if exist
+                        nChange = changePos.get(t.getChild(0).getText());
+                        changePos.put(t.getChild(0).getText(),-1);
+                        states.get(nChange).add(states.get(nChange).size()-1,Change.toString("opacity", deltaTime, 0.001, "","0"));
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().clear();
+                    }
+                    catch (Exception e) {}
+                    try {
+                        nChange = states.size();
+                        changePos.put(t.getChild(0).getText(),nChange);
+                        states.add(new ArrayList<String>());
+                        states.get(nChange).add("<"+value.getListAttributes().get("objectType")+">");
+                        for (Map.Entry<String,String> p : value.getListAttributes().entrySet()) {
+                            states.get(nChange).add(Change.toString(p.getKey(),deltaTime, 0.001,"",p.getValue()));
+                        }
+                        states.get(nChange).add("</"+value.getListAttributes().get("objectType")+">");
+                    }
+                    catch (Exception e) {
+                        throw new RuntimeException("The object \"" + t.getChild(1).getText() + "\" is not defined");
+                    }
+                }
                 Stack.defineVariable (t.getChild(0).getText(), value);
                 return null;
 

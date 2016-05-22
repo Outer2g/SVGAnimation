@@ -1,24 +1,34 @@
 func main()
   create dos (circle,50,300, (color : #129fa3 , r : 40,stroke : black) );
   create tres (circle, 200, 400, (color : #123 , r : 20, stroke : blue));
-  delay 1s;
-  parallel 2s {
+  create cuatro(circle, 0,0, (r:5));
+  delay 250ms;
+  parallel 500ms {
     hide dos;
     hide tres;
   }
+  movet cuatro 150ms (25+25,20+30);
+  destroy(dos);
+  create dos (circle, 400, 200, (color : #121fa3 , r : 40,stroke : green));
   show dos;
   show tres;
   parallel {
-    hidet dos 1s;
-    hidet tres 2s;
+    hidet dos 250ms;
+    hidet tres 500ms;
   }
 
-  delay 1s;
-  showt dos 1s;
-  showt dos 1s;
-  hidet dos 1s;
-  hidet dos 1s;
+  delay 250ms;
+  showt dos 250ms;
+  showt dos 1000ms;
+  hidet dos 250ms;
+  hidet dos 250ms;
   show dos;
+  show tres;
+  delay 1s;
+  dos = tres;
+  
+  movet dos 200ms (100,100);
+
   //show dos;
   //modify dos (color:black);
   //movet dos 2s (45,42);
