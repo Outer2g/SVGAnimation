@@ -370,8 +370,51 @@ public class Interp {
                     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
                 }
                 return null;
-		
-	       case AslLexer.SHOW:
+
+            case AslLexer.MODIFY:
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+
+                    AslTree listAttributes = t.getChild(1);
+                    for (int i = 0; i< listAttributes.getChildCount();++i){
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
+                    }
+
+                    // Modificar los atributos del objecto en cuestion
+                    for (int i = 0; i< listAttributes.getChildCount();++i){
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                    }
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }   
+                return null;
+
+            case AslLexer.MODIFY_T:
+                try {
+                    nChange = changePos.get(t.getChild(0).getText());
+
+                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+
+                    AslTree listAttributes = t.getChild(2);
+                    for (int i = 0; i< listAttributes.getChildCount();++i){
+                        from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
+                    }
+
+                    deltaTime += elapsedTime;
+
+                    // Modificar los atributos del objecto en cuestion
+                    for (int i = 0; i< listAttributes.getChildCount();++i){
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                    }
+                }
+                catch (Exception e) {
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                }   
+                return null;
+	
+	        case AslLexer.SHOW:
                 System.out.println("buenos dias");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {

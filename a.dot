@@ -176,14 +176,29 @@ digraph {
   n112 [label=":="];
   n113 [label="dos"];
   n114 [label="tres"];
-  n115 [label="movet"];
-  n115 [label="movet"];
-  n116 [label="dos"];
-  n117 [label="ms"];
-  n117 [label="ms"];
-  n118 [label="200"];
-  n119 [label="100"];
-  n120 [label="100"];
+  n115 [label="parallel"];
+  n115 [label="parallel"];
+  n116 [label="s"];
+  n116 [label="s"];
+  n117 [label="10"];
+  n118 [label="LIST_INSTR"];
+  n118 [label="LIST_INSTR"];
+  n119 [label="move"];
+  n119 [label="move"];
+  n120 [label="dos"];
+  n121 [label="400"];
+  n122 [label="400"];
+  n123 [label="modify"];
+  n123 [label="modify"];
+  n124 [label="dos"];
+  n125 [label="LIST_ATTR"];
+  n125 [label="LIST_ATTR"];
+  n126 [label="color"];
+  n126 [label="color"];
+  n127 [label="green"];
+  n128 [label="r"];
+  n128 [label="r"];
+  n129 [label="200"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -299,11 +314,20 @@ digraph {
   n4 -> n112 // "LIST_INSTR" -> ":="
   n112 -> n113 // ":=" -> "dos"
   n112 -> n114 // ":=" -> "tres"
-  n4 -> n115 // "LIST_INSTR" -> "movet"
-  n115 -> n116 // "movet" -> "dos"
-  n115 -> n117 // "movet" -> "ms"
-  n117 -> n118 // "ms" -> "200"
-  n115 -> n119 // "movet" -> "100"
-  n115 -> n120 // "movet" -> "100"
+  n4 -> n115 // "LIST_INSTR" -> "parallel"
+  n115 -> n116 // "parallel" -> "s"
+  n116 -> n117 // "s" -> "10"
+  n115 -> n118 // "parallel" -> "LIST_INSTR"
+  n118 -> n119 // "LIST_INSTR" -> "move"
+  n119 -> n120 // "move" -> "dos"
+  n119 -> n121 // "move" -> "400"
+  n119 -> n122 // "move" -> "400"
+  n118 -> n123 // "LIST_INSTR" -> "modify"
+  n123 -> n124 // "modify" -> "dos"
+  n123 -> n125 // "modify" -> "LIST_ATTR"
+  n125 -> n126 // "LIST_ATTR" -> "color"
+  n126 -> n127 // "color" -> "green"
+  n125 -> n128 // "LIST_ATTR" -> "r"
+  n128 -> n129 // "r" -> "200"
 
 }

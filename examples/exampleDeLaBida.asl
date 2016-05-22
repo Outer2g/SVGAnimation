@@ -26,8 +26,10 @@ func main()
   show tres;
   delay 1s;
   dos = tres;
-  
-  movet dos 200ms (100,100);
+  parallel 10s{
+    move dos (400,400);
+    modify dos (color : green, r : 200);
+  }
 
   //show dos;
   //modify dos (color:black);
