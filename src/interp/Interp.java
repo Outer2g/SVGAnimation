@@ -635,6 +635,10 @@ public class Interp {
             case AslLexer.ID:
                 value = new Data(Stack.getVariable(t.getText()));
                 break;
+            case AslLexer.ATTR:
+                value = Stack.getVariable(t.getChild(0).getText());
+                value = new Data(Integer.parseInt(value.getAttribute(t.getChild(1).getText())));
+                break;
             // An integer literal
             case AslLexer.INT:
                 value = new Data(t.getIntValue());

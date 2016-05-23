@@ -57,7 +57,7 @@ compile:
 	if [ ! -e $(CLASSDIR) ]; then\
 	  mkdir $(CLASSDIR);\
 	fi
-	javac $(JFLAGS) $(ALL_SRC)
+	javac $(JFLAGS) $(ALL_SRC) -Xlint
 
 docs:
 	javadoc $(DOCFLAGS) $(ALL_SRC)

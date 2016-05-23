@@ -27,6 +27,8 @@ func main()
   delay 1s;
   dos = tres;
   estoEsNull = dos;
+  prueba = dos.r; 
+  write prueba;
   parallel 10s{
     move dos (400,400);
     modify dos (color : green, r : 20);
