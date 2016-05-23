@@ -3,19 +3,19 @@ func main()
   create tres (circle, 200, 400, (color : #123 , r : 20, stroke : blue));
   create cuatro(circle, 0,0, (r:5));
   delay 250ms;
-  parallel 500ms {
-    hide dos;
-    hide tres;
-  }
-  movet cuatro 150ms (25+25,20+30);
-  destroy(dos);
-  create dos (circle, 400, 200, (color : #121fa3 , r : 40,stroke : green));
-  show dos;
-  show tres;
-  parallel {
-    hidet dos 250ms;
-    hidet tres 500ms;
-  }
+//  parallel 500ms {
+//    hide dos;
+//    hide tres;
+//  }
+//  movet cuatro 150ms (25+25,20+30);
+//  destroy(dos);
+//  create dos (circle, 400, 200, (color : #121fa3 , r : 40,stroke : green));
+//  show dos;
+//  show tres;
+//  parallel {
+//    hidet dos 250ms;
+//    hidet tres 500ms;
+//  }
 
   delay 250ms;
   showt dos 250ms;
@@ -26,9 +26,12 @@ func main()
   show tres;
   delay 1s;
   dos = tres;
+  estoEsNull = dos;
   parallel 10s{
     move dos (400,400);
-    modify dos (color : green, r : 200);
+    modify dos (color : green, r : 20);
+    move estoEsNull (200,200);
+    modify estoEsNull (color : white, r : 20);
   }
 
   //show dos;
