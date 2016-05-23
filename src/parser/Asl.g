@@ -110,6 +110,7 @@ instruction_spc
         |   show
         |   hide
         |   delay
+        |   getAttribute
         |                   // Nothing
         ;
 
@@ -119,6 +120,8 @@ instructions_brack : parallel;
 assign  :   ID eq=EEQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
         ;
 
+getAttribute: ID '.' attribute
+            ;
 // if-then-else (else is optional)
 ite_stmt    :   IF^ expr THEN! block_instructions (ELSE! block_instructions)? ENDIF!
             ;
