@@ -225,7 +225,7 @@ color_keyword : RED | WHITE | BLACK | BLUE | GREEN;
 obj_type : CIRCLE | RECTANGLE | TEXT
          ;
 
-time :  INT 's'^; // o ms. token para cat uno
+time :  INT ('s'|'ms')^; // o ms. token para cat uno
 
 // Grammar for expressions with boolean, relational and aritmetic operators
 expr    :   boolterm (OR^ boolterm)*

@@ -47,78 +47,109 @@ digraph {
   n27 [label="stroke"];
   n27 [label="stroke"];
   n28 [label="blue"];
-  n29 [label="delay"];
-  n29 [label="delay"];
-  n30 [label="s"];
-  n30 [label="s"];
-  n31 [label="1"];
-  n32 [label="parallel"];
-  n32 [label="parallel"];
-  n33 [label="s"];
-  n33 [label="s"];
-  n34 [label="2"];
-  n35 [label="LIST_INSTR"];
-  n35 [label="LIST_INSTR"];
-  n36 [label="hide"];
-  n36 [label="hide"];
-  n37 [label="dos"];
-  n38 [label="hide"];
-  n38 [label="hide"];
-  n39 [label="tres"];
-  n40 [label="show"];
-  n40 [label="show"];
-  n41 [label="dos"];
-  n42 [label="show"];
-  n42 [label="show"];
-  n43 [label="tres"];
-  n44 [label="parallel"];
-  n44 [label="parallel"];
-  n45 [label="LIST_INSTR"];
-  n45 [label="LIST_INSTR"];
-  n46 [label="hidet"];
-  n46 [label="hidet"];
-  n47 [label="dos"];
-  n48 [label="s"];
-  n48 [label="s"];
-  n49 [label="1"];
-  n50 [label="hidet"];
-  n50 [label="hidet"];
-  n51 [label="tres"];
-  n52 [label="s"];
-  n52 [label="s"];
-  n53 [label="2"];
-  n54 [label="delay"];
-  n54 [label="delay"];
-  n55 [label="s"];
-  n55 [label="s"];
-  n56 [label="1"];
-  n57 [label="showt"];
-  n57 [label="showt"];
-  n58 [label="dos"];
-  n59 [label="s"];
-  n59 [label="s"];
-  n60 [label="1"];
-  n61 [label="showt"];
-  n61 [label="showt"];
-  n62 [label="dos"];
-  n63 [label="s"];
-  n63 [label="s"];
-  n64 [label="1"];
-  n65 [label="hidet"];
-  n65 [label="hidet"];
-  n66 [label="dos"];
-  n67 [label="s"];
-  n67 [label="s"];
-  n68 [label="1"];
-  n69 [label="hidet"];
-  n69 [label="hidet"];
-  n70 [label="dos"];
-  n71 [label="s"];
-  n71 [label="s"];
-  n72 [label="1"];
-  n73 [label="show"];
-  n73 [label="show"];
-  n74 [label="dos"];
+  n29 [label="create"];
+  n29 [label="create"];
+  n30 [label="cuatro"];
+  n31 [label="circle"];
+  n32 [label="0"];
+  n33 [label="0"];
+  n34 [label="LIST_ATTR"];
+  n34 [label="LIST_ATTR"];
+  n35 [label="r"];
+  n35 [label="r"];
+  n36 [label="5"];
+  n37 [label="delay"];
+  n37 [label="delay"];
+  n38 [label="ms"];
+  n38 [label="ms"];
+  n39 [label="250"];
+  n40 [label="delay"];
+  n40 [label="delay"];
+  n41 [label="ms"];
+  n41 [label="ms"];
+  n42 [label="250"];
+  n43 [label="showt"];
+  n43 [label="showt"];
+  n44 [label="dos"];
+  n45 [label="ms"];
+  n45 [label="ms"];
+  n46 [label="250"];
+  n47 [label="showt"];
+  n47 [label="showt"];
+  n48 [label="dos"];
+  n49 [label="ms"];
+  n49 [label="ms"];
+  n50 [label="1000"];
+  n51 [label="hidet"];
+  n51 [label="hidet"];
+  n52 [label="dos"];
+  n53 [label="ms"];
+  n53 [label="ms"];
+  n54 [label="250"];
+  n55 [label="hidet"];
+  n55 [label="hidet"];
+  n56 [label="dos"];
+  n57 [label="ms"];
+  n57 [label="ms"];
+  n58 [label="250"];
+  n59 [label="show"];
+  n59 [label="show"];
+  n60 [label="dos"];
+  n61 [label="show"];
+  n61 [label="show"];
+  n62 [label="tres"];
+  n63 [label="delay"];
+  n63 [label="delay"];
+  n64 [label="s"];
+  n64 [label="s"];
+  n65 [label="1"];
+  n66 [label=":="];
+  n66 [label=":="];
+  n67 [label="dos"];
+  n68 [label="tres"];
+  n69 [label=":="];
+  n69 [label=":="];
+  n70 [label="estoEsNull"];
+  n71 [label="dos"];
+  n72 [label="parallel"];
+  n72 [label="parallel"];
+  n73 [label="s"];
+  n73 [label="s"];
+  n74 [label="10"];
+  n75 [label="LIST_INSTR"];
+  n75 [label="LIST_INSTR"];
+  n76 [label="move"];
+  n76 [label="move"];
+  n77 [label="dos"];
+  n78 [label="400"];
+  n79 [label="400"];
+  n80 [label="modify"];
+  n80 [label="modify"];
+  n81 [label="dos"];
+  n82 [label="LIST_ATTR"];
+  n82 [label="LIST_ATTR"];
+  n83 [label="color"];
+  n83 [label="color"];
+  n84 [label="green"];
+  n85 [label="r"];
+  n85 [label="r"];
+  n86 [label="20"];
+  n87 [label="move"];
+  n87 [label="move"];
+  n88 [label="estoEsNull"];
+  n89 [label="200"];
+  n90 [label="200"];
+  n91 [label="modify"];
+  n91 [label="modify"];
+  n92 [label="estoEsNull"];
+  n93 [label="LIST_ATTR"];
+  n93 [label="LIST_ATTR"];
+  n94 [label="color"];
+  n94 [label="color"];
+  n95 [label="white"];
+  n96 [label="r"];
+  n96 [label="r"];
+  n97 [label="20"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -148,51 +179,74 @@ digraph {
   n25 -> n26 // "r" -> "20"
   n22 -> n27 // "LIST_ATTR" -> "stroke"
   n27 -> n28 // "stroke" -> "blue"
-  n4 -> n29 // "LIST_INSTR" -> "delay"
-  n29 -> n30 // "delay" -> "s"
-  n30 -> n31 // "s" -> "1"
-  n4 -> n32 // "LIST_INSTR" -> "parallel"
-  n32 -> n33 // "parallel" -> "s"
-  n33 -> n34 // "s" -> "2"
-  n32 -> n35 // "parallel" -> "LIST_INSTR"
-  n35 -> n36 // "LIST_INSTR" -> "hide"
-  n36 -> n37 // "hide" -> "dos"
-  n35 -> n38 // "LIST_INSTR" -> "hide"
-  n38 -> n39 // "hide" -> "tres"
-  n4 -> n40 // "LIST_INSTR" -> "show"
-  n40 -> n41 // "show" -> "dos"
-  n4 -> n42 // "LIST_INSTR" -> "show"
-  n42 -> n43 // "show" -> "tres"
-  n4 -> n44 // "LIST_INSTR" -> "parallel"
-  n44 -> n45 // "parallel" -> "LIST_INSTR"
-  n45 -> n46 // "LIST_INSTR" -> "hidet"
-  n46 -> n47 // "hidet" -> "dos"
-  n46 -> n48 // "hidet" -> "s"
-  n48 -> n49 // "s" -> "1"
-  n45 -> n50 // "LIST_INSTR" -> "hidet"
-  n50 -> n51 // "hidet" -> "tres"
-  n50 -> n52 // "hidet" -> "s"
-  n52 -> n53 // "s" -> "2"
-  n4 -> n54 // "LIST_INSTR" -> "delay"
-  n54 -> n55 // "delay" -> "s"
-  n55 -> n56 // "s" -> "1"
-  n4 -> n57 // "LIST_INSTR" -> "showt"
-  n57 -> n58 // "showt" -> "dos"
-  n57 -> n59 // "showt" -> "s"
-  n59 -> n60 // "s" -> "1"
-  n4 -> n61 // "LIST_INSTR" -> "showt"
-  n61 -> n62 // "showt" -> "dos"
-  n61 -> n63 // "showt" -> "s"
-  n63 -> n64 // "s" -> "1"
-  n4 -> n65 // "LIST_INSTR" -> "hidet"
-  n65 -> n66 // "hidet" -> "dos"
-  n65 -> n67 // "hidet" -> "s"
-  n67 -> n68 // "s" -> "1"
-  n4 -> n69 // "LIST_INSTR" -> "hidet"
-  n69 -> n70 // "hidet" -> "dos"
-  n69 -> n71 // "hidet" -> "s"
-  n71 -> n72 // "s" -> "1"
-  n4 -> n73 // "LIST_INSTR" -> "show"
-  n73 -> n74 // "show" -> "dos"
+  n4 -> n29 // "LIST_INSTR" -> "create"
+  n29 -> n30 // "create" -> "cuatro"
+  n29 -> n31 // "create" -> "circle"
+  n29 -> n32 // "create" -> "0"
+  n29 -> n33 // "create" -> "0"
+  n29 -> n34 // "create" -> "LIST_ATTR"
+  n34 -> n35 // "LIST_ATTR" -> "r"
+  n35 -> n36 // "r" -> "5"
+  n4 -> n37 // "LIST_INSTR" -> "delay"
+  n37 -> n38 // "delay" -> "ms"
+  n38 -> n39 // "ms" -> "250"
+  n4 -> n40 // "LIST_INSTR" -> "delay"
+  n40 -> n41 // "delay" -> "ms"
+  n41 -> n42 // "ms" -> "250"
+  n4 -> n43 // "LIST_INSTR" -> "showt"
+  n43 -> n44 // "showt" -> "dos"
+  n43 -> n45 // "showt" -> "ms"
+  n45 -> n46 // "ms" -> "250"
+  n4 -> n47 // "LIST_INSTR" -> "showt"
+  n47 -> n48 // "showt" -> "dos"
+  n47 -> n49 // "showt" -> "ms"
+  n49 -> n50 // "ms" -> "1000"
+  n4 -> n51 // "LIST_INSTR" -> "hidet"
+  n51 -> n52 // "hidet" -> "dos"
+  n51 -> n53 // "hidet" -> "ms"
+  n53 -> n54 // "ms" -> "250"
+  n4 -> n55 // "LIST_INSTR" -> "hidet"
+  n55 -> n56 // "hidet" -> "dos"
+  n55 -> n57 // "hidet" -> "ms"
+  n57 -> n58 // "ms" -> "250"
+  n4 -> n59 // "LIST_INSTR" -> "show"
+  n59 -> n60 // "show" -> "dos"
+  n4 -> n61 // "LIST_INSTR" -> "show"
+  n61 -> n62 // "show" -> "tres"
+  n4 -> n63 // "LIST_INSTR" -> "delay"
+  n63 -> n64 // "delay" -> "s"
+  n64 -> n65 // "s" -> "1"
+  n4 -> n66 // "LIST_INSTR" -> ":="
+  n66 -> n67 // ":=" -> "dos"
+  n66 -> n68 // ":=" -> "tres"
+  n4 -> n69 // "LIST_INSTR" -> ":="
+  n69 -> n70 // ":=" -> "estoEsNull"
+  n69 -> n71 // ":=" -> "dos"
+  n4 -> n72 // "LIST_INSTR" -> "parallel"
+  n72 -> n73 // "parallel" -> "s"
+  n73 -> n74 // "s" -> "10"
+  n72 -> n75 // "parallel" -> "LIST_INSTR"
+  n75 -> n76 // "LIST_INSTR" -> "move"
+  n76 -> n77 // "move" -> "dos"
+  n76 -> n78 // "move" -> "400"
+  n76 -> n79 // "move" -> "400"
+  n75 -> n80 // "LIST_INSTR" -> "modify"
+  n80 -> n81 // "modify" -> "dos"
+  n80 -> n82 // "modify" -> "LIST_ATTR"
+  n82 -> n83 // "LIST_ATTR" -> "color"
+  n83 -> n84 // "color" -> "green"
+  n82 -> n85 // "LIST_ATTR" -> "r"
+  n85 -> n86 // "r" -> "20"
+  n75 -> n87 // "LIST_INSTR" -> "move"
+  n87 -> n88 // "move" -> "estoEsNull"
+  n87 -> n89 // "move" -> "200"
+  n87 -> n90 // "move" -> "200"
+  n75 -> n91 // "LIST_INSTR" -> "modify"
+  n91 -> n92 // "modify" -> "estoEsNull"
+  n91 -> n93 // "modify" -> "LIST_ATTR"
+  n93 -> n94 // "LIST_ATTR" -> "color"
+  n94 -> n95 // "color" -> "white"
+  n93 -> n96 // "LIST_ATTR" -> "r"
+  n96 -> n97 // "r" -> "20"
 
 }

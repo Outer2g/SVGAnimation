@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-12 18:43:23
+// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-23 01:11:11
 
 package parser;
 import interp.AslTree;
@@ -41,7 +41,7 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AslParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BLACK", "BLUE", "BOOLEAN", "CIRCLE", "COLOR", "COLORHEX", "COLORINT", "COLORPRCTJ", "COMMENT", "CREATE", "DELAY", "DESTROY", "DIV", "DO", "EEQUAL", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FALSE", "FUNC", "FUNCALL", "GE", "GREEN", "GT", "HASHTAG", "HEXADIGIT", "HIDE", "HIDE_T", "ID", "IF", "INT", "LE", "LIST_ATTR", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MODIFY", "MODIFY_T", "MOVE", "MOVE_T", "MUL", "NOT", "NOT_EQUAL", "OR", "PARALLEL", "PARAMS", "PLUS", "POSX", "POSY", "PREF", "PVALUE", "READ", "RECTANGLE", "RED", "RETURN", "RGB", "RGBPRCTJ", "SHOW", "SHOW_T", "STRING", "STROKE", "TEXT", "THEN", "TRUE", "WHILE", "WHITE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'r'", "'s'", "'{'", "'}'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "AND", "ARGLIST", "ASSIGN", "BLACK", "BLUE", "BOOLEAN", "CIRCLE", "COLOR", "COLORHEX", "COLORINT", "COLORPRCTJ", "COMMENT", "CREATE", "DELAY", "DESTROY", "DIV", "DO", "EEQUAL", "ELSE", "ENDFUNC", "ENDIF", "ENDWHILE", "EQUAL", "ESC_SEQ", "FALSE", "FUNC", "FUNCALL", "GE", "GREEN", "GT", "HASHTAG", "HEXADIGIT", "HIDE", "HIDE_T", "ID", "IF", "INT", "LE", "LIST_ATTR", "LIST_FUNCTIONS", "LIST_INSTR", "LT", "MINUS", "MOD", "MODIFY", "MODIFY_T", "MOVE", "MOVE_T", "MUL", "NOT", "NOT_EQUAL", "OR", "PARALLEL", "PARAMS", "PLUS", "POSX", "POSY", "PREF", "PVALUE", "READ", "RECTANGLE", "RED", "RETURN", "RGB", "RGBPRCTJ", "SHOW", "SHOW_T", "STRING", "STROKE", "TEXT", "THEN", "TRUE", "WHILE", "WHITE", "WRITE", "WS", "'&'", "'('", "')'", "','", "':'", "';'", "'ms'", "'r'", "'s'", "'{'", "'}'"
     };
 
     public static final int EOF=-1;
@@ -55,6 +55,7 @@ public class AslParser extends Parser {
     public static final int T__87=87;
     public static final int T__88=88;
     public static final int T__89=89;
+    public static final int T__90=90;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -2745,7 +2746,7 @@ public TreeAdaptor getTreeAdaptor() {
             if ( (LA14_0==PARALLEL) ) {
                 int LA14_1 = input.LA(2);
 
-                if ( (LA14_1==88) ) {
+                if ( (LA14_1==89) ) {
                     alt14=2;
                 }
                 else if ( (LA14_1==INT) ) {
@@ -3148,7 +3149,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, time107.getTree());
 
-            char_literal108=(Token)match(input,88,FOLLOW_88_in_parallel_time1340); 
+            char_literal108=(Token)match(input,89,FOLLOW_89_in_parallel_time1340); 
 
             pushFollow(FOLLOW_block_instructions_notime_in_parallel_time1343);
             block_instructions_notime109=block_instructions_notime();
@@ -3157,7 +3158,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, block_instructions_notime109.getTree());
 
-            char_literal110=(Token)match(input,89,FOLLOW_89_in_parallel_time1345); 
+            char_literal110=(Token)match(input,90,FOLLOW_90_in_parallel_time1345); 
 
             }
 
@@ -3501,7 +3502,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(PARALLEL119_tree, root_0);
 
 
-            char_literal120=(Token)match(input,88,FOLLOW_88_in_parallel_no_time1430); 
+            char_literal120=(Token)match(input,89,FOLLOW_89_in_parallel_no_time1430); 
 
             pushFollow(FOLLOW_block_instructions_time_in_parallel_no_time1433);
             block_instructions_time121=block_instructions_time();
@@ -3510,7 +3511,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, block_instructions_time121.getTree());
 
-            char_literal122=(Token)match(input,89,FOLLOW_89_in_parallel_no_time1435); 
+            char_literal122=(Token)match(input,90,FOLLOW_90_in_parallel_no_time1435); 
 
             }
 
@@ -3718,7 +3719,7 @@ public TreeAdaptor getTreeAdaptor() {
             if ( (LA20_0==COLOR||LA20_0==STROKE) ) {
                 alt20=1;
             }
-            else if ( ((LA20_0 >= POSX && LA20_0 <= POSY)||LA20_0==86) ) {
+            else if ( ((LA20_0 >= POSX && LA20_0 <= POSY)||LA20_0==87) ) {
                 alt20=2;
             }
             else {
@@ -4430,7 +4431,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             set151=(Token)input.LT(1);
 
-            if ( (input.LA(1) >= POSX && input.LA(1) <= POSY)||input.LA(1)==86 ) {
+            if ( (input.LA(1) >= POSX && input.LA(1) <= POSY)||input.LA(1)==87 ) {
                 input.consume();
                 adaptor.addChild(root_0, 
                 (AslTree)adaptor.create(set151)
@@ -4913,7 +4914,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:1: time : INT 's' ^;
+    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:1: time : INT ( 's' | 'ms' ) ^;
     public final AslParser.time_return time() throws RecognitionException {
         AslParser.time_return retval = new AslParser.time_return();
         retval.start = input.LT(1);
@@ -4922,14 +4923,14 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree root_0 = null;
 
         Token INT172=null;
-        Token char_literal173=null;
+        Token set173=null;
 
         AslTree INT172_tree=null;
-        AslTree char_literal173_tree=null;
+        AslTree set173_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:6: ( INT 's' ^)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:9: INT 's' ^
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:6: ( INT ( 's' | 'ms' ) ^)
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:225:9: INT ( 's' | 'ms' ) ^
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -4941,11 +4942,21 @@ public TreeAdaptor getTreeAdaptor() {
             adaptor.addChild(root_0, INT172_tree);
 
 
-            char_literal173=(Token)match(input,87,FOLLOW_87_in_time1912); 
-            char_literal173_tree = 
-            (AslTree)adaptor.create(char_literal173)
-            ;
-            root_0 = (AslTree)adaptor.becomeRoot(char_literal173_tree, root_0);
+            set173=(Token)input.LT(1);
+
+            set173=(Token)input.LT(1);
+
+            if ( input.LA(1)==86||input.LA(1)==88 ) {
+                input.consume();
+                root_0 = (AslTree)adaptor.becomeRoot(
+                (AslTree)adaptor.create(set173)
+                , root_0);
+                state.errorRecovery=false;
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                throw mse;
+            }
 
 
             }
@@ -5002,7 +5013,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_boolterm_in_expr1928);
+            pushFollow(FOLLOW_boolterm_in_expr1932);
             boolterm174=boolterm();
 
             state._fsp--;
@@ -5024,14 +5035,14 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:228:23: OR ^ boolterm
             	    {
-            	    OR175=(Token)match(input,OR,FOLLOW_OR_in_expr1931); 
+            	    OR175=(Token)match(input,OR,FOLLOW_OR_in_expr1935); 
             	    OR175_tree = 
             	    (AslTree)adaptor.create(OR175)
             	    ;
             	    root_0 = (AslTree)adaptor.becomeRoot(OR175_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_boolterm_in_expr1934);
+            	    pushFollow(FOLLOW_boolterm_in_expr1938);
             	    boolterm176=boolterm();
 
             	    state._fsp--;
@@ -5101,7 +5112,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_boolfact_in_boolterm1954);
+            pushFollow(FOLLOW_boolfact_in_boolterm1958);
             boolfact177=boolfact();
 
             state._fsp--;
@@ -5123,14 +5134,14 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:231:23: AND ^ boolfact
             	    {
-            	    AND178=(Token)match(input,AND,FOLLOW_AND_in_boolterm1957); 
+            	    AND178=(Token)match(input,AND,FOLLOW_AND_in_boolterm1961); 
             	    AND178_tree = 
             	    (AslTree)adaptor.create(AND178)
             	    ;
             	    root_0 = (AslTree)adaptor.becomeRoot(AND178_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_boolfact_in_boolterm1960);
+            	    pushFollow(FOLLOW_boolfact_in_boolterm1964);
             	    boolfact179=boolfact();
 
             	    state._fsp--;
@@ -5210,7 +5221,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_num_expr_in_boolfact1980);
+            pushFollow(FOLLOW_num_expr_in_boolfact1984);
             num_expr180=num_expr();
 
             state._fsp--;
@@ -5273,7 +5284,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:24: EQUAL ^
                             {
-                            EQUAL181=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact1984); 
+                            EQUAL181=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact1988); 
                             EQUAL181_tree = 
                             (AslTree)adaptor.create(EQUAL181)
                             ;
@@ -5285,7 +5296,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 2 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:33: NOT_EQUAL ^
                             {
-                            NOT_EQUAL182=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact1989); 
+                            NOT_EQUAL182=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact1993); 
                             NOT_EQUAL182_tree = 
                             (AslTree)adaptor.create(NOT_EQUAL182)
                             ;
@@ -5297,7 +5308,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 3 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:46: LT ^
                             {
-                            LT183=(Token)match(input,LT,FOLLOW_LT_in_boolfact1994); 
+                            LT183=(Token)match(input,LT,FOLLOW_LT_in_boolfact1998); 
                             LT183_tree = 
                             (AslTree)adaptor.create(LT183)
                             ;
@@ -5309,7 +5320,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 4 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:52: LE ^
                             {
-                            LE184=(Token)match(input,LE,FOLLOW_LE_in_boolfact1999); 
+                            LE184=(Token)match(input,LE,FOLLOW_LE_in_boolfact2003); 
                             LE184_tree = 
                             (AslTree)adaptor.create(LE184)
                             ;
@@ -5321,7 +5332,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 5 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:58: GT ^
                             {
-                            GT185=(Token)match(input,GT,FOLLOW_GT_in_boolfact2004); 
+                            GT185=(Token)match(input,GT,FOLLOW_GT_in_boolfact2008); 
                             GT185_tree = 
                             (AslTree)adaptor.create(GT185)
                             ;
@@ -5333,7 +5344,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 6 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:234:64: GE ^
                             {
-                            GE186=(Token)match(input,GE,FOLLOW_GE_in_boolfact2009); 
+                            GE186=(Token)match(input,GE,FOLLOW_GE_in_boolfact2013); 
                             GE186_tree = 
                             (AslTree)adaptor.create(GE186)
                             ;
@@ -5346,7 +5357,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    pushFollow(FOLLOW_num_expr_in_boolfact2013);
+                    pushFollow(FOLLOW_num_expr_in_boolfact2017);
                     num_expr187=num_expr();
 
                     state._fsp--;
@@ -5415,7 +5426,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_term_in_num_expr2033);
+            pushFollow(FOLLOW_term_in_num_expr2037);
             term188=term();
 
             state._fsp--;
@@ -5458,7 +5469,7 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 1 :
             	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:237:21: PLUS ^
             	            {
-            	            PLUS189=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr2038); 
+            	            PLUS189=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr2042); 
             	            PLUS189_tree = 
             	            (AslTree)adaptor.create(PLUS189)
             	            ;
@@ -5470,7 +5481,7 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 2 :
             	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:237:29: MINUS ^
             	            {
-            	            MINUS190=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr2043); 
+            	            MINUS190=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr2047); 
             	            MINUS190_tree = 
             	            (AslTree)adaptor.create(MINUS190)
             	            ;
@@ -5483,7 +5494,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_term_in_num_expr2047);
+            	    pushFollow(FOLLOW_term_in_num_expr2051);
             	    term191=term();
 
             	    state._fsp--;
@@ -5557,7 +5568,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_factor_in_term2071);
+            pushFollow(FOLLOW_factor_in_term2075);
             factor192=factor();
 
             state._fsp--;
@@ -5609,7 +5620,7 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 1 :
             	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:240:23: MUL ^
             	            {
-            	            MUL193=(Token)match(input,MUL,FOLLOW_MUL_in_term2076); 
+            	            MUL193=(Token)match(input,MUL,FOLLOW_MUL_in_term2080); 
             	            MUL193_tree = 
             	            (AslTree)adaptor.create(MUL193)
             	            ;
@@ -5621,7 +5632,7 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 2 :
             	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:240:30: DIV ^
             	            {
-            	            DIV194=(Token)match(input,DIV,FOLLOW_DIV_in_term2081); 
+            	            DIV194=(Token)match(input,DIV,FOLLOW_DIV_in_term2085); 
             	            DIV194_tree = 
             	            (AslTree)adaptor.create(DIV194)
             	            ;
@@ -5633,7 +5644,7 @@ public TreeAdaptor getTreeAdaptor() {
             	        case 3 :
             	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:240:37: MOD ^
             	            {
-            	            MOD195=(Token)match(input,MOD,FOLLOW_MOD_in_term2086); 
+            	            MOD195=(Token)match(input,MOD,FOLLOW_MOD_in_term2090); 
             	            MOD195_tree = 
             	            (AslTree)adaptor.create(MOD195)
             	            ;
@@ -5646,7 +5657,7 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_factor_in_term2090);
+            	    pushFollow(FOLLOW_factor_in_term2094);
             	    factor196=factor();
 
             	    state._fsp--;
@@ -5742,7 +5753,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:243:14: NOT ^
                     {
-                    NOT197=(Token)match(input,NOT,FOLLOW_NOT_in_factor2113); 
+                    NOT197=(Token)match(input,NOT,FOLLOW_NOT_in_factor2117); 
                     NOT197_tree = 
                     (AslTree)adaptor.create(NOT197)
                     ;
@@ -5754,7 +5765,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 2 :
                     // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:243:21: PLUS ^
                     {
-                    PLUS198=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor2118); 
+                    PLUS198=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor2122); 
                     PLUS198_tree = 
                     (AslTree)adaptor.create(PLUS198)
                     ;
@@ -5766,7 +5777,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 3 :
                     // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:243:29: MINUS ^
                     {
-                    MINUS199=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor2123); 
+                    MINUS199=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor2127); 
                     MINUS199_tree = 
                     (AslTree)adaptor.create(MINUS199)
                     ;
@@ -5779,7 +5790,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_atom_in_factor2128);
+            pushFollow(FOLLOW_atom_in_factor2132);
             atom200=atom();
 
             state._fsp--;
@@ -5897,7 +5908,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    ID201=(Token)match(input,ID,FOLLOW_ID_in_atom2153); 
+                    ID201=(Token)match(input,ID,FOLLOW_ID_in_atom2157); 
                     ID201_tree = 
                     (AslTree)adaptor.create(ID201)
                     ;
@@ -5912,7 +5923,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    INT202=(Token)match(input,INT,FOLLOW_INT_in_atom2168); 
+                    INT202=(Token)match(input,INT,FOLLOW_INT_in_atom2172); 
                     INT202_tree = 
                     (AslTree)adaptor.create(INT202)
                     ;
@@ -5945,7 +5956,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 1 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:251:14: b= TRUE
                             {
-                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom2185);  
+                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom2189);  
                             stream_TRUE.add(b);
 
 
@@ -5954,7 +5965,7 @@ public TreeAdaptor getTreeAdaptor() {
                         case 2 :
                             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:251:23: b= FALSE
                             {
-                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom2191);  
+                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom2195);  
                             stream_FALSE.add(b);
 
 
@@ -6000,7 +6011,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_funcall_in_atom2214);
+                    pushFollow(FOLLOW_funcall_in_atom2218);
                     funcall203=funcall();
 
                     state._fsp--;
@@ -6015,16 +6026,16 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    char_literal204=(Token)match(input,81,FOLLOW_81_in_atom2228); 
+                    char_literal204=(Token)match(input,81,FOLLOW_81_in_atom2232); 
 
-                    pushFollow(FOLLOW_expr_in_atom2231);
+                    pushFollow(FOLLOW_expr_in_atom2235);
                     expr205=expr();
 
                     state._fsp--;
 
                     adaptor.addChild(root_0, expr205.getTree());
 
-                    char_literal206=(Token)match(input,82,FOLLOW_82_in_atom2233); 
+                    char_literal206=(Token)match(input,82,FOLLOW_82_in_atom2237); 
 
                     }
                     break;
@@ -6084,11 +6095,11 @@ public TreeAdaptor getTreeAdaptor() {
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:257:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
             // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:257:13: ID '(' ( expr_list )? ')'
             {
-            ID207=(Token)match(input,ID,FOLLOW_ID_in_funcall2254);  
+            ID207=(Token)match(input,ID,FOLLOW_ID_in_funcall2258);  
             stream_ID.add(ID207);
 
 
-            char_literal208=(Token)match(input,81,FOLLOW_81_in_funcall2256);  
+            char_literal208=(Token)match(input,81,FOLLOW_81_in_funcall2260);  
             stream_81.add(char_literal208);
 
 
@@ -6103,7 +6114,7 @@ public TreeAdaptor getTreeAdaptor() {
                 case 1 :
                     // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:257:20: expr_list
                     {
-                    pushFollow(FOLLOW_expr_list_in_funcall2258);
+                    pushFollow(FOLLOW_expr_list_in_funcall2262);
                     expr_list209=expr_list();
 
                     state._fsp--;
@@ -6116,7 +6127,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal210=(Token)match(input,82,FOLLOW_82_in_funcall2261);  
+            char_literal210=(Token)match(input,82,FOLLOW_82_in_funcall2265);  
             stream_82.add(char_literal210);
 
 
@@ -6223,7 +6234,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_expr_in_expr_list2294);
+            pushFollow(FOLLOW_expr_in_expr_list2298);
             expr211=expr();
 
             state._fsp--;
@@ -6245,9 +6256,9 @@ public TreeAdaptor getTreeAdaptor() {
             	case 1 :
             	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:261:19: ',' ! expr
             	    {
-            	    char_literal212=(Token)match(input,83,FOLLOW_83_in_expr_list2297); 
+            	    char_literal212=(Token)match(input,83,FOLLOW_83_in_expr_list2301); 
 
-            	    pushFollow(FOLLOW_expr_in_expr_list2300);
+            	    pushFollow(FOLLOW_expr_in_expr_list2304);
             	    expr213=expr();
 
             	    state._fsp--;
@@ -6400,10 +6411,10 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_instructions_notime_in_block_instructions_notime1286 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
     public static final BitSet FOLLOW_85_in_block_instructions_notime1288 = new BitSet(new long[]{0x0005001000000002L,0x0000000000000020L});
     public static final BitSet FOLLOW_PARALLEL_in_parallel_time1335 = new BitSet(new long[]{0x0000010000000000L});
-    public static final BitSet FOLLOW_time_in_parallel_time1338 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_88_in_parallel_time1340 = new BitSet(new long[]{0x0005001000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_block_instructions_notime_in_parallel_time1343 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_parallel_time1345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_time_in_parallel_time1338 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_89_in_parallel_time1340 = new BitSet(new long[]{0x0005001000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_block_instructions_notime_in_parallel_time1343 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+    public static final BitSet FOLLOW_90_in_parallel_time1345 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_move_time_in_instructions_time1354 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_modify_time_in_instructions_time1358 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_show_time_in_instructions_time1362 = new BitSet(new long[]{0x0000000000000002L});
@@ -6412,13 +6423,13 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_85_in_block_instructions_time1375 = new BitSet(new long[]{0x000A002000000002L,0x0000000000000040L});
     public static final BitSet FOLLOW_instructions_time_in_block_instructions_time1379 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
     public static final BitSet FOLLOW_85_in_block_instructions_time1380 = new BitSet(new long[]{0x000A002000000002L,0x0000000000000040L});
-    public static final BitSet FOLLOW_PARALLEL_in_parallel_no_time1427 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_88_in_parallel_no_time1430 = new BitSet(new long[]{0x000A002000000000L,0x0000000000000040L});
-    public static final BitSet FOLLOW_block_instructions_time_in_parallel_no_time1433 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_parallel_no_time1435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_list_attributes1444 = new BitSet(new long[]{0x1800000000000800L,0x0000000000400100L});
+    public static final BitSet FOLLOW_PARALLEL_in_parallel_no_time1427 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_89_in_parallel_no_time1430 = new BitSet(new long[]{0x000A002000000000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_block_instructions_time_in_parallel_no_time1433 = new BitSet(new long[]{0x0000000000000000L,0x0000000004000000L});
+    public static final BitSet FOLLOW_90_in_parallel_no_time1435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_list_attributes1444 = new BitSet(new long[]{0x1800000000000800L,0x0000000000800100L});
     public static final BitSet FOLLOW_attribute_in_list_attributes1446 = new BitSet(new long[]{0x0000000000000000L,0x00000000000C0000L});
-    public static final BitSet FOLLOW_83_in_list_attributes1449 = new BitSet(new long[]{0x1800000000000800L,0x0000000000400100L});
+    public static final BitSet FOLLOW_83_in_list_attributes1449 = new BitSet(new long[]{0x1800000000000800L,0x0000000000800100L});
     public static final BitSet FOLLOW_attribute_in_list_attributes1451 = new BitSet(new long[]{0x0000000000000000L,0x00000000000C0000L});
     public static final BitSet FOLLOW_82_in_list_attributes1455 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_attribute_name_color_in_attribute1485 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
@@ -6461,49 +6472,49 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_expr_in_color1814 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
     public static final BitSet FOLLOW_82_in_color1816 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_color_keyword_in_color1842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_time1910 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_87_in_time1912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_boolterm_in_expr1928 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_OR_in_expr1931 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_boolterm_in_expr1934 = new BitSet(new long[]{0x0080000000000002L});
-    public static final BitSet FOLLOW_boolfact_in_boolterm1954 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_AND_in_boolterm1957 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_boolfact_in_boolterm1960 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_num_expr_in_boolfact1980 = new BitSet(new long[]{0x0040220284000002L});
-    public static final BitSet FOLLOW_EQUAL_in_boolfact1984 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact1989 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_LT_in_boolfact1994 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_LE_in_boolfact1999 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_GT_in_boolfact2004 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_GE_in_boolfact2009 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_num_expr_in_boolfact2013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_term_in_num_expr2033 = new BitSet(new long[]{0x0400400000000002L});
-    public static final BitSet FOLLOW_PLUS_in_num_expr2038 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_MINUS_in_num_expr2043 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_term_in_num_expr2047 = new BitSet(new long[]{0x0400400000000002L});
-    public static final BitSet FOLLOW_factor_in_term2071 = new BitSet(new long[]{0x0010800000080002L});
-    public static final BitSet FOLLOW_MUL_in_term2076 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_DIV_in_term2081 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_MOD_in_term2086 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_factor_in_term2090 = new BitSet(new long[]{0x0010800000080002L});
-    public static final BitSet FOLLOW_NOT_in_factor2113 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_PLUS_in_factor2118 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_MINUS_in_factor2123 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_atom_in_factor2128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atom2153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom2168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_atom2185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_atom2191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcall_in_atom2214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_atom2228 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_expr_in_atom2231 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_82_in_atom2233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_funcall2254 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
-    public static final BitSet FOLLOW_81_in_funcall2256 = new BitSet(new long[]{0x0420414010000000L,0x0000000000060800L});
-    public static final BitSet FOLLOW_expr_list_in_funcall2258 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_82_in_funcall2261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_expr_list2294 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
-    public static final BitSet FOLLOW_83_in_expr_list2297 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
-    public static final BitSet FOLLOW_expr_in_expr_list2300 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_INT_in_time1910 = new BitSet(new long[]{0x0000000000000000L,0x0000000001400000L});
+    public static final BitSet FOLLOW_set_in_time1912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_boolterm_in_expr1932 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_OR_in_expr1935 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_boolterm_in_expr1938 = new BitSet(new long[]{0x0080000000000002L});
+    public static final BitSet FOLLOW_boolfact_in_boolterm1958 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_AND_in_boolterm1961 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_boolfact_in_boolterm1964 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_num_expr_in_boolfact1984 = new BitSet(new long[]{0x0040220284000002L});
+    public static final BitSet FOLLOW_EQUAL_in_boolfact1988 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact1993 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_LT_in_boolfact1998 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_LE_in_boolfact2003 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_GT_in_boolfact2008 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_GE_in_boolfact2013 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_num_expr_in_boolfact2017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_term_in_num_expr2037 = new BitSet(new long[]{0x0400400000000002L});
+    public static final BitSet FOLLOW_PLUS_in_num_expr2042 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_MINUS_in_num_expr2047 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_term_in_num_expr2051 = new BitSet(new long[]{0x0400400000000002L});
+    public static final BitSet FOLLOW_factor_in_term2075 = new BitSet(new long[]{0x0010800000080002L});
+    public static final BitSet FOLLOW_MUL_in_term2080 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_DIV_in_term2085 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_MOD_in_term2090 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_factor_in_term2094 = new BitSet(new long[]{0x0010800000080002L});
+    public static final BitSet FOLLOW_NOT_in_factor2117 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_PLUS_in_factor2122 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_MINUS_in_factor2127 = new BitSet(new long[]{0x0000014010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_atom_in_factor2132 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom2157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom2172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_atom2189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_atom2195 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcall_in_atom2218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_81_in_atom2232 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_expr_in_atom2235 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_82_in_atom2237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_funcall2258 = new BitSet(new long[]{0x0000000000000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_81_in_funcall2260 = new BitSet(new long[]{0x0420414010000000L,0x0000000000060800L});
+    public static final BitSet FOLLOW_expr_list_in_funcall2262 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_82_in_funcall2265 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_expr_list2298 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
+    public static final BitSet FOLLOW_83_in_expr_list2301 = new BitSet(new long[]{0x0420414010000000L,0x0000000000020800L});
+    public static final BitSet FOLLOW_expr_in_expr_list2304 = new BitSet(new long[]{0x0000000000000002L,0x0000000000080000L});
 
 }

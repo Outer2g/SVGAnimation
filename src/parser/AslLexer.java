@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-12 18:43:23
+// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-23 01:11:11
 
 package parser;
 
@@ -21,6 +21,7 @@ public class AslLexer extends Lexer {
     public static final int T__87=87;
     public static final int T__88=88;
     public static final int T__89=89;
+    public static final int T__90=90;
     public static final int AND=4;
     public static final int ARGLIST=5;
     public static final int ASSIGN=6;
@@ -244,10 +245,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:7: ( 'r' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:9: 'r'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:7: ( 'ms' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:9: 'ms'
             {
-            match('r'); 
+            match("ms"); 
+
+
 
             }
 
@@ -265,10 +268,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:7: ( 's' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:9: 's'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:7: ( 'r' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:9: 'r'
             {
-            match('s'); 
+            match('r'); 
 
             }
 
@@ -286,10 +289,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:7: ( '{' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:9: '{'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:7: ( 's' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:9: 's'
             {
-            match('{'); 
+            match('s'); 
 
             }
 
@@ -307,8 +310,29 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:7: ( '}' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:9: '}'
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:7: ( '{' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:9: '{'
+            {
+            match('{'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "T__89"
+
+    // $ANTLR start "T__90"
+    public final void mT__90() throws RecognitionException {
+        try {
+            int _type = T__90;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:16:7: ( '}' )
+            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:16:9: '}'
             {
             match('}'); 
 
@@ -321,7 +345,7 @@ public class AslLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "T__89"
+    // $ANTLR end "T__90"
 
     // $ANTLR start "HASHTAG"
     public final void mHASHTAG() throws RecognitionException {
@@ -2084,8 +2108,8 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
-        int alt9=72;
+        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
+        int alt9=73;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
@@ -2169,495 +2193,503 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:70: HASHTAG
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:70: T__90
+                {
+                mT__90(); 
+
+
+                }
+                break;
+            case 12 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:76: HASHTAG
                 {
                 mHASHTAG(); 
 
 
                 }
                 break;
-            case 12 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:78: EEQUAL
+            case 13 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:84: EEQUAL
                 {
                 mEEQUAL(); 
 
 
                 }
                 break;
-            case 13 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:85: EQUAL
+            case 14 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:91: EQUAL
                 {
                 mEQUAL(); 
 
 
                 }
                 break;
-            case 14 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:91: NOT_EQUAL
+            case 15 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:97: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
 
                 }
                 break;
-            case 15 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:101: LT
+            case 16 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:107: LT
                 {
                 mLT(); 
 
 
                 }
                 break;
-            case 16 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:104: LE
+            case 17 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:110: LE
                 {
                 mLE(); 
 
 
                 }
                 break;
-            case 17 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:107: GT
+            case 18 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:113: GT
                 {
                 mGT(); 
 
 
                 }
                 break;
-            case 18 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:110: GE
+            case 19 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:116: GE
                 {
                 mGE(); 
 
 
                 }
                 break;
-            case 19 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:113: PLUS
+            case 20 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:119: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 20 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:118: MINUS
+            case 21 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:124: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 21 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:124: MUL
+            case 22 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:130: MUL
                 {
                 mMUL(); 
 
 
                 }
                 break;
-            case 22 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:128: DIV
+            case 23 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:134: DIV
                 {
                 mDIV(); 
 
 
                 }
                 break;
-            case 23 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:132: MOD
+            case 24 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:138: MOD
                 {
                 mMOD(); 
 
 
                 }
                 break;
-            case 24 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:136: NOT
+            case 25 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:142: NOT
                 {
                 mNOT(); 
 
 
                 }
                 break;
-            case 25 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:140: AND
+            case 26 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:146: AND
                 {
                 mAND(); 
 
 
                 }
                 break;
-            case 26 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:144: OR
+            case 27 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:150: OR
                 {
                 mOR(); 
 
 
                 }
                 break;
-            case 27 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:147: IF
+            case 28 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:153: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 28 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:150: THEN
+            case 29 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:156: THEN
                 {
                 mTHEN(); 
 
 
                 }
                 break;
-            case 29 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:155: ELSE
+            case 30 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:161: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 30 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:160: ENDIF
+            case 31 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:166: ENDIF
                 {
                 mENDIF(); 
 
 
                 }
                 break;
-            case 31 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:166: WHILE
+            case 32 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:172: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 32 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:172: DO
+            case 33 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:178: DO
                 {
                 mDO(); 
 
 
                 }
                 break;
-            case 33 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:175: ENDWHILE
+            case 34 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:181: ENDWHILE
                 {
                 mENDWHILE(); 
 
 
                 }
                 break;
-            case 34 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:184: FUNC
+            case 35 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:190: FUNC
                 {
                 mFUNC(); 
 
 
                 }
                 break;
-            case 35 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:189: ENDFUNC
+            case 36 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:195: ENDFUNC
                 {
                 mENDFUNC(); 
 
 
                 }
                 break;
-            case 36 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:197: RETURN
+            case 37 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:203: RETURN
                 {
                 mRETURN(); 
 
 
                 }
                 break;
-            case 37 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:204: READ
+            case 38 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:210: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 38 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:209: WRITE
+            case 39 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:215: WRITE
                 {
                 mWRITE(); 
 
 
                 }
                 break;
-            case 39 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:215: TRUE
+            case 40 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:221: TRUE
                 {
                 mTRUE(); 
 
 
                 }
                 break;
-            case 40 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:220: FALSE
+            case 41 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:226: FALSE
                 {
                 mFALSE(); 
 
 
                 }
                 break;
-            case 41 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:226: CREATE
+            case 42 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:232: CREATE
                 {
                 mCREATE(); 
 
 
                 }
                 break;
-            case 42 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:233: DESTROY
+            case 43 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:239: DESTROY
                 {
                 mDESTROY(); 
 
 
                 }
                 break;
-            case 43 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:241: MOVE_T
+            case 44 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:247: MOVE_T
                 {
                 mMOVE_T(); 
 
 
                 }
                 break;
-            case 44 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:248: MOVE
+            case 45 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:254: MOVE
                 {
                 mMOVE(); 
 
 
                 }
                 break;
-            case 45 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:253: MODIFY_T
+            case 46 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:259: MODIFY_T
                 {
                 mMODIFY_T(); 
 
 
                 }
                 break;
-            case 46 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:262: MODIFY
+            case 47 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:268: MODIFY
                 {
                 mMODIFY(); 
 
 
                 }
                 break;
-            case 47 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:269: RGBPRCTJ
+            case 48 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:275: RGBPRCTJ
                 {
                 mRGBPRCTJ(); 
 
 
                 }
                 break;
-            case 48 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:278: RGB
+            case 49 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:284: RGB
                 {
                 mRGB(); 
 
 
                 }
                 break;
-            case 49 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:282: SHOW_T
+            case 50 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:288: SHOW_T
                 {
                 mSHOW_T(); 
 
 
                 }
                 break;
-            case 50 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:289: SHOW
+            case 51 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:295: SHOW
                 {
                 mSHOW(); 
 
 
                 }
                 break;
-            case 51 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:294: HIDE_T
+            case 52 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:300: HIDE_T
                 {
                 mHIDE_T(); 
 
 
                 }
                 break;
-            case 52 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:301: HIDE
+            case 53 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:307: HIDE
                 {
                 mHIDE(); 
 
 
                 }
                 break;
-            case 53 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:306: DELAY
+            case 54 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:312: DELAY
                 {
                 mDELAY(); 
 
 
                 }
                 break;
-            case 54 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:312: PARALLEL
+            case 55 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:318: PARALLEL
                 {
                 mPARALLEL(); 
 
 
                 }
                 break;
-            case 55 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:321: COLOR
+            case 56 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:327: COLOR
                 {
                 mCOLOR(); 
 
 
                 }
                 break;
-            case 56 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:327: WHITE
+            case 57 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:333: WHITE
                 {
                 mWHITE(); 
 
 
                 }
                 break;
-            case 57 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:333: BLACK
+            case 58 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:339: BLACK
                 {
                 mBLACK(); 
 
 
                 }
                 break;
-            case 58 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:339: BLUE
+            case 59 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:345: BLUE
                 {
                 mBLUE(); 
 
 
                 }
                 break;
-            case 59 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:344: RED
+            case 60 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:350: RED
                 {
                 mRED(); 
 
 
                 }
                 break;
-            case 60 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:348: GREEN
+            case 61 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:354: GREEN
                 {
                 mGREEN(); 
 
 
                 }
                 break;
-            case 61 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:354: POSX
+            case 62 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:360: POSX
                 {
                 mPOSX(); 
 
 
                 }
                 break;
-            case 62 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:359: POSY
+            case 63 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:365: POSY
                 {
                 mPOSY(); 
 
 
                 }
                 break;
-            case 63 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:364: CIRCLE
+            case 64 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:370: CIRCLE
                 {
                 mCIRCLE(); 
 
 
                 }
                 break;
-            case 64 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:371: STROKE
+            case 65 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:377: STROKE
                 {
                 mSTROKE(); 
 
 
                 }
                 break;
-            case 65 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:378: RECTANGLE
+            case 66 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:384: RECTANGLE
                 {
                 mRECTANGLE(); 
 
 
                 }
                 break;
-            case 66 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:388: TEXT
+            case 67 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:394: TEXT
                 {
                 mTEXT(); 
 
 
                 }
                 break;
-            case 67 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:393: INT
+            case 68 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:399: INT
                 {
                 mINT(); 
 
 
                 }
                 break;
-            case 68 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:397: ID
+            case 69 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:403: ID
                 {
                 mID(); 
 
 
                 }
                 break;
-            case 69 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:400: COLORHEX
+            case 70 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:406: COLORHEX
                 {
                 mCOLORHEX(); 
 
 
                 }
                 break;
-            case 70 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:409: COMMENT
+            case 71 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:415: COMMENT
                 {
                 mCOMMENT(); 
 
 
                 }
                 break;
-            case 71 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:417: STRING
+            case 72 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:423: STRING
                 {
                 mSTRING(); 
 
 
                 }
                 break;
-            case 72 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:424: WS
+            case 73 :
+                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:430: WS
                 {
                 mWS(); 
 
@@ -2672,185 +2704,186 @@ public class AslLexer extends Lexer {
 
     protected DFA9 dfa9 = new DFA9(this);
     static final String DFA9_eotS =
-        "\7\uffff\1\54\1\57\2\uffff\1\60\1\63\1\uffff\1\65\1\67\3\uffff\1"+
-        "\71\1\uffff\17\47\1\121\1\122\4\uffff\2\47\1\uffff\2\47\13\uffff"+
-        "\2\47\1\134\1\135\7\47\1\145\13\47\2\uffff\2\47\1\166\1\47\1\171"+
-        "\2\47\1\174\1\175\2\uffff\7\47\1\uffff\17\47\1\u0097\1\uffff\1\47"+
-        "\1\u0099\1\uffff\1\u009b\1\47\2\uffff\1\u009d\1\u009e\1\u009f\1"+
-        "\u00a0\10\47\1\u00a9\4\47\1\u00af\1\47\1\u00b2\2\47\1\u00b5\2\47"+
-        "\1\uffff\1\47\1\uffff\1\u00b9\1\uffff\1\47\4\uffff\1\u00bb\2\47"+
-        "\1\u00be\1\u00bf\1\u00c0\1\47\1\u00c2\1\uffff\1\u00c3\1\47\1\u00c5"+
-        "\1\47\1\u00c7\1\uffff\1\47\1\u00c9\1\uffff\1\47\1\u00cb\1\uffff"+
-        "\1\u00cc\1\u00cd\1\47\1\uffff\1\u00cf\1\uffff\2\47\3\uffff\1\47"+
-        "\2\uffff\1\u00d3\1\uffff\1\u00d4\1\uffff\1\u00d6\1\uffff\1\47\3"+
-        "\uffff\1\47\1\uffff\1\47\1\u00da\1\u00db\2\uffff\1\u00dc\1\uffff"+
-        "\2\47\1\u00df\3\uffff\1\u00e0\1\u00e1\3\uffff";
+        "\7\uffff\1\47\1\56\1\61\2\uffff\1\62\1\65\1\uffff\1\67\1\71\3\uffff"+
+        "\1\73\1\uffff\16\47\1\122\1\123\4\uffff\1\124\3\47\1\uffff\2\47"+
+        "\13\uffff\2\47\1\140\1\141\7\47\1\151\12\47\3\uffff\4\47\1\172\1"+
+        "\47\1\175\2\47\1\u0080\1\u0081\2\uffff\7\47\1\uffff\14\47\1\u0099"+
+        "\2\47\1\u009c\1\uffff\1\47\1\u009e\1\uffff\1\u00a0\1\47\2\uffff"+
+        "\1\u00a2\1\u00a3\1\u00a4\1\u00a5\10\47\1\u00ae\4\47\1\u00b4\2\47"+
+        "\1\u00b7\1\47\1\u00b9\1\uffff\2\47\1\uffff\1\47\1\uffff\1\u00bd"+
+        "\1\uffff\1\47\4\uffff\1\u00bf\2\47\1\u00c2\1\u00c3\1\u00c4\1\47"+
+        "\1\u00c6\1\uffff\1\u00c7\1\47\1\u00c9\1\47\1\u00cb\1\uffff\1\47"+
+        "\1\u00cd\1\uffff\1\u00ce\1\uffff\1\u00d0\1\u00d1\1\47\1\uffff\1"+
+        "\u00d3\1\uffff\2\47\3\uffff\1\47\2\uffff\1\u00d7\1\uffff\1\u00d8"+
+        "\1\uffff\1\47\2\uffff\1\u00da\2\uffff\1\47\1\uffff\1\47\1\u00dd"+
+        "\1\u00de\2\uffff\1\47\1\uffff\1\47\1\u00e1\2\uffff\1\u00e2\1\u00e3"+
+        "\3\uffff";
     static final String DFA9_eofS =
-        "\u00e2\uffff";
+        "\u00e4\uffff";
     static final String DFA9_minS =
-        "\1\11\6\uffff\2\60\2\uffff\1\60\1\75\1\uffff\2\75\3\uffff\1\52\1"+
-        "\uffff\1\157\1\156\1\162\1\146\1\145\1\154\1\150\1\145\1\141\1\151"+
-        "\1\157\1\151\1\141\1\154\1\162\2\60\4\uffff\1\141\1\142\1\uffff"+
-        "\1\157\1\162\13\uffff\1\164\1\144\2\60\1\145\1\165\1\170\1\163\1"+
-        "\144\2\151\1\60\1\154\1\156\1\154\1\145\1\154\1\162\2\144\1\162"+
-        "\1\141\1\145\2\uffff\1\165\1\144\1\60\1\164\1\60\1\167\1\157\2\60"+
-        "\2\uffff\1\156\1\145\1\164\1\145\1\146\1\154\1\164\1\uffff\1\164"+
-        "\1\141\1\143\1\163\1\141\1\157\1\143\1\145\1\151\1\145\1\141\1\143"+
-        "\2\145\1\162\1\60\1\uffff\1\141\1\60\1\uffff\1\60\1\153\2\uffff"+
-        "\4\60\1\146\1\150\1\165\3\145\1\162\1\171\1\60\1\145\1\164\1\162"+
-        "\1\154\1\60\1\146\1\60\1\154\1\153\1\60\2\156\1\uffff\1\156\1\uffff"+
-        "\1\60\1\uffff\1\145\4\uffff\1\60\1\151\1\156\3\60\1\157\1\60\1\uffff"+
-        "\1\60\1\145\1\60\1\145\1\60\1\uffff\1\171\1\60\1\uffff\1\154\1\60"+
-        "\1\uffff\2\60\1\147\1\uffff\1\60\1\uffff\1\154\1\143\3\uffff\1\171"+
-        "\2\uffff\1\60\1\uffff\1\60\1\uffff\1\60\1\uffff\1\145\3\uffff\1"+
-        "\154\1\uffff\1\145\2\60\2\uffff\1\60\1\uffff\1\154\1\145\1\60\3"+
-        "\uffff\2\60\3\uffff";
+        "\1\11\6\uffff\1\157\2\60\2\uffff\1\60\1\75\1\uffff\2\75\3\uffff"+
+        "\1\52\1\uffff\1\157\1\156\1\162\1\146\1\145\1\154\1\150\1\145\1"+
+        "\141\2\151\1\141\1\154\1\162\2\60\4\uffff\1\60\1\144\1\141\1\142"+
+        "\1\uffff\1\157\1\162\13\uffff\1\164\1\144\2\60\1\145\1\165\1\170"+
+        "\1\163\1\144\2\151\1\60\1\154\1\156\1\154\1\145\1\154\1\162\1\144"+
+        "\1\162\1\141\1\145\3\uffff\1\145\1\151\1\165\1\144\1\60\1\164\1"+
+        "\60\1\167\1\157\2\60\2\uffff\1\156\1\145\1\164\1\145\1\146\1\154"+
+        "\1\164\1\uffff\1\164\1\141\1\143\1\163\1\141\1\157\1\143\1\145\1"+
+        "\141\1\143\2\145\1\60\1\146\1\162\1\60\1\uffff\1\141\1\60\1\uffff"+
+        "\1\60\1\153\2\uffff\4\60\1\146\1\150\1\165\3\145\1\162\1\171\1\60"+
+        "\1\145\1\164\1\162\1\154\1\60\1\154\1\153\1\60\1\156\1\60\1\uffff"+
+        "\1\171\1\156\1\uffff\1\156\1\uffff\1\60\1\uffff\1\145\4\uffff\1"+
+        "\60\1\151\1\156\3\60\1\157\1\60\1\uffff\1\60\1\145\1\60\1\145\1"+
+        "\60\1\uffff\1\154\1\60\1\uffff\1\60\1\uffff\2\60\1\147\1\uffff\1"+
+        "\60\1\uffff\1\154\1\143\3\uffff\1\171\2\uffff\1\60\1\uffff\1\60"+
+        "\1\uffff\1\145\2\uffff\1\60\2\uffff\1\154\1\uffff\1\145\2\60\2\uffff"+
+        "\1\154\1\uffff\1\145\1\60\2\uffff\2\60\3\uffff";
     static final String DFA9_maxS =
-        "\1\175\6\uffff\2\172\2\uffff\1\146\1\75\1\uffff\2\75\3\uffff\1\57"+
-        "\1\uffff\1\157\1\156\1\162\1\146\1\162\1\156\1\162\1\157\1\165\1"+
-        "\162\1\157\1\151\1\141\1\154\1\162\2\172\4\uffff\1\164\1\142\1\uffff"+
-        "\1\157\1\162\13\uffff\1\164\1\144\2\172\1\145\1\165\1\170\1\163"+
-        "\1\144\2\151\1\172\1\163\1\156\1\154\1\145\1\154\1\162\1\166\1\144"+
-        "\1\162\1\165\1\145\2\uffff\1\165\1\144\1\172\1\164\1\172\1\167\1"+
-        "\157\2\172\2\uffff\1\156\1\145\1\164\1\145\1\167\2\164\1\uffff\1"+
-        "\164\1\141\1\143\1\163\1\141\1\157\1\143\1\145\1\151\1\145\1\141"+
-        "\1\143\2\145\1\162\1\172\1\uffff\1\141\1\172\1\uffff\1\172\1\153"+
-        "\2\uffff\4\172\1\146\1\150\1\165\3\145\1\162\1\171\1\172\1\145\1"+
-        "\164\1\162\1\154\1\172\1\146\1\172\1\154\1\153\1\172\2\156\1\uffff"+
-        "\1\156\1\uffff\1\172\1\uffff\1\145\4\uffff\1\172\1\151\1\156\3\172"+
-        "\1\157\1\172\1\uffff\1\172\1\145\1\172\1\145\1\172\1\uffff\1\171"+
-        "\1\172\1\uffff\1\154\1\172\1\uffff\2\172\1\147\1\uffff\1\172\1\uffff"+
-        "\1\154\1\143\3\uffff\1\171\2\uffff\1\172\1\uffff\1\172\1\uffff\1"+
-        "\172\1\uffff\1\145\3\uffff\1\154\1\uffff\1\145\2\172\2\uffff\1\172"+
-        "\1\uffff\1\154\1\145\1\172\3\uffff\2\172\3\uffff";
+        "\1\175\6\uffff\1\163\2\172\2\uffff\1\146\1\75\1\uffff\2\75\3\uffff"+
+        "\1\57\1\uffff\1\157\1\156\1\162\1\146\1\162\1\156\1\162\1\157\1"+
+        "\165\1\162\1\151\1\141\1\154\1\162\2\172\4\uffff\1\172\1\166\1\164"+
+        "\1\142\1\uffff\1\157\1\162\13\uffff\1\164\1\144\2\172\1\145\1\165"+
+        "\1\170\1\163\1\144\2\151\1\172\1\163\1\156\1\154\1\145\1\154\1\162"+
+        "\1\144\1\162\1\165\1\145\3\uffff\1\145\1\151\1\165\1\144\1\172\1"+
+        "\164\1\172\1\167\1\157\2\172\2\uffff\1\156\1\145\1\164\1\145\1\167"+
+        "\2\164\1\uffff\1\164\1\141\1\143\1\163\1\141\1\157\1\143\1\145\1"+
+        "\141\1\143\2\145\1\172\1\146\1\162\1\172\1\uffff\1\141\1\172\1\uffff"+
+        "\1\172\1\153\2\uffff\4\172\1\146\1\150\1\165\3\145\1\162\1\171\1"+
+        "\172\1\145\1\164\1\162\1\154\1\172\1\154\1\153\1\172\1\156\1\172"+
+        "\1\uffff\1\171\1\156\1\uffff\1\156\1\uffff\1\172\1\uffff\1\145\4"+
+        "\uffff\1\172\1\151\1\156\3\172\1\157\1\172\1\uffff\1\172\1\145\1"+
+        "\172\1\145\1\172\1\uffff\1\154\1\172\1\uffff\1\172\1\uffff\2\172"+
+        "\1\147\1\uffff\1\172\1\uffff\1\154\1\143\3\uffff\1\171\2\uffff\1"+
+        "\172\1\uffff\1\172\1\uffff\1\145\2\uffff\1\172\2\uffff\1\154\1\uffff"+
+        "\1\145\2\172\2\uffff\1\154\1\uffff\1\145\1\172\2\uffff\2\172\3\uffff";
     static final String DFA9_acceptS =
-        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\2\uffff\1\11\1\12\2\uffff\1\16"+
-        "\2\uffff\1\23\1\24\1\25\1\uffff\1\27\21\uffff\1\103\1\104\1\107"+
-        "\1\110\2\uffff\1\7\2\uffff\1\10\1\13\1\105\1\15\1\14\1\20\1\17\1"+
-        "\22\1\21\1\106\1\26\27\uffff\1\75\1\76\11\uffff\1\32\1\33\7\uffff"+
-        "\1\40\20\uffff\1\73\2\uffff\1\60\2\uffff\1\30\1\31\31\uffff\1\45"+
-        "\1\uffff\1\57\1\uffff\1\62\1\uffff\1\34\1\47\1\102\1\35\10\uffff"+
-        "\1\42\5\uffff\1\54\2\uffff\1\64\2\uffff\1\72\3\uffff\1\61\1\uffff"+
-        "\1\36\2\uffff\1\37\1\70\1\46\1\uffff\1\65\1\50\1\uffff\1\67\1\uffff"+
-        "\1\53\1\uffff\1\63\1\uffff\1\71\1\74\1\44\1\uffff\1\100\3\uffff"+
-        "\1\51\1\77\1\uffff\1\56\3\uffff\1\43\1\52\1\55\2\uffff\1\41\1\66"+
-        "\1\101";
+        "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\3\uffff\1\12\1\13\2\uffff\1\17"+
+        "\2\uffff\1\24\1\25\1\26\1\uffff\1\30\20\uffff\1\104\1\105\1\110"+
+        "\1\111\4\uffff\1\10\2\uffff\1\11\1\14\1\106\1\16\1\15\1\21\1\20"+
+        "\1\23\1\22\1\107\1\27\26\uffff\1\76\1\77\1\7\13\uffff\1\33\1\34"+
+        "\7\uffff\1\41\20\uffff\1\74\2\uffff\1\61\2\uffff\1\31\1\32\27\uffff"+
+        "\1\55\2\uffff\1\46\1\uffff\1\60\1\uffff\1\63\1\uffff\1\35\1\50\1"+
+        "\103\1\36\10\uffff\1\43\5\uffff\1\65\2\uffff\1\73\1\uffff\1\54\3"+
+        "\uffff\1\62\1\uffff\1\37\2\uffff\1\40\1\71\1\47\1\uffff\1\66\1\51"+
+        "\1\uffff\1\70\1\uffff\1\64\1\uffff\1\72\1\75\1\uffff\1\57\1\45\1"+
+        "\uffff\1\101\3\uffff\1\52\1\100\1\uffff\1\56\2\uffff\1\44\1\53\2"+
+        "\uffff\1\42\1\67\1\102";
     static final String DFA9_specialS =
-        "\u00e2\uffff}>";
+        "\u00e4\uffff}>";
     static final String[] DFA9_transitionS = {
-            "\2\51\2\uffff\1\51\22\uffff\1\51\1\15\1\50\1\13\1\uffff\1\24"+
-            "\1\1\1\uffff\1\2\1\3\1\22\1\20\1\4\1\21\1\uffff\1\23\12\46\1"+
-            "\5\1\6\1\16\1\14\1\17\2\uffff\32\47\4\uffff\1\47\1\uffff\1\26"+
-            "\1\42\1\36\1\34\1\32\1\35\1\43\1\40\1\30\3\47\1\37\1\25\1\27"+
-            "\1\41\1\47\1\7\1\10\1\31\2\47\1\33\1\44\1\45\1\47\1\11\1\uffff"+
-            "\1\12",
+            "\2\51\2\uffff\1\51\22\uffff\1\51\1\16\1\50\1\14\1\uffff\1\25"+
+            "\1\1\1\uffff\1\2\1\3\1\23\1\21\1\4\1\22\1\uffff\1\24\12\46\1"+
+            "\5\1\6\1\17\1\15\1\20\2\uffff\32\47\4\uffff\1\47\1\uffff\1\27"+
+            "\1\42\1\37\1\35\1\33\1\36\1\43\1\40\1\31\3\47\1\7\1\26\1\30"+
+            "\1\41\1\47\1\10\1\11\1\32\2\47\1\34\1\44\1\45\1\47\1\12\1\uffff"+
+            "\1\13",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\4\47\1\52\1\47\1"+
-            "\53\23\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\7\47\1\55\13\47\1"+
-            "\56\6\47",
+            "\1\53\3\uffff\1\52",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\4\47\1\54\1\47\1"+
+            "\55\23\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\7\47\1\57\13\47\1"+
+            "\60\6\47",
             "",
             "",
-            "\12\61\7\uffff\6\61\32\uffff\6\61",
-            "\1\62",
-            "",
+            "\12\63\7\uffff\6\63\32\uffff\6\63",
             "\1\64",
+            "",
             "\1\66",
+            "\1\70",
             "",
             "",
             "",
-            "\1\70\4\uffff\1\70",
+            "\1\72\4\uffff\1\72",
             "",
-            "\1\72",
-            "\1\73",
             "\1\74",
             "\1\75",
-            "\1\100\2\uffff\1\76\11\uffff\1\77",
-            "\1\101\1\uffff\1\102",
-            "\1\103\11\uffff\1\104",
-            "\1\106\11\uffff\1\105",
-            "\1\110\23\uffff\1\107",
-            "\1\113\5\uffff\1\112\2\uffff\1\111",
-            "\1\114",
-            "\1\115",
+            "\1\76",
+            "\1\77",
+            "\1\102\2\uffff\1\100\11\uffff\1\101",
+            "\1\103\1\uffff\1\104",
+            "\1\105\11\uffff\1\106",
+            "\1\110\11\uffff\1\107",
+            "\1\112\23\uffff\1\111",
+            "\1\115\5\uffff\1\114\2\uffff\1\113",
             "\1\116",
             "\1\117",
             "\1\120",
+            "\1\121",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "",
             "",
             "",
-            "\1\124\1\uffff\1\126\1\125\17\uffff\1\123",
-            "\1\127",
-            "",
-            "\1\130",
-            "\1\131",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\132",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\126\21\uffff\1\125",
+            "\1\130\1\uffff\1\132\1\131\17\uffff\1\127",
             "\1\133",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\134",
+            "\1\135",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\136",
             "\1\137",
-            "\1\140",
-            "\1\141",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\142",
             "\1\143",
             "\1\144",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\147\6\uffff\1\146",
+            "\1\145",
+            "\1\146",
+            "\1\147",
             "\1\150",
-            "\1\151",
-            "\1\152",
-            "\1\153",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\153\6\uffff\1\152",
             "\1\154",
-            "\1\156\21\uffff\1\155",
+            "\1\155",
+            "\1\156",
             "\1\157",
             "\1\160",
-            "\1\161\23\uffff\1\162",
-            "\1\163",
-            "",
-            "",
-            "\1\164",
+            "\1\161",
+            "\1\162",
+            "\1\163\23\uffff\1\164",
             "\1\165",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "",
+            "",
+            "\1\166",
             "\1\167",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\17\47\1\170\12\47",
-            "\1\172",
+            "\1\170",
+            "\1\171",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\173",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
-            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\17\47\1\174\12\47",
             "\1\176",
             "\1\177",
-            "\1\u0080",
-            "\1\u0081",
-            "\1\u0084\2\uffff\1\u0082\15\uffff\1\u0083",
-            "\1\u0085\7\uffff\1\u0086",
-            "\1\u0087",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\1\u0088",
-            "\1\u0089",
-            "\1\u008a",
+            "",
+            "\1\u0082",
+            "\1\u0083",
+            "\1\u0084",
+            "\1\u0085",
+            "\1\u0088\2\uffff\1\u0086\15\uffff\1\u0087",
+            "\1\u0089\7\uffff\1\u008a",
             "\1\u008b",
+            "",
             "\1\u008c",
             "\1\u008d",
             "\1\u008e",
@@ -2862,108 +2895,110 @@ public class AslLexer extends Lexer {
             "\1\u0094",
             "\1\u0095",
             "\1\u0096",
+            "\1\u0097",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u0098\6\47",
+            "\1\u009a",
+            "\1\u009b",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\1\u0098",
+            "\1\u009d",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u009a\6\47",
-            "\1\u009c",
-            "",
-            "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u009f\6\47",
             "\1\u00a1",
-            "\1\u00a2",
-            "\1\u00a3",
-            "\1\u00a4",
-            "\1\u00a5",
+            "",
+            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\u00a6",
             "\1\u00a7",
             "\1\u00a8",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00a9",
             "\1\u00aa",
             "\1\u00ab",
             "\1\u00ac",
             "\1\u00ad",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00ae\6\47",
-            "\1\u00b0",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00b1\6\47",
-            "\1\u00b3",
-            "\1\u00b4",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00af",
+            "\1\u00b0",
+            "\1\u00b1",
+            "\1\u00b2",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00b3\6\47",
+            "\1\u00b5",
             "\1\u00b6",
-            "\1\u00b7",
-            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\u00b8",
-            "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "\1\u00ba",
+            "\1\u00bb",
             "",
-            "",
-            "",
-            "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\u00bc",
-            "\1\u00bd",
+            "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\u00be",
+            "",
+            "",
+            "",
+            "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "\1\u00c0",
             "\1\u00c1",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00c4",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00c6",
+            "\1\u00c5",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\u00c8",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
             "\1\u00ca",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\1\u00ce",
-            "",
+            "\1\u00cc",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\1\u00d0",
-            "\1\u00d1",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "",
-            "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00cf\6\47",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\1\u00d2",
             "",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
+            "",
+            "\1\u00d4",
+            "\1\u00d5",
+            "",
+            "",
+            "",
+            "\1\u00d6",
+            "",
             "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\23\47\1\u00d5\6\47",
-            "",
-            "\1\u00d7",
-            "",
-            "",
-            "",
-            "\1\u00d8",
             "",
             "\1\u00d9",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
-            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
-            "\1\u00dd",
-            "\1\u00de",
+            "",
+            "\1\u00db",
+            "",
+            "\1\u00dc",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
+            "",
+            "\1\u00df",
+            "",
+            "\1\u00e0",
+            "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
             "",
             "",
             "\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47",
@@ -3003,7 +3038,7 @@ public class AslLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
+            return "1:1: Tokens : ( T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS );";
         }
     }
  
