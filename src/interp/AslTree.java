@@ -89,7 +89,7 @@ public class AslTree extends CommonTree {
         return super.getType();
     }
 
-    public void addChild(int i, AslTree child) {
+    public void addChild(int i, Object child) {
         children.add(i,child);
     }
 }
