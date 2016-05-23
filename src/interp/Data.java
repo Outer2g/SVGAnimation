@@ -42,18 +42,21 @@ import java.util.HashMap;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER,OBJECT;}
+    public enum Type {VOID, BOOLEAN, INTEGER, STRING, OBJECT;}
 
     /** Type of data*/
     private Type type;
 
     /** Value of the data */
     private int value; 
+
+    /** Value of the string */
+    private String sValue;
     
-    /** Values Object types **/
+    /** Values Object types */
     private HashMap<String,String> attributes;
     
-    /** Constructor for objects **/
+    /** Constructor for objects */
     Data(HashMap<String,String> att){type = Type.OBJECT; attributes = att;}
     
     /** Constructor for integers */
@@ -65,11 +68,14 @@ public class Data {
     /** Constructor for void data */
     Data() {type = Type.VOID; }
 
+    Data(String s) {type = Type.STRING; sValue = s;}
+
     /** Copy constructor */
     Data(Data d) { 
       type = d.type;
-      if (type != Type.OBJECT) value = d.value;
-      else attributes = d.attributes;
+      if (type == Type.OBJECT) attributes = d.attributes;
+      else if (type == Type.STRING) sValue = d.sValue;
+      else value = d.value;
     }
 
     /** Returns the type of data */
@@ -85,6 +91,8 @@ public class Data {
 
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
+
+    public boolean isString() {return type == Type.STRING; }
     
     /** Gets the attributes hashmap **/
     public HashMap<String,String> getListAttributes(){
@@ -113,6 +121,12 @@ public class Data {
         assert type == Type.BOOLEAN;
         return value == 1;
     }
+
+    public String getStringValue() {
+        assert type == Type.STRING;
+        return sValue;
+    }
+
     /** Defines an Attribute for the data **/
     public void setAttribute(String name,String value) { assert type == Type.OBJECT; attributes.put(name,value);}
     /** Defines a Boolean value for the data */
@@ -126,7 +140,9 @@ public class Data {
     
     /** Returns a string representing the data in textual form. */
     public String toString() {
+        assert type != Type.OBJECT;
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
+        else if (type == Type.STRING) return sValue;
         return Integer.toString(value);
     }
     

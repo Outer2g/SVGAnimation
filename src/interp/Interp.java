@@ -302,12 +302,11 @@ public class Interp {
                 if (t.getChildCount() == 5) {
                     AslTree listAttributes = t.getChild(4);
                     for (int i = 0; i< t.getChild(4).getChildCount();++i){
-                      states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
-                    }
-
-                    // AslTree listAttributes = t.getChild(4);
-                    for (int i = 0; i< t.getChild(4).getChildCount();++i){
-                      att.put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                        value = evaluateExpression(listAttributes.getChild(i).getChild(0));
+                        value = new Data(value.toString());
+                        checkString(value);
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",value.toString()));
+                        att.put(listAttributes.getChild(i).getText(),value.toString());
                     }
                 }
         		Data objecte = new Data(att);
@@ -629,6 +628,7 @@ public class Interp {
         int type = t.getType();
 
         Data value = null;
+        String string;
         // Atoms
         switch (type) {
             // A variable
@@ -650,6 +650,40 @@ public class Interp {
                 if (value.isVoid()) {
                     throw new RuntimeException ("function expected to return a value");
                 }
+                break;
+            case AslLexer.COLORHEXA:
+                value = new Data(t.getChild(0).getText());
+                checkString(value);
+                break;
+            case AslLexer.COLORINT:
+                string = "rgb(";
+                value = evaluateExpression(t.getChild(0));
+                checkInteger(value);
+                string += value.toString() + ',';
+                value = evaluateExpression(t.getChild(1));
+                checkInteger(value);
+                string += value.toString() + ',';
+                value = evaluateExpression(t.getChild(2));
+                checkInteger(value);
+                string += value.toString() + ')';
+                value = new Data(string);
+                break;
+            case AslLexer.COLORPRCTJ:
+                string = "rgb(";
+                value = evaluateExpression(t.getChild(0));
+                checkInteger(value);
+                string += value.toString() + "%%,";
+                value = evaluateExpression(t.getChild(1));
+                checkInteger(value);
+                string += value.toString() + "%%,";
+                value = evaluateExpression(t.getChild(2));
+                checkInteger(value);
+                string += value.toString() + "%%)";
+                value = new Data(string);
+                break;
+            case AslLexer.COLORKEYWORD:
+                value = new Data(t.getChild(0).getText());
+                checkString(value);
                 break;
             default: break;
         }
@@ -769,6 +803,13 @@ public class Interp {
     private void checkInteger (Data b) {
         if (!b.isInteger()) {
             throw new RuntimeException ("Expecting numerical expression");
+        }
+    }
+
+    /** Checks that the data is integer and raises an exception if it is not. */
+    private void checkString (Data b) {
+        if (!b.isString()) {
+            throw new RuntimeException ("Expecting string expression");
         }
     }
 

@@ -45,8 +45,9 @@ tokens {
     PVALUE;     // Parameter by value in the list of parameters
     PREF;       // Parameter by reference in the list of parameters
     COLORINT;
-//    COLORHEX;
+    COLORHEXA;
     COLORPRCTJ;
+    COLORKEYWORD;
     LIST_ATTR;
 }
 
@@ -214,10 +215,10 @@ attribute_name_expr : POSX
                     | 'r'
                     ;
 
-color   :   COLORHEX 
+color   :   COLORHEX -> ^(COLORHEXA COLORHEX)
         |   RGB '(' expr ',' expr ',' expr ')' -> ^(COLORINT expr expr expr)
         |   RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^(COLORPRCTJ expr expr expr)
-        |   color_keyword
+        |   color_keyword -> ^(COLORKEYWORD color_keyword)
         ;
 
 color_keyword : RED | WHITE | BLACK | BLUE | GREEN;

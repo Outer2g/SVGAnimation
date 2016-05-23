@@ -25,8 +25,9 @@ func main()
   show dos;
   show tres;
   delay 1s;
+  modify tres (color: black);
   dos = tres;
-  estoEsNull = dos;
+  estoEsNull = tres;
   parallel 10s{
     move dos (400,400);
     modify dos (color : green, r : 20);
