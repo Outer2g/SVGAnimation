@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-23 09:52:41
+// $ANTLR 3.4 /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g 2016-05-24 19:09:59
 
 package parser;
 
@@ -116,15 +116,15 @@ public class AslLexer extends Lexer {
     public AslLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "/home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g"; }
 
     // $ANTLR start "T__83"
     public final void mT__83() throws RecognitionException {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:6:7: ( '&' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:6:9: '&'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:6:7: ( '&' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:6:9: '&'
             {
             match('&'); 
 
@@ -144,8 +144,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:7:7: ( '(' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:7:9: '('
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:7:7: ( '(' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:7:9: '('
             {
             match('('); 
 
@@ -165,8 +165,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:8:7: ( ')' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:8:9: ')'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:8:7: ( ')' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:8:9: ')'
             {
             match(')'); 
 
@@ -186,8 +186,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:9:7: ( ',' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:9:9: ','
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:9:7: ( ',' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:9:9: ','
             {
             match(','); 
 
@@ -207,8 +207,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:10:7: ( '.' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:10:9: '.'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:10:7: ( '.' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:10:9: '.'
             {
             match('.'); 
 
@@ -228,8 +228,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:11:7: ( ':' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:11:9: ':'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:11:7: ( ':' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:11:9: ':'
             {
             match(':'); 
 
@@ -249,8 +249,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:7: ( ';' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:12:9: ';'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:12:7: ( ';' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:12:9: ';'
             {
             match(';'); 
 
@@ -270,8 +270,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:7: ( 'ms' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:13:9: 'ms'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:13:7: ( 'ms' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:13:9: 'ms'
             {
             match("ms"); 
 
@@ -293,8 +293,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:7: ( 'r' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:14:9: 'r'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:14:7: ( 'r' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:14:9: 'r'
             {
             match('r'); 
 
@@ -314,8 +314,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:7: ( 's' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:15:9: 's'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:15:7: ( 's' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:15:9: 's'
             {
             match('s'); 
 
@@ -335,8 +335,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:16:7: ( '{' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:16:9: '{'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:16:7: ( '{' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:16:9: '{'
             {
             match('{'); 
 
@@ -356,8 +356,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:17:7: ( '}' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:17:9: '}'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:17:7: ( '}' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:17:9: '}'
             {
             match('}'); 
 
@@ -377,8 +377,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = HASHTAG;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:9: ( '#' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:267:11: '#'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:272:9: ( '#' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:272:11: '#'
             {
             match('#'); 
 
@@ -398,8 +398,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EEQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:9: ( '=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:268:11: '='
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:273:9: ( '=' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:273:11: '='
             {
             match('='); 
 
@@ -419,8 +419,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:9: ( '==' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:269:11: '=='
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:274:9: ( '==' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:274:11: '=='
             {
             match("=="); 
 
@@ -442,8 +442,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:10: ( '!=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:270:12: '!='
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:275:10: ( '!=' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:275:12: '!='
             {
             match("!="); 
 
@@ -465,8 +465,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:9: ( '<' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:271:11: '<'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:276:9: ( '<' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:276:11: '<'
             {
             match('<'); 
 
@@ -486,8 +486,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = LE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:9: ( '<=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:272:11: '<='
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:277:9: ( '<=' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:277:11: '<='
             {
             match("<="); 
 
@@ -509,8 +509,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:9: ( '>' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:273:11: '>'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:278:9: ( '>' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:278:11: '>'
             {
             match('>'); 
 
@@ -530,8 +530,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:9: ( '>=' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:274:11: '>='
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:279:9: ( '>=' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:279:11: '>='
             {
             match(">="); 
 
@@ -553,8 +553,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:275:9: ( '+' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:275:11: '+'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:280:9: ( '+' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:280:11: '+'
             {
             match('+'); 
 
@@ -574,8 +574,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:9: ( '-' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:276:11: '-'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:281:9: ( '-' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:281:11: '-'
             {
             match('-'); 
 
@@ -595,8 +595,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MUL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:9: ( '*' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:277:11: '*'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:282:9: ( '*' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:282:11: '*'
             {
             match('*'); 
 
@@ -616,8 +616,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:9: ( '/' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:278:11: '/'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:283:9: ( '/' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:283:11: '/'
             {
             match('/'); 
 
@@ -637,8 +637,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:9: ( '%' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:279:11: '%'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:284:9: ( '%' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:284:11: '%'
             {
             match('%'); 
 
@@ -658,8 +658,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = NOT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:9: ( 'not' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:280:11: 'not'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:285:9: ( 'not' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:285:11: 'not'
             {
             match("not"); 
 
@@ -681,8 +681,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = AND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:9: ( 'and' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:281:11: 'and'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:286:9: ( 'and' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:286:11: 'and'
             {
             match("and"); 
 
@@ -704,8 +704,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = OR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:9: ( 'or' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:282:11: 'or'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:287:9: ( 'or' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:287:11: 'or'
             {
             match("or"); 
 
@@ -727,8 +727,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:9: ( 'if' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:283:11: 'if'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:288:9: ( 'if' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:288:11: 'if'
             {
             match("if"); 
 
@@ -750,8 +750,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:9: ( 'then' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:284:11: 'then'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:289:9: ( 'then' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:289:11: 'then'
             {
             match("then"); 
 
@@ -773,8 +773,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:9: ( 'else' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:285:11: 'else'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:290:9: ( 'else' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:290:11: 'else'
             {
             match("else"); 
 
@@ -796,8 +796,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDIF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:9: ( 'endif' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:286:11: 'endif'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:291:9: ( 'endif' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:291:11: 'endif'
             {
             match("endif"); 
 
@@ -819,8 +819,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:287:9: ( 'while' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:287:11: 'while'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:292:9: ( 'while' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:292:11: 'while'
             {
             match("while"); 
 
@@ -842,8 +842,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:288:9: ( 'do' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:288:11: 'do'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:293:9: ( 'do' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:293:11: 'do'
             {
             match("do"); 
 
@@ -865,8 +865,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDWHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:9: ( 'endwhile' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:289:11: 'endwhile'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:294:9: ( 'endwhile' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:294:11: 'endwhile'
             {
             match("endwhile"); 
 
@@ -888,8 +888,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:9: ( 'func' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:290:11: 'func'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:295:9: ( 'func' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:295:11: 'func'
             {
             match("func"); 
 
@@ -911,8 +911,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ENDFUNC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:291:9: ( 'endfunc' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:291:11: 'endfunc'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:296:9: ( 'endfunc' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:296:11: 'endfunc'
             {
             match("endfunc"); 
 
@@ -934,8 +934,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RETURN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:9: ( 'return' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:292:11: 'return'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:297:9: ( 'return' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:297:11: 'return'
             {
             match("return"); 
 
@@ -957,8 +957,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:293:9: ( 'read' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:293:11: 'read'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:298:9: ( 'read' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:298:11: 'read'
             {
             match("read"); 
 
@@ -980,8 +980,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WRITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:294:9: ( 'write' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:294:11: 'write'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:299:9: ( 'write' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:299:11: 'write'
             {
             match("write"); 
 
@@ -1003,8 +1003,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TRUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:295:9: ( 'true' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:295:11: 'true'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:300:9: ( 'true' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:300:11: 'true'
             {
             match("true"); 
 
@@ -1026,8 +1026,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = FALSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:296:9: ( 'false' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:296:11: 'false'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:301:9: ( 'false' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:301:11: 'false'
             {
             match("false"); 
 
@@ -1049,8 +1049,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = CREATE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:9: ( 'create' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:298:11: 'create'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:303:9: ( 'create' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:303:11: 'create'
             {
             match("create"); 
 
@@ -1072,8 +1072,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DESTROY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:299:9: ( 'destroy' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:299:11: 'destroy'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:304:9: ( 'destroy' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:304:11: 'destroy'
             {
             match("destroy"); 
 
@@ -1095,8 +1095,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOVE_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:300:9: ( 'movet' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:300:11: 'movet'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:305:9: ( 'movet' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:305:11: 'movet'
             {
             match("movet"); 
 
@@ -1118,8 +1118,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MOVE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:301:9: ( 'move' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:301:11: 'move'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:306:9: ( 'move' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:306:11: 'move'
             {
             match("move"); 
 
@@ -1141,8 +1141,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MODIFY_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:9: ( 'modifyt' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:302:11: 'modifyt'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:307:9: ( 'modifyt' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:307:11: 'modifyt'
             {
             match("modifyt"); 
 
@@ -1164,8 +1164,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = MODIFY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:303:9: ( 'modify' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:303:11: 'modify'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:308:9: ( 'modify' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:308:11: 'modify'
             {
             match("modify"); 
 
@@ -1187,8 +1187,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RGBPRCTJ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:304:9: ( 'rgbp' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:304:11: 'rgbp'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:309:9: ( 'rgbp' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:309:11: 'rgbp'
             {
             match("rgbp"); 
 
@@ -1210,8 +1210,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RGB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:9: ( 'rgb' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:305:11: 'rgb'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:310:9: ( 'rgb' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:310:11: 'rgb'
             {
             match("rgb"); 
 
@@ -1233,8 +1233,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SHOW_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:10: ( 'showt' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:307:12: 'showt'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:312:10: ( 'showt' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:312:12: 'showt'
             {
             match("showt"); 
 
@@ -1256,8 +1256,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = SHOW;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:308:9: ( 'show' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:308:11: 'show'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:313:9: ( 'show' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:313:11: 'show'
             {
             match("show"); 
 
@@ -1279,8 +1279,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = HIDE_T;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:309:10: ( 'hidet' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:309:12: 'hidet'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:314:10: ( 'hidet' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:314:12: 'hidet'
             {
             match("hidet"); 
 
@@ -1302,8 +1302,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = HIDE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:310:9: ( 'hide' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:310:11: 'hide'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:315:9: ( 'hide' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:315:11: 'hide'
             {
             match("hide"); 
 
@@ -1325,8 +1325,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = DELAY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:9: ( 'delay' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:311:11: 'delay'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:316:9: ( 'delay' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:316:11: 'delay'
             {
             match("delay"); 
 
@@ -1348,8 +1348,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = PARALLEL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:313:9: ( 'parallel' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:313:11: 'parallel'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:318:9: ( 'parallel' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:318:11: 'parallel'
             {
             match("parallel"); 
 
@@ -1371,8 +1371,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COLOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:315:9: ( 'color' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:315:11: 'color'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:320:9: ( 'color' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:320:11: 'color'
             {
             match("color"); 
 
@@ -1394,8 +1394,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WHITE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:316:9: ( 'white' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:316:11: 'white'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:321:9: ( 'white' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:321:11: 'white'
             {
             match("white"); 
 
@@ -1417,8 +1417,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = BLACK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:317:9: ( 'black' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:317:11: 'black'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:322:9: ( 'black' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:322:11: 'black'
             {
             match("black"); 
 
@@ -1440,8 +1440,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = BLUE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:318:9: ( 'blue' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:318:11: 'blue'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:323:9: ( 'blue' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:323:11: 'blue'
             {
             match("blue"); 
 
@@ -1463,8 +1463,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RED;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:319:9: ( 'red' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:319:11: 'red'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:324:9: ( 'red' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:324:11: 'red'
             {
             match("red"); 
 
@@ -1486,8 +1486,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = GREEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:320:9: ( 'green' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:320:11: 'green'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:325:9: ( 'green' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:325:11: 'green'
             {
             match("green"); 
 
@@ -1509,8 +1509,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = POSX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:321:9: ( 'x' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:321:11: 'x'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:326:9: ( 'x' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:326:11: 'x'
             {
             match('x'); 
 
@@ -1530,8 +1530,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = POSY;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:322:9: ( 'y' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:322:11: 'y'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:327:9: ( 'y' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:327:11: 'y'
             {
             match('y'); 
 
@@ -1551,8 +1551,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = CIRCLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:323:9: ( 'circle' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:323:11: 'circle'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:328:9: ( 'circle' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:328:11: 'circle'
             {
             match("circle"); 
 
@@ -1574,8 +1574,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = STROKE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:324:8: ( 'stroke' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:324:10: 'stroke'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:329:8: ( 'stroke' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:329:10: 'stroke'
             {
             match("stroke"); 
 
@@ -1597,8 +1597,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = RECTANGLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:325:11: ( 'rectangle' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:325:13: 'rectangle'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:330:11: ( 'rectangle' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:330:13: 'rectangle'
             {
             match("rectangle"); 
 
@@ -1620,8 +1620,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = TEXT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:326:6: ( 'text' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:326:8: 'text'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:331:6: ( 'text' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:331:8: 'text'
             {
             match("text"); 
 
@@ -1643,10 +1643,10 @@ public class AslLexer extends Lexer {
         try {
             int _type = INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:329:9: ( ( '0' .. '9' )+ )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:329:13: ( '0' .. '9' )+
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:334:9: ( ( '0' .. '9' )+ )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:334:13: ( '0' .. '9' )+
             {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:329:13: ( '0' .. '9' )+
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:334:13: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -1660,7 +1660,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1701,8 +1701,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:330:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:330:13: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:335:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:335:13: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1714,7 +1714,7 @@ public class AslLexer extends Lexer {
             }
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:330:37: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:335:37: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop2:
             do {
                 int alt2=2;
@@ -1727,7 +1727,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1764,8 +1764,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = COLORHEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:9: ( '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )? )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:11: '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:337:9: ( '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )? )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:337:11: '#' HEXADIGIT HEXADIGIT HEXADIGIT ( HEXADIGIT HEXADIGIT HEXADIGIT )?
             {
             match('#'); 
 
@@ -1778,7 +1778,7 @@ public class AslLexer extends Lexer {
             mHEXADIGIT(); 
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:45: ( HEXADIGIT HEXADIGIT HEXADIGIT )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:337:45: ( HEXADIGIT HEXADIGIT HEXADIGIT )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1787,7 +1787,7 @@ public class AslLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:332:46: HEXADIGIT HEXADIGIT HEXADIGIT
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:337:46: HEXADIGIT HEXADIGIT HEXADIGIT
                     {
                     mHEXADIGIT(); 
 
@@ -1818,8 +1818,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "HEXADIGIT"
     public final void mHEXADIGIT() throws RecognitionException {
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:335:10: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:340:10: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
                 input.consume();
@@ -1846,7 +1846,7 @@ public class AslLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:342:9: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1876,13 +1876,13 @@ public class AslLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:342:11: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
                     {
                     match("//"); 
 
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:16: (~ ( '\\n' | '\\r' ) )*
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:342:16: (~ ( '\\n' | '\\r' ) )*
                     loop4:
                     do {
                         int alt4=2;
@@ -1895,7 +1895,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+                    	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
                     	    {
                     	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '\t')||(input.LA(1) >= '\u000B' && input.LA(1) <= '\f')||(input.LA(1) >= '\u000E' && input.LA(1) <= '\uFFFF') ) {
                     	        input.consume();
@@ -1916,7 +1916,7 @@ public class AslLexer extends Lexer {
                     } while (true);
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:30: ( '\\r' )?
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:342:30: ( '\\r' )?
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
@@ -1925,7 +1925,7 @@ public class AslLexer extends Lexer {
                     }
                     switch (alt5) {
                         case 1 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:337:30: '\\r'
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:342:30: '\\r'
                             {
                             match('\r'); 
 
@@ -1942,13 +1942,13 @@ public class AslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:338:11: '/*' ( options {greedy=false; } : . )* '*/'
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:343:11: '/*' ( options {greedy=false; } : . )* '*/'
                     {
                     match("/*"); 
 
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:338:16: ( options {greedy=false; } : . )*
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:343:16: ( options {greedy=false; } : . )*
                     loop6:
                     do {
                         int alt6=2;
@@ -1973,7 +1973,7 @@ public class AslLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:338:44: .
+                    	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:343:44: .
                     	    {
                     	    matchAny(); 
 
@@ -2010,12 +2010,12 @@ public class AslLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:342:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:342:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:347:9: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:347:12: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
             {
             match('\"'); 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:342:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:347:16: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
             loop8:
             do {
                 int alt8=3;
@@ -2031,7 +2031,7 @@ public class AslLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:342:18: ESC_SEQ
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:347:18: ESC_SEQ
             	    {
             	    mESC_SEQ(); 
 
@@ -2039,7 +2039,7 @@ public class AslLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:342:28: ~ ( '\\\\' | '\"' )
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:347:28: ~ ( '\\\\' | '\"' )
             	    {
             	    if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
             	        input.consume();
@@ -2076,8 +2076,8 @@ public class AslLexer extends Lexer {
     // $ANTLR start "ESC_SEQ"
     public final void mESC_SEQ() throws RecognitionException {
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:348:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:348:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:353:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:353:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
             {
             match('\\'); 
 
@@ -2106,8 +2106,8 @@ public class AslLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:351:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:351:11: ( ' ' | '\\t' | '\\r' | '\\n' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:356:9: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:356:11: ( ' ' | '\\t' | '\\r' | '\\n' )
             {
             if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
                 input.consume();
@@ -2133,12 +2133,12 @@ public class AslLexer extends Lexer {
     // $ANTLR end "WS"
 
     public void mTokens() throws RecognitionException {
-        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:8: ( T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
+        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:8: ( T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | HASHTAG | EEQUAL | EQUAL | NOT_EQUAL | LT | LE | GT | GE | PLUS | MINUS | MUL | DIV | MOD | NOT | AND | OR | IF | THEN | ELSE | ENDIF | WHILE | DO | ENDWHILE | FUNC | ENDFUNC | RETURN | READ | WRITE | TRUE | FALSE | CREATE | DESTROY | MOVE_T | MOVE | MODIFY_T | MODIFY | RGBPRCTJ | RGB | SHOW_T | SHOW | HIDE_T | HIDE | DELAY | PARALLEL | COLOR | WHITE | BLACK | BLUE | RED | GREEN | POSX | POSY | CIRCLE | STROKE | RECTANGLE | TEXT | INT | ID | COLORHEX | COMMENT | STRING | WS )
         int alt9=74;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:10: T__83
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:10: T__83
                 {
                 mT__83(); 
 
@@ -2146,7 +2146,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:16: T__84
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:16: T__84
                 {
                 mT__84(); 
 
@@ -2154,7 +2154,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:22: T__85
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:22: T__85
                 {
                 mT__85(); 
 
@@ -2162,7 +2162,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:28: T__86
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:28: T__86
                 {
                 mT__86(); 
 
@@ -2170,7 +2170,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:34: T__87
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:34: T__87
                 {
                 mT__87(); 
 
@@ -2178,7 +2178,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:40: T__88
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:40: T__88
                 {
                 mT__88(); 
 
@@ -2186,7 +2186,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 7 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:46: T__89
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:46: T__89
                 {
                 mT__89(); 
 
@@ -2194,7 +2194,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 8 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:52: T__90
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:52: T__90
                 {
                 mT__90(); 
 
@@ -2202,7 +2202,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 9 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:58: T__91
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:58: T__91
                 {
                 mT__91(); 
 
@@ -2210,7 +2210,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 10 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:64: T__92
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:64: T__92
                 {
                 mT__92(); 
 
@@ -2218,7 +2218,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 11 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:70: T__93
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:70: T__93
                 {
                 mT__93(); 
 
@@ -2226,7 +2226,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 12 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:76: T__94
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:76: T__94
                 {
                 mT__94(); 
 
@@ -2234,7 +2234,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 13 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:82: HASHTAG
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:82: HASHTAG
                 {
                 mHASHTAG(); 
 
@@ -2242,7 +2242,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 14 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:90: EEQUAL
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:90: EEQUAL
                 {
                 mEEQUAL(); 
 
@@ -2250,7 +2250,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 15 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:97: EQUAL
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:97: EQUAL
                 {
                 mEQUAL(); 
 
@@ -2258,7 +2258,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:103: NOT_EQUAL
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:103: NOT_EQUAL
                 {
                 mNOT_EQUAL(); 
 
@@ -2266,7 +2266,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:113: LT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:113: LT
                 {
                 mLT(); 
 
@@ -2274,7 +2274,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 18 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:116: LE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:116: LE
                 {
                 mLE(); 
 
@@ -2282,7 +2282,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:119: GT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:119: GT
                 {
                 mGT(); 
 
@@ -2290,7 +2290,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 20 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:122: GE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:122: GE
                 {
                 mGE(); 
 
@@ -2298,7 +2298,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 21 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:125: PLUS
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:125: PLUS
                 {
                 mPLUS(); 
 
@@ -2306,7 +2306,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 22 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:130: MINUS
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:130: MINUS
                 {
                 mMINUS(); 
 
@@ -2314,7 +2314,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 23 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:136: MUL
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:136: MUL
                 {
                 mMUL(); 
 
@@ -2322,7 +2322,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 24 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:140: DIV
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:140: DIV
                 {
                 mDIV(); 
 
@@ -2330,7 +2330,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 25 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:144: MOD
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:144: MOD
                 {
                 mMOD(); 
 
@@ -2338,7 +2338,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 26 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:148: NOT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:148: NOT
                 {
                 mNOT(); 
 
@@ -2346,7 +2346,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 27 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:152: AND
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:152: AND
                 {
                 mAND(); 
 
@@ -2354,7 +2354,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 28 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:156: OR
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:156: OR
                 {
                 mOR(); 
 
@@ -2362,7 +2362,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:159: IF
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:159: IF
                 {
                 mIF(); 
 
@@ -2370,7 +2370,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 30 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:162: THEN
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:162: THEN
                 {
                 mTHEN(); 
 
@@ -2378,7 +2378,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:167: ELSE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:167: ELSE
                 {
                 mELSE(); 
 
@@ -2386,7 +2386,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 32 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:172: ENDIF
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:172: ENDIF
                 {
                 mENDIF(); 
 
@@ -2394,7 +2394,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 33 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:178: WHILE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:178: WHILE
                 {
                 mWHILE(); 
 
@@ -2402,7 +2402,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 34 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:184: DO
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:184: DO
                 {
                 mDO(); 
 
@@ -2410,7 +2410,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 35 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:187: ENDWHILE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:187: ENDWHILE
                 {
                 mENDWHILE(); 
 
@@ -2418,7 +2418,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:196: FUNC
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:196: FUNC
                 {
                 mFUNC(); 
 
@@ -2426,7 +2426,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:201: ENDFUNC
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:201: ENDFUNC
                 {
                 mENDFUNC(); 
 
@@ -2434,7 +2434,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:209: RETURN
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:209: RETURN
                 {
                 mRETURN(); 
 
@@ -2442,7 +2442,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:216: READ
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:216: READ
                 {
                 mREAD(); 
 
@@ -2450,7 +2450,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:221: WRITE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:221: WRITE
                 {
                 mWRITE(); 
 
@@ -2458,7 +2458,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 41 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:227: TRUE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:227: TRUE
                 {
                 mTRUE(); 
 
@@ -2466,7 +2466,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:232: FALSE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:232: FALSE
                 {
                 mFALSE(); 
 
@@ -2474,7 +2474,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 43 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:238: CREATE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:238: CREATE
                 {
                 mCREATE(); 
 
@@ -2482,7 +2482,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:245: DESTROY
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:245: DESTROY
                 {
                 mDESTROY(); 
 
@@ -2490,7 +2490,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 45 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:253: MOVE_T
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:253: MOVE_T
                 {
                 mMOVE_T(); 
 
@@ -2498,7 +2498,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 46 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:260: MOVE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:260: MOVE
                 {
                 mMOVE(); 
 
@@ -2506,7 +2506,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 47 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:265: MODIFY_T
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:265: MODIFY_T
                 {
                 mMODIFY_T(); 
 
@@ -2514,7 +2514,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 48 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:274: MODIFY
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:274: MODIFY
                 {
                 mMODIFY(); 
 
@@ -2522,7 +2522,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 49 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:281: RGBPRCTJ
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:281: RGBPRCTJ
                 {
                 mRGBPRCTJ(); 
 
@@ -2530,7 +2530,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 50 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:290: RGB
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:290: RGB
                 {
                 mRGB(); 
 
@@ -2538,7 +2538,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 51 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:294: SHOW_T
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:294: SHOW_T
                 {
                 mSHOW_T(); 
 
@@ -2546,7 +2546,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 52 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:301: SHOW
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:301: SHOW
                 {
                 mSHOW(); 
 
@@ -2554,7 +2554,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 53 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:306: HIDE_T
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:306: HIDE_T
                 {
                 mHIDE_T(); 
 
@@ -2562,7 +2562,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 54 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:313: HIDE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:313: HIDE
                 {
                 mHIDE(); 
 
@@ -2570,7 +2570,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 55 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:318: DELAY
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:318: DELAY
                 {
                 mDELAY(); 
 
@@ -2578,7 +2578,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 56 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:324: PARALLEL
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:324: PARALLEL
                 {
                 mPARALLEL(); 
 
@@ -2586,7 +2586,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 57 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:333: COLOR
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:333: COLOR
                 {
                 mCOLOR(); 
 
@@ -2594,7 +2594,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 58 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:339: WHITE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:339: WHITE
                 {
                 mWHITE(); 
 
@@ -2602,7 +2602,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 59 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:345: BLACK
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:345: BLACK
                 {
                 mBLACK(); 
 
@@ -2610,7 +2610,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 60 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:351: BLUE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:351: BLUE
                 {
                 mBLUE(); 
 
@@ -2618,7 +2618,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 61 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:356: RED
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:356: RED
                 {
                 mRED(); 
 
@@ -2626,7 +2626,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 62 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:360: GREEN
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:360: GREEN
                 {
                 mGREEN(); 
 
@@ -2634,7 +2634,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 63 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:366: POSX
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:366: POSX
                 {
                 mPOSX(); 
 
@@ -2642,7 +2642,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 64 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:371: POSY
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:371: POSY
                 {
                 mPOSY(); 
 
@@ -2650,7 +2650,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 65 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:376: CIRCLE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:376: CIRCLE
                 {
                 mCIRCLE(); 
 
@@ -2658,7 +2658,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 66 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:383: STROKE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:383: STROKE
                 {
                 mSTROKE(); 
 
@@ -2666,7 +2666,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 67 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:390: RECTANGLE
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:390: RECTANGLE
                 {
                 mRECTANGLE(); 
 
@@ -2674,7 +2674,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 68 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:400: TEXT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:400: TEXT
                 {
                 mTEXT(); 
 
@@ -2682,7 +2682,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 69 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:405: INT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:405: INT
                 {
                 mINT(); 
 
@@ -2690,7 +2690,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 70 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:409: ID
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:409: ID
                 {
                 mID(); 
 
@@ -2698,7 +2698,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 71 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:412: COLORHEX
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:412: COLORHEX
                 {
                 mCOLORHEX(); 
 
@@ -2706,7 +2706,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 72 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:421: COMMENT
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:421: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -2714,7 +2714,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 73 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:429: STRING
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:429: STRING
                 {
                 mSTRING(); 
 
@@ -2722,7 +2722,7 @@ public class AslLexer extends Lexer {
                 }
                 break;
             case 74 :
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:1:436: WS
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:1:436: WS
                 {
                 mWS(); 
 

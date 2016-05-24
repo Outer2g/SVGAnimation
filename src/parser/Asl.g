@@ -185,9 +185,13 @@ parallel_no_time : PARALLEL^ '{'! block_instructions_time '}'!;
 list_attributes : '(' attribute (',' attribute)* ')' -> ^(LIST_ATTR attribute+)
         ;
 
-attribute   :   attribute_name_color^ ':'! color
+attribute   :   attribute_name_color^ ':'! obj_attribute
             |   attribute_name_expr^ ':'! expr
             ;
+obj_attribute   :   color
+                | ID
+                |   ID '.' ( attribute_name_color) -> ^(ATTR ID attribute_name_color)
+                ;
 
 show : show_time | show_no_time;
 
@@ -249,7 +253,8 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // in parenthesis
 atom    :   ID 
         |   INT
-        |   ID '.' (e=attribute_name_expr) -> ^(ATTR ID $  e)
+        |   ID '.' (attribute_name_expr) -> ^(ATTR ID  attribute_name_expr)
+        |   ID '.' ( attribute_name_color) -> ^(ATTR ID attribute_name_color)
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
         |   '('! expr ')'!

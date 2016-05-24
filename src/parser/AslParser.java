@@ -1,4 +1,4 @@
-// $ANTLR 3.4 /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g 2016-05-23 09:52:41
+// $ANTLR 3.4 /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g 2016-05-24 19:09:58
 
 package parser;
 import interp.AslTree;
@@ -161,7 +161,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return AslParser.tokenNames; }
-    public String getGrammarFileName() { return "/home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g"; }
+    public String getGrammarFileName() { return "/home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g"; }
 
 
     public static class prog_return extends ParserRuleReturnScope {
@@ -171,7 +171,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "prog"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:1: prog : ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:1: prog : ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) ;
     public final AslParser.prog_return prog() throws RecognitionException {
         AslParser.prog_return retval = new AslParser.prog_return();
         retval.start = input.LT(1);
@@ -187,10 +187,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_EOF=new RewriteRuleTokenStream(adaptor,"token EOF");
         RewriteRuleSubtreeStream stream_func=new RewriteRuleSubtreeStream(adaptor,"rule func");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:9: ( ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:11: ( func )+ EOF
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:9: ( ( func )+ EOF -> ^( LIST_FUNCTIONS ( func )+ ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:11: ( func )+ EOF
             {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:11: ( func )+
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:11: ( func )+
             int cnt1=0;
             loop1:
             do {
@@ -204,7 +204,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:11: func
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:11: func
             	    {
             	    pushFollow(FOLLOW_func_in_prog208);
             	    func1=func();
@@ -243,7 +243,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 66:21: -> ^( LIST_FUNCTIONS ( func )+ )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:66:24: ^( LIST_FUNCTIONS ( func )+ )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:66:24: ^( LIST_FUNCTIONS ( func )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -298,7 +298,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "func"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:70:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:70:1: func : FUNC ^ ID params block_instructions ENDFUNC !;
     public final AslParser.func_return func() throws RecognitionException {
         AslParser.func_return retval = new AslParser.func_return();
         retval.start = input.LT(1);
@@ -319,8 +319,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDFUNC7_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:70:9: ( FUNC ^ ID params block_instructions ENDFUNC !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:70:11: FUNC ^ ID params block_instructions ENDFUNC !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:70:9: ( FUNC ^ ID params block_instructions ENDFUNC !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:70:11: FUNC ^ ID params block_instructions ENDFUNC !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -386,7 +386,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "params"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:1: params : '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) ;
     public final AslParser.params_return params() throws RecognitionException {
         AslParser.params_return retval = new AslParser.params_return();
         retval.start = input.LT(1);
@@ -405,14 +405,14 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
         RewriteRuleSubtreeStream stream_paramlist=new RewriteRuleSubtreeStream(adaptor,"rule paramlist");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:9: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:11: '(' ( paramlist )? ')'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:9: ( '(' ( paramlist )? ')' -> ^( PARAMS ( paramlist )? ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:11: '(' ( paramlist )? ')'
             {
             char_literal8=(Token)match(input,84,FOLLOW_84_in_params282);  
             stream_84.add(char_literal8);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:15: ( paramlist )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:15: ( paramlist )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -421,7 +421,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt2) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:15: paramlist
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:15: paramlist
                     {
                     pushFollow(FOLLOW_paramlist_in_params284);
                     paramlist9=paramlist();
@@ -453,14 +453,14 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 74:30: -> ^( PARAMS ( paramlist )? )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:33: ^( PARAMS ( paramlist )? )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:33: ^( PARAMS ( paramlist )? )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(PARAMS, "PARAMS")
                 , root_1);
 
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:74:42: ( paramlist )?
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:74:42: ( paramlist )?
                 if ( stream_paramlist.hasNext() ) {
                     adaptor.addChild(root_1, stream_paramlist.nextTree());
 
@@ -506,7 +506,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "paramlist"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:78:1: paramlist : param ( ',' ! param )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:78:1: paramlist : param ( ',' ! param )* ;
     public final AslParser.paramlist_return paramlist() throws RecognitionException {
         AslParser.paramlist_return retval = new AslParser.paramlist_return();
         retval.start = input.LT(1);
@@ -523,8 +523,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal12_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:78:10: ( param ( ',' ! param )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:78:12: param ( ',' ! param )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:78:10: ( param ( ',' ! param )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:78:12: param ( ',' ! param )*
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -536,7 +536,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, param11.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:78:18: ( ',' ! param )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:78:18: ( ',' ! param )*
             loop3:
             do {
                 int alt3=2;
@@ -549,7 +549,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt3) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:78:19: ',' ! param
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:78:19: ',' ! param
             	    {
             	    char_literal12=(Token)match(input,86,FOLLOW_86_in_paramlist316); 
 
@@ -600,7 +600,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "param"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:83:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:83:1: param : ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) );
     public final AslParser.param_return param() throws RecognitionException {
         AslParser.param_return retval = new AslParser.param_return();
         retval.start = input.LT(1);
@@ -617,7 +617,7 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:83:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:83:9: ( '&' id= ID -> ^( PREF[$id,$id.text] ) |id= ID -> ^( PVALUE[$id,$id.text] ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -636,7 +636,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt4) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:83:13: '&' id= ID
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:83:13: '&' id= ID
                     {
                     char_literal14=(Token)match(input,83,FOLLOW_83_in_param344);  
                     stream_83.add(char_literal14);
@@ -659,7 +659,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 83:23: -> ^( PREF[$id,$id.text] )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:83:26: ^( PREF[$id,$id.text] )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:83:26: ^( PREF[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -677,7 +677,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:84:13: id= ID
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:84:13: id= ID
                     {
                     id=(Token)match(input,ID,FOLLOW_ID_in_param371);  
                     stream_ID.add(id);
@@ -696,7 +696,7 @@ public TreeAdaptor getTreeAdaptor() {
                     root_0 = (AslTree)adaptor.nil();
                     // 84:19: -> ^( PVALUE[$id,$id.text] )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:84:22: ^( PVALUE[$id,$id.text] )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:84:22: ^( PVALUE[$id,$id.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -744,7 +744,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block_instructions"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:91:1: block_instructions : ( instruction )+ -> ^( LIST_INSTR ( instruction )+ ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:91:1: block_instructions : ( instruction )+ -> ^( LIST_INSTR ( instruction )+ ) ;
     public final AslParser.block_instructions_return block_instructions() throws RecognitionException {
         AslParser.block_instructions_return retval = new AslParser.block_instructions_return();
         retval.start = input.LT(1);
@@ -757,10 +757,10 @@ public TreeAdaptor getTreeAdaptor() {
 
         RewriteRuleSubtreeStream stream_instruction=new RewriteRuleSubtreeStream(adaptor,"rule instruction");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:92:9: ( ( instruction )+ -> ^( LIST_INSTR ( instruction )+ ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:92:14: ( instruction )+
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:92:9: ( ( instruction )+ -> ^( LIST_INSTR ( instruction )+ ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:92:14: ( instruction )+
             {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:92:14: ( instruction )+
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:92:14: ( instruction )+
             int cnt5=0;
             loop5:
             do {
@@ -774,7 +774,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt5) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:92:14: instruction
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:92:14: instruction
             	    {
             	    pushFollow(FOLLOW_instruction_in_block_instructions410);
             	    instruction15=instruction();
@@ -809,7 +809,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 93:13: -> ^( LIST_INSTR ( instruction )+ )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:93:16: ^( LIST_INSTR ( instruction )+ )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:93:16: ^( LIST_INSTR ( instruction )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -864,7 +864,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instruction"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:1: instruction : ( ( instruction_spc ';' !) | instructions_brack );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:1: instruction : ( ( instruction_spc ';' !) | instructions_brack );
     public final AslParser.instruction_return instruction() throws RecognitionException {
         AslParser.instruction_return retval = new AslParser.instruction_return();
         retval.start = input.LT(1);
@@ -881,7 +881,7 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal17_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:13: ( ( instruction_spc ';' !) | instructions_brack )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:13: ( ( instruction_spc ';' !) | instructions_brack )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -900,13 +900,13 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt6) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:15: ( instruction_spc ';' !)
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:15: ( instruction_spc ';' !)
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:15: ( instruction_spc ';' !)
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:16: instruction_spc ';' !
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:15: ( instruction_spc ';' !)
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:16: instruction_spc ';' !
                     {
                     pushFollow(FOLLOW_instruction_spc_in_instruction451);
                     instruction_spc16=instruction_spc();
@@ -923,7 +923,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:96:40: instructions_brack
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:96:40: instructions_brack
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -968,7 +968,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instruction_spc"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:99:1: instruction_spc : ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write | create | destroy | move | modify | show | hide | delay |);
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:99:1: instruction_spc : ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write | create | destroy | move | modify | show | hide | delay |);
     public final AslParser.instruction_spc_return instruction_spc() throws RecognitionException {
         AslParser.instruction_spc_return retval = new AslParser.instruction_spc_return();
         retval.start = input.LT(1);
@@ -1007,7 +1007,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:100:9: ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write | create | destroy | move | modify | show | hide | delay |)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:100:9: ( assign | ite_stmt | while_stmt | funcall | return_stmt | read | write | create | destroy | move | modify | show | hide | delay |)
             int alt7=15;
             switch ( input.LA(1) ) {
             case ID:
@@ -1108,7 +1108,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt7) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:100:13: assign
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:100:13: assign
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1123,7 +1123,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:101:13: ite_stmt
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:101:13: ite_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1138,7 +1138,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:102:13: while_stmt
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:102:13: while_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1153,7 +1153,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:103:13: funcall
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:103:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1168,7 +1168,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 5 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:104:13: return_stmt
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:104:13: return_stmt
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1183,7 +1183,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 6 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:105:13: read
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:105:13: read
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1198,7 +1198,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 7 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:106:13: write
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:106:13: write
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1213,7 +1213,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 8 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:107:13: create
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:107:13: create
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1228,7 +1228,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 9 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:108:13: destroy
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:108:13: destroy
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1243,7 +1243,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 10 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:109:13: move
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:109:13: move
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1258,7 +1258,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 11 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:110:13: modify
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:110:13: modify
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1273,7 +1273,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 12 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:112:13: show
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:112:13: show
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1288,7 +1288,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 13 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:113:13: hide
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:113:13: hide
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1303,7 +1303,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 14 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:114:13: delay
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:114:13: delay
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1318,7 +1318,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 15 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:116:9: 
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:116:9: 
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -1356,7 +1356,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instructions_brack"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:118:1: instructions_brack : parallel ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:118:1: instructions_brack : parallel ;
     public final AslParser.instructions_brack_return instructions_brack() throws RecognitionException {
         AslParser.instructions_brack_return retval = new AslParser.instructions_brack_return();
         retval.start = input.LT(1);
@@ -1369,8 +1369,8 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:118:20: ( parallel )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:118:22: parallel
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:118:20: ( parallel )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:118:22: parallel
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1413,7 +1413,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "assign"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:121:1: assign : ID eq= EEQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:121:1: assign : ID eq= EEQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) ;
     public final AslParser.assign_return assign() throws RecognitionException {
         AslParser.assign_return retval = new AslParser.assign_return();
         retval.start = input.LT(1);
@@ -1432,8 +1432,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_EEQUAL=new RewriteRuleTokenStream(adaptor,"token EEQUAL");
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:121:9: ( ID eq= EEQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:121:13: ID eq= EEQUAL expr
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:121:9: ( ID eq= EEQUAL expr -> ^( ASSIGN[$eq,\":=\"] ID expr ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:121:13: ID eq= EEQUAL expr
             {
             ID34=(Token)match(input,ID,FOLLOW_ID_in_assign824);  
             stream_ID.add(ID34);
@@ -1451,7 +1451,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_expr.add(expr35.getTree());
 
             // AST REWRITE
-            // elements: expr, ID
+            // elements: ID, expr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1463,7 +1463,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 121:31: -> ^( ASSIGN[$eq,\":=\"] ID expr )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:121:34: ^( ASSIGN[$eq,\":=\"] ID expr )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:121:34: ^( ASSIGN[$eq,\":=\"] ID expr )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -1515,7 +1515,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "ite_stmt"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:124:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:124:1: ite_stmt : IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !;
     public final AslParser.ite_stmt_return ite_stmt() throws RecognitionException {
         AslParser.ite_stmt_return retval = new AslParser.ite_stmt_return();
         retval.start = input.LT(1);
@@ -1540,8 +1540,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDIF42_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:124:13: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:124:17: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:124:13: ( IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:124:17: IF ^ expr THEN ! block_instructions ( ELSE ! block_instructions )? ENDIF !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1569,7 +1569,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, block_instructions39.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:124:51: ( ELSE ! block_instructions )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:124:51: ( ELSE ! block_instructions )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1578,7 +1578,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt8) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:124:52: ELSE ! block_instructions
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:124:52: ELSE ! block_instructions
                     {
                     ELSE40=(Token)match(input,ELSE,FOLLOW_ELSE_in_ite_stmt874); 
 
@@ -1628,7 +1628,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "while_stmt"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:128:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:128:1: while_stmt : WHILE ^ expr DO ! block_instructions ENDWHILE !;
     public final AslParser.while_stmt_return while_stmt() throws RecognitionException {
         AslParser.while_stmt_return retval = new AslParser.while_stmt_return();
         retval.start = input.LT(1);
@@ -1649,8 +1649,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ENDWHILE47_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:128:13: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:128:17: WHILE ^ expr DO ! block_instructions ENDWHILE !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:128:13: ( WHILE ^ expr DO ! block_instructions ENDWHILE !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:128:17: WHILE ^ expr DO ! block_instructions ENDWHILE !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1711,7 +1711,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "return_stmt"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:132:1: return_stmt : RETURN ^ ( expr )? ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:132:1: return_stmt : RETURN ^ ( expr )? ;
     public final AslParser.return_stmt_return return_stmt() throws RecognitionException {
         AslParser.return_stmt_return retval = new AslParser.return_stmt_return();
         retval.start = input.LT(1);
@@ -1726,8 +1726,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree RETURN48_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:132:13: ( RETURN ^ ( expr )? )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:132:17: RETURN ^ ( expr )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:132:13: ( RETURN ^ ( expr )? )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:132:17: RETURN ^ ( expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1739,7 +1739,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(RETURN48_tree, root_0);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:132:25: ( expr )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:132:25: ( expr )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -1748,7 +1748,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt9) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:132:25: expr
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:132:25: expr
                     {
                     pushFollow(FOLLOW_expr_in_return_stmt945);
                     expr49=expr();
@@ -1794,7 +1794,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "read"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:136:1: read : READ ^ ID ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:136:1: read : READ ^ ID ;
     public final AslParser.read_return read() throws RecognitionException {
         AslParser.read_return retval = new AslParser.read_return();
         retval.start = input.LT(1);
@@ -1809,8 +1809,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID51_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:136:9: ( READ ^ ID )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:136:13: READ ^ ID
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:136:9: ( READ ^ ID )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:136:13: READ ^ ID
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1860,7 +1860,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "write"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:1: write : WRITE ^ ( expr | STRING ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:1: write : WRITE ^ ( expr | STRING ) ;
     public final AslParser.write_return write() throws RecognitionException {
         AslParser.write_return retval = new AslParser.write_return();
         retval.start = input.LT(1);
@@ -1877,8 +1877,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree STRING54_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:9: ( WRITE ^ ( expr | STRING ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:13: WRITE ^ ( expr | STRING )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:9: ( WRITE ^ ( expr | STRING ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:13: WRITE ^ ( expr | STRING )
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -1890,7 +1890,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.becomeRoot(WRITE52_tree, root_0);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:20: ( expr | STRING )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:20: ( expr | STRING )
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1909,7 +1909,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt10) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:21: expr
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:21: expr
                     {
                     pushFollow(FOLLOW_expr_in_write998);
                     expr53=expr();
@@ -1921,7 +1921,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:140:28: STRING
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:140:28: STRING
                     {
                     STRING54=(Token)match(input,STRING,FOLLOW_STRING_in_write1002); 
                     STRING54_tree = 
@@ -1967,7 +1967,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "create"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:145:1: create : CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:145:1: create : CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !;
     public final AslParser.create_return create() throws RecognitionException {
         AslParser.create_return retval = new AslParser.create_return();
         retval.start = input.LT(1);
@@ -2000,8 +2000,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal65_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:145:9: ( CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:145:13: CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:145:9: ( CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:145:13: CREATE ^ ID '(' ! obj_type ',' ! expr ',' ! expr ( ',' ! list_attributes )? ')' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2047,7 +2047,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             adaptor.addChild(root_0, expr62.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:145:58: ( ',' ! list_attributes )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:145:58: ( ',' ! list_attributes )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2056,7 +2056,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt11) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:145:59: ',' ! list_attributes
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:145:59: ',' ! list_attributes
                     {
                     char_literal63=(Token)match(input,86,FOLLOW_86_in_create1047); 
 
@@ -2106,7 +2106,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "destroy"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:148:1: destroy : DESTROY ^ '(' ! ID ')' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:148:1: destroy : DESTROY ^ '(' ! ID ')' !;
     public final AslParser.destroy_return destroy() throws RecognitionException {
         AslParser.destroy_return retval = new AslParser.destroy_return();
         retval.start = input.LT(1);
@@ -2125,8 +2125,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal69_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:148:9: ( DESTROY ^ '(' ! ID ')' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:148:13: DESTROY ^ '(' ! ID ')' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:148:9: ( DESTROY ^ '(' ! ID ')' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:148:13: DESTROY ^ '(' ! ID ')' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2180,7 +2180,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "move"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:151:1: move : ( move_time | move_no_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:151:1: move : ( move_time | move_no_time );
     public final AslParser.move_return move() throws RecognitionException {
         AslParser.move_return retval = new AslParser.move_return();
         retval.start = input.LT(1);
@@ -2195,7 +2195,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:151:9: ( move_time | move_no_time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:151:9: ( move_time | move_no_time )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2214,7 +2214,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt12) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:151:13: move_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:151:13: move_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2229,7 +2229,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:151:25: move_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:151:25: move_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2274,7 +2274,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "move_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:154:1: move_time : MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:154:1: move_time : MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !;
     public final AslParser.move_time_return move_time() throws RecognitionException {
         AslParser.move_time_return retval = new AslParser.move_time_return();
         retval.start = input.LT(1);
@@ -2301,8 +2301,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal79_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:154:11: ( MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:154:13: MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:154:11: ( MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:154:13: MOVE_T ^ ID time '(' ! expr ',' ! expr ')' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2379,7 +2379,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "move_no_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:157:1: move_no_time : MOVE ^ ID '(' ! expr ',' ! expr ')' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:157:1: move_no_time : MOVE ^ ID '(' ! expr ',' ! expr ')' !;
     public final AslParser.move_no_time_return move_no_time() throws RecognitionException {
         AslParser.move_no_time_return retval = new AslParser.move_no_time_return();
         retval.start = input.LT(1);
@@ -2404,8 +2404,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal86_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:157:14: ( MOVE ^ ID '(' ! expr ',' ! expr ')' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:157:16: MOVE ^ ID '(' ! expr ',' ! expr ')' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:157:14: ( MOVE ^ ID '(' ! expr ',' ! expr ')' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:157:16: MOVE ^ ID '(' ! expr ',' ! expr ')' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2475,7 +2475,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "modify"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:160:1: modify : ( modify_time | modify_no_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:160:1: modify : ( modify_time | modify_no_time );
     public final AslParser.modify_return modify() throws RecognitionException {
         AslParser.modify_return retval = new AslParser.modify_return();
         retval.start = input.LT(1);
@@ -2490,7 +2490,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:160:11: ( modify_time | modify_no_time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:160:11: ( modify_time | modify_no_time )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2509,7 +2509,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt13) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:160:15: modify_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:160:15: modify_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2524,7 +2524,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:160:29: modify_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:160:29: modify_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2569,7 +2569,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "modify_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:163:1: modify_time : MODIFY_T ^ ID time list_attributes ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:163:1: modify_time : MODIFY_T ^ ID time list_attributes ;
     public final AslParser.modify_time_return modify_time() throws RecognitionException {
         AslParser.modify_time_return retval = new AslParser.modify_time_return();
         retval.start = input.LT(1);
@@ -2588,8 +2588,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID90_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:163:13: ( MODIFY_T ^ ID time list_attributes )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:163:15: MODIFY_T ^ ID time list_attributes
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:163:13: ( MODIFY_T ^ ID time list_attributes )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:163:15: MODIFY_T ^ ID time list_attributes
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2653,7 +2653,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "modify_no_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:166:1: modify_no_time : MODIFY ^ ID list_attributes ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:166:1: modify_no_time : MODIFY ^ ID list_attributes ;
     public final AslParser.modify_no_time_return modify_no_time() throws RecognitionException {
         AslParser.modify_no_time_return retval = new AslParser.modify_no_time_return();
         retval.start = input.LT(1);
@@ -2670,8 +2670,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree ID94_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:166:16: ( MODIFY ^ ID list_attributes )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:166:18: MODIFY ^ ID list_attributes
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:166:16: ( MODIFY ^ ID list_attributes )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:166:18: MODIFY ^ ID list_attributes
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -2728,7 +2728,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "parallel"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:169:1: parallel : ( parallel_time | parallel_no_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:169:1: parallel : ( parallel_time | parallel_no_time );
     public final AslParser.parallel_return parallel() throws RecognitionException {
         AslParser.parallel_return retval = new AslParser.parallel_return();
         retval.start = input.LT(1);
@@ -2743,7 +2743,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:169:10: ( parallel_time | parallel_no_time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:169:10: ( parallel_time | parallel_no_time )
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -2773,7 +2773,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt14) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:169:12: parallel_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:169:12: parallel_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2788,7 +2788,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:169:28: parallel_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:169:28: parallel_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2833,7 +2833,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instructions_notime"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:1: instructions_notime : ( move_no_time | modify_no_time | show_no_time | hide_no_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:1: instructions_notime : ( move_no_time | modify_no_time | show_no_time | hide_no_time );
     public final AslParser.instructions_notime_return instructions_notime() throws RecognitionException {
         AslParser.instructions_notime_return retval = new AslParser.instructions_notime_return();
         retval.start = input.LT(1);
@@ -2852,7 +2852,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:21: ( move_no_time | modify_no_time | show_no_time | hide_no_time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:21: ( move_no_time | modify_no_time | show_no_time | hide_no_time )
             int alt15=4;
             switch ( input.LA(1) ) {
             case MOVE:
@@ -2885,7 +2885,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt15) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:23: move_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:23: move_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2900,7 +2900,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:38: modify_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:38: modify_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2915,7 +2915,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:55: show_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:55: show_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2930,7 +2930,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:171:70: hide_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:171:70: hide_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -2975,7 +2975,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block_instructions_notime"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:173:1: block_instructions_notime : instructions_notime ';' ( instructions_notime ';' )* -> ^( LIST_INSTR ( instructions_notime )+ ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:173:1: block_instructions_notime : instructions_notime ';' ( instructions_notime ';' )* -> ^( LIST_INSTR ( instructions_notime )+ ) ;
     public final AslParser.block_instructions_notime_return block_instructions_notime() throws RecognitionException {
         AslParser.block_instructions_notime_return retval = new AslParser.block_instructions_notime_return();
         retval.start = input.LT(1);
@@ -2995,8 +2995,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_89=new RewriteRuleTokenStream(adaptor,"token 89");
         RewriteRuleSubtreeStream stream_instructions_notime=new RewriteRuleSubtreeStream(adaptor,"rule instructions_notime");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:173:26: ( instructions_notime ';' ( instructions_notime ';' )* -> ^( LIST_INSTR ( instructions_notime )+ ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:173:28: instructions_notime ';' ( instructions_notime ';' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:173:26: ( instructions_notime ';' ( instructions_notime ';' )* -> ^( LIST_INSTR ( instructions_notime )+ ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:173:28: instructions_notime ';' ( instructions_notime ';' )*
             {
             pushFollow(FOLLOW_instructions_notime_in_block_instructions_notime1300);
             instructions_notime102=instructions_notime();
@@ -3009,7 +3009,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_89.add(char_literal103);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:173:51: ( instructions_notime ';' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:173:51: ( instructions_notime ';' )*
             loop16:
             do {
                 int alt16=2;
@@ -3022,7 +3022,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt16) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:173:53: instructions_notime ';'
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:173:53: instructions_notime ';'
             	    {
             	    pushFollow(FOLLOW_instructions_notime_in_block_instructions_notime1305);
             	    instructions_notime104=instructions_notime();
@@ -3057,7 +3057,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 174:29: -> ^( LIST_INSTR ( instructions_notime )+ )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:174:32: ^( LIST_INSTR ( instructions_notime )+ )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:174:32: ^( LIST_INSTR ( instructions_notime )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3112,7 +3112,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "parallel_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:176:1: parallel_time : PARALLEL ^ time '{' ! block_instructions_notime '}' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:176:1: parallel_time : PARALLEL ^ time '{' ! block_instructions_notime '}' !;
     public final AslParser.parallel_time_return parallel_time() throws RecognitionException {
         AslParser.parallel_time_return retval = new AslParser.parallel_time_return();
         retval.start = input.LT(1);
@@ -3133,8 +3133,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal110_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:176:15: ( PARALLEL ^ time '{' ! block_instructions_notime '}' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:176:17: PARALLEL ^ time '{' ! block_instructions_notime '}' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:176:15: ( PARALLEL ^ time '{' ! block_instructions_notime '}' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:176:17: PARALLEL ^ time '{' ! block_instructions_notime '}' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3195,7 +3195,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "instructions_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:1: instructions_time : ( move_time | modify_time | show_time | hide_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:1: instructions_time : ( move_time | modify_time | show_time | hide_time );
     public final AslParser.instructions_time_return instructions_time() throws RecognitionException {
         AslParser.instructions_time_return retval = new AslParser.instructions_time_return();
         retval.start = input.LT(1);
@@ -3214,7 +3214,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:19: ( move_time | modify_time | show_time | hide_time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:19: ( move_time | modify_time | show_time | hide_time )
             int alt17=4;
             switch ( input.LA(1) ) {
             case MOVE_T:
@@ -3247,7 +3247,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             switch (alt17) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:21: move_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:21: move_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3262,7 +3262,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:33: modify_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:33: modify_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3277,7 +3277,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:47: show_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:47: show_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3292,7 +3292,7 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:178:59: hide_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:178:59: hide_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3337,7 +3337,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "block_instructions_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:180:1: block_instructions_time : instructions_time ';' ( instructions_time ';' )* -> ^( LIST_INSTR ( instructions_time )+ ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:180:1: block_instructions_time : instructions_time ';' ( instructions_time ';' )* -> ^( LIST_INSTR ( instructions_time )+ ) ;
     public final AslParser.block_instructions_time_return block_instructions_time() throws RecognitionException {
         AslParser.block_instructions_time_return retval = new AslParser.block_instructions_time_return();
         retval.start = input.LT(1);
@@ -3357,8 +3357,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_89=new RewriteRuleTokenStream(adaptor,"token 89");
         RewriteRuleSubtreeStream stream_instructions_time=new RewriteRuleSubtreeStream(adaptor,"rule instructions_time");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:180:24: ( instructions_time ';' ( instructions_time ';' )* -> ^( LIST_INSTR ( instructions_time )+ ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:180:26: instructions_time ';' ( instructions_time ';' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:180:24: ( instructions_time ';' ( instructions_time ';' )* -> ^( LIST_INSTR ( instructions_time )+ ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:180:26: instructions_time ';' ( instructions_time ';' )*
             {
             pushFollow(FOLLOW_instructions_time_in_block_instructions_time1392);
             instructions_time115=instructions_time();
@@ -3371,7 +3371,7 @@ public TreeAdaptor getTreeAdaptor() {
             stream_89.add(char_literal116);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:180:48: ( instructions_time ';' )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:180:48: ( instructions_time ';' )*
             loop18:
             do {
                 int alt18=2;
@@ -3384,7 +3384,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt18) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:180:50: instructions_time ';'
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:180:50: instructions_time ';'
             	    {
             	    pushFollow(FOLLOW_instructions_time_in_block_instructions_time1398);
             	    instructions_time117=instructions_time();
@@ -3419,7 +3419,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 181:29: -> ^( LIST_INSTR ( instructions_time )+ )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:181:32: ^( LIST_INSTR ( instructions_time )+ )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:181:32: ^( LIST_INSTR ( instructions_time )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3474,7 +3474,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "parallel_no_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:183:1: parallel_no_time : PARALLEL ^ '{' ! block_instructions_time '}' !;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:183:1: parallel_no_time : PARALLEL ^ '{' ! block_instructions_time '}' !;
     public final AslParser.parallel_no_time_return parallel_no_time() throws RecognitionException {
         AslParser.parallel_no_time_return retval = new AslParser.parallel_no_time_return();
         retval.start = input.LT(1);
@@ -3493,8 +3493,8 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal122_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:183:18: ( PARALLEL ^ '{' ! block_instructions_time '}' !)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:183:20: PARALLEL ^ '{' ! block_instructions_time '}' !
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:183:18: ( PARALLEL ^ '{' ! block_instructions_time '}' !)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:183:20: PARALLEL ^ '{' ! block_instructions_time '}' !
             {
             root_0 = (AslTree)adaptor.nil();
 
@@ -3548,7 +3548,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "list_attributes"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:1: list_attributes : '(' attribute ( ',' attribute )* ')' -> ^( LIST_ATTR ( attribute )+ ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:1: list_attributes : '(' attribute ( ',' attribute )* ')' -> ^( LIST_ATTR ( attribute )+ ) ;
     public final AslParser.list_attributes_return list_attributes() throws RecognitionException {
         AslParser.list_attributes_return retval = new AslParser.list_attributes_return();
         retval.start = input.LT(1);
@@ -3572,8 +3572,8 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_86=new RewriteRuleTokenStream(adaptor,"token 86");
         RewriteRuleSubtreeStream stream_attribute=new RewriteRuleSubtreeStream(adaptor,"rule attribute");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:17: ( '(' attribute ( ',' attribute )* ')' -> ^( LIST_ATTR ( attribute )+ ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:19: '(' attribute ( ',' attribute )* ')'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:17: ( '(' attribute ( ',' attribute )* ')' -> ^( LIST_ATTR ( attribute )+ ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:19: '(' attribute ( ',' attribute )* ')'
             {
             char_literal123=(Token)match(input,84,FOLLOW_84_in_list_attributes1463);  
             stream_84.add(char_literal123);
@@ -3586,7 +3586,7 @@ public TreeAdaptor getTreeAdaptor() {
 
             stream_attribute.add(attribute124.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:33: ( ',' attribute )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:33: ( ',' attribute )*
             loop19:
             do {
                 int alt19=2;
@@ -3599,7 +3599,7 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt19) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:34: ',' attribute
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:34: ',' attribute
             	    {
             	    char_literal125=(Token)match(input,86,FOLLOW_86_in_list_attributes1468);  
             	    stream_86.add(char_literal125);
@@ -3638,7 +3638,7 @@ public TreeAdaptor getTreeAdaptor() {
             root_0 = (AslTree)adaptor.nil();
             // 185:54: -> ^( LIST_ATTR ( attribute )+ )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:185:57: ^( LIST_ATTR ( attribute )+ )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:185:57: ^( LIST_ATTR ( attribute )+ )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -3693,7 +3693,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "attribute"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:188:1: attribute : ( attribute_name_color ^ ':' ! color | attribute_name_expr ^ ':' ! expr );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:188:1: attribute : ( attribute_name_color ^ ':' ! obj_attribute | attribute_name_expr ^ ':' ! expr );
     public final AslParser.attribute_return attribute() throws RecognitionException {
         AslParser.attribute_return retval = new AslParser.attribute_return();
         retval.start = input.LT(1);
@@ -3705,7 +3705,7 @@ public TreeAdaptor getTreeAdaptor() {
         Token char_literal132=null;
         AslParser.attribute_name_color_return attribute_name_color128 =null;
 
-        AslParser.color_return color130 =null;
+        AslParser.obj_attribute_return obj_attribute130 =null;
 
         AslParser.attribute_name_expr_return attribute_name_expr131 =null;
 
@@ -3716,7 +3716,7 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree char_literal132_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:188:13: ( attribute_name_color ^ ':' ! color | attribute_name_expr ^ ':' ! expr )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:188:13: ( attribute_name_color ^ ':' ! obj_attribute | attribute_name_expr ^ ':' ! expr )
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -3735,7 +3735,7 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt20) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:188:17: attribute_name_color ^ ':' ! color
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:188:17: attribute_name_color ^ ':' ! obj_attribute
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3749,17 +3749,17 @@ public TreeAdaptor getTreeAdaptor() {
 
                     char_literal129=(Token)match(input,88,FOLLOW_88_in_attribute1507); 
 
-                    pushFollow(FOLLOW_color_in_attribute1510);
-                    color130=color();
+                    pushFollow(FOLLOW_obj_attribute_in_attribute1510);
+                    obj_attribute130=obj_attribute();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, color130.getTree());
+                    adaptor.addChild(root_0, obj_attribute130.getTree());
 
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:189:17: attribute_name_expr ^ ':' ! expr
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:189:17: attribute_name_expr ^ ':' ! expr
                     {
                     root_0 = (AslTree)adaptor.nil();
 
@@ -3806,37 +3806,59 @@ public TreeAdaptor getTreeAdaptor() {
     // $ANTLR end "attribute"
 
 
-    public static class show_return extends ParserRuleReturnScope {
+    public static class obj_attribute_return extends ParserRuleReturnScope {
         AslTree tree;
         public Object getTree() { return tree; }
     };
 
 
-    // $ANTLR start "show"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:192:1: show : ( show_time | show_no_time );
-    public final AslParser.show_return show() throws RecognitionException {
-        AslParser.show_return retval = new AslParser.show_return();
+    // $ANTLR start "obj_attribute"
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:191:1: obj_attribute : ( color | ID | ID '.' ( attribute_name_color ) -> ^( ATTR ID attribute_name_color ) );
+    public final AslParser.obj_attribute_return obj_attribute() throws RecognitionException {
+        AslParser.obj_attribute_return retval = new AslParser.obj_attribute_return();
         retval.start = input.LT(1);
 
 
         AslTree root_0 = null;
 
-        AslParser.show_time_return show_time134 =null;
+        Token ID135=null;
+        Token ID136=null;
+        Token char_literal137=null;
+        AslParser.color_return color134 =null;
 
-        AslParser.show_no_time_return show_no_time135 =null;
+        AslParser.attribute_name_color_return attribute_name_color138 =null;
 
 
-
+        AslTree ID135_tree=null;
+        AslTree ID136_tree=null;
+        AslTree char_literal137_tree=null;
+        RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
+        RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
+        RewriteRuleSubtreeStream stream_attribute_name_color=new RewriteRuleSubtreeStream(adaptor,"rule attribute_name_color");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:192:6: ( show_time | show_no_time )
-            int alt21=2;
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:191:17: ( color | ID | ID '.' ( attribute_name_color ) -> ^( ATTR ID attribute_name_color ) )
+            int alt21=3;
             int LA21_0 = input.LA(1);
 
-            if ( (LA21_0==SHOW_T) ) {
+            if ( ((LA21_0 >= BLACK && LA21_0 <= BLUE)||LA21_0==COLORHEX||LA21_0==GREEN||LA21_0==RED||(LA21_0 >= RGB && LA21_0 <= RGBPRCTJ)||LA21_0==WHITE) ) {
                 alt21=1;
             }
-            else if ( (LA21_0==SHOW) ) {
-                alt21=2;
+            else if ( (LA21_0==ID) ) {
+                int LA21_2 = input.LA(2);
+
+                if ( (LA21_2==87) ) {
+                    alt21=3;
+                }
+                else if ( ((LA21_2 >= 85 && LA21_2 <= 86)) ) {
+                    alt21=2;
+                }
+                else {
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 21, 2, input);
+
+                    throw nvae;
+
+                }
             }
             else {
                 NoViableAltException nvae =
@@ -3847,32 +3869,186 @@ public TreeAdaptor getTreeAdaptor() {
             }
             switch (alt21) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:192:8: show_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:191:21: color
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_show_time_in_show1555);
-                    show_time134=show_time();
+                    pushFollow(FOLLOW_color_in_obj_attribute1558);
+                    color134=color();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, show_time134.getTree());
+                    adaptor.addChild(root_0, color134.getTree());
 
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:192:20: show_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:192:19: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_show_no_time_in_show1559);
-                    show_no_time135=show_no_time();
+                    ID135=(Token)match(input,ID,FOLLOW_ID_in_obj_attribute1578); 
+                    ID135_tree = 
+                    (AslTree)adaptor.create(ID135)
+                    ;
+                    adaptor.addChild(root_0, ID135_tree);
+
+
+                    }
+                    break;
+                case 3 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:193:21: ID '.' ( attribute_name_color )
+                    {
+                    ID136=(Token)match(input,ID,FOLLOW_ID_in_obj_attribute1600);  
+                    stream_ID.add(ID136);
+
+
+                    char_literal137=(Token)match(input,87,FOLLOW_87_in_obj_attribute1602);  
+                    stream_87.add(char_literal137);
+
+
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:193:28: ( attribute_name_color )
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:193:30: attribute_name_color
+                    {
+                    pushFollow(FOLLOW_attribute_name_color_in_obj_attribute1606);
+                    attribute_name_color138=attribute_name_color();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, show_no_time135.getTree());
+                    stream_attribute_name_color.add(attribute_name_color138.getTree());
+
+                    }
+
+
+                    // AST REWRITE
+                    // elements: ID, attribute_name_color
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (AslTree)adaptor.nil();
+                    // 193:52: -> ^( ATTR ID attribute_name_color )
+                    {
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:193:55: ^( ATTR ID attribute_name_color )
+                        {
+                        AslTree root_1 = (AslTree)adaptor.nil();
+                        root_1 = (AslTree)adaptor.becomeRoot(
+                        (AslTree)adaptor.create(ATTR, "ATTR")
+                        , root_1);
+
+                        adaptor.addChild(root_1, 
+                        stream_ID.nextNode()
+                        );
+
+                        adaptor.addChild(root_1, stream_attribute_name_color.nextTree());
+
+                        adaptor.addChild(root_0, root_1);
+                        }
+
+                    }
+
+
+                    retval.tree = root_0;
+
+                    }
+                    break;
+
+            }
+            retval.stop = input.LT(-1);
+
+
+            retval.tree = (AslTree)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+    	retval.tree = (AslTree)adaptor.errorNode(input, retval.start, input.LT(-1), re);
+
+        }
+
+        finally {
+        	// do for sure before leaving
+        }
+        return retval;
+    }
+    // $ANTLR end "obj_attribute"
+
+
+    public static class show_return extends ParserRuleReturnScope {
+        AslTree tree;
+        public Object getTree() { return tree; }
+    };
+
+
+    // $ANTLR start "show"
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:196:1: show : ( show_time | show_no_time );
+    public final AslParser.show_return show() throws RecognitionException {
+        AslParser.show_return retval = new AslParser.show_return();
+        retval.start = input.LT(1);
+
+
+        AslTree root_0 = null;
+
+        AslParser.show_time_return show_time139 =null;
+
+        AslParser.show_no_time_return show_no_time140 =null;
+
+
+
+        try {
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:196:6: ( show_time | show_no_time )
+            int alt22=2;
+            int LA22_0 = input.LA(1);
+
+            if ( (LA22_0==SHOW_T) ) {
+                alt22=1;
+            }
+            else if ( (LA22_0==SHOW) ) {
+                alt22=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 22, 0, input);
+
+                throw nvae;
+
+            }
+            switch (alt22) {
+                case 1 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:196:8: show_time
+                    {
+                    root_0 = (AslTree)adaptor.nil();
+
+
+                    pushFollow(FOLLOW_show_time_in_show1642);
+                    show_time139=show_time();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, show_time139.getTree());
+
+                    }
+                    break;
+                case 2 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:196:20: show_no_time
+                    {
+                    root_0 = (AslTree)adaptor.nil();
+
+
+                    pushFollow(FOLLOW_show_no_time_in_show1646);
+                    show_no_time140=show_no_time();
+
+                    state._fsp--;
+
+                    adaptor.addChild(root_0, show_no_time140.getTree());
 
                     }
                     break;
@@ -3907,7 +4083,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "show_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:194:1: show_time : SHOW_T ^ ID time ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:198:1: show_time : SHOW_T ^ ID time ;
     public final AslParser.show_time_return show_time() throws RecognitionException {
         AslParser.show_time_return retval = new AslParser.show_time_return();
         retval.start = input.LT(1);
@@ -3915,41 +4091,41 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token SHOW_T136=null;
-        Token ID137=null;
-        AslParser.time_return time138 =null;
+        Token SHOW_T141=null;
+        Token ID142=null;
+        AslParser.time_return time143 =null;
 
 
-        AslTree SHOW_T136_tree=null;
-        AslTree ID137_tree=null;
+        AslTree SHOW_T141_tree=null;
+        AslTree ID142_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:194:11: ( SHOW_T ^ ID time )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:194:13: SHOW_T ^ ID time
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:198:11: ( SHOW_T ^ ID time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:198:13: SHOW_T ^ ID time
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            SHOW_T136=(Token)match(input,SHOW_T,FOLLOW_SHOW_T_in_show_time1567); 
-            SHOW_T136_tree = 
-            (AslTree)adaptor.create(SHOW_T136)
+            SHOW_T141=(Token)match(input,SHOW_T,FOLLOW_SHOW_T_in_show_time1654); 
+            SHOW_T141_tree = 
+            (AslTree)adaptor.create(SHOW_T141)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(SHOW_T136_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(SHOW_T141_tree, root_0);
 
 
-            ID137=(Token)match(input,ID,FOLLOW_ID_in_show_time1570); 
-            ID137_tree = 
-            (AslTree)adaptor.create(ID137)
+            ID142=(Token)match(input,ID,FOLLOW_ID_in_show_time1657); 
+            ID142_tree = 
+            (AslTree)adaptor.create(ID142)
             ;
-            adaptor.addChild(root_0, ID137_tree);
+            adaptor.addChild(root_0, ID142_tree);
 
 
-            pushFollow(FOLLOW_time_in_show_time1572);
-            time138=time();
+            pushFollow(FOLLOW_time_in_show_time1659);
+            time143=time();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, time138.getTree());
+            adaptor.addChild(root_0, time143.getTree());
 
             }
 
@@ -3982,7 +4158,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "show_no_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:196:1: show_no_time : SHOW ^ ID ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:200:1: show_no_time : SHOW ^ ID ;
     public final AslParser.show_no_time_return show_no_time() throws RecognitionException {
         AslParser.show_no_time_return retval = new AslParser.show_no_time_return();
         retval.start = input.LT(1);
@@ -3990,31 +4166,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token SHOW139=null;
-        Token ID140=null;
+        Token SHOW144=null;
+        Token ID145=null;
 
-        AslTree SHOW139_tree=null;
-        AslTree ID140_tree=null;
+        AslTree SHOW144_tree=null;
+        AslTree ID145_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:196:14: ( SHOW ^ ID )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:196:17: SHOW ^ ID
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:200:14: ( SHOW ^ ID )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:200:17: SHOW ^ ID
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            SHOW139=(Token)match(input,SHOW,FOLLOW_SHOW_in_show_no_time1581); 
-            SHOW139_tree = 
-            (AslTree)adaptor.create(SHOW139)
+            SHOW144=(Token)match(input,SHOW,FOLLOW_SHOW_in_show_no_time1668); 
+            SHOW144_tree = 
+            (AslTree)adaptor.create(SHOW144)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(SHOW139_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(SHOW144_tree, root_0);
 
 
-            ID140=(Token)match(input,ID,FOLLOW_ID_in_show_no_time1584); 
-            ID140_tree = 
-            (AslTree)adaptor.create(ID140)
+            ID145=(Token)match(input,ID,FOLLOW_ID_in_show_no_time1671); 
+            ID145_tree = 
+            (AslTree)adaptor.create(ID145)
             ;
-            adaptor.addChild(root_0, ID140_tree);
+            adaptor.addChild(root_0, ID145_tree);
 
 
             }
@@ -4048,7 +4224,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "hide"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:198:1: hide : ( hide_time | hide_no_time );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:202:1: hide : ( hide_time | hide_no_time );
     public final AslParser.hide_return hide() throws RecognitionException {
         AslParser.hide_return retval = new AslParser.hide_return();
         retval.start = input.LT(1);
@@ -4056,58 +4232,58 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        AslParser.hide_time_return hide_time141 =null;
+        AslParser.hide_time_return hide_time146 =null;
 
-        AslParser.hide_no_time_return hide_no_time142 =null;
+        AslParser.hide_no_time_return hide_no_time147 =null;
 
 
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:198:6: ( hide_time | hide_no_time )
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:202:6: ( hide_time | hide_no_time )
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA22_0==HIDE_T) ) {
-                alt22=1;
+            if ( (LA23_0==HIDE_T) ) {
+                alt23=1;
             }
-            else if ( (LA22_0==HIDE) ) {
-                alt22=2;
+            else if ( (LA23_0==HIDE) ) {
+                alt23=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
 
             }
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:198:8: hide_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:202:8: hide_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_hide_time_in_hide1592);
-                    hide_time141=hide_time();
+                    pushFollow(FOLLOW_hide_time_in_hide1679);
+                    hide_time146=hide_time();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, hide_time141.getTree());
+                    adaptor.addChild(root_0, hide_time146.getTree());
 
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:198:20: hide_no_time
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:202:20: hide_no_time
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_hide_no_time_in_hide1596);
-                    hide_no_time142=hide_no_time();
+                    pushFollow(FOLLOW_hide_no_time_in_hide1683);
+                    hide_no_time147=hide_no_time();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, hide_no_time142.getTree());
+                    adaptor.addChild(root_0, hide_no_time147.getTree());
 
                     }
                     break;
@@ -4142,7 +4318,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "hide_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:200:1: hide_time : HIDE_T ^ ID time ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:204:1: hide_time : HIDE_T ^ ID time ;
     public final AslParser.hide_time_return hide_time() throws RecognitionException {
         AslParser.hide_time_return retval = new AslParser.hide_time_return();
         retval.start = input.LT(1);
@@ -4150,41 +4326,41 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token HIDE_T143=null;
-        Token ID144=null;
-        AslParser.time_return time145 =null;
+        Token HIDE_T148=null;
+        Token ID149=null;
+        AslParser.time_return time150 =null;
 
 
-        AslTree HIDE_T143_tree=null;
-        AslTree ID144_tree=null;
+        AslTree HIDE_T148_tree=null;
+        AslTree ID149_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:200:11: ( HIDE_T ^ ID time )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:200:13: HIDE_T ^ ID time
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:204:11: ( HIDE_T ^ ID time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:204:13: HIDE_T ^ ID time
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            HIDE_T143=(Token)match(input,HIDE_T,FOLLOW_HIDE_T_in_hide_time1604); 
-            HIDE_T143_tree = 
-            (AslTree)adaptor.create(HIDE_T143)
+            HIDE_T148=(Token)match(input,HIDE_T,FOLLOW_HIDE_T_in_hide_time1691); 
+            HIDE_T148_tree = 
+            (AslTree)adaptor.create(HIDE_T148)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(HIDE_T143_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(HIDE_T148_tree, root_0);
 
 
-            ID144=(Token)match(input,ID,FOLLOW_ID_in_hide_time1607); 
-            ID144_tree = 
-            (AslTree)adaptor.create(ID144)
+            ID149=(Token)match(input,ID,FOLLOW_ID_in_hide_time1694); 
+            ID149_tree = 
+            (AslTree)adaptor.create(ID149)
             ;
-            adaptor.addChild(root_0, ID144_tree);
+            adaptor.addChild(root_0, ID149_tree);
 
 
-            pushFollow(FOLLOW_time_in_hide_time1609);
-            time145=time();
+            pushFollow(FOLLOW_time_in_hide_time1696);
+            time150=time();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, time145.getTree());
+            adaptor.addChild(root_0, time150.getTree());
 
             }
 
@@ -4217,7 +4393,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "hide_no_time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:202:1: hide_no_time : HIDE ^ ID ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:206:1: hide_no_time : HIDE ^ ID ;
     public final AslParser.hide_no_time_return hide_no_time() throws RecognitionException {
         AslParser.hide_no_time_return retval = new AslParser.hide_no_time_return();
         retval.start = input.LT(1);
@@ -4225,31 +4401,31 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token HIDE146=null;
-        Token ID147=null;
+        Token HIDE151=null;
+        Token ID152=null;
 
-        AslTree HIDE146_tree=null;
-        AslTree ID147_tree=null;
+        AslTree HIDE151_tree=null;
+        AslTree ID152_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:202:14: ( HIDE ^ ID )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:202:17: HIDE ^ ID
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:206:14: ( HIDE ^ ID )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:206:17: HIDE ^ ID
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            HIDE146=(Token)match(input,HIDE,FOLLOW_HIDE_in_hide_no_time1618); 
-            HIDE146_tree = 
-            (AslTree)adaptor.create(HIDE146)
+            HIDE151=(Token)match(input,HIDE,FOLLOW_HIDE_in_hide_no_time1705); 
+            HIDE151_tree = 
+            (AslTree)adaptor.create(HIDE151)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(HIDE146_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(HIDE151_tree, root_0);
 
 
-            ID147=(Token)match(input,ID,FOLLOW_ID_in_hide_no_time1621); 
-            ID147_tree = 
-            (AslTree)adaptor.create(ID147)
+            ID152=(Token)match(input,ID,FOLLOW_ID_in_hide_no_time1708); 
+            ID152_tree = 
+            (AslTree)adaptor.create(ID152)
             ;
-            adaptor.addChild(root_0, ID147_tree);
+            adaptor.addChild(root_0, ID152_tree);
 
 
             }
@@ -4283,7 +4459,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "delay"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:204:1: delay : DELAY ^ time ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:208:1: delay : DELAY ^ time ;
     public final AslParser.delay_return delay() throws RecognitionException {
         AslParser.delay_return retval = new AslParser.delay_return();
         retval.start = input.LT(1);
@@ -4291,32 +4467,32 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token DELAY148=null;
-        AslParser.time_return time149 =null;
+        Token DELAY153=null;
+        AslParser.time_return time154 =null;
 
 
-        AslTree DELAY148_tree=null;
+        AslTree DELAY153_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:204:6: ( DELAY ^ time )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:204:8: DELAY ^ time
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:208:6: ( DELAY ^ time )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:208:8: DELAY ^ time
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            DELAY148=(Token)match(input,DELAY,FOLLOW_DELAY_in_delay1628); 
-            DELAY148_tree = 
-            (AslTree)adaptor.create(DELAY148)
+            DELAY153=(Token)match(input,DELAY,FOLLOW_DELAY_in_delay1715); 
+            DELAY153_tree = 
+            (AslTree)adaptor.create(DELAY153)
             ;
-            root_0 = (AslTree)adaptor.becomeRoot(DELAY148_tree, root_0);
+            root_0 = (AslTree)adaptor.becomeRoot(DELAY153_tree, root_0);
 
 
-            pushFollow(FOLLOW_time_in_delay1631);
-            time149=time();
+            pushFollow(FOLLOW_time_in_delay1718);
+            time154=time();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, time149.getTree());
+            adaptor.addChild(root_0, time154.getTree());
 
             }
 
@@ -4349,7 +4525,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "attribute_name_color"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:206:1: attribute_name_color : ( COLOR | STROKE );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:210:1: attribute_name_color : ( COLOR | STROKE );
     public final AslParser.attribute_name_color_return attribute_name_color() throws RecognitionException {
         AslParser.attribute_name_color_return retval = new AslParser.attribute_name_color_return();
         retval.start = input.LT(1);
@@ -4357,23 +4533,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token set150=null;
+        Token set155=null;
 
-        AslTree set150_tree=null;
+        AslTree set155_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:206:25: ( COLOR | STROKE )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:210:25: ( COLOR | STROKE )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            set150=(Token)input.LT(1);
+            set155=(Token)input.LT(1);
 
             if ( input.LA(1)==COLOR||input.LA(1)==STROKE ) {
                 input.consume();
                 adaptor.addChild(root_0, 
-                (AslTree)adaptor.create(set150)
+                (AslTree)adaptor.create(set155)
                 );
                 state.errorRecovery=false;
             }
@@ -4414,7 +4590,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "attribute_name_expr"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:210:1: attribute_name_expr : ( POSX | POSY | 'r' );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:214:1: attribute_name_expr : ( POSX | POSY | 'r' );
     public final AslParser.attribute_name_expr_return attribute_name_expr() throws RecognitionException {
         AslParser.attribute_name_expr_return retval = new AslParser.attribute_name_expr_return();
         retval.start = input.LT(1);
@@ -4422,23 +4598,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token set151=null;
+        Token set156=null;
 
-        AslTree set151_tree=null;
+        AslTree set156_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:210:21: ( POSX | POSY | 'r' )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:214:21: ( POSX | POSY | 'r' )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            set151=(Token)input.LT(1);
+            set156=(Token)input.LT(1);
 
             if ( (input.LA(1) >= POSX && input.LA(1) <= POSY)||input.LA(1)==91 ) {
                 input.consume();
                 adaptor.addChild(root_0, 
-                (AslTree)adaptor.create(set151)
+                (AslTree)adaptor.create(set156)
                 );
                 state.errorRecovery=false;
             }
@@ -4479,7 +4655,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "color"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:215:1: color : ( COLORHEX -> ^( COLORHEXA COLORHEX ) | RGB '(' expr ',' expr ',' expr ')' -> ^( COLORINT expr expr expr ) | RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^( COLORPRCTJ expr expr expr ) | color_keyword -> ^( COLORKEYWORD color_keyword ) );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:219:1: color : ( COLORHEX -> ^( COLORHEXA COLORHEX ) | RGB '(' expr ',' expr ',' expr ')' -> ^( COLORINT expr expr expr ) | RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^( COLORPRCTJ expr expr expr ) | color_keyword -> ^( COLORKEYWORD color_keyword ) );
     public final AslParser.color_return color() throws RecognitionException {
         AslParser.color_return retval = new AslParser.color_return();
         retval.start = input.LT(1);
@@ -4487,43 +4663,43 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token COLORHEX152=null;
-        Token RGB153=null;
-        Token char_literal154=null;
-        Token char_literal156=null;
-        Token char_literal158=null;
-        Token char_literal160=null;
-        Token RGBPRCTJ161=null;
-        Token char_literal162=null;
-        Token char_literal164=null;
-        Token char_literal166=null;
-        Token char_literal168=null;
-        AslParser.expr_return expr155 =null;
+        Token COLORHEX157=null;
+        Token RGB158=null;
+        Token char_literal159=null;
+        Token char_literal161=null;
+        Token char_literal163=null;
+        Token char_literal165=null;
+        Token RGBPRCTJ166=null;
+        Token char_literal167=null;
+        Token char_literal169=null;
+        Token char_literal171=null;
+        Token char_literal173=null;
+        AslParser.expr_return expr160 =null;
 
-        AslParser.expr_return expr157 =null;
+        AslParser.expr_return expr162 =null;
 
-        AslParser.expr_return expr159 =null;
+        AslParser.expr_return expr164 =null;
 
-        AslParser.expr_return expr163 =null;
+        AslParser.expr_return expr168 =null;
 
-        AslParser.expr_return expr165 =null;
+        AslParser.expr_return expr170 =null;
 
-        AslParser.expr_return expr167 =null;
+        AslParser.expr_return expr172 =null;
 
-        AslParser.color_keyword_return color_keyword169 =null;
+        AslParser.color_keyword_return color_keyword174 =null;
 
 
-        AslTree COLORHEX152_tree=null;
-        AslTree RGB153_tree=null;
-        AslTree char_literal154_tree=null;
-        AslTree char_literal156_tree=null;
-        AslTree char_literal158_tree=null;
-        AslTree char_literal160_tree=null;
-        AslTree RGBPRCTJ161_tree=null;
-        AslTree char_literal162_tree=null;
-        AslTree char_literal164_tree=null;
-        AslTree char_literal166_tree=null;
-        AslTree char_literal168_tree=null;
+        AslTree COLORHEX157_tree=null;
+        AslTree RGB158_tree=null;
+        AslTree char_literal159_tree=null;
+        AslTree char_literal161_tree=null;
+        AslTree char_literal163_tree=null;
+        AslTree char_literal165_tree=null;
+        AslTree RGBPRCTJ166_tree=null;
+        AslTree char_literal167_tree=null;
+        AslTree char_literal169_tree=null;
+        AslTree char_literal171_tree=null;
+        AslTree char_literal173_tree=null;
         RewriteRuleTokenStream stream_COLORHEX=new RewriteRuleTokenStream(adaptor,"token COLORHEX");
         RewriteRuleTokenStream stream_RGBPRCTJ=new RewriteRuleTokenStream(adaptor,"token RGBPRCTJ");
         RewriteRuleTokenStream stream_84=new RewriteRuleTokenStream(adaptor,"token 84");
@@ -4533,22 +4709,22 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleSubtreeStream stream_expr=new RewriteRuleSubtreeStream(adaptor,"rule expr");
         RewriteRuleSubtreeStream stream_color_keyword=new RewriteRuleSubtreeStream(adaptor,"rule color_keyword");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:215:9: ( COLORHEX -> ^( COLORHEXA COLORHEX ) | RGB '(' expr ',' expr ',' expr ')' -> ^( COLORINT expr expr expr ) | RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^( COLORPRCTJ expr expr expr ) | color_keyword -> ^( COLORKEYWORD color_keyword ) )
-            int alt23=4;
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:219:9: ( COLORHEX -> ^( COLORHEXA COLORHEX ) | RGB '(' expr ',' expr ',' expr ')' -> ^( COLORINT expr expr expr ) | RGBPRCTJ '(' expr ',' expr ',' expr ')' -> ^( COLORPRCTJ expr expr expr ) | color_keyword -> ^( COLORKEYWORD color_keyword ) )
+            int alt24=4;
             switch ( input.LA(1) ) {
             case COLORHEX:
                 {
-                alt23=1;
+                alt24=1;
                 }
                 break;
             case RGB:
                 {
-                alt23=2;
+                alt24=2;
                 }
                 break;
             case RGBPRCTJ:
                 {
-                alt23=3;
+                alt24=3;
                 }
                 break;
             case BLACK:
@@ -4557,23 +4733,23 @@ public TreeAdaptor getTreeAdaptor() {
             case RED:
             case WHITE:
                 {
-                alt23=4;
+                alt24=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:215:13: COLORHEX
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:219:13: COLORHEX
                     {
-                    COLORHEX152=(Token)match(input,COLORHEX,FOLLOW_COLORHEX_in_color1766);  
-                    stream_COLORHEX.add(COLORHEX152);
+                    COLORHEX157=(Token)match(input,COLORHEX,FOLLOW_COLORHEX_in_color1853);  
+                    stream_COLORHEX.add(COLORHEX157);
 
 
                     // AST REWRITE
@@ -4587,9 +4763,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 215:22: -> ^( COLORHEXA COLORHEX )
+                    // 219:22: -> ^( COLORHEXA COLORHEX )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:215:25: ^( COLORHEXA COLORHEX )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:219:25: ^( COLORHEXA COLORHEX )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4611,47 +4787,47 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:216:13: RGB '(' expr ',' expr ',' expr ')'
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:220:13: RGB '(' expr ',' expr ',' expr ')'
                     {
-                    RGB153=(Token)match(input,RGB,FOLLOW_RGB_in_color1788);  
-                    stream_RGB.add(RGB153);
+                    RGB158=(Token)match(input,RGB,FOLLOW_RGB_in_color1875);  
+                    stream_RGB.add(RGB158);
 
 
-                    char_literal154=(Token)match(input,84,FOLLOW_84_in_color1790);  
-                    stream_84.add(char_literal154);
+                    char_literal159=(Token)match(input,84,FOLLOW_84_in_color1877);  
+                    stream_84.add(char_literal159);
 
 
-                    pushFollow(FOLLOW_expr_in_color1792);
-                    expr155=expr();
-
-                    state._fsp--;
-
-                    stream_expr.add(expr155.getTree());
-
-                    char_literal156=(Token)match(input,86,FOLLOW_86_in_color1794);  
-                    stream_86.add(char_literal156);
-
-
-                    pushFollow(FOLLOW_expr_in_color1796);
-                    expr157=expr();
+                    pushFollow(FOLLOW_expr_in_color1879);
+                    expr160=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr157.getTree());
+                    stream_expr.add(expr160.getTree());
 
-                    char_literal158=(Token)match(input,86,FOLLOW_86_in_color1798);  
-                    stream_86.add(char_literal158);
+                    char_literal161=(Token)match(input,86,FOLLOW_86_in_color1881);  
+                    stream_86.add(char_literal161);
 
 
-                    pushFollow(FOLLOW_expr_in_color1800);
-                    expr159=expr();
+                    pushFollow(FOLLOW_expr_in_color1883);
+                    expr162=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr159.getTree());
+                    stream_expr.add(expr162.getTree());
 
-                    char_literal160=(Token)match(input,85,FOLLOW_85_in_color1802);  
-                    stream_85.add(char_literal160);
+                    char_literal163=(Token)match(input,86,FOLLOW_86_in_color1885);  
+                    stream_86.add(char_literal163);
+
+
+                    pushFollow(FOLLOW_expr_in_color1887);
+                    expr164=expr();
+
+                    state._fsp--;
+
+                    stream_expr.add(expr164.getTree());
+
+                    char_literal165=(Token)match(input,85,FOLLOW_85_in_color1889);  
+                    stream_85.add(char_literal165);
 
 
                     // AST REWRITE
@@ -4665,9 +4841,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 216:48: -> ^( COLORINT expr expr expr )
+                    // 220:48: -> ^( COLORINT expr expr expr )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:216:51: ^( COLORINT expr expr expr )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:220:51: ^( COLORINT expr expr expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4691,47 +4867,47 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:217:13: RGBPRCTJ '(' expr ',' expr ',' expr ')'
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:221:13: RGBPRCTJ '(' expr ',' expr ',' expr ')'
                     {
-                    RGBPRCTJ161=(Token)match(input,RGBPRCTJ,FOLLOW_RGBPRCTJ_in_color1828);  
-                    stream_RGBPRCTJ.add(RGBPRCTJ161);
+                    RGBPRCTJ166=(Token)match(input,RGBPRCTJ,FOLLOW_RGBPRCTJ_in_color1915);  
+                    stream_RGBPRCTJ.add(RGBPRCTJ166);
 
 
-                    char_literal162=(Token)match(input,84,FOLLOW_84_in_color1830);  
-                    stream_84.add(char_literal162);
+                    char_literal167=(Token)match(input,84,FOLLOW_84_in_color1917);  
+                    stream_84.add(char_literal167);
 
 
-                    pushFollow(FOLLOW_expr_in_color1832);
-                    expr163=expr();
-
-                    state._fsp--;
-
-                    stream_expr.add(expr163.getTree());
-
-                    char_literal164=(Token)match(input,86,FOLLOW_86_in_color1834);  
-                    stream_86.add(char_literal164);
-
-
-                    pushFollow(FOLLOW_expr_in_color1836);
-                    expr165=expr();
+                    pushFollow(FOLLOW_expr_in_color1919);
+                    expr168=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr165.getTree());
+                    stream_expr.add(expr168.getTree());
 
-                    char_literal166=(Token)match(input,86,FOLLOW_86_in_color1838);  
-                    stream_86.add(char_literal166);
+                    char_literal169=(Token)match(input,86,FOLLOW_86_in_color1921);  
+                    stream_86.add(char_literal169);
 
 
-                    pushFollow(FOLLOW_expr_in_color1840);
-                    expr167=expr();
+                    pushFollow(FOLLOW_expr_in_color1923);
+                    expr170=expr();
 
                     state._fsp--;
 
-                    stream_expr.add(expr167.getTree());
+                    stream_expr.add(expr170.getTree());
 
-                    char_literal168=(Token)match(input,85,FOLLOW_85_in_color1842);  
-                    stream_85.add(char_literal168);
+                    char_literal171=(Token)match(input,86,FOLLOW_86_in_color1925);  
+                    stream_86.add(char_literal171);
+
+
+                    pushFollow(FOLLOW_expr_in_color1927);
+                    expr172=expr();
+
+                    state._fsp--;
+
+                    stream_expr.add(expr172.getTree());
+
+                    char_literal173=(Token)match(input,85,FOLLOW_85_in_color1929);  
+                    stream_85.add(char_literal173);
 
 
                     // AST REWRITE
@@ -4745,9 +4921,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 217:53: -> ^( COLORPRCTJ expr expr expr )
+                    // 221:53: -> ^( COLORPRCTJ expr expr expr )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:217:56: ^( COLORPRCTJ expr expr expr )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:221:56: ^( COLORPRCTJ expr expr expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4771,14 +4947,14 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:218:13: color_keyword
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:222:13: color_keyword
                     {
-                    pushFollow(FOLLOW_color_keyword_in_color1868);
-                    color_keyword169=color_keyword();
+                    pushFollow(FOLLOW_color_keyword_in_color1955);
+                    color_keyword174=color_keyword();
 
                     state._fsp--;
 
-                    stream_color_keyword.add(color_keyword169.getTree());
+                    stream_color_keyword.add(color_keyword174.getTree());
 
                     // AST REWRITE
                     // elements: color_keyword
@@ -4791,9 +4967,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 218:27: -> ^( COLORKEYWORD color_keyword )
+                    // 222:27: -> ^( COLORKEYWORD color_keyword )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:218:30: ^( COLORKEYWORD color_keyword )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:222:30: ^( COLORKEYWORD color_keyword )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -4843,7 +5019,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "color_keyword"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:221:1: color_keyword : ( RED | WHITE | BLACK | BLUE | GREEN );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:225:1: color_keyword : ( RED | WHITE | BLACK | BLUE | GREEN );
     public final AslParser.color_keyword_return color_keyword() throws RecognitionException {
         AslParser.color_keyword_return retval = new AslParser.color_keyword_return();
         retval.start = input.LT(1);
@@ -4851,23 +5027,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token set170=null;
+        Token set175=null;
 
-        AslTree set170_tree=null;
+        AslTree set175_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:221:15: ( RED | WHITE | BLACK | BLUE | GREEN )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:225:15: ( RED | WHITE | BLACK | BLUE | GREEN )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            set170=(Token)input.LT(1);
+            set175=(Token)input.LT(1);
 
             if ( (input.LA(1) >= BLACK && input.LA(1) <= BLUE)||input.LA(1)==GREEN||input.LA(1)==RED||input.LA(1)==WHITE ) {
                 input.consume();
                 adaptor.addChild(root_0, 
-                (AslTree)adaptor.create(set170)
+                (AslTree)adaptor.create(set175)
                 );
                 state.errorRecovery=false;
             }
@@ -4908,7 +5084,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "obj_type"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:223:1: obj_type : ( CIRCLE | RECTANGLE | TEXT );
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:227:1: obj_type : ( CIRCLE | RECTANGLE | TEXT );
     public final AslParser.obj_type_return obj_type() throws RecognitionException {
         AslParser.obj_type_return retval = new AslParser.obj_type_return();
         retval.start = input.LT(1);
@@ -4916,23 +5092,23 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token set171=null;
+        Token set176=null;
 
-        AslTree set171_tree=null;
+        AslTree set176_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:223:10: ( CIRCLE | RECTANGLE | TEXT )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:227:10: ( CIRCLE | RECTANGLE | TEXT )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            set171=(Token)input.LT(1);
+            set176=(Token)input.LT(1);
 
             if ( input.LA(1)==CIRCLE||input.LA(1)==RECTANGLE||input.LA(1)==TEXT ) {
                 input.consume();
                 adaptor.addChild(root_0, 
-                (AslTree)adaptor.create(set171)
+                (AslTree)adaptor.create(set176)
                 );
                 state.errorRecovery=false;
             }
@@ -4973,7 +5149,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "time"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:226:1: time : INT ( 's' | 'ms' ) ^;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:230:1: time : INT ( 's' | 'ms' ) ^;
     public final AslParser.time_return time() throws RecognitionException {
         AslParser.time_return retval = new AslParser.time_return();
         retval.start = input.LT(1);
@@ -4981,34 +5157,34 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token INT172=null;
-        Token set173=null;
+        Token INT177=null;
+        Token set178=null;
 
-        AslTree INT172_tree=null;
-        AslTree set173_tree=null;
+        AslTree INT177_tree=null;
+        AslTree set178_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:226:6: ( INT ( 's' | 'ms' ) ^)
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:226:9: INT ( 's' | 'ms' ) ^
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:230:6: ( INT ( 's' | 'ms' ) ^)
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:230:9: INT ( 's' | 'ms' ) ^
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            INT172=(Token)match(input,INT,FOLLOW_INT_in_time1944); 
-            INT172_tree = 
-            (AslTree)adaptor.create(INT172)
+            INT177=(Token)match(input,INT,FOLLOW_INT_in_time2031); 
+            INT177_tree = 
+            (AslTree)adaptor.create(INT177)
             ;
-            adaptor.addChild(root_0, INT172_tree);
+            adaptor.addChild(root_0, INT177_tree);
 
 
-            set173=(Token)input.LT(1);
+            set178=(Token)input.LT(1);
 
-            set173=(Token)input.LT(1);
+            set178=(Token)input.LT(1);
 
             if ( input.LA(1)==90||input.LA(1)==92 ) {
                 input.consume();
                 root_0 = (AslTree)adaptor.becomeRoot(
-                (AslTree)adaptor.create(set173)
+                (AslTree)adaptor.create(set178)
                 , root_0);
                 state.errorRecovery=false;
             }
@@ -5049,7 +5225,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:229:1: expr : boolterm ( OR ^ boolterm )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:233:1: expr : boolterm ( OR ^ boolterm )* ;
     public final AslParser.expr_return expr() throws RecognitionException {
         AslParser.expr_return retval = new AslParser.expr_return();
         retval.start = input.LT(1);
@@ -5057,62 +5233,62 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token OR175=null;
-        AslParser.boolterm_return boolterm174 =null;
+        Token OR180=null;
+        AslParser.boolterm_return boolterm179 =null;
 
-        AslParser.boolterm_return boolterm176 =null;
+        AslParser.boolterm_return boolterm181 =null;
 
 
-        AslTree OR175_tree=null;
+        AslTree OR180_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:229:9: ( boolterm ( OR ^ boolterm )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:229:13: boolterm ( OR ^ boolterm )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:233:9: ( boolterm ( OR ^ boolterm )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:233:13: boolterm ( OR ^ boolterm )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_boolterm_in_expr1966);
-            boolterm174=boolterm();
+            pushFollow(FOLLOW_boolterm_in_expr2053);
+            boolterm179=boolterm();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, boolterm174.getTree());
+            adaptor.addChild(root_0, boolterm179.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:229:22: ( OR ^ boolterm )*
-            loop24:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:233:22: ( OR ^ boolterm )*
+            loop25:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt25=2;
+                int LA25_0 = input.LA(1);
 
-                if ( (LA24_0==OR) ) {
-                    alt24=1;
+                if ( (LA25_0==OR) ) {
+                    alt25=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt25) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:229:23: OR ^ boolterm
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:233:23: OR ^ boolterm
             	    {
-            	    OR175=(Token)match(input,OR,FOLLOW_OR_in_expr1969); 
-            	    OR175_tree = 
-            	    (AslTree)adaptor.create(OR175)
+            	    OR180=(Token)match(input,OR,FOLLOW_OR_in_expr2056); 
+            	    OR180_tree = 
+            	    (AslTree)adaptor.create(OR180)
             	    ;
-            	    root_0 = (AslTree)adaptor.becomeRoot(OR175_tree, root_0);
+            	    root_0 = (AslTree)adaptor.becomeRoot(OR180_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_boolterm_in_expr1972);
-            	    boolterm176=boolterm();
+            	    pushFollow(FOLLOW_boolterm_in_expr2059);
+            	    boolterm181=boolterm();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, boolterm176.getTree());
+            	    adaptor.addChild(root_0, boolterm181.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop25;
                 }
             } while (true);
 
@@ -5148,7 +5324,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolterm"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:232:1: boolterm : boolfact ( AND ^ boolfact )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:236:1: boolterm : boolfact ( AND ^ boolfact )* ;
     public final AslParser.boolterm_return boolterm() throws RecognitionException {
         AslParser.boolterm_return retval = new AslParser.boolterm_return();
         retval.start = input.LT(1);
@@ -5156,62 +5332,62 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token AND178=null;
-        AslParser.boolfact_return boolfact177 =null;
+        Token AND183=null;
+        AslParser.boolfact_return boolfact182 =null;
 
-        AslParser.boolfact_return boolfact179 =null;
+        AslParser.boolfact_return boolfact184 =null;
 
 
-        AslTree AND178_tree=null;
+        AslTree AND183_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:232:9: ( boolfact ( AND ^ boolfact )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:232:13: boolfact ( AND ^ boolfact )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:236:9: ( boolfact ( AND ^ boolfact )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:236:13: boolfact ( AND ^ boolfact )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_boolfact_in_boolterm1992);
-            boolfact177=boolfact();
+            pushFollow(FOLLOW_boolfact_in_boolterm2079);
+            boolfact182=boolfact();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, boolfact177.getTree());
+            adaptor.addChild(root_0, boolfact182.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:232:22: ( AND ^ boolfact )*
-            loop25:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:236:22: ( AND ^ boolfact )*
+            loop26:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt26=2;
+                int LA26_0 = input.LA(1);
 
-                if ( (LA25_0==AND) ) {
-                    alt25=1;
+                if ( (LA26_0==AND) ) {
+                    alt26=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt26) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:232:23: AND ^ boolfact
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:236:23: AND ^ boolfact
             	    {
-            	    AND178=(Token)match(input,AND,FOLLOW_AND_in_boolterm1995); 
-            	    AND178_tree = 
-            	    (AslTree)adaptor.create(AND178)
+            	    AND183=(Token)match(input,AND,FOLLOW_AND_in_boolterm2082); 
+            	    AND183_tree = 
+            	    (AslTree)adaptor.create(AND183)
             	    ;
-            	    root_0 = (AslTree)adaptor.becomeRoot(AND178_tree, root_0);
+            	    root_0 = (AslTree)adaptor.becomeRoot(AND183_tree, root_0);
 
 
-            	    pushFollow(FOLLOW_boolfact_in_boolterm1998);
-            	    boolfact179=boolfact();
+            	    pushFollow(FOLLOW_boolfact_in_boolterm2085);
+            	    boolfact184=boolfact();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, boolfact179.getTree());
+            	    adaptor.addChild(root_0, boolfact184.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop26;
                 }
             } while (true);
 
@@ -5247,7 +5423,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "boolfact"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:1: boolfact : num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? ;
     public final AslParser.boolfact_return boolfact() throws RecognitionException {
         AslParser.boolfact_return retval = new AslParser.boolfact_return();
         retval.start = input.LT(1);
@@ -5255,159 +5431,159 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token EQUAL181=null;
-        Token NOT_EQUAL182=null;
-        Token LT183=null;
-        Token LE184=null;
-        Token GT185=null;
-        Token GE186=null;
-        AslParser.num_expr_return num_expr180 =null;
+        Token EQUAL186=null;
+        Token NOT_EQUAL187=null;
+        Token LT188=null;
+        Token LE189=null;
+        Token GT190=null;
+        Token GE191=null;
+        AslParser.num_expr_return num_expr185 =null;
 
-        AslParser.num_expr_return num_expr187 =null;
+        AslParser.num_expr_return num_expr192 =null;
 
 
-        AslTree EQUAL181_tree=null;
-        AslTree NOT_EQUAL182_tree=null;
-        AslTree LT183_tree=null;
-        AslTree LE184_tree=null;
-        AslTree GT185_tree=null;
-        AslTree GE186_tree=null;
+        AslTree EQUAL186_tree=null;
+        AslTree NOT_EQUAL187_tree=null;
+        AslTree LT188_tree=null;
+        AslTree LE189_tree=null;
+        AslTree GT190_tree=null;
+        AslTree GE191_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:9: ( num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )? )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:13: num_expr ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_num_expr_in_boolfact2018);
-            num_expr180=num_expr();
+            pushFollow(FOLLOW_num_expr_in_boolfact2105);
+            num_expr185=num_expr();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, num_expr180.getTree());
+            adaptor.addChild(root_0, num_expr185.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:22: ( ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA27_0==EQUAL||LA27_0==GE||LA27_0==GT||LA27_0==LE||LA27_0==LT||LA27_0==NOT_EQUAL) ) {
-                alt27=1;
+            if ( (LA28_0==EQUAL||LA28_0==GE||LA28_0==GT||LA28_0==LE||LA28_0==LT||LA28_0==NOT_EQUAL) ) {
+                alt28=1;
             }
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^) num_expr
                     {
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
-                    int alt26=6;
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:23: ( EQUAL ^| NOT_EQUAL ^| LT ^| LE ^| GT ^| GE ^)
+                    int alt27=6;
                     switch ( input.LA(1) ) {
                     case EQUAL:
                         {
-                        alt26=1;
+                        alt27=1;
                         }
                         break;
                     case NOT_EQUAL:
                         {
-                        alt26=2;
+                        alt27=2;
                         }
                         break;
                     case LT:
                         {
-                        alt26=3;
+                        alt27=3;
                         }
                         break;
                     case LE:
                         {
-                        alt26=4;
+                        alt27=4;
                         }
                         break;
                     case GT:
                         {
-                        alt26=5;
+                        alt27=5;
                         }
                         break;
                     case GE:
                         {
-                        alt26=6;
+                        alt27=6;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 26, 0, input);
+                            new NoViableAltException("", 27, 0, input);
 
                         throw nvae;
 
                     }
 
-                    switch (alt26) {
+                    switch (alt27) {
                         case 1 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:24: EQUAL ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:24: EQUAL ^
                             {
-                            EQUAL181=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact2022); 
-                            EQUAL181_tree = 
-                            (AslTree)adaptor.create(EQUAL181)
+                            EQUAL186=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_boolfact2109); 
+                            EQUAL186_tree = 
+                            (AslTree)adaptor.create(EQUAL186)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(EQUAL181_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(EQUAL186_tree, root_0);
 
 
                             }
                             break;
                         case 2 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:33: NOT_EQUAL ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:33: NOT_EQUAL ^
                             {
-                            NOT_EQUAL182=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact2027); 
-                            NOT_EQUAL182_tree = 
-                            (AslTree)adaptor.create(NOT_EQUAL182)
+                            NOT_EQUAL187=(Token)match(input,NOT_EQUAL,FOLLOW_NOT_EQUAL_in_boolfact2114); 
+                            NOT_EQUAL187_tree = 
+                            (AslTree)adaptor.create(NOT_EQUAL187)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(NOT_EQUAL182_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(NOT_EQUAL187_tree, root_0);
 
 
                             }
                             break;
                         case 3 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:46: LT ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:46: LT ^
                             {
-                            LT183=(Token)match(input,LT,FOLLOW_LT_in_boolfact2032); 
-                            LT183_tree = 
-                            (AslTree)adaptor.create(LT183)
+                            LT188=(Token)match(input,LT,FOLLOW_LT_in_boolfact2119); 
+                            LT188_tree = 
+                            (AslTree)adaptor.create(LT188)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(LT183_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(LT188_tree, root_0);
 
 
                             }
                             break;
                         case 4 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:52: LE ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:52: LE ^
                             {
-                            LE184=(Token)match(input,LE,FOLLOW_LE_in_boolfact2037); 
-                            LE184_tree = 
-                            (AslTree)adaptor.create(LE184)
+                            LE189=(Token)match(input,LE,FOLLOW_LE_in_boolfact2124); 
+                            LE189_tree = 
+                            (AslTree)adaptor.create(LE189)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(LE184_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(LE189_tree, root_0);
 
 
                             }
                             break;
                         case 5 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:58: GT ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:58: GT ^
                             {
-                            GT185=(Token)match(input,GT,FOLLOW_GT_in_boolfact2042); 
-                            GT185_tree = 
-                            (AslTree)adaptor.create(GT185)
+                            GT190=(Token)match(input,GT,FOLLOW_GT_in_boolfact2129); 
+                            GT190_tree = 
+                            (AslTree)adaptor.create(GT190)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(GT185_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(GT190_tree, root_0);
 
 
                             }
                             break;
                         case 6 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:235:64: GE ^
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:239:64: GE ^
                             {
-                            GE186=(Token)match(input,GE,FOLLOW_GE_in_boolfact2047); 
-                            GE186_tree = 
-                            (AslTree)adaptor.create(GE186)
+                            GE191=(Token)match(input,GE,FOLLOW_GE_in_boolfact2134); 
+                            GE191_tree = 
+                            (AslTree)adaptor.create(GE191)
                             ;
-                            root_0 = (AslTree)adaptor.becomeRoot(GE186_tree, root_0);
+                            root_0 = (AslTree)adaptor.becomeRoot(GE191_tree, root_0);
 
 
                             }
@@ -5416,12 +5592,12 @@ public TreeAdaptor getTreeAdaptor() {
                     }
 
 
-                    pushFollow(FOLLOW_num_expr_in_boolfact2051);
-                    num_expr187=num_expr();
+                    pushFollow(FOLLOW_num_expr_in_boolfact2138);
+                    num_expr192=num_expr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, num_expr187.getTree());
+                    adaptor.addChild(root_0, num_expr192.getTree());
 
                     }
                     break;
@@ -5460,7 +5636,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "num_expr"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:1: num_expr : term ( ( PLUS ^| MINUS ^) term )* ;
     public final AslParser.num_expr_return num_expr() throws RecognitionException {
         AslParser.num_expr_return retval = new AslParser.num_expr_return();
         retval.start = input.LT(1);
@@ -5468,83 +5644,83 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token PLUS189=null;
-        Token MINUS190=null;
-        AslParser.term_return term188 =null;
+        Token PLUS194=null;
+        Token MINUS195=null;
+        AslParser.term_return term193 =null;
 
-        AslParser.term_return term191 =null;
+        AslParser.term_return term196 =null;
 
 
-        AslTree PLUS189_tree=null;
-        AslTree MINUS190_tree=null;
+        AslTree PLUS194_tree=null;
+        AslTree MINUS195_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:9: ( term ( ( PLUS ^| MINUS ^) term )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:13: term ( ( PLUS ^| MINUS ^) term )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:9: ( term ( ( PLUS ^| MINUS ^) term )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:13: term ( ( PLUS ^| MINUS ^) term )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_term_in_num_expr2071);
-            term188=term();
+            pushFollow(FOLLOW_term_in_num_expr2158);
+            term193=term();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, term188.getTree());
+            adaptor.addChild(root_0, term193.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:18: ( ( PLUS ^| MINUS ^) term )*
-            loop29:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:18: ( ( PLUS ^| MINUS ^) term )*
+            loop30:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt30=2;
+                int LA30_0 = input.LA(1);
 
-                if ( (LA29_0==MINUS||LA29_0==PLUS) ) {
-                    alt29=1;
+                if ( (LA30_0==MINUS||LA30_0==PLUS) ) {
+                    alt30=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt30) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:20: ( PLUS ^| MINUS ^) term
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:20: ( PLUS ^| MINUS ^) term
             	    {
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:20: ( PLUS ^| MINUS ^)
-            	    int alt28=2;
-            	    int LA28_0 = input.LA(1);
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:20: ( PLUS ^| MINUS ^)
+            	    int alt29=2;
+            	    int LA29_0 = input.LA(1);
 
-            	    if ( (LA28_0==PLUS) ) {
-            	        alt28=1;
+            	    if ( (LA29_0==PLUS) ) {
+            	        alt29=1;
             	    }
-            	    else if ( (LA28_0==MINUS) ) {
-            	        alt28=2;
+            	    else if ( (LA29_0==MINUS) ) {
+            	        alt29=2;
             	    }
             	    else {
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 28, 0, input);
+            	            new NoViableAltException("", 29, 0, input);
 
             	        throw nvae;
 
             	    }
-            	    switch (alt28) {
+            	    switch (alt29) {
             	        case 1 :
-            	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:21: PLUS ^
+            	            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:21: PLUS ^
             	            {
-            	            PLUS189=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr2076); 
-            	            PLUS189_tree = 
-            	            (AslTree)adaptor.create(PLUS189)
+            	            PLUS194=(Token)match(input,PLUS,FOLLOW_PLUS_in_num_expr2163); 
+            	            PLUS194_tree = 
+            	            (AslTree)adaptor.create(PLUS194)
             	            ;
-            	            root_0 = (AslTree)adaptor.becomeRoot(PLUS189_tree, root_0);
+            	            root_0 = (AslTree)adaptor.becomeRoot(PLUS194_tree, root_0);
 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:238:29: MINUS ^
+            	            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:242:29: MINUS ^
             	            {
-            	            MINUS190=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr2081); 
-            	            MINUS190_tree = 
-            	            (AslTree)adaptor.create(MINUS190)
+            	            MINUS195=(Token)match(input,MINUS,FOLLOW_MINUS_in_num_expr2168); 
+            	            MINUS195_tree = 
+            	            (AslTree)adaptor.create(MINUS195)
             	            ;
-            	            root_0 = (AslTree)adaptor.becomeRoot(MINUS190_tree, root_0);
+            	            root_0 = (AslTree)adaptor.becomeRoot(MINUS195_tree, root_0);
 
 
             	            }
@@ -5553,18 +5729,18 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_term_in_num_expr2085);
-            	    term191=term();
+            	    pushFollow(FOLLOW_term_in_num_expr2172);
+            	    term196=term();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, term191.getTree());
+            	    adaptor.addChild(root_0, term196.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop30;
                 }
             } while (true);
 
@@ -5600,7 +5776,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "term"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:1: term : factor ( ( MUL ^| DIV ^| MOD ^) factor )* ;
     public final AslParser.term_return term() throws RecognitionException {
         AslParser.term_return retval = new AslParser.term_return();
         retval.start = input.LT(1);
@@ -5608,106 +5784,106 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token MUL193=null;
-        Token DIV194=null;
-        Token MOD195=null;
-        AslParser.factor_return factor192 =null;
+        Token MUL198=null;
+        Token DIV199=null;
+        Token MOD200=null;
+        AslParser.factor_return factor197 =null;
 
-        AslParser.factor_return factor196 =null;
+        AslParser.factor_return factor201 =null;
 
 
-        AslTree MUL193_tree=null;
-        AslTree DIV194_tree=null;
-        AslTree MOD195_tree=null;
+        AslTree MUL198_tree=null;
+        AslTree DIV199_tree=null;
+        AslTree MOD200_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:9: ( factor ( ( MUL ^| DIV ^| MOD ^) factor )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:13: factor ( ( MUL ^| DIV ^| MOD ^) factor )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_factor_in_term2109);
-            factor192=factor();
+            pushFollow(FOLLOW_factor_in_term2196);
+            factor197=factor();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, factor192.getTree());
+            adaptor.addChild(root_0, factor197.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
-            loop31:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:20: ( ( MUL ^| DIV ^| MOD ^) factor )*
+            loop32:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt32=2;
+                int LA32_0 = input.LA(1);
 
-                if ( (LA31_0==DIV||LA31_0==MOD||LA31_0==MUL) ) {
-                    alt31=1;
+                if ( (LA32_0==DIV||LA32_0==MOD||LA32_0==MUL) ) {
+                    alt32=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt32) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:22: ( MUL ^| DIV ^| MOD ^) factor
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:22: ( MUL ^| DIV ^| MOD ^) factor
             	    {
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:22: ( MUL ^| DIV ^| MOD ^)
-            	    int alt30=3;
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:22: ( MUL ^| DIV ^| MOD ^)
+            	    int alt31=3;
             	    switch ( input.LA(1) ) {
             	    case MUL:
             	        {
-            	        alt30=1;
+            	        alt31=1;
             	        }
             	        break;
             	    case DIV:
             	        {
-            	        alt30=2;
+            	        alt31=2;
             	        }
             	        break;
             	    case MOD:
             	        {
-            	        alt30=3;
+            	        alt31=3;
             	        }
             	        break;
             	    default:
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 30, 0, input);
+            	            new NoViableAltException("", 31, 0, input);
 
             	        throw nvae;
 
             	    }
 
-            	    switch (alt30) {
+            	    switch (alt31) {
             	        case 1 :
-            	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:23: MUL ^
+            	            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:23: MUL ^
             	            {
-            	            MUL193=(Token)match(input,MUL,FOLLOW_MUL_in_term2114); 
-            	            MUL193_tree = 
-            	            (AslTree)adaptor.create(MUL193)
+            	            MUL198=(Token)match(input,MUL,FOLLOW_MUL_in_term2201); 
+            	            MUL198_tree = 
+            	            (AslTree)adaptor.create(MUL198)
             	            ;
-            	            root_0 = (AslTree)adaptor.becomeRoot(MUL193_tree, root_0);
+            	            root_0 = (AslTree)adaptor.becomeRoot(MUL198_tree, root_0);
 
 
             	            }
             	            break;
             	        case 2 :
-            	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:30: DIV ^
+            	            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:30: DIV ^
             	            {
-            	            DIV194=(Token)match(input,DIV,FOLLOW_DIV_in_term2119); 
-            	            DIV194_tree = 
-            	            (AslTree)adaptor.create(DIV194)
+            	            DIV199=(Token)match(input,DIV,FOLLOW_DIV_in_term2206); 
+            	            DIV199_tree = 
+            	            (AslTree)adaptor.create(DIV199)
             	            ;
-            	            root_0 = (AslTree)adaptor.becomeRoot(DIV194_tree, root_0);
+            	            root_0 = (AslTree)adaptor.becomeRoot(DIV199_tree, root_0);
 
 
             	            }
             	            break;
             	        case 3 :
-            	            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:241:37: MOD ^
+            	            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:245:37: MOD ^
             	            {
-            	            MOD195=(Token)match(input,MOD,FOLLOW_MOD_in_term2124); 
-            	            MOD195_tree = 
-            	            (AslTree)adaptor.create(MOD195)
+            	            MOD200=(Token)match(input,MOD,FOLLOW_MOD_in_term2211); 
+            	            MOD200_tree = 
+            	            (AslTree)adaptor.create(MOD200)
             	            ;
-            	            root_0 = (AslTree)adaptor.becomeRoot(MOD195_tree, root_0);
+            	            root_0 = (AslTree)adaptor.becomeRoot(MOD200_tree, root_0);
 
 
             	            }
@@ -5716,18 +5892,18 @@ public TreeAdaptor getTreeAdaptor() {
             	    }
 
 
-            	    pushFollow(FOLLOW_factor_in_term2128);
-            	    factor196=factor();
+            	    pushFollow(FOLLOW_factor_in_term2215);
+            	    factor201=factor();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, factor196.getTree());
+            	    adaptor.addChild(root_0, factor201.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop32;
                 }
             } while (true);
 
@@ -5763,7 +5939,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "factor"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:1: factor : ( NOT ^| PLUS ^| MINUS ^)? atom ;
     public final AslParser.factor_return factor() throws RecognitionException {
         AslParser.factor_return retval = new AslParser.factor_return();
         retval.start = input.LT(1);
@@ -5771,76 +5947,76 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token NOT197=null;
-        Token PLUS198=null;
-        Token MINUS199=null;
-        AslParser.atom_return atom200 =null;
+        Token NOT202=null;
+        Token PLUS203=null;
+        Token MINUS204=null;
+        AslParser.atom_return atom205 =null;
 
 
-        AslTree NOT197_tree=null;
-        AslTree PLUS198_tree=null;
-        AslTree MINUS199_tree=null;
+        AslTree NOT202_tree=null;
+        AslTree PLUS203_tree=null;
+        AslTree MINUS204_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:13: ( NOT ^| PLUS ^| MINUS ^)? atom
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:9: ( ( NOT ^| PLUS ^| MINUS ^)? atom )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:13: ( NOT ^| PLUS ^| MINUS ^)? atom
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:13: ( NOT ^| PLUS ^| MINUS ^)?
-            int alt32=4;
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:13: ( NOT ^| PLUS ^| MINUS ^)?
+            int alt33=4;
             switch ( input.LA(1) ) {
                 case NOT:
                     {
-                    alt32=1;
+                    alt33=1;
                     }
                     break;
                 case PLUS:
                     {
-                    alt32=2;
+                    alt33=2;
                     }
                     break;
                 case MINUS:
                     {
-                    alt32=3;
+                    alt33=3;
                     }
                     break;
             }
 
-            switch (alt32) {
+            switch (alt33) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:14: NOT ^
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:14: NOT ^
                     {
-                    NOT197=(Token)match(input,NOT,FOLLOW_NOT_in_factor2151); 
-                    NOT197_tree = 
-                    (AslTree)adaptor.create(NOT197)
+                    NOT202=(Token)match(input,NOT,FOLLOW_NOT_in_factor2238); 
+                    NOT202_tree = 
+                    (AslTree)adaptor.create(NOT202)
                     ;
-                    root_0 = (AslTree)adaptor.becomeRoot(NOT197_tree, root_0);
+                    root_0 = (AslTree)adaptor.becomeRoot(NOT202_tree, root_0);
 
 
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:21: PLUS ^
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:21: PLUS ^
                     {
-                    PLUS198=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor2156); 
-                    PLUS198_tree = 
-                    (AslTree)adaptor.create(PLUS198)
+                    PLUS203=(Token)match(input,PLUS,FOLLOW_PLUS_in_factor2243); 
+                    PLUS203_tree = 
+                    (AslTree)adaptor.create(PLUS203)
                     ;
-                    root_0 = (AslTree)adaptor.becomeRoot(PLUS198_tree, root_0);
+                    root_0 = (AslTree)adaptor.becomeRoot(PLUS203_tree, root_0);
 
 
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:244:29: MINUS ^
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:248:29: MINUS ^
                     {
-                    MINUS199=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor2161); 
-                    MINUS199_tree = 
-                    (AslTree)adaptor.create(MINUS199)
+                    MINUS204=(Token)match(input,MINUS,FOLLOW_MINUS_in_factor2248); 
+                    MINUS204_tree = 
+                    (AslTree)adaptor.create(MINUS204)
                     ;
-                    root_0 = (AslTree)adaptor.becomeRoot(MINUS199_tree, root_0);
+                    root_0 = (AslTree)adaptor.becomeRoot(MINUS204_tree, root_0);
 
 
                     }
@@ -5849,12 +6025,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            pushFollow(FOLLOW_atom_in_factor2166);
-            atom200=atom();
+            pushFollow(FOLLOW_atom_in_factor2253);
+            atom205=atom();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, atom200.getTree());
+            adaptor.addChild(root_0, atom205.getTree());
 
             }
 
@@ -5887,7 +6063,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "atom"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:250:1: atom : ( ID | INT | ID '.' (e= attribute_name_expr ) -> ^( ATTR ID $e) | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:254:1: atom : ( ID | INT | ID '.' ( attribute_name_expr ) -> ^( ATTR ID attribute_name_expr ) | ID '.' ( attribute_name_color ) -> ^( ATTR ID attribute_name_color ) | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !);
     public final AslParser.atom_return atom() throws RecognitionException {
         AslParser.atom_return retval = new AslParser.atom_return();
         retval.start = input.LT(1);
@@ -5896,46 +6072,67 @@ public TreeAdaptor getTreeAdaptor() {
         AslTree root_0 = null;
 
         Token b=null;
-        Token ID201=null;
-        Token INT202=null;
-        Token ID203=null;
-        Token char_literal204=null;
-        Token char_literal206=null;
-        Token char_literal208=null;
-        AslParser.attribute_name_expr_return e =null;
+        Token ID206=null;
+        Token INT207=null;
+        Token ID208=null;
+        Token char_literal209=null;
+        Token ID211=null;
+        Token char_literal212=null;
+        Token char_literal215=null;
+        Token char_literal217=null;
+        AslParser.attribute_name_expr_return attribute_name_expr210 =null;
 
-        AslParser.funcall_return funcall205 =null;
+        AslParser.attribute_name_color_return attribute_name_color213 =null;
 
-        AslParser.expr_return expr207 =null;
+        AslParser.funcall_return funcall214 =null;
+
+        AslParser.expr_return expr216 =null;
 
 
         AslTree b_tree=null;
-        AslTree ID201_tree=null;
-        AslTree INT202_tree=null;
-        AslTree ID203_tree=null;
-        AslTree char_literal204_tree=null;
-        AslTree char_literal206_tree=null;
-        AslTree char_literal208_tree=null;
+        AslTree ID206_tree=null;
+        AslTree INT207_tree=null;
+        AslTree ID208_tree=null;
+        AslTree char_literal209_tree=null;
+        AslTree ID211_tree=null;
+        AslTree char_literal212_tree=null;
+        AslTree char_literal215_tree=null;
+        AslTree char_literal217_tree=null;
         RewriteRuleTokenStream stream_TRUE=new RewriteRuleTokenStream(adaptor,"token TRUE");
         RewriteRuleTokenStream stream_FALSE=new RewriteRuleTokenStream(adaptor,"token FALSE");
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_87=new RewriteRuleTokenStream(adaptor,"token 87");
         RewriteRuleSubtreeStream stream_attribute_name_expr=new RewriteRuleSubtreeStream(adaptor,"rule attribute_name_expr");
+        RewriteRuleSubtreeStream stream_attribute_name_color=new RewriteRuleSubtreeStream(adaptor,"rule attribute_name_color");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:250:9: ( ID | INT | ID '.' (e= attribute_name_expr ) -> ^( ATTR ID $e) | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
-            int alt34=6;
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:254:9: ( ID | INT | ID '.' ( attribute_name_expr ) -> ^( ATTR ID attribute_name_expr ) | ID '.' ( attribute_name_color ) -> ^( ATTR ID attribute_name_color ) | (b= TRUE |b= FALSE ) -> ^( BOOLEAN[$b,$b.text] ) | funcall | '(' ! expr ')' !)
+            int alt35=7;
             switch ( input.LA(1) ) {
             case ID:
                 {
                 switch ( input.LA(2) ) {
                 case 87:
                     {
-                    alt34=3;
+                    int LA35_5 = input.LA(3);
+
+                    if ( ((LA35_5 >= POSX && LA35_5 <= POSY)||LA35_5==91) ) {
+                        alt35=3;
+                    }
+                    else if ( (LA35_5==COLOR||LA35_5==STROKE) ) {
+                        alt35=4;
+                    }
+                    else {
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 35, 5, input);
+
+                        throw nvae;
+
+                    }
                     }
                     break;
                 case 84:
                     {
-                    alt34=5;
+                    alt35=6;
                     }
                     break;
                 case AND:
@@ -5957,12 +6154,12 @@ public TreeAdaptor getTreeAdaptor() {
                 case 86:
                 case 89:
                     {
-                    alt34=1;
+                    alt35=1;
                     }
                     break;
                 default:
                     NoViableAltException nvae =
-                        new NoViableAltException("", 34, 1, input);
+                        new NoViableAltException("", 35, 1, input);
 
                     throw nvae;
 
@@ -5972,98 +6169,97 @@ public TreeAdaptor getTreeAdaptor() {
                 break;
             case INT:
                 {
-                alt34=2;
+                alt35=2;
                 }
                 break;
             case FALSE:
             case TRUE:
                 {
-                alt34=4;
+                alt35=5;
                 }
                 break;
             case 84:
                 {
-                alt34=6;
+                alt35=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 34, 0, input);
+                    new NoViableAltException("", 35, 0, input);
 
                 throw nvae;
 
             }
 
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:250:13: ID
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:254:13: ID
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    ID201=(Token)match(input,ID,FOLLOW_ID_in_atom2191); 
-                    ID201_tree = 
-                    (AslTree)adaptor.create(ID201)
+                    ID206=(Token)match(input,ID,FOLLOW_ID_in_atom2278); 
+                    ID206_tree = 
+                    (AslTree)adaptor.create(ID206)
                     ;
-                    adaptor.addChild(root_0, ID201_tree);
+                    adaptor.addChild(root_0, ID206_tree);
 
 
                     }
                     break;
                 case 2 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:251:13: INT
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:255:13: INT
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    INT202=(Token)match(input,INT,FOLLOW_INT_in_atom2206); 
-                    INT202_tree = 
-                    (AslTree)adaptor.create(INT202)
+                    INT207=(Token)match(input,INT,FOLLOW_INT_in_atom2293); 
+                    INT207_tree = 
+                    (AslTree)adaptor.create(INT207)
                     ;
-                    adaptor.addChild(root_0, INT202_tree);
+                    adaptor.addChild(root_0, INT207_tree);
 
 
                     }
                     break;
                 case 3 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:13: ID '.' (e= attribute_name_expr )
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:256:13: ID '.' ( attribute_name_expr )
                     {
-                    ID203=(Token)match(input,ID,FOLLOW_ID_in_atom2220);  
-                    stream_ID.add(ID203);
+                    ID208=(Token)match(input,ID,FOLLOW_ID_in_atom2307);  
+                    stream_ID.add(ID208);
 
 
-                    char_literal204=(Token)match(input,87,FOLLOW_87_in_atom2222);  
-                    stream_87.add(char_literal204);
+                    char_literal209=(Token)match(input,87,FOLLOW_87_in_atom2309);  
+                    stream_87.add(char_literal209);
 
 
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:20: (e= attribute_name_expr )
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:21: e= attribute_name_expr
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:256:20: ( attribute_name_expr )
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:256:21: attribute_name_expr
                     {
-                    pushFollow(FOLLOW_attribute_name_expr_in_atom2227);
-                    e=attribute_name_expr();
+                    pushFollow(FOLLOW_attribute_name_expr_in_atom2312);
+                    attribute_name_expr210=attribute_name_expr();
 
                     state._fsp--;
 
-                    stream_attribute_name_expr.add(e.getTree());
+                    stream_attribute_name_expr.add(attribute_name_expr210.getTree());
 
                     }
 
 
                     // AST REWRITE
-                    // elements: ID, e
+                    // elements: ID, attribute_name_expr
                     // token labels: 
-                    // rule labels: e, retval
+                    // rule labels: retval
                     // token list labels: 
                     // rule list labels: 
                     // wildcard labels: 
                     retval.tree = root_0;
-                    RewriteRuleSubtreeStream stream_e=new RewriteRuleSubtreeStream(adaptor,"rule e",e!=null?e.tree:null);
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 252:44: -> ^( ATTR ID $e)
+                    // 256:42: -> ^( ATTR ID attribute_name_expr )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:252:47: ^( ATTR ID $e)
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:256:45: ^( ATTR ID attribute_name_expr )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -6074,7 +6270,7 @@ public TreeAdaptor getTreeAdaptor() {
                         stream_ID.nextNode()
                         );
 
-                        adaptor.addChild(root_1, stream_e.nextTree());
+                        adaptor.addChild(root_1, stream_attribute_name_expr.nextTree());
 
                         adaptor.addChild(root_0, root_1);
                         }
@@ -6087,39 +6283,99 @@ public TreeAdaptor getTreeAdaptor() {
                     }
                     break;
                 case 4 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:13: (b= TRUE |b= FALSE )
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:257:13: ID '.' ( attribute_name_color )
                     {
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:13: (b= TRUE |b= FALSE )
-                    int alt33=2;
-                    int LA33_0 = input.LA(1);
+                    ID211=(Token)match(input,ID,FOLLOW_ID_in_atom2338);  
+                    stream_ID.add(ID211);
 
-                    if ( (LA33_0==TRUE) ) {
-                        alt33=1;
+
+                    char_literal212=(Token)match(input,87,FOLLOW_87_in_atom2340);  
+                    stream_87.add(char_literal212);
+
+
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:257:20: ( attribute_name_color )
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:257:22: attribute_name_color
+                    {
+                    pushFollow(FOLLOW_attribute_name_color_in_atom2344);
+                    attribute_name_color213=attribute_name_color();
+
+                    state._fsp--;
+
+                    stream_attribute_name_color.add(attribute_name_color213.getTree());
+
                     }
-                    else if ( (LA33_0==FALSE) ) {
-                        alt33=2;
+
+
+                    // AST REWRITE
+                    // elements: attribute_name_color, ID
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (AslTree)adaptor.nil();
+                    // 257:44: -> ^( ATTR ID attribute_name_color )
+                    {
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:257:47: ^( ATTR ID attribute_name_color )
+                        {
+                        AslTree root_1 = (AslTree)adaptor.nil();
+                        root_1 = (AslTree)adaptor.becomeRoot(
+                        (AslTree)adaptor.create(ATTR, "ATTR")
+                        , root_1);
+
+                        adaptor.addChild(root_1, 
+                        stream_ID.nextNode()
+                        );
+
+                        adaptor.addChild(root_1, stream_attribute_name_color.nextTree());
+
+                        adaptor.addChild(root_0, root_1);
+                        }
+
+                    }
+
+
+                    retval.tree = root_0;
+
+                    }
+                    break;
+                case 5 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:258:13: (b= TRUE |b= FALSE )
+                    {
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:258:13: (b= TRUE |b= FALSE )
+                    int alt34=2;
+                    int LA34_0 = input.LA(1);
+
+                    if ( (LA34_0==TRUE) ) {
+                        alt34=1;
+                    }
+                    else if ( (LA34_0==FALSE) ) {
+                        alt34=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 33, 0, input);
+                            new NoViableAltException("", 34, 0, input);
 
                         throw nvae;
 
                     }
-                    switch (alt33) {
+                    switch (alt34) {
                         case 1 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:14: b= TRUE
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:258:14: b= TRUE
                             {
-                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom2258);  
+                            b=(Token)match(input,TRUE,FOLLOW_TRUE_in_atom2372);  
                             stream_TRUE.add(b);
 
 
                             }
                             break;
                         case 2 :
-                            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:23: b= FALSE
+                            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:258:23: b= FALSE
                             {
-                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom2264);  
+                            b=(Token)match(input,FALSE,FOLLOW_FALSE_in_atom2378);  
                             stream_FALSE.add(b);
 
 
@@ -6140,9 +6396,9 @@ public TreeAdaptor getTreeAdaptor() {
                     RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
                     root_0 = (AslTree)adaptor.nil();
-                    // 253:33: -> ^( BOOLEAN[$b,$b.text] )
+                    // 258:33: -> ^( BOOLEAN[$b,$b.text] )
                     {
-                        // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:253:36: ^( BOOLEAN[$b,$b.text] )
+                        // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:258:36: ^( BOOLEAN[$b,$b.text] )
                         {
                         AslTree root_1 = (AslTree)adaptor.nil();
                         root_1 = (AslTree)adaptor.becomeRoot(
@@ -6159,37 +6415,37 @@ public TreeAdaptor getTreeAdaptor() {
 
                     }
                     break;
-                case 5 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:254:13: funcall
+                case 6 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:259:13: funcall
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    pushFollow(FOLLOW_funcall_in_atom2287);
-                    funcall205=funcall();
+                    pushFollow(FOLLOW_funcall_in_atom2401);
+                    funcall214=funcall();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, funcall205.getTree());
+                    adaptor.addChild(root_0, funcall214.getTree());
 
                     }
                     break;
-                case 6 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:255:13: '(' ! expr ')' !
+                case 7 :
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:260:13: '(' ! expr ')' !
                     {
                     root_0 = (AslTree)adaptor.nil();
 
 
-                    char_literal206=(Token)match(input,84,FOLLOW_84_in_atom2301); 
+                    char_literal215=(Token)match(input,84,FOLLOW_84_in_atom2415); 
 
-                    pushFollow(FOLLOW_expr_in_atom2304);
-                    expr207=expr();
+                    pushFollow(FOLLOW_expr_in_atom2418);
+                    expr216=expr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, expr207.getTree());
+                    adaptor.addChild(root_0, expr216.getTree());
 
-                    char_literal208=(Token)match(input,85,FOLLOW_85_in_atom2306); 
+                    char_literal217=(Token)match(input,85,FOLLOW_85_in_atom2420); 
 
                     }
                     break;
@@ -6224,7 +6480,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "funcall"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:1: funcall : ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) ;
     public final AslParser.funcall_return funcall() throws RecognitionException {
         AslParser.funcall_return retval = new AslParser.funcall_return();
         retval.start = input.LT(1);
@@ -6232,48 +6488,48 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token ID209=null;
-        Token char_literal210=null;
-        Token char_literal212=null;
-        AslParser.expr_list_return expr_list211 =null;
+        Token ID218=null;
+        Token char_literal219=null;
+        Token char_literal221=null;
+        AslParser.expr_list_return expr_list220 =null;
 
 
-        AslTree ID209_tree=null;
-        AslTree char_literal210_tree=null;
-        AslTree char_literal212_tree=null;
+        AslTree ID218_tree=null;
+        AslTree char_literal219_tree=null;
+        AslTree char_literal221_tree=null;
         RewriteRuleTokenStream stream_ID=new RewriteRuleTokenStream(adaptor,"token ID");
         RewriteRuleTokenStream stream_84=new RewriteRuleTokenStream(adaptor,"token 84");
         RewriteRuleTokenStream stream_85=new RewriteRuleTokenStream(adaptor,"token 85");
         RewriteRuleSubtreeStream stream_expr_list=new RewriteRuleSubtreeStream(adaptor,"rule expr_list");
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:13: ID '(' ( expr_list )? ')'
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:9: ( ID '(' ( expr_list )? ')' -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) ) )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:13: ID '(' ( expr_list )? ')'
             {
-            ID209=(Token)match(input,ID,FOLLOW_ID_in_funcall2327);  
-            stream_ID.add(ID209);
+            ID218=(Token)match(input,ID,FOLLOW_ID_in_funcall2441);  
+            stream_ID.add(ID218);
 
 
-            char_literal210=(Token)match(input,84,FOLLOW_84_in_funcall2329);  
-            stream_84.add(char_literal210);
+            char_literal219=(Token)match(input,84,FOLLOW_84_in_funcall2443);  
+            stream_84.add(char_literal219);
 
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:20: ( expr_list )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:20: ( expr_list )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==FALSE||LA35_0==ID||LA35_0==INT||LA35_0==MINUS||LA35_0==NOT||LA35_0==PLUS||LA35_0==TRUE||LA35_0==84) ) {
-                alt35=1;
+            if ( (LA36_0==FALSE||LA36_0==ID||LA36_0==INT||LA36_0==MINUS||LA36_0==NOT||LA36_0==PLUS||LA36_0==TRUE||LA36_0==84) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:20: expr_list
+                    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:20: expr_list
                     {
-                    pushFollow(FOLLOW_expr_list_in_funcall2331);
-                    expr_list211=expr_list();
+                    pushFollow(FOLLOW_expr_list_in_funcall2445);
+                    expr_list220=expr_list();
 
                     state._fsp--;
 
-                    stream_expr_list.add(expr_list211.getTree());
+                    stream_expr_list.add(expr_list220.getTree());
 
                     }
                     break;
@@ -6281,12 +6537,12 @@ public TreeAdaptor getTreeAdaptor() {
             }
 
 
-            char_literal212=(Token)match(input,85,FOLLOW_85_in_funcall2334);  
-            stream_85.add(char_literal212);
+            char_literal221=(Token)match(input,85,FOLLOW_85_in_funcall2448);  
+            stream_85.add(char_literal221);
 
 
             // AST REWRITE
-            // elements: expr_list, ID
+            // elements: ID, expr_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -6296,9 +6552,9 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (AslTree)adaptor.nil();
-            // 259:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+            // 264:35: -> ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
             {
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:38: ^( FUNCALL ID ^( ARGLIST ( expr_list )? ) )
                 {
                 AslTree root_1 = (AslTree)adaptor.nil();
                 root_1 = (AslTree)adaptor.becomeRoot(
@@ -6309,14 +6565,14 @@ public TreeAdaptor getTreeAdaptor() {
                 stream_ID.nextNode()
                 );
 
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:51: ^( ARGLIST ( expr_list )? )
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:51: ^( ARGLIST ( expr_list )? )
                 {
                 AslTree root_2 = (AslTree)adaptor.nil();
                 root_2 = (AslTree)adaptor.becomeRoot(
                 (AslTree)adaptor.create(ARGLIST, "ARGLIST")
                 , root_2);
 
-                // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:259:61: ( expr_list )?
+                // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:264:61: ( expr_list )?
                 if ( stream_expr_list.hasNext() ) {
                     adaptor.addChild(root_2, stream_expr_list.nextTree());
 
@@ -6365,7 +6621,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "expr_list"
-    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:1: expr_list : expr ( ',' ! expr )* ;
+    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:268:1: expr_list : expr ( ',' ! expr )* ;
     public final AslParser.expr_list_return expr_list() throws RecognitionException {
         AslParser.expr_list_return retval = new AslParser.expr_list_return();
         retval.start = input.LT(1);
@@ -6373,57 +6629,57 @@ public TreeAdaptor getTreeAdaptor() {
 
         AslTree root_0 = null;
 
-        Token char_literal214=null;
-        AslParser.expr_return expr213 =null;
+        Token char_literal223=null;
+        AslParser.expr_return expr222 =null;
 
-        AslParser.expr_return expr215 =null;
+        AslParser.expr_return expr224 =null;
 
 
-        AslTree char_literal214_tree=null;
+        AslTree char_literal223_tree=null;
 
         try {
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:10: ( expr ( ',' ! expr )* )
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:13: expr ( ',' ! expr )*
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:268:10: ( expr ( ',' ! expr )* )
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:268:13: expr ( ',' ! expr )*
             {
             root_0 = (AslTree)adaptor.nil();
 
 
-            pushFollow(FOLLOW_expr_in_expr_list2367);
-            expr213=expr();
+            pushFollow(FOLLOW_expr_in_expr_list2481);
+            expr222=expr();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, expr213.getTree());
+            adaptor.addChild(root_0, expr222.getTree());
 
-            // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:18: ( ',' ! expr )*
-            loop36:
+            // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:268:18: ( ',' ! expr )*
+            loop37:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA36_0==86) ) {
-                    alt36=1;
+                if ( (LA37_0==86) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt37) {
             	case 1 :
-            	    // /home/pinkii/Documents/Compilers/Asl/src/parser/Asl.g:263:19: ',' ! expr
+            	    // /home/outer2g/Documentos/FIB/Q6/SVGAnimation/src/parser/Asl.g:268:19: ',' ! expr
             	    {
-            	    char_literal214=(Token)match(input,86,FOLLOW_86_in_expr_list2370); 
+            	    char_literal223=(Token)match(input,86,FOLLOW_86_in_expr_list2484); 
 
-            	    pushFollow(FOLLOW_expr_in_expr_list2373);
-            	    expr215=expr();
+            	    pushFollow(FOLLOW_expr_in_expr_list2487);
+            	    expr224=expr();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, expr215.getTree());
+            	    adaptor.addChild(root_0, expr224.getTree());
 
             	    }
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
@@ -6587,91 +6843,99 @@ public TreeAdaptor getTreeAdaptor() {
     public static final BitSet FOLLOW_attribute_in_list_attributes1470 = new BitSet(new long[]{0x0000000000000000L,0x0000000000600000L});
     public static final BitSet FOLLOW_85_in_list_attributes1474 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_attribute_name_color_in_attribute1504 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_88_in_attribute1507 = new BitSet(new long[]{0x0000000800002300L,0x00000000000100D0L});
-    public static final BitSet FOLLOW_color_in_attribute1510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_88_in_attribute1507 = new BitSet(new long[]{0x0000020800002300L,0x00000000000100D0L});
+    public static final BitSet FOLLOW_obj_attribute_in_attribute1510 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_attribute_name_expr_in_attribute1528 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
     public static final BitSet FOLLOW_88_in_attribute1531 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
     public static final BitSet FOLLOW_expr_in_attribute1534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_show_time_in_show1555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_show_no_time_in_show1559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SHOW_T_in_show_time1567 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_ID_in_show_time1570 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_time_in_show_time1572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_SHOW_in_show_no_time1581 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_ID_in_show_no_time1584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_hide_time_in_hide1592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_hide_no_time_in_hide1596 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_HIDE_T_in_hide_time1604 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_ID_in_hide_time1607 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_time_in_hide_time1609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_HIDE_in_hide_no_time1618 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_ID_in_hide_no_time1621 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_DELAY_in_delay1628 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_time_in_delay1631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_COLORHEX_in_color1766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RGB_in_color1788 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_color1790 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1792 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_color1794 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1796 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_color1798 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1800 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_color1802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RGBPRCTJ_in_color1828 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_color1830 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1832 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_color1834 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1836 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_color1838 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_color1840 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_color1842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_color_keyword_in_color1868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_time1944 = new BitSet(new long[]{0x0000000000000000L,0x0000000014000000L});
-    public static final BitSet FOLLOW_set_in_time1946 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_boolterm_in_expr1966 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_OR_in_expr1969 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_boolterm_in_expr1972 = new BitSet(new long[]{0x0400000000000002L});
-    public static final BitSet FOLLOW_boolfact_in_boolterm1992 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_AND_in_boolterm1995 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_boolfact_in_boolterm1998 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_num_expr_in_boolfact2018 = new BitSet(new long[]{0x0201101420000002L});
-    public static final BitSet FOLLOW_EQUAL_in_boolfact2022 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact2027 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_LT_in_boolfact2032 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_LE_in_boolfact2037 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_GT_in_boolfact2042 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_GE_in_boolfact2047 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_num_expr_in_boolfact2051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_term_in_num_expr2071 = new BitSet(new long[]{0x2002000000000002L});
-    public static final BitSet FOLLOW_PLUS_in_num_expr2076 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_MINUS_in_num_expr2081 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_term_in_num_expr2085 = new BitSet(new long[]{0x2002000000000002L});
-    public static final BitSet FOLLOW_factor_in_term2109 = new BitSet(new long[]{0x0084000000400002L});
-    public static final BitSet FOLLOW_MUL_in_term2114 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_DIV_in_term2119 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_MOD_in_term2124 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_factor_in_term2128 = new BitSet(new long[]{0x0084000000400002L});
-    public static final BitSet FOLLOW_NOT_in_factor2151 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_PLUS_in_factor2156 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_MINUS_in_factor2161 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_atom_in_factor2166 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atom2191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_INT_in_atom2206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_atom2220 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_87_in_atom2222 = new BitSet(new long[]{0xC000000000000000L,0x0000000008000000L});
-    public static final BitSet FOLLOW_attribute_name_expr_in_atom2227 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_TRUE_in_atom2258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_FALSE_in_atom2264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_funcall_in_atom2287 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_atom2301 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_atom2304 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_atom2306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ID_in_funcall2327 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_84_in_funcall2329 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000304000L});
-    public static final BitSet FOLLOW_expr_list_in_funcall2331 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_85_in_funcall2334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_expr_in_expr_list2367 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
-    public static final BitSet FOLLOW_86_in_expr_list2370 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
-    public static final BitSet FOLLOW_expr_in_expr_list2373 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+    public static final BitSet FOLLOW_color_in_obj_attribute1558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_obj_attribute1578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_obj_attribute1600 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_87_in_obj_attribute1602 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_attribute_name_color_in_obj_attribute1606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_show_time_in_show1642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_show_no_time_in_show1646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SHOW_T_in_show_time1654 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_ID_in_show_time1657 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_time_in_show_time1659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_SHOW_in_show_no_time1668 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_ID_in_show_no_time1671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_hide_time_in_hide1679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_hide_no_time_in_hide1683 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_HIDE_T_in_hide_time1691 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_ID_in_hide_time1694 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_time_in_hide_time1696 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_HIDE_in_hide_no_time1705 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_ID_in_hide_no_time1708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DELAY_in_delay1715 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_time_in_delay1718 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_COLORHEX_in_color1853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RGB_in_color1875 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_color1877 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1879 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_color1881 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1883 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_color1885 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1887 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_color1889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RGBPRCTJ_in_color1915 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_color1917 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1919 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_color1921 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1923 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_color1925 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_color1927 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_color1929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_color_keyword_in_color1955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_time2031 = new BitSet(new long[]{0x0000000000000000L,0x0000000014000000L});
+    public static final BitSet FOLLOW_set_in_time2033 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_boolterm_in_expr2053 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_OR_in_expr2056 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_boolterm_in_expr2059 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_boolfact_in_boolterm2079 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_AND_in_boolterm2082 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_boolfact_in_boolterm2085 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_num_expr_in_boolfact2105 = new BitSet(new long[]{0x0201101420000002L});
+    public static final BitSet FOLLOW_EQUAL_in_boolfact2109 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_NOT_EQUAL_in_boolfact2114 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_LT_in_boolfact2119 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_LE_in_boolfact2124 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_GT_in_boolfact2129 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_GE_in_boolfact2134 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_num_expr_in_boolfact2138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_term_in_num_expr2158 = new BitSet(new long[]{0x2002000000000002L});
+    public static final BitSet FOLLOW_PLUS_in_num_expr2163 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_MINUS_in_num_expr2168 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_term_in_num_expr2172 = new BitSet(new long[]{0x2002000000000002L});
+    public static final BitSet FOLLOW_factor_in_term2196 = new BitSet(new long[]{0x0084000000400002L});
+    public static final BitSet FOLLOW_MUL_in_term2201 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_DIV_in_term2206 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_MOD_in_term2211 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_factor_in_term2215 = new BitSet(new long[]{0x0084000000400002L});
+    public static final BitSet FOLLOW_NOT_in_factor2238 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_PLUS_in_factor2243 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_MINUS_in_factor2248 = new BitSet(new long[]{0x00000A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_atom_in_factor2253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom2278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_INT_in_atom2293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom2307 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_87_in_atom2309 = new BitSet(new long[]{0xC000000000000000L,0x0000000008000000L});
+    public static final BitSet FOLLOW_attribute_name_expr_in_atom2312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_atom2338 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
+    public static final BitSet FOLLOW_87_in_atom2340 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000800L});
+    public static final BitSet FOLLOW_attribute_name_color_in_atom2344 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_TRUE_in_atom2372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_FALSE_in_atom2378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_funcall_in_atom2401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_atom2415 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_atom2418 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_atom2420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ID_in_funcall2441 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_84_in_funcall2443 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000304000L});
+    public static final BitSet FOLLOW_expr_list_in_funcall2445 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
+    public static final BitSet FOLLOW_85_in_funcall2448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_expr_in_expr_list2481 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
+    public static final BitSet FOLLOW_86_in_expr_list2484 = new BitSet(new long[]{0x21020A0080000000L,0x0000000000104000L});
+    public static final BitSet FOLLOW_expr_in_expr_list2487 = new BitSet(new long[]{0x0000000000000002L,0x0000000000400000L});
 
 }

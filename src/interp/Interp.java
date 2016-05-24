@@ -613,7 +613,12 @@ public class Interp {
         assert false;
         return null;
     }
-
+//true if its a color attribute, false otherwise
+private Boolean isColorAttribute(String attribute){
+    if (attribute.equals("color")) return true;
+    if (attribute.equals("stroke")) return true;
+    return false;
+}
     /**
      * Evaluates the expression represented in the AST t.
      * @param t The AST of the expression
@@ -637,7 +642,9 @@ public class Interp {
                 break;
             case AslLexer.ATTR:
                 value = Stack.getVariable(t.getChild(0).getText());
-                value = new Data(Integer.parseInt(value.getAttribute(t.getChild(1).getText())));
+                string = t.getChild(1).getText();
+                if (isColorAttribute(string)) value = new Data(value.getAttribute(string));
+                else value = new Data(Integer.parseInt(value.getAttribute(string)));
                 break;
             // An integer literal
             case AslLexer.INT:

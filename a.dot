@@ -34,144 +34,40 @@ digraph {
   n17 [label="COLORKEYWORD"];
   n17 [label="COLORKEYWORD"];
   n18 [label="black"];
-  n19 [label="create"];
-  n19 [label="create"];
-  n20 [label="tres"];
-  n21 [label="circle"];
-  n22 [label="200"];
-  n23 [label="400"];
-  n24 [label="LIST_ATTR"];
-  n24 [label="LIST_ATTR"];
-  n25 [label="color"];
-  n25 [label="color"];
-  n26 [label="COLORHEXA"];
-  n26 [label="COLORHEXA"];
-  n27 [label="#123"];
-  n28 [label="r"];
-  n28 [label="r"];
-  n29 [label="20"];
-  n30 [label="stroke"];
-  n30 [label="stroke"];
-  n31 [label="COLORKEYWORD"];
-  n31 [label="COLORKEYWORD"];
-  n32 [label="blue"];
-  n33 [label="create"];
-  n33 [label="create"];
-  n34 [label="cuatro"];
-  n35 [label="circle"];
-  n36 [label="0"];
-  n37 [label="0"];
-  n38 [label="LIST_ATTR"];
-  n38 [label="LIST_ATTR"];
-  n39 [label="r"];
-  n39 [label="r"];
-  n40 [label="5"];
-  n41 [label="delay"];
-  n41 [label="delay"];
-  n42 [label="ms"];
-  n42 [label="ms"];
-  n43 [label="250"];
-  n44 [label="delay"];
-  n44 [label="delay"];
-  n45 [label="ms"];
-  n45 [label="ms"];
-  n46 [label="250"];
-  n47 [label="showt"];
-  n47 [label="showt"];
-  n48 [label="dos"];
-  n49 [label="ms"];
-  n49 [label="ms"];
-  n50 [label="250"];
-  n51 [label="showt"];
-  n51 [label="showt"];
-  n52 [label="dos"];
-  n53 [label="ms"];
-  n53 [label="ms"];
-  n54 [label="1000"];
-  n55 [label="hidet"];
-  n55 [label="hidet"];
-  n56 [label="dos"];
-  n57 [label="ms"];
-  n57 [label="ms"];
-  n58 [label="250"];
-  n59 [label="hidet"];
-  n59 [label="hidet"];
-  n60 [label="dos"];
-  n61 [label="ms"];
-  n61 [label="ms"];
-  n62 [label="250"];
-  n63 [label="show"];
-  n63 [label="show"];
-  n64 [label="dos"];
-  n65 [label="show"];
-  n65 [label="show"];
-  n66 [label="tres"];
-  n67 [label="delay"];
-  n67 [label="delay"];
-  n68 [label="s"];
-  n68 [label="s"];
-  n69 [label="1"];
-  n70 [label="modify"];
-  n70 [label="modify"];
-  n71 [label="tres"];
-  n72 [label="LIST_ATTR"];
-  n72 [label="LIST_ATTR"];
-  n73 [label="color"];
-  n73 [label="color"];
-  n74 [label="COLORKEYWORD"];
-  n74 [label="COLORKEYWORD"];
-  n75 [label="black"];
-  n76 [label=":="];
-  n76 [label=":="];
-  n77 [label="dos"];
-  n78 [label="tres"];
-  n79 [label=":="];
-  n79 [label=":="];
-  n80 [label="estoEsNull"];
-  n81 [label="tres"];
-  n82 [label="parallel"];
-  n82 [label="parallel"];
-  n83 [label="s"];
-  n83 [label="s"];
-  n84 [label="10"];
-  n85 [label="LIST_INSTR"];
-  n85 [label="LIST_INSTR"];
-  n86 [label="move"];
-  n86 [label="move"];
-  n87 [label="dos"];
-  n88 [label="400"];
-  n89 [label="400"];
-  n90 [label="modify"];
-  n90 [label="modify"];
-  n91 [label="dos"];
-  n92 [label="LIST_ATTR"];
-  n92 [label="LIST_ATTR"];
-  n93 [label="color"];
-  n93 [label="color"];
-  n94 [label="COLORKEYWORD"];
-  n94 [label="COLORKEYWORD"];
-  n95 [label="green"];
-  n96 [label="r"];
-  n96 [label="r"];
-  n97 [label="20"];
-  n98 [label="move"];
-  n98 [label="move"];
-  n99 [label="estoEsNull"];
-  n100 [label="200"];
-  n101 [label="200"];
-  n102 [label="modify"];
-  n102 [label="modify"];
-  n103 [label="estoEsNull"];
-  n104 [label="LIST_ATTR"];
-  n104 [label="LIST_ATTR"];
-  n105 [label="color"];
-  n105 [label="color"];
-  n106 [label="COLORKEYWORD"];
-  n106 [label="COLORKEYWORD"];
-  n107 [label="white"];
-  n108 [label="r"];
-  n108 [label="r"];
-  n109 [label="20"];
+  n19 [label=":="];
+  n19 [label=":="];
+  n20 [label="prueba"];
+  n21 [label="ATTR"];
+  n21 [label="ATTR"];
+  n22 [label="dos"];
+  n23 [label="color"];
+  n24 [label="create"];
+  n24 [label="create"];
+  n25 [label="dos"];
+  n26 [label="circle"];
+  n27 [label="100"];
+  n28 [label="300"];
+  n29 [label="LIST_ATTR"];
+  n29 [label="LIST_ATTR"];
+  n30 [label="color"];
+  n30 [label="color"];
+  n31 [label="dos"];
+  n32 [label="."];
+  n33 [label="color"];
+  n34 [label="r"];
+  n34 [label="r"];
+  n35 [label="40"];
+  n36 [label="stroke"];
+  n36 [label="stroke"];
+  n37 [label="COLORKEYWORD"];
+  n37 [label="COLORKEYWORD"];
+  n38 [label="black"];
+  n39 [label="write"];
+  n39 [label="write"];
+  n40 [label="ATTR"];
+  n40 [label="ATTR"];
+  n41 [label="dos"];
+  n42 [label="color"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -191,96 +87,29 @@ digraph {
   n10 -> n16 // "LIST_ATTR" -> "stroke"
   n16 -> n17 // "stroke" -> "COLORKEYWORD"
   n17 -> n18 // "COLORKEYWORD" -> "black"
-  n4 -> n19 // "LIST_INSTR" -> "create"
-  n19 -> n20 // "create" -> "tres"
-  n19 -> n21 // "create" -> "circle"
-  n19 -> n22 // "create" -> "200"
-  n19 -> n23 // "create" -> "400"
-  n19 -> n24 // "create" -> "LIST_ATTR"
-  n24 -> n25 // "LIST_ATTR" -> "color"
-  n25 -> n26 // "color" -> "COLORHEXA"
-  n26 -> n27 // "COLORHEXA" -> "#123"
-  n24 -> n28 // "LIST_ATTR" -> "r"
-  n28 -> n29 // "r" -> "20"
-  n24 -> n30 // "LIST_ATTR" -> "stroke"
-  n30 -> n31 // "stroke" -> "COLORKEYWORD"
-  n31 -> n32 // "COLORKEYWORD" -> "blue"
-  n4 -> n33 // "LIST_INSTR" -> "create"
-  n33 -> n34 // "create" -> "cuatro"
-  n33 -> n35 // "create" -> "circle"
-  n33 -> n36 // "create" -> "0"
-  n33 -> n37 // "create" -> "0"
-  n33 -> n38 // "create" -> "LIST_ATTR"
-  n38 -> n39 // "LIST_ATTR" -> "r"
-  n39 -> n40 // "r" -> "5"
-  n4 -> n41 // "LIST_INSTR" -> "delay"
-  n41 -> n42 // "delay" -> "ms"
-  n42 -> n43 // "ms" -> "250"
-  n4 -> n44 // "LIST_INSTR" -> "delay"
-  n44 -> n45 // "delay" -> "ms"
-  n45 -> n46 // "ms" -> "250"
-  n4 -> n47 // "LIST_INSTR" -> "showt"
-  n47 -> n48 // "showt" -> "dos"
-  n47 -> n49 // "showt" -> "ms"
-  n49 -> n50 // "ms" -> "250"
-  n4 -> n51 // "LIST_INSTR" -> "showt"
-  n51 -> n52 // "showt" -> "dos"
-  n51 -> n53 // "showt" -> "ms"
-  n53 -> n54 // "ms" -> "1000"
-  n4 -> n55 // "LIST_INSTR" -> "hidet"
-  n55 -> n56 // "hidet" -> "dos"
-  n55 -> n57 // "hidet" -> "ms"
-  n57 -> n58 // "ms" -> "250"
-  n4 -> n59 // "LIST_INSTR" -> "hidet"
-  n59 -> n60 // "hidet" -> "dos"
-  n59 -> n61 // "hidet" -> "ms"
-  n61 -> n62 // "ms" -> "250"
-  n4 -> n63 // "LIST_INSTR" -> "show"
-  n63 -> n64 // "show" -> "dos"
-  n4 -> n65 // "LIST_INSTR" -> "show"
-  n65 -> n66 // "show" -> "tres"
-  n4 -> n67 // "LIST_INSTR" -> "delay"
-  n67 -> n68 // "delay" -> "s"
-  n68 -> n69 // "s" -> "1"
-  n4 -> n70 // "LIST_INSTR" -> "modify"
-  n70 -> n71 // "modify" -> "tres"
-  n70 -> n72 // "modify" -> "LIST_ATTR"
-  n72 -> n73 // "LIST_ATTR" -> "color"
-  n73 -> n74 // "color" -> "COLORKEYWORD"
-  n74 -> n75 // "COLORKEYWORD" -> "black"
-  n4 -> n76 // "LIST_INSTR" -> ":="
-  n76 -> n77 // ":=" -> "dos"
-  n76 -> n78 // ":=" -> "tres"
-  n4 -> n79 // "LIST_INSTR" -> ":="
-  n79 -> n80 // ":=" -> "estoEsNull"
-  n79 -> n81 // ":=" -> "tres"
-  n4 -> n82 // "LIST_INSTR" -> "parallel"
-  n82 -> n83 // "parallel" -> "s"
-  n83 -> n84 // "s" -> "10"
-  n82 -> n85 // "parallel" -> "LIST_INSTR"
-  n85 -> n86 // "LIST_INSTR" -> "move"
-  n86 -> n87 // "move" -> "dos"
-  n86 -> n88 // "move" -> "400"
-  n86 -> n89 // "move" -> "400"
-  n85 -> n90 // "LIST_INSTR" -> "modify"
-  n90 -> n91 // "modify" -> "dos"
-  n90 -> n92 // "modify" -> "LIST_ATTR"
-  n92 -> n93 // "LIST_ATTR" -> "color"
-  n93 -> n94 // "color" -> "COLORKEYWORD"
-  n94 -> n95 // "COLORKEYWORD" -> "green"
-  n92 -> n96 // "LIST_ATTR" -> "r"
-  n96 -> n97 // "r" -> "20"
-  n85 -> n98 // "LIST_INSTR" -> "move"
-  n98 -> n99 // "move" -> "estoEsNull"
-  n98 -> n100 // "move" -> "200"
-  n98 -> n101 // "move" -> "200"
-  n85 -> n102 // "LIST_INSTR" -> "modify"
-  n102 -> n103 // "modify" -> "estoEsNull"
-  n102 -> n104 // "modify" -> "LIST_ATTR"
-  n104 -> n105 // "LIST_ATTR" -> "color"
-  n105 -> n106 // "color" -> "COLORKEYWORD"
-  n106 -> n107 // "COLORKEYWORD" -> "white"
-  n104 -> n108 // "LIST_ATTR" -> "r"
-  n108 -> n109 // "r" -> "20"
+  n4 -> n19 // "LIST_INSTR" -> ":="
+  n19 -> n20 // ":=" -> "prueba"
+  n19 -> n21 // ":=" -> "ATTR"
+  n21 -> n22 // "ATTR" -> "dos"
+  n21 -> n23 // "ATTR" -> "color"
+  n4 -> n24 // "LIST_INSTR" -> "create"
+  n24 -> n25 // "create" -> "dos"
+  n24 -> n26 // "create" -> "circle"
+  n24 -> n27 // "create" -> "100"
+  n24 -> n28 // "create" -> "300"
+  n24 -> n29 // "create" -> "LIST_ATTR"
+  n29 -> n30 // "LIST_ATTR" -> "color"
+  n30 -> n31 // "color" -> "dos"
+  n30 -> n32 // "color" -> "."
+  n30 -> n33 // "color" -> "color"
+  n29 -> n34 // "LIST_ATTR" -> "r"
+  n34 -> n35 // "r" -> "40"
+  n29 -> n36 // "LIST_ATTR" -> "stroke"
+  n36 -> n37 // "stroke" -> "COLORKEYWORD"
+  n37 -> n38 // "COLORKEYWORD" -> "black"
+  n4 -> n39 // "LIST_INSTR" -> "write"
+  n39 -> n40 // "write" -> "ATTR"
+  n40 -> n41 // "ATTR" -> "dos"
+  n40 -> n42 // "ATTR" -> "color"
 
 }
