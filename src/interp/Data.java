@@ -39,10 +39,11 @@ package interp;
 
 import parser.*;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Data {
     /** Types of data */
-    public enum Type {VOID, BOOLEAN, INTEGER, STRING, OBJECT;}
+    public enum Type {VOID, BOOLEAN, INTEGER, STRING, OBJECT,BLOCK;}
 
     /** Type of data*/
     private Type type;
@@ -56,6 +57,12 @@ public class Data {
     /** Values Object types */
     private HashMap<String,String> attributes;
     
+    /** Values of block types */
+    private HashSet<String> objects;
+
+    /** Constructor for blocks */
+    Data(HashSet<String> objs){ type = Type.BLOCK;objects = objs;}
+
     /** Constructor for objects */
     Data(HashMap<String,String> att){type = Type.OBJECT; attributes = att;}
     
@@ -75,14 +82,19 @@ public class Data {
       type = d.type;
       if (type == Type.OBJECT) attributes = d.attributes;
       else if (type == Type.STRING) sValue = d.sValue;
+      else if (type == Type.BLOCK) objects = d.objects;
       else value = d.value;
     }
 
     /** Returns the type of data */
     public Type getType() { return type; }
     
-    /** Indicates wether the data is an Object */
+    /** Indicates whether the data is a Block*/
+    public boolean isBlock(){ return type == Type.BLOCK;}
+
+    /** Indicates whether the data is an Object */
     public boolean isObject() { return type == Type.OBJECT; }
+
     /** Indicates whether the data is Boolean */
     public boolean isBoolean() { return type == Type.BOOLEAN; }
 
@@ -92,8 +104,15 @@ public class Data {
     /** Indicates whether the data is void */
     public boolean isVoid() { return type == Type.VOID; }
 
+    /** Indicates whether the data is a String */
     public boolean isString() {return type == Type.STRING; }
     
+    /** Gets the objects names associated to the block*/
+    public HashSet<String> getSetObjects(){
+      assert type == Type.BLOCK;
+      return objects;
+    }
+
     /** Gets the attributes hashmap **/
     public HashMap<String,String> getListAttributes(){
       assert type == Type.OBJECT;
@@ -127,8 +146,15 @@ public class Data {
         return sValue;
     }
 
+    /**Adds an object name to the block */
+    public void addObject(String name){assert type == Type.BLOCK; objects.add(name);}
+
+    /** Deletes an object name from the block */
+    public void delObject(String name){assert type == Type.BLOCK; objects.remove(name);}
+    
     /** Defines an Attribute for the data **/
     public void setAttribute(String name,String value) { assert type == Type.OBJECT; attributes.put(name,value);}
+
     /** Defines a Boolean value for the data */
     public void setValue(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
 

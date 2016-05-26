@@ -115,7 +115,7 @@ instruction_spc
         |                   // Nothing
         ;
 
-instructions_brack : parallel;
+instructions_brack : parallel |  block;
 
 // Assignment
 assign  :   ID eq=EEQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
@@ -164,6 +164,9 @@ modify_time : MODIFY_T^ ID time list_attributes
         ;
 // "modify" id x y
 modify_no_time : MODIFY^ ID list_attributes 
+        ;
+
+block : BLOCK^ ID '{'! (create ';'!)+ '}'!
         ;
 
 parallel : parallel_time | parallel_no_time;
@@ -315,6 +318,7 @@ HIDE_T   : 'hidet';
 HIDE    : 'hide';
 DELAY   : 'delay';
 
+BLOCK : 'block';
 PARALLEL: 'parallel';
 
 COLOR   : 'color';

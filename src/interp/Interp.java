@@ -280,6 +280,14 @@ public class Interp {
 
         // A big switch for all type of instructions
         switch (t.getType()) {
+            case AslLexer.BLOCK:
+                HashSet<String> objs = new HashSet();
+                for (int i =1; i<t.getChildCount();++i){
+                    executeInstruction(t.getChild(i));
+                    objs.add(t.getChild(i).getChild(0).getText());
+                }
+                value = new Data(objs);
+                return null;
     	    case AslLexer.CREATE:
                 prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
 
