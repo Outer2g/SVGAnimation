@@ -376,12 +376,11 @@ public class Interp {
 
                     AslTree listAttributes = t.getChild(1);
                     for (int i = 0; i< listAttributes.getChildCount();++i){
-                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",listAttributes.getChild(i).getChild(0).getText()));
-                    }
-
-                    // Modificar los atributos del objecto en cuestion
-                    for (int i = 0; i< listAttributes.getChildCount();++i){
-                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
+                        value = evaluateExpression(listAttributes.getChild(i).getChild(0));
+                        value = new Data(value.toString());
+                        checkString(value);
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",value.toString()));
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                     }
                 }
                 catch (Exception e) {
@@ -395,18 +394,19 @@ public class Interp {
 
                     elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
 
+
+
                     AslTree listAttributes = t.getChild(2);
                     for (int i = 0; i< listAttributes.getChildCount();++i){
+                        value = evaluateExpression(listAttributes.getChild(i).getChild(0));
+                        value = new Data(value.toString());
+                        checkString(value);
                         from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
                         states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                     }
 
                     deltaTime += elapsedTime;
-
-                    // Modificar los atributos del objecto en cuestion
-                    for (int i = 0; i< listAttributes.getChildCount();++i){
-                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),listAttributes.getChild(i).getChild(0).getText());
-                    }
                 }
                 catch (Exception e) {
                     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
