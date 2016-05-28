@@ -701,6 +701,7 @@ private Boolean isColorAttribute(String attribute){
                 break;
             // An integer literal
             case AslLexer.INT:
+            t.setIntValue();
                 value = new Data(t.getIntValue());
                 break;
             // A Boolean literal
