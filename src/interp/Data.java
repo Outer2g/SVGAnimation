@@ -80,7 +80,7 @@ public class Data {
     /** Copy constructor */
     Data(Data d) { 
       type = d.type;
-      if (type == Type.OBJECT) attributes = d.attributes;
+      if (type == Type.OBJECT) attributes = new HashMap(d.attributes);
       else if (type == Type.STRING) sValue = d.sValue;
       else if (type == Type.BLOCK) objects = d.objects;
       else value = d.value;
@@ -171,7 +171,7 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
 
     /** Copies the value from another data */
-    public void setData(Data d) { type = d.type; value = d.value; attributes = d.attributes; }
+    public void setData(Data d) { type = d.type; value = d.value; attributes = new HashMap(d.attributes); }
     
     /** Returns a string representing the data in textual form. */
     public String toString() {
