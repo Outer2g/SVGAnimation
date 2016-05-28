@@ -7,6 +7,14 @@
 *.jar
 *.war
 *.ear
-
+#Makefile
+Makefile
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+src/parser/AslLexer.java
+src/parser/AslParser.java
+src/parser/Asl.tokens
+a.do
+a.dot
+bin/Asl
+bin/Asl_Manifest.txt

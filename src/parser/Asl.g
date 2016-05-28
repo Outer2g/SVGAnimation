@@ -115,7 +115,7 @@ instruction_spc
         |                   // Nothing
         ;
 
-instructions_brack : parallel;
+instructions_brack : parallel |  block;
 
 // Assignment
 assign  :   ID eq=EEQUAL expr -> ^(ASSIGN[$eq,":="] ID expr)
@@ -166,6 +166,9 @@ modify_time : MODIFY_T^ ID time list_attributes
 modify_no_time : MODIFY^ ID list_attributes 
         ;
 
+block : BLOCK^ ID '{'! (create ';'!)+ '}'!
+        ;
+
 parallel : parallel_time | parallel_no_time;
 
 instructions_notime : move_no_time | modify_no_time | show_no_time | hide_no_time;
@@ -185,9 +188,13 @@ parallel_no_time : PARALLEL^ '{'! block_instructions_time '}'!;
 list_attributes : '(' attribute (',' attribute)* ')' -> ^(LIST_ATTR attribute+)
         ;
 
-attribute   :   attribute_name_color^ ':'! color
+attribute   :   attribute_name_color^ ':'! obj_attribute
             |   attribute_name_expr^ ':'! expr
             ;
+obj_attribute   :   color
+                | ID
+                |   ID '.' ( attribute_name_color) -> ^(ATTR ID attribute_name_color)
+                ;
 
 show : show_time | show_no_time;
 
@@ -249,7 +256,8 @@ factor  :   (NOT^ | PLUS^ | MINUS^)? atom
 // in parenthesis
 atom    :   ID 
         |   INT
-        |   ID '.' (e=attribute_name_expr) -> ^(ATTR ID $  e)
+        |   ID '.' (attribute_name_expr) -> ^(ATTR ID  attribute_name_expr)
+        |   ID '.' ( attribute_name_color) -> ^(ATTR ID attribute_name_color)
         |   (b=TRUE | b=FALSE)  -> ^(BOOLEAN[$b,$b.text])
         |   funcall
         |   '('! expr ')'!
@@ -310,6 +318,7 @@ HIDE_T   : 'hidet';
 HIDE    : 'hide';
 DELAY   : 'delay';
 
+BLOCK : 'block';
 PARALLEL: 'parallel';
 
 COLOR   : 'color';
