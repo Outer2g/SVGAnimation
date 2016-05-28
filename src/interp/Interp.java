@@ -34,6 +34,10 @@ import java.util.*;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.io.*;
+import org.antlr.runtime.Token;
+import org.antlr.runtime.tree.CommonTree ;
+
+
 
 /** Class that implements the interpreter of the language. */
 
@@ -258,7 +262,22 @@ public class Interp {
 	toPrint += "/>";
 	fileOutput.println(toPrint);
     }
-    
+
+    private void computeCenter(HashSet<String> objs,Integer x,Integer y){
+        int sumax = 0;
+        int sumay = 0;
+        Data value;
+        
+        for (String objecte : objs){
+            value = Stack.getVariable(objecte);
+            if (value.getAttribute("objectType") == "circle"){
+                sumax += Integer.parseInt(value.getAttribute("cx"));
+                sumay += Integer.parseInt(value.getAttribute("cy"));
+            }
+        }
+        x = sumax/objs.size();
+        y = sumay/objs.size();
+    }
     /**
      * Executes an instruction. 
      * Non-null results are only returned by "return" statements.
@@ -272,10 +291,13 @@ public class Interp {
         System.out.println("hola" + t.getType());
         setLineNumber(t);
         Data value; // The returned value
-        Integer nChange;
+        Data aux;
+        Integer nChange,x,y;
+        AslLexer pupita;
         Double elapsedTime;
         String from;
         String prefixPosition;
+        Token tokenx,tokeny,tokenid;
 
 
         // A big switch for all type of instructions
@@ -287,6 +309,11 @@ public class Interp {
                     objs.add(t.getChild(i).getChild(0).getText());
                 }
                 value = new Data(objs);
+                x = 0;
+                y = 0;
+                computeCenter(objs,x,y);
+                value.addCenter(x,y);
+                Stack.defineVariable(t.getChild(0).getText(),value);
                 return null;
     	    case AslLexer.CREATE:
                 prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
@@ -335,18 +362,36 @@ public class Interp {
 
             case AslLexer.MOVE:
                 try {
-                    nChange = changePos.get(t.getChild(0).getText());
-                    prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
-                    
-                    value = evaluateExpression(t.getChild(1));
-                    checkInteger(value);
-                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "", value.toString()));
-                    
-                    value = evaluateExpression(t.getChild(2));
-                    checkInteger(value);
-                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "", value.toString()));
+                    if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
+                        nChange = changePos.get(t.getChild(0).getText());
+                        prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                        System.out.println("DENTRO MOVE: OBJ "+ t.getChild(0).getText()+" x: "+ t.getChild(1).getText());
+                        value = evaluateExpression(t.getChild(1));
+                        checkInteger(value);
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "", value.toString()));
+                        
+                        value = evaluateExpression(t.getChild(2));
+                        checkInteger(value);
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "", value.toString()));
+                }
+                    else{
+                        value = Stack.getVariable(t.getChild(0).getText());
+                        x = evaluateExpression(t.getChild(1)).getIntegerValue() - Integer.parseInt(value.getAttribute("cx"));
+                        y = evaluateExpression(t.getChild(2)).getIntegerValue() - Integer.parseInt(value.getAttribute("cy"));
+                        for (String obj : value.getSetObjects()){
+                            aux = Stack.getVariable(obj);
+                            tokenid = t.getChild(0).getToken();
+                            tokenx = t.getChild(1).getToken();
+                            tokeny = t.getChild(2).getToken();
+                            tokenid.setText(obj);
+                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute("cx"))));
+                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute("cy"))));
+                            System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                            executeInstruction(t);
+                        }
+                    }
                 }
                 catch (Exception e) {
                     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");

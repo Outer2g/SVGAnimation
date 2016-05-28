@@ -21,7 +21,7 @@ digraph {
   n8 [label="dos"];
   n9 [label="circle"];
   n10 [label="50"];
-  n11 [label="300"];
+  n11 [label="200"];
   n12 [label="LIST_ATTR"];
   n12 [label="LIST_ATTR"];
   n13 [label="color"];
@@ -58,6 +58,11 @@ digraph {
   n33 [label="COLORKEYWORD"];
   n33 [label="COLORKEYWORD"];
   n34 [label="black"];
+  n35 [label="move"];
+  n35 [label="move"];
+  n36 [label="holi"];
+  n37 [label="300"];
+  n38 [label="300"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -69,7 +74,7 @@ digraph {
   n7 -> n8 // "create" -> "dos"
   n7 -> n9 // "create" -> "circle"
   n7 -> n10 // "create" -> "50"
-  n7 -> n11 // "create" -> "300"
+  n7 -> n11 // "create" -> "200"
   n7 -> n12 // "create" -> "LIST_ATTR"
   n12 -> n13 // "LIST_ATTR" -> "color"
   n13 -> n14 // "color" -> "COLORHEXA"
@@ -93,5 +98,9 @@ digraph {
   n26 -> n32 // "LIST_ATTR" -> "stroke"
   n32 -> n33 // "stroke" -> "COLORKEYWORD"
   n33 -> n34 // "COLORKEYWORD" -> "black"
+  n4 -> n35 // "LIST_INSTR" -> "move"
+  n35 -> n36 // "move" -> "holi"
+  n35 -> n37 // "move" -> "300"
+  n35 -> n38 // "move" -> "300"
 
 }

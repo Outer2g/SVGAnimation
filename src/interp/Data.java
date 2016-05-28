@@ -120,7 +120,7 @@ public class Data {
     }
     /** Gets the specified attribute **/
     public String getAttribute(String name){
-      assert type == Type.OBJECT;
+      //assert type == Type.OBJECT;
       return attributes.get(name);
     }
     /**
@@ -151,9 +151,18 @@ public class Data {
 
     /** Deletes an object name from the block */
     public void delObject(String name){assert type == Type.BLOCK; objects.remove(name);}
+
+    /** Inserts the position */
+    public void addCenter(int x,int y){
+      assert type == Type.BLOCK;
+      attributes = new HashMap<String,String>();
+      attributes.put("cx",String.valueOf(x));
+      attributes.put("cy",String.valueOf(y));
+    }
     
     /** Defines an Attribute for the data **/
-    public void setAttribute(String name,String value) { assert type == Type.OBJECT; attributes.put(name,value);}
+    public void setAttribute(String name,String value) { //assert type == Type.OBJECT; 
+      attributes.put(name,value);}
 
     /** Defines a Boolean value for the data */
     public void setValue(boolean b) { type = Type.BOOLEAN; value = b ? 1 : 0; }
