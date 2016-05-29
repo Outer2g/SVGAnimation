@@ -45,6 +45,8 @@ public class Interp {
 
     Double deltaTime = 0.0;
 
+    private States States;
+
     ArrayList<ArrayList<String>> states = new ArrayList<ArrayList<String>>();
 
     HashMap<String,Integer> changePos = new HashMap<String,Integer>();
@@ -84,6 +86,7 @@ public class Interp {
         MapFunctions(T);  // Creates the table to map function names into AST nodes
         PreProcessAST(T); // Some internal pre-processing ot the AST
         Stack = new Stack(); // Creates the memory of the virtual machine
+        States = new States(Stack);
         // Initializes the standard input of the program
         stdin = new Scanner (new BufferedReader(new InputStreamReader(System.in)));
         if (tracefile != null) {
@@ -171,13 +174,9 @@ public class Interp {
 	
     }
     private void printEnd(){
-    for (int i = 0; i < states.size(); ++i) {
-        for (String s : states.get(i)) {
-            fileOutput.println(s);
-        }
-    }
-	fileOutput.println("</svg>\n </body> \n </html>");
-	fileOutput.close();
+        States.printEnd(fileOutput);
+    	fileOutput.println("</svg>\n </body> \n </html>");
+    	fileOutput.close();
     }
     /**
      * Executes a function.
@@ -298,6 +297,7 @@ public class Interp {
         String from;
         String prefixPosition;
         Token tokenx,tokeny,tokenid;
+        String id;
 
 
         // A big switch for all type of instructions
@@ -316,65 +316,80 @@ public class Interp {
                 Stack.defineVariable(t.getChild(0).getText(),value);
                 return null;
     	    case AslLexer.CREATE:
+                id = t.getChild(0).getText();
                 prefixPosition = (t.getChild(1).getText().equals("circle") ? "c" : "");
 
-                nChange = states.size();
-                changePos.put(t.getChild(0).getText(),nChange);
-                states.add(new ArrayList<String>());
+                // nChange = states.size();
+                // changePos.put(t.getChild(0).getText(),nChange);
+                // states.add(new ArrayList<String>());
 
-                states.get(nChange).add("<"+t.getChild(1).getText()+">");
-                states.get(nChange).add("</"+t.getChild(1).getText()+">");
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "",t.getChild(2).getText()));
-                states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "",t.getChild(3).getText()));
+                States.create(id, t.getChild(1).getText());
 
-                System.out.println(states.get(nChange));
+                // states.get(nChange).add("<"+t.getChild(1).getText()+">");
+                // states.get(nChange).add("</"+t.getChild(1).getText()+">");
+
+                // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.0, "",t.getChild(2).getText()));
+                // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.0, "",t.getChild(3).getText()));
+
+                States.modify(id, prefixPosition+"x", 0.0, t.getChild(2).getText());
+                States.modify(id, prefixPosition+"y", 0.0, t.getChild(3).getText());
+
+                // System.out.println(states.get(nChange));
 
                 System.out.println("adio");
-                HashMap<String,String> att = new HashMap<String,String>();
-                att.put("objectType",t.getChild(1).getText());
-                att.put(prefixPosition+"x",t.getChild(2).getText());
-                att.put(prefixPosition+"y",t.getChild(3).getText());
+                // HashMap<String,String> att = new HashMap<String,String>();
+                // att.put("objectType",t.getChild(1).getText());
+                // att.put(prefixPosition+"x",t.getChild(2).getText());
+                // att.put(prefixPosition+"y",t.getChild(3).getText());
                 if (t.getChildCount() == 5) {
                     AslTree listAttributes = t.getChild(4);
                     for (int i = 0; i< t.getChild(4).getChildCount();++i){
                         value = evaluateExpression(listAttributes.getChild(i).getChild(0));
                         value = new Data(value.toString());
                         checkString(value);
-                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",value.toString()));
-                        att.put(listAttributes.getChild(i).getText(),value.toString());
+                        States.modify(id,listAttributes.getChild(i).getText(), 0.0, value.toString());
+                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.0, "",value.toString()));
+                        // att.put(listAttributes.getChild(i).getText(),value.toString());
                     }
                 }
-        		Data objecte = new Data(att);
-        		Stack.defineVariable(t.getChild(0).getText(),objecte);
+        		// Data objecte = new Data(att);
+        		// Stack.defineVariable(t.getChild(0).getText(),objecte);
         		return null;
 
             case AslLexer.DESTROY:
-                try {
-                    nChange = changePos.get(t.getChild(0).getText());
-                    changePos.put(t.getChild(0).getText(),-1);
-                    states.get(nChange).add(states.get(nChange).size()-1,Change.toString("opacity", deltaTime, 0.001, "","0"));
-                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().clear();
-                }
-                catch (Exception e) {
-                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
-                }
+                // try {
+                //     nChange = changePos.get(t.getChild(0).getText());
+                //     changePos.put(t.getChild(0).getText(),-1);
+                //     states.get(nChange).add(states.get(nChange).size()-1,Change.toString("opacity", deltaTime, 0.0, "","0"));
+                //     Stack.getVariable(t.getChild(0).getText()).getListAttributes().clear();
+                // }
+                // catch (Exception e) {
+                //     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                // }
+                States.destroy(t.getChild(0).getText());
                 return null;
 
             case AslLexer.MOVE:
                 try {
                     if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
-                        nChange = changePos.get(t.getChild(0).getText());
-                        prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
-                        System.out.println("DENTRO MOVE: OBJ "+ t.getChild(0).getText()+" x: "+ t.getChild(1).getText());
+
+                        id = t.getChild(0).getText();
+                        prefixPosition = (Stack.getVariable(id).getListAttributes().get("objectType").equals("circle") ? "c" : ""); // Si está destruido, esto da null ptr exception
+
+                        // nChange = changePos.get(t.getChild(0).getText());
+                        // System.out.println("DENTRO MOVE: OBJ "+ t.getChild(0).getText()+" x: "+ t.getChild(1).getText());
                         value = evaluateExpression(t.getChild(1));
                         checkInteger(value);
-                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
-                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.001, "", value.toString()));
+
+                        States.modify(id,prefixPosition+"x",0.0, value.toString());
+                        // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
+                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime, 0.0, "", value.toString()));
                         
                         value = evaluateExpression(t.getChild(2));
                         checkInteger(value);
-                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
-                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.001, "", value.toString()));
+                        States.modify(id,prefixPosition+"y",0.0, value.toString());
+                        // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
+                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, 0.0, "", value.toString()));
                 }
                     else{
                         value = Stack.getVariable(t.getChild(0).getText());
@@ -394,7 +409,7 @@ public class Interp {
                     }
                 }
                 catch (Exception e) {
-                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined or has been removed");
                 }
                 return null;
 
@@ -432,7 +447,7 @@ public class Interp {
                         value = evaluateExpression(listAttributes.getChild(i).getChild(0));
                         value = new Data(value.toString());
                         checkString(value);
-                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.001, "",value.toString()));
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.0, "",value.toString()));
                         Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                     }
                 }
@@ -471,7 +486,7 @@ public class Interp {
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
                     nChange = changePos.get(t.getChild(0).getText());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "1"));
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.0, "", "1"));
 
                     // Modificar la opcidad del objecto en cuestion
                     Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
@@ -505,7 +520,7 @@ public class Interp {
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
                     nChange = changePos.get(t.getChild(0).getText());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.001, "", "0"));
+                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.0, "", "0"));
 
                     // Modificar la opcidad del objecto en cuestion
                     Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
@@ -541,7 +556,7 @@ public class Interp {
                 return null;
 
             case AslLexer.DELAY:
-                deltaTime += Double.parseDouble(t.getChild(0).getChild(0).getText()) * (t.getChild(0).getText().equals("ms") ? 0.001 : 1);
+                deltaTime += Double.parseDouble(t.getChild(0).getChild(0).getText()) * (t.getChild(0).getText().equals("ms") ? 0.0 : 1);
                 return null;
 
             case AslLexer.PARALLEL:
