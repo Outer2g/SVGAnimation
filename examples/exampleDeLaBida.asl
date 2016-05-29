@@ -11,10 +11,10 @@ func main()
  // create tres (circle, 200, 400, (color : #123 , r : 20, stroke : blue));
  // create cuatro(circle, 0,0, (r:5));
  // delay 250ms;
-//  parallel 500ms {
-//    hide dos;
-//    hide tres;
-//  }
+  parallel 500ms {
+    hide dos;
+    hide tres;
+  }
 //  movet cuatro 150ms (25+25,20+30);
 //  destroy(dos);
 //  create dos (circle, 400, 200, (color : #121fa3 , r : 40,stroke : green));

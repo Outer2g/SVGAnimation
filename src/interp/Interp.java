@@ -36,6 +36,7 @@ import java.util.Scanner;
 import java.io.*;
 import org.antlr.runtime.Token;
 import org.antlr.runtime.tree.CommonTree ;
+import org.antlr.runtime.CommonToken ;
 
 
 
@@ -277,6 +278,27 @@ public class Interp {
         x = sumax/objs.size();
         y = sumay/objs.size();
     }
+
+    private AslTree createParallel(ArrayList<AslTree> instructions){
+        AslTree ret,timeNode,instrNodes,instr;
+        Token tokenx,tokeny,tokentime;
+        ret = (AslTree) instructions.get(0).dupNode();
+        ret.myType = AslLexer.PARALLEL;
+        timeNode = (AslTree)instructions.get(0).dupNode();
+        timeNode = timeNode.getChild(1);
+        ret.addChild(0,timeNode);
+        instrNodes = ret.getChild(1);
+        for (int i=0;i<instructions.size();++i){
+            instr = instructions.get(i);
+            tokenx = instr.getChild(2).getToken();
+            tokeny = instr.getChild(3).getToken();
+            tokentime = instr.getChild(1).getToken();
+            tokentime.setText(tokenx.getText());
+            tokenx.setText(tokeny.getText());
+            instrNodes.addChild(i,instr);
+        }
+        return ret;
+    }
     /**
      * Executes an instruction. 
      * Non-null results are only returned by "return" statements.
@@ -292,11 +314,12 @@ public class Interp {
         Data value; // The returned value
         Data aux;
         Integer nChange,x,y;
-        AslLexer pupita;
+        AslTree pupita,instrNodes;
+        ArrayList<AslTree> trees;
         Double elapsedTime;
         String from;
         String prefixPosition;
-        Token tokenx,tokeny,tokenid;
+        Token tokenx,tokeny,tokenid,tokentime;
         String id;
 
 
@@ -415,26 +438,48 @@ public class Interp {
 
             case AslLexer.MOVE_T:
                 try {
-                    nChange = changePos.get(t.getChild(0).getText());
-                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
-                    prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
-                    
-                    value = evaluateExpression(t.getChild(2));
-                    checkInteger(value);
-                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"x");
-                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime,elapsedTime, from, value.toString()));
-                    
-                    value = evaluateExpression(t.getChild(3));
-                    checkInteger(value);
-                    from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"y");
-                    Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
-                    states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, elapsedTime, from, value.toString()));
-                    deltaTime += elapsedTime;
+                    if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
+                        nChange = changePos.get(t.getChild(0).getText());
+                        elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                        prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                        
+                        value = evaluateExpression(t.getChild(2));
+                        checkInteger(value);
+                        from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"x");
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"x",value.toString());
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"x", deltaTime,elapsedTime, from, value.toString()));
+                        
+                        value = evaluateExpression(t.getChild(3));
+                        checkInteger(value);
+                        from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(prefixPosition+"y");
+                        Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(prefixPosition+"y",value.toString());
+                        states.get(nChange).add(states.get(nChange).size()-1, Change.toString(prefixPosition+"y", deltaTime, elapsedTime, from, value.toString()));
+                        deltaTime += elapsedTime;
+                }
+                else{
+                        value = Stack.getVariable(t.getChild(0).getText());
+                        x = evaluateExpression(t.getChild(2)).getIntegerValue() - Integer.parseInt(value.getAttribute("cx"));
+                        y = evaluateExpression(t.getChild(3)).getIntegerValue() - Integer.parseInt(value.getAttribute("cy"));
+                        elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                        for (String obj : value.getSetObjects()){
+                            aux = Stack.getVariable(obj);
+                            tokenid = t.getChild(0).getToken();
+                            tokenx = t.getChild(2).getToken();
+                            tokeny = t.getChild(3).getToken();
+                            tokenid.setText(obj);
+                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute("cx"))));
+                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute("cy"))));
+                            System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                            executeInstruction(t);
+                            deltaTime -= elapsedTime;
+                        }
+                        deltaTime += elapsedTime;
+                    }
         
                 }
                 catch (Exception e) {
-                    throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                    //throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
+                    throw new RuntimeException(e.getMessage());
                 }
                 return null;
 
@@ -716,7 +761,7 @@ private Boolean isColorAttribute(String attribute){
                 break;
             // An integer literal
             case AslLexer.INT:
-            t.setIntValue();
+                t.setIntValue();
                 value = new Data(t.getIntValue());
                 break;
             // A Boolean literal
