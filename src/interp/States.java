@@ -37,6 +37,7 @@ class States {
     void modify(String id, String attribute, Double duration, String from, String to) {
     	Data value = Stack.getVariable(id);
     	checkObject(value);
+    	attribute = (value.getListAttributes().get("objectType").equals("circle") && (attribute.equals("x") || attribute.equals("y"))? "c" : "") + attribute;
 
     	int nChange = changePos.get(id);
     	if (nChange == -1) throw new RuntimeException("The object \"" + id + "\" is not defined or has been destroyed");
@@ -50,7 +51,7 @@ class States {
     void modify(String id, String attribute, Double duration, String to) {
     	Data value = Stack.getVariable(id);
     	checkObject(value);
-
+    	attribute = (value.getListAttributes().get("objectType").equals("circle") && (attribute.equals("x") || attribute.equals("y"))? "c" : "") + attribute;
 
     	String from = value.getListAttributes().get(attribute);
         if (from == null) from = "";

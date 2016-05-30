@@ -91,9 +91,14 @@ public class Stack {
      * @param value The value of the variable
      */
     public void defineVariable(String name, Data value) {
+        System.out.println("entrando en el define variable");
         Data d = CurrentAR.get(name);
+
+        System.out.println("he pillado el data y es " + d);
         if (d == null) CurrentAR.put(name, value); // New definition
         else d.setData(value); // Use the previous data 
+
+        System.out.println("definido");
     }
 
     /** Gets the value of the variable. The value is represented as

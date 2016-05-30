@@ -95,4 +95,8 @@ public class AslTree extends CommonTree {
     public void addChild(int i, AslTree child) {
         children.add(i,child);
     }
+
+    public void removeChild(int i) {
+        children.remove(i);
+    }
 }

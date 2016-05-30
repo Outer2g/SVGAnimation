@@ -639,6 +639,7 @@ public class Interp {
                 return null;
 
             case AslLexer.PARALLEL:
+                System.out.println("ESTOY EN EL PARALLEL");
                 Double currentDeltaTime = States.deltaTime;
                 Data useless;
                 Double lastDeltaTime = 0.0;
@@ -661,6 +662,9 @@ public class Interp {
                         treeAux.addChild(1,t.getChild(0));
                         System.out.println("size " + treeAux.getChildCount());
                         useless = executeInstruction(treeAux);
+                        treeAux.myType = treeAux.getType() - 1;
+                        treeAux.removeChild(1);
+
                     }
                 }
                 return null;
@@ -668,6 +672,7 @@ public class Interp {
                 
             // Assignment
             case AslLexer.ASSIGN:
+                System.out.println("tratanddo de assignasnfgar");
                 value = evaluateExpression(t.getChild(1));
                 if (value.getType() == Data.Type.OBJECT) {
                     id = t.getChild(0).getText();
@@ -697,7 +702,12 @@ public class Interp {
                     }
                     return null;
                 }
-                Stack.defineVariable (t.getChild(0).getText(), value);
+                System.out.println("casi asignado " + value.getType() + " " + value);
+
+                id = t.getChild(0).getText();
+                Stack.defineVariable (id, value);
+
+                System.out.println("asignado");
                 return null;
 
             // If-then-else
@@ -760,7 +770,7 @@ public class Interp {
 
             default: assert false; // Should never happen
         }
-
+        System.out.println("No posible instruction");
         // All possible instructions should have been treated.
         assert false;
         return null;
@@ -784,6 +794,8 @@ private Boolean isColorAttribute(String attribute){
         setLineNumber(t);
         int type = t.getType();
 
+        System.out.println("aqui empieza el arbol\n"+ t);
+
         Data value = null;
         String string;
         // Atoms
@@ -795,6 +807,7 @@ private Boolean isColorAttribute(String attribute){
             case AslLexer.ATTR:
                 value = Stack.getVariable(t.getChild(0).getText());
                 string = t.getChild(1).getText();
+                string = (value.getListAttributes().get("objectType").equals("circle") && (string.equals("x") || string.equals("y") )? "c" : "") + string;
                 if (isColorAttribute(string)) value = new Data(value.getAttribute(string));
                 else value = new Data(Integer.parseInt(value.getAttribute(string)));
                 break;

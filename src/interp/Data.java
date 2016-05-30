@@ -171,11 +171,20 @@ public class Data {
     public void setValue(int v) { type = Type.INTEGER; value = v; }
 
     /** Copies the value from another data */
-    public void setData(Data d) { type = d.type; value = d.value; attributes = new HashMap(d.attributes); }
+    public void setData(Data d) { 
+
+        System.out.println("sas");
+        type = d.type; 
+        value = d.value; 
+
+        if (d.attributes != null) attributes = new HashMap(d.attributes);
+        else attributes = new HashMap<String,String>();
+      }
     
     /** Returns a string representing the data in textual form. */
     public String toString() {
-        assert type != Type.OBJECT;
+        // assert type != Type.OBJECT;
+      if (type == Type.OBJECT) return attributes.toString();
         if (type == Type.BOOLEAN) return value == 1 ? "true" : "false";
         else if (type == Type.STRING) return sValue;
         return Integer.toString(value);
