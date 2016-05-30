@@ -88,6 +88,7 @@ public class Interp {
         PreProcessAST(T); // Some internal pre-processing ot the AST
         Stack = new Stack(); // Creates the memory of the virtual machine
         States = new States(Stack);
+        Stack.setStates(States);
         // Initializes the standard input of the program
         stdin = new Scanner (new BufferedReader(new InputStreamReader(System.in)));
         if (tracefile != null) {

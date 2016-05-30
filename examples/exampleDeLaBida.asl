@@ -25,6 +25,7 @@ func main()
   seis = cinco;
 
 
+
   //movet tres 500ms (250, 300);
   //movet cuatro 500ms (300, 350);
   //movet cinco 500ms (300, 250);
@@ -38,30 +39,29 @@ func main()
 
   i = 0;
   while i < 10 do
+    test();
     i = i + 1;
   endwhile;
-
-  siete = dos;
-  destroy (dos);
-  while siete.r < 100 do
-    parallel 250ms {
-      hide siete;hide tres;hide cuatro;hide cinco;hide seis;
-      modify siete (r : siete.r - 10);
-      modify tres (r : tres.r - 10, x: tres.x + 10);
-      modify cuatro (r : cuatro.r - 10, x: cuatro.x - 10);
-      modify cinco (r : cinco.r - 10, y: cinco.y + 10);
-      modify seis (r : seis.r - 10, y: seis.y - 10);
-    }
-    parallel 500ms {
-
-      show siete;show tres;show cuatro;show cinco;show seis;
-      modify siete (r : siete.r + 20);
-      modify tres (r : tres.r + 20);
-      modify cuatro (r : cuatro.r + 20);
-      modify cinco (r : cinco.r + 20);
-      modify seis (r : seis.r + 20);
-    }
-  endwhile;
+  //siete = dos;
+  //destroy (dos);
+  //while siete.r < 100 do
+  //  parallel 250ms {
+  //    hide siete;hide tres;hide cuatro;hide cinco;hide seis;
+  //    modify siete (r : siete.r - 10);
+  //    modify tres (r : tres.r - 10, x: tres.x + 10);
+  //    modify cuatro (r : cuatro.r - 10, x: cuatro.x - 10);
+  //    modify cinco (r : cinco.r - 10, y: cinco.y + 10);
+  //    modify seis (r : seis.r - 10, y: seis.y - 10);
+  //  }
+  //  parallel 500ms {
+  //    show siete;show tres;show cuatro;show cinco;show seis;
+  //    modify siete (r : siete.r + 20);
+  //    modify tres (r : tres.r + 20);
+  //    modify cuatro (r : cuatro.r + 20);
+  //    modify cinco (r : cinco.r + 20);
+  //    modify seis (r : seis.r + 20);
+  //  }
+  //endwhile;
 
  // create dos (circle,50,300, (color : #129fa3 , r : 40,stroke : black) );
  // create tres (circle, 200, 400, (color : #123 , r : 20, stroke : blue));
@@ -115,4 +115,10 @@ func main()
   //	modifyt tres 3s (x:100);
   //	modifyt cuatro 14s (y:200);
   // }
+endfunc
+
+func test()
+    create dos (circle,100,100, (color : #129fa3 , r : 40,stroke : black) );
+    movet dos 1s (dos.x + 10, dos.y +10);
+
 endfunc

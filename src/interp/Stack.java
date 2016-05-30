@@ -30,6 +30,7 @@ package interp;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import java.util.HashMap.*;
 
 /**
  * Class to represent the memory of the virtual machine of the
@@ -45,6 +46,10 @@ public class Stack {
 
     /** Reference to the current activation record */
     private HashMap<String,Data> CurrentAR = null;
+
+    States States;
+
+    void setStates(States s) {States = s;}
 
     /**
      * Class to represent an item of the Stack trace.
@@ -78,10 +83,19 @@ public class Stack {
 
     /** Destroys the current activation record */
     public void popActivationRecord() {
+        for (String k : Stack.getLast().keySet()) {
+            if (Stack.getLast().get(k).isObject()) {
+                States.destroy(k);
+            }
+        }
         Stack.removeLast();
         if (Stack.isEmpty()) CurrentAR = null;
         else CurrentAR = Stack.getLast();
         StackTrace.removeLast();
+    }
+
+    int getCurrentActivationRecordNumber() {
+        return Stack.size();
     }
 
     /** Defines the value of a variable. If the variable does not

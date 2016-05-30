@@ -21,7 +21,8 @@ class States {
     }
 
     void create(String id,String type) {
-
+    	String idaux = id;
+    	id = id+Stack.getCurrentActivationRecordNumber();
     	int nChange = states.size();
         changePos.put(id,nChange);
 
@@ -31,11 +32,13 @@ class States {
 
         Data objecte = new Data(new HashMap<String,String>());
         objecte.getListAttributes().put("objectType",type);
-        Stack.defineVariable(id,objecte);
+        Stack.defineVariable(idaux, objecte);
     }
 
     void modify(String id, String attribute, Double duration, String from, String to) {
-    	Data value = Stack.getVariable(id);
+    	String idaux = id;
+    	id = id+Stack.getCurrentActivationRecordNumber();
+    	Data value = Stack.getVariable(idaux);
     	checkObject(value);
     	attribute = (value.getListAttributes().get("objectType").equals("circle") && (attribute.equals("x") || attribute.equals("y"))? "c" : "") + attribute;
 
@@ -49,7 +52,9 @@ class States {
     }
 
     void modify(String id, String attribute, Double duration, String to) {
-    	Data value = Stack.getVariable(id);
+    	String idaux = id;
+    	id = id+Stack.getCurrentActivationRecordNumber();
+    	Data value = Stack.getVariable(idaux);
     	checkObject(value);
     	attribute = (value.getListAttributes().get("objectType").equals("circle") && (attribute.equals("x") || attribute.equals("y"))? "c" : "") + attribute;
 
@@ -65,10 +70,13 @@ class States {
     }
 
     void destroy(String id) {
-    	Data value = Stack.getVariable(id);
+    	String idaux = id;
+    	id = id+Stack.getCurrentActivationRecordNumber();
+    	System.out.println(id + " " + idaux);
+    	Data value = Stack.getVariable(idaux);
     	checkObject(value);
 
-        modify(id,"opacity", 0.0,"0");
+        modify(idaux,"opacity", 0.0,"0");
         changePos.put(id,-1);
         value.getListAttributes().clear();
     }
