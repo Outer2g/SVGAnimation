@@ -480,9 +480,9 @@ public class Interp {
                             tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute("cy"))));
                             System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
                             executeInstruction(t);
-                            deltaTime -= elapsedTime;
+                            States.deltaTime -= elapsedTime;
                         }
-                        deltaTime += elapsedTime;
+                        States.deltaTime += elapsedTime;
                     }
         
                 }
@@ -495,19 +495,31 @@ public class Interp {
             case AslLexer.MODIFY:
                 // try {
                 {
-                    id = t.getChild(0).getText();
-                    // nChange = changePos.get(t.getChild(0).getText());
+                    if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
+                        id = t.getChild(0).getText();
+                        // nChange = changePos.get(t.getChild(0).getText());
 
-                    AslTree listAttributes = t.getChild(1);
-                    for (int i = 0; i< listAttributes.getChildCount();++i){
-                        value = evaluateExpression(listAttributes.getChild(i).getChild(0));
-                        value = new Data(value.toString());
-                        checkString(value);
-                        States.modify(id,listAttributes.getChild(i).getText(),0.0,value.toString());
-                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.0, "",value.toString()));
-                        // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
+                        AslTree listAttributes = t.getChild(1);
+                        for (int i = 0; i< listAttributes.getChildCount();++i){
+                            value = evaluateExpression(listAttributes.getChild(i).getChild(0));
+                            value = new Data(value.toString());
+                            checkString(value);
+                            States.modify(id,listAttributes.getChild(i).getText(),0.0,value.toString());
+                            // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, 0.0, "",value.toString()));
+                            // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
+                        }
+                }
+                else {
+                    value = Stack.getVariable(t.getChild(0).getText());
+                    for (String obj : value.getSetObjects()){
+                        aux = Stack.getVariable(obj);
+                        tokenid = t.getChild(0).getToken();
+                        tokenid.setText(obj);
+                        System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                        executeInstruction(t);
                     }
                 }
+            }
                 // }
                 // catch (Exception e) {
                 //     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
@@ -517,6 +529,7 @@ public class Interp {
             case AslLexer.MODIFY_T:
                 // try {
                 {
+                    if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
                     id = t.getChild(0).getText();
                     // nChange = changePos.get(t.getChild(0).getText());
 
@@ -535,6 +548,20 @@ public class Interp {
                         // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
                         // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                     }
+                }
+                else {
+                    value = Stack.getVariable(t.getChild(0).getText());
+                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                    for (String obj : value.getSetObjects()){
+                        aux = Stack.getVariable(obj);
+                        tokenid = t.getChild(0).getToken();
+                        tokenid.setText(obj);
+                        System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                        executeInstruction(t);
+                        States.deltaTime -= elapsedTime;
+                    }
+                    States.deltaTime += elapsedTime;
+                }
                 }
 
                     // deltaTime += elapsedTime;
