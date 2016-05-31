@@ -300,6 +300,23 @@ public class Interp {
         }
         return ret;
     }
+
+    private Data executeBlock(AslTree t,Boolean time){
+        Data value = Stack.getVariable(t.getChild(0).getText());
+        Data aux;
+        Double elapsedTime = 0.0;
+        Token tokenid;
+        if(time) elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+        for (String obj : value.getSetObjects()){
+            aux = Stack.getVariable(obj);
+            tokenid = t.getChild(0).getToken();
+            tokenid.setText(obj);
+            executeInstruction(t);
+            if (time) States.deltaTime -= elapsedTime;
+        }
+        if (time) States.deltaTime += elapsedTime;                    
+        return value;
+    }
     /**
      * Executes an instruction. 
      * Non-null results are only returned by "return" statements.
@@ -509,16 +526,7 @@ public class Interp {
                             // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                         }
                 }
-                else {
-                    value = Stack.getVariable(t.getChild(0).getText());
-                    for (String obj : value.getSetObjects()){
-                        aux = Stack.getVariable(obj);
-                        tokenid = t.getChild(0).getToken();
-                        tokenid.setText(obj);
-                        System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
-                        executeInstruction(t);
-                    }
-                }
+                else value = executeBlock(t,false);
             }
                 // }
                 // catch (Exception e) {
@@ -530,38 +538,26 @@ public class Interp {
                 // try {
                 {
                     if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
-                    id = t.getChild(0).getText();
-                    // nChange = changePos.get(t.getChild(0).getText());
+                        id = t.getChild(0).getText();
+                        // nChange = changePos.get(t.getChild(0).getText());
 
-                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
+                        elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
 
-                    double time = States.deltaTime;
+                        double time = States.deltaTime;
 
-                    AslTree listAttributes = t.getChild(2);
-                    for (int i = 0; i< listAttributes.getChildCount();++i){
-                        value = evaluateExpression(listAttributes.getChild(i).getChild(0));
-                        value = new Data(value.toString());
-                        checkString(value);
-                        States.deltaTime = time;
-                        States.modify(id,listAttributes.getChild(i).getText(),elapsedTime,value.toString());
-                        // from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
-                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
-                        // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
+                        AslTree listAttributes = t.getChild(2);
+                        for (int i = 0; i< listAttributes.getChildCount();++i){
+                            value = evaluateExpression(listAttributes.getChild(i).getChild(0));
+                            value = new Data(value.toString());
+                            checkString(value);
+                            States.deltaTime = time;
+                            States.modify(id,listAttributes.getChild(i).getText(),elapsedTime,value.toString());
+                            // from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
+                            // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
+                            // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
                     }
                 }
-                else {
-                    value = Stack.getVariable(t.getChild(0).getText());
-                    elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
-                    for (String obj : value.getSetObjects()){
-                        aux = Stack.getVariable(obj);
-                        tokenid = t.getChild(0).getToken();
-                        tokenid.setText(obj);
-                        System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
-                        executeInstruction(t);
-                        States.deltaTime -= elapsedTime;
-                    }
-                    States.deltaTime += elapsedTime;
-                }
+                else  value = executeBlock(t,true);
                 }
 
                     // deltaTime += elapsedTime;
@@ -575,16 +571,19 @@ public class Interp {
                 System.out.println("buenos dias");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 // try {
-                {
-                    id = t.getChild(0).getText();
-                    // nChange = changePos.get(t.getChild(0).getText());
+                
+                if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
+                        id = t.getChild(0).getText();
+                        // nChange = changePos.get(t.getChild(0).getText());
 
-                    States.modify(id, "opacity", 0.0, "1");
-                    // states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.0, "", "1"));
+                        States.modify(id, "opacity", 0.0, "1");
+                        // states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.0, "", "1"));
 
-                    // // Modificar la opcidad del objecto en cuestion
-                    // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
+                        // // Modificar la opcidad del objecto en cuestion
+                        // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
                 }
+                else value = executeBlock(t,false);
+                
                 // catch (Exception e) {
                 //     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
                 // }
@@ -594,6 +593,7 @@ public class Interp {
                 System.out.println("buenos dias compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
+                    if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
 
                     id = t.getChild(0).getText();
 
@@ -609,6 +609,8 @@ public class Interp {
                     // Modificar la opcidad del objecto en cuestion
                     // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","1");
                 }
+                else value = executeBlock(t,true);
+                }
                 catch (Exception e) {
                     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined or has been destroyed");
                 }
@@ -618,10 +620,9 @@ public class Interp {
                 System.out.println("buenas noches");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 // try {
-
+                if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
                     id = t.getChild(0).getText();
                     States.modify(id, "opacity", 0.0, "0");
-
                     // nChange = changePos.get(t.getChild(0).getText());
                     // states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, 0.0, "", "0"));
 
@@ -631,12 +632,15 @@ public class Interp {
                 // catch (Exception e) {
                 //     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined");
                 // }
+                }
+                else executeBlock(t,false);
                 return null;
 
             case AslLexer.HIDE_T:
                 System.out.println("buenas noches compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
+                if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
 
                     id = t.getChild(0).getText();
 
@@ -655,6 +659,8 @@ public class Interp {
 
                     // // Modificar la opcidad del objecto en cuestion
                     // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put("opacity","0");
+                }
+                else executeBlock(t,true);
                 }
                 catch (Exception e) {
                     throw new RuntimeException("The object \"" + t.getChild(0).getText() + "\" is not defined or has been destroyed");
