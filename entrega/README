@@ -1,0 +1,1 @@
+IMPORTANT: Hem afegit una nova classe, anomenada "States.java", que esta afegida en els makefiles ajuntats. Si el Makefile no funciona hi ha un MakefileAux que té l'opció de compilació -Xlint i hauria de funcionar.
