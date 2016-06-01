@@ -268,7 +268,7 @@ public class Interp {
         int sumax = 0;
         int sumay = 0;
         Data value;
-        System.out.println("computa");
+        ////System.out.println("computa");
         
         for (String objecte : objs){
             value = Stack.getVariable(objecte);
@@ -277,12 +277,12 @@ public class Interp {
                 sumay += Integer.parseInt(value.getAttribute("cy"));
             }
             else{
-                System.out.println("computa2");
+                //System.out.println("computa2");
                 int width = Integer.parseInt(value.getAttribute("width")) / 2;
                 int height = Integer.parseInt(value.getAttribute("height")) / 2;
                 sumax += Integer.parseInt(value.getAttribute("x")) + width;
                 sumay += Integer.parseInt(value.getAttribute("y")) + height;
-                System.out.println("computa3");
+                //.println("computa3");
             }
         }
 
@@ -316,7 +316,7 @@ public class Interp {
      */
     private Data executeInstruction (AslTree t) {
         assert t != null;
-        System.out.println("hola" + t.getType());
+        //System.out.println("hola" + t.getType());
         setLineNumber(t);
         Data value; // The returned value
         Data aux;
@@ -371,9 +371,9 @@ public class Interp {
                 States.modify(id, prefixPosition+"x", 0.0, t.getChild(2).getText());
                 States.modify(id, prefixPosition+"y", 0.0, t.getChild(3).getText());
 
-                // System.out.println(states.get(nChange));
+                // //System.out.println(states.get(nChange));
 
-                System.out.println("adio");
+                //System.out.println("adio");
                 // HashMap<String,String> att = new HashMap<String,String>();
                 // att.put("objectType",t.getChild(1).getText());
                 // att.put(prefixPosition+"x",t.getChild(2).getText());
@@ -414,7 +414,7 @@ public class Interp {
                         prefixPosition = (Stack.getVariable(id).getListAttributes().get("objectType").equals("circle") ? "c" : ""); // Si está destruido, esto da null ptr exception
 
                         // nChange = changePos.get(t.getChild(0).getText());
-                        // System.out.println("DENTRO MOVE: OBJ "+ t.getChild(0).getText()+" x: "+ t.getChild(1).getText());
+                        // //System.out.println("DENTRO MOVE: OBJ "+ t.getChild(0).getText()+" x: "+ t.getChild(1).getText());
                         value = evaluateExpression(t.getChild(1));
                         checkInteger(value);
 
@@ -441,7 +441,7 @@ public class Interp {
                             prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
                             tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute(prefixPosition + "x"))));
                             tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute(prefixPosition + "y"))));
-                            System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                            //System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
                             executeInstruction(t);
                         }
                     }
@@ -452,7 +452,7 @@ public class Interp {
                 return null;
 
             case AslLexer.MOVE_T:
-            System.out.println("MOVET");
+            //System.out.println("MOVET");
                 try {
                     if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
                         id = t.getChild(0).getText();
@@ -494,7 +494,7 @@ public class Interp {
                             prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
                             tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute(prefixPosition + "x"))));
                             tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute(prefixPosition + "y"))));
-                            System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
+                            //System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
                             executeInstruction(t);
                             States.deltaTime -= elapsedTime;
                         }
@@ -546,7 +546,7 @@ public class Interp {
 
                         AslTree listAttributes = t.getChild(2);
                         for (int i = 0; i< listAttributes.getChildCount();++i){
-                            System.out.println("modifyt attribute >>> " + listAttributes.getChild(i).getText() + " <<< of the objet >>> " + id );
+                            //System.out.println("modifyt attribute >>> " + listAttributes.getChild(i).getText() + " <<< of the objet >>> " + id );
                             value = evaluateExpression(listAttributes.getChild(i).getChild(0));
                             value = new Data(value.toString());
                             checkString(value);
@@ -555,7 +555,7 @@ public class Interp {
                             // from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
                             // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
                             // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
-                            System.out.println("acabado de modificar ^ ");
+                            //System.out.println("acabado de modificar ^ ");
                         }
                     }
                     else value = executeBlock(t,true);
@@ -569,7 +569,7 @@ public class Interp {
                 return null;
 	
 	        case AslLexer.SHOW:
-                System.out.println("buenos dias");
+                //System.out.println("buenos dias");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 // try {
                 
@@ -591,7 +591,7 @@ public class Interp {
                 return null;
 
             case AslLexer.SHOW_T:
-                System.out.println("buenos dias compiyogui");
+                //System.out.println("buenos dias compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
                     if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
@@ -618,7 +618,7 @@ public class Interp {
                 return null;
 
             case AslLexer.HIDE:
-                System.out.println("buenas noches");
+                //System.out.println("buenas noches");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 // try {
                 if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
@@ -638,7 +638,7 @@ public class Interp {
                 return null;
 
             case AslLexer.HIDE_T:
-                System.out.println("buenas noches compiyogui");
+                //System.out.println("buenas noches compiyogui");
                 // showObject(Stack.getVariable(t.getChild(0).getText()));
                 try {
                 if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
@@ -647,12 +647,12 @@ public class Interp {
 
 
                     // nChange = changePos.get(t.getChild(0).getText());
-                    // System.out.println("0");
+                    // //System.out.println("0");
                     elapsedTime = Double.parseDouble(t.getChild(1).getChild(0).getText()) * (t.getChild(1).getText().equals("ms") ? 0.001 : 1);
-                    // System.out.println("1");
+                    // //System.out.println("1");
                     from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("opacity");
 
-                    // System.out.println("2");
+                    // //System.out.println("2");
                     if (from == null) from = "1";
                     States.modify(id, "opacity", elapsedTime, from, "0");
                     // states.get(nChange).add(states.get(nChange).size()-1, Change.toString("opacity", deltaTime, elapsedTime, from, "0"));
@@ -674,7 +674,7 @@ public class Interp {
                 return null;
 
             case AslLexer.PARALLEL:
-                System.out.println("ESTOY EN EL PARALLEL");
+                //System.out.println("ESTOY EN EL PARALLEL");
                 Double currentDeltaTime = States.deltaTime;
                 Data useless;
                 Double lastDeltaTime = 0.0;
@@ -704,7 +704,7 @@ public class Interp {
                 
             // Assignment
             case AslLexer.ASSIGN:
-                System.out.println("tratanddo de assignasnfgar");
+                //System.out.println("tratanddo de assignasnfgar");
                 value = evaluateExpression(t.getChild(1));
                 if (value.getType() == Data.Type.OBJECT) {
                     id = t.getChild(0).getText();
@@ -734,12 +734,12 @@ public class Interp {
                     }
                     return null;
                 }
-                System.out.println("casi asignado " + value.getType() + " " + value);
+                //System.out.println("casi asignado " + value.getType() + " " + value);
 
                 id = t.getChild(0).getText();
                 Stack.defineVariable (id, value);
 
-                System.out.println("asignado");
+                //System.out.println("asignado");
                 return null;
 
             // If-then-else
@@ -787,12 +787,12 @@ public class Interp {
                 AslTree v = t.getChild(0);
                 // Special case for strings
                 if (v.getType() == AslLexer.STRING) {
-                    System.out.format(v.getStringValue());
+                    //System.out.format(v.getStringValue());
                     return null;
                 }
 
                 // Write an expression
-                System.out.print(evaluateExpression(v).toString());
+                //System.out.print(evaluateExpression(v).toString());
                 return null;
 
             // Function call
@@ -802,7 +802,7 @@ public class Interp {
 
             default: assert false; // Should never happen
         }
-        System.out.println("No posible instruction");
+        //System.out.println("No posible instruction");
         // All possible instructions should have been treated.
         assert false;
         return null;
@@ -826,7 +826,7 @@ private Boolean isColorAttribute(String attribute){
         setLineNumber(t);
         int type = t.getType();
 
-        // System.out.println("aqui empieza el arbol\n"+ t);
+        // //System.out.println("aqui empieza el arbol\n"+ t);
 
         Data value = null;
         String string;

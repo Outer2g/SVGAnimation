@@ -56,7 +56,7 @@ class States {
     	id = id+Stack.getCurrentActivationRecordNumber();
     	Data value = Stack.getVariable(idaux);
     	checkObject(value);
-        System.out.println(idaux);
+        //System.out.println(idaux);
     	attribute = (value
             .getListAttributes()
             .get("objectType")
@@ -77,11 +77,11 @@ class States {
     }
 
     void destroy(String id) {
-        System.out.println("la id es " + id);
+        //System.out.println("la id es " + id);
     	String idaux = new String(id);
     	id = id+Stack.getCurrentActivationRecordNumber();
-        System.out.println("la nueva id es " + id + " la vieja es " + idaux);
-    	// System.out.println(id + " " + idaux);
+        //System.out.println("la nueva id es " + id + " la vieja es " + idaux);
+    	// //System.out.println(id + " " + idaux);
     	Data value = Stack.getVariable(idaux);
     	checkObject(value);
 

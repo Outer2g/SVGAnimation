@@ -173,7 +173,7 @@ public class Data {
     /** Copies the value from another data */
     public void setData(Data d) { 
 
-        System.out.println("sas");
+        //System.out.println("sas");
         type = d.type; 
         value = d.value; 
 
