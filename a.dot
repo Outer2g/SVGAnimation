@@ -34,126 +34,246 @@ digraph {
   n17 [label="COLORKEYWORD"];
   n17 [label="COLORKEYWORD"];
   n18 [label="black"];
-  n19 [label="move"];
-  n19 [label="move"];
-  n20 [label="dos"];
-  n21 [label="400"];
-  n22 [label="200"];
-  n23 [label="modifyt"];
-  n23 [label="modifyt"];
+  n19 [label=":="];
+  n19 [label=":="];
+  n20 [label="tres"];
+  n21 [label="dos"];
+  n22 [label=":="];
+  n22 [label=":="];
+  n23 [label="cuatro"];
   n24 [label="dos"];
-  n25 [label="ms"];
-  n25 [label="ms"];
-  n26 [label="500"];
-  n27 [label="LIST_ATTR"];
-  n27 [label="LIST_ATTR"];
-  n28 [label="color"];
-  n28 [label="color"];
-  n29 [label="COLORHEXA"];
-  n29 [label="COLORHEXA"];
-  n30 [label="#123"];
-  n31 [label="stroke"];
-  n31 [label="stroke"];
-  n32 [label="COLORKEYWORD"];
-  n32 [label="COLORKEYWORD"];
-  n33 [label="green"];
-  n34 [label="r"];
-  n34 [label="r"];
-  n35 [label="20"];
-  n36 [label="movet"];
-  n36 [label="movet"];
-  n37 [label="dos"];
-  n38 [label="s"];
-  n38 [label="s"];
-  n39 [label="1"];
-  n40 [label="300"];
-  n41 [label="300"];
-  n42 [label=":="];
-  n42 [label=":="];
-  n43 [label="tres"];
-  n44 [label="dos"];
-  n45 [label=":="];
-  n45 [label=":="];
-  n46 [label="cuatro"];
-  n47 [label="dos"];
-  n48 [label=":="];
-  n48 [label=":="];
-  n49 [label="cinco"];
+  n25 [label=":="];
+  n25 [label=":="];
+  n26 [label="cinco"];
+  n27 [label="tres"];
+  n28 [label=":="];
+  n28 [label=":="];
+  n29 [label="seis"];
+  n30 [label="cinco"];
+  n31 [label=":="];
+  n31 [label=":="];
+  n32 [label="siete"];
+  n33 [label="dos"];
+  n34 [label="destroy"];
+  n34 [label="destroy"];
+  n35 [label="dos"];
+  n36 [label="while"];
+  n36 [label="while"];
+  n37 [label="<"];
+  n37 [label="<"];
+  n38 [label="ATTR"];
+  n38 [label="ATTR"];
+  n39 [label="siete"];
+  n40 [label="r"];
+  n41 [label="100"];
+  n42 [label="LIST_INSTR"];
+  n42 [label="LIST_INSTR"];
+  n43 [label="parallel"];
+  n43 [label="parallel"];
+  n44 [label="ms"];
+  n44 [label="ms"];
+  n45 [label="250"];
+  n46 [label="LIST_INSTR"];
+  n46 [label="LIST_INSTR"];
+  n47 [label="hide"];
+  n47 [label="hide"];
+  n48 [label="siete"];
+  n49 [label="hide"];
+  n49 [label="hide"];
   n50 [label="tres"];
-  n51 [label=":="];
-  n51 [label=":="];
-  n52 [label="seis"];
-  n53 [label="cinco"];
-  n54 [label=":="];
-  n54 [label=":="];
-  n55 [label="i"];
-  n56 [label="0"];
-  n57 [label="while"];
-  n57 [label="while"];
-  n58 [label="<"];
-  n58 [label="<"];
-  n59 [label="i"];
-  n60 [label="10"];
-  n61 [label="LIST_INSTR"];
-  n61 [label="LIST_INSTR"];
-  n62 [label="FUNCALL"];
-  n62 [label="FUNCALL"];
-  n63 [label="test"];
-  n64 [label="ARGLIST"];
-  n65 [label=":="];
-  n65 [label=":="];
-  n66 [label="i"];
-  n67 [label="+"];
-  n67 [label="+"];
-  n68 [label="i"];
-  n69 [label="1"];
-  n70 [label="func"];
-  n70 [label="func"];
-  n71 [label="test"];
-  n72 [label="PARAMS"];
-  n73 [label="LIST_INSTR"];
-  n73 [label="LIST_INSTR"];
-  n74 [label="create"];
-  n74 [label="create"];
-  n75 [label="dos"];
-  n76 [label="circle"];
-  n77 [label="100"];
-  n78 [label="100"];
-  n79 [label="LIST_ATTR"];
-  n79 [label="LIST_ATTR"];
-  n80 [label="color"];
-  n80 [label="color"];
-  n81 [label="COLORHEXA"];
-  n81 [label="COLORHEXA"];
-  n82 [label="#129fa3"];
-  n83 [label="r"];
-  n83 [label="r"];
-  n84 [label="40"];
-  n85 [label="stroke"];
-  n85 [label="stroke"];
-  n86 [label="COLORKEYWORD"];
-  n86 [label="COLORKEYWORD"];
-  n87 [label="black"];
-  n88 [label="movet"];
-  n88 [label="movet"];
-  n89 [label="dos"];
-  n90 [label="s"];
-  n90 [label="s"];
-  n91 [label="1"];
-  n92 [label="+"];
-  n92 [label="+"];
-  n93 [label="ATTR"];
-  n93 [label="ATTR"];
-  n94 [label="dos"];
-  n95 [label="x"];
-  n96 [label="10"];
-  n97 [label="+"];
-  n97 [label="+"];
-  n98 [label="ATTR"];
-  n98 [label="ATTR"];
-  n99 [label="dos"];
-  n100 [label="y"];
-  n101 [label="10"];
+  n51 [label="hide"];
+  n51 [label="hide"];
+  n52 [label="cuatro"];
+  n53 [label="hide"];
+  n53 [label="hide"];
+  n54 [label="cinco"];
+  n55 [label="hide"];
+  n55 [label="hide"];
+  n56 [label="seis"];
+  n57 [label="modify"];
+  n57 [label="modify"];
+  n58 [label="siete"];
+  n59 [label="LIST_ATTR"];
+  n59 [label="LIST_ATTR"];
+  n60 [label="r"];
+  n60 [label="r"];
+  n61 [label="-"];
+  n61 [label="-"];
+  n62 [label="ATTR"];
+  n62 [label="ATTR"];
+  n63 [label="siete"];
+  n64 [label="r"];
+  n65 [label="10"];
+  n66 [label="modify"];
+  n66 [label="modify"];
+  n67 [label="tres"];
+  n68 [label="LIST_ATTR"];
+  n68 [label="LIST_ATTR"];
+  n69 [label="r"];
+  n69 [label="r"];
+  n70 [label="-"];
+  n70 [label="-"];
+  n71 [label="ATTR"];
+  n71 [label="ATTR"];
+  n72 [label="tres"];
+  n73 [label="r"];
+  n74 [label="10"];
+  n75 [label="x"];
+  n75 [label="x"];
+  n76 [label="+"];
+  n76 [label="+"];
+  n77 [label="ATTR"];
+  n77 [label="ATTR"];
+  n78 [label="tres"];
+  n79 [label="x"];
+  n80 [label="10"];
+  n81 [label="modify"];
+  n81 [label="modify"];
+  n82 [label="cuatro"];
+  n83 [label="LIST_ATTR"];
+  n83 [label="LIST_ATTR"];
+  n84 [label="r"];
+  n84 [label="r"];
+  n85 [label="-"];
+  n85 [label="-"];
+  n86 [label="ATTR"];
+  n86 [label="ATTR"];
+  n87 [label="cuatro"];
+  n88 [label="r"];
+  n89 [label="10"];
+  n90 [label="x"];
+  n90 [label="x"];
+  n91 [label="-"];
+  n91 [label="-"];
+  n92 [label="ATTR"];
+  n92 [label="ATTR"];
+  n93 [label="cuatro"];
+  n94 [label="x"];
+  n95 [label="10"];
+  n96 [label="modify"];
+  n96 [label="modify"];
+  n97 [label="cinco"];
+  n98 [label="LIST_ATTR"];
+  n98 [label="LIST_ATTR"];
+  n99 [label="r"];
+  n99 [label="r"];
+  n100 [label="-"];
+  n100 [label="-"];
+  n101 [label="ATTR"];
+  n101 [label="ATTR"];
+  n102 [label="cinco"];
+  n103 [label="r"];
+  n104 [label="10"];
+  n105 [label="y"];
+  n105 [label="y"];
+  n106 [label="+"];
+  n106 [label="+"];
+  n107 [label="ATTR"];
+  n107 [label="ATTR"];
+  n108 [label="cinco"];
+  n109 [label="y"];
+  n110 [label="10"];
+  n111 [label="modify"];
+  n111 [label="modify"];
+  n112 [label="seis"];
+  n113 [label="LIST_ATTR"];
+  n113 [label="LIST_ATTR"];
+  n114 [label="r"];
+  n114 [label="r"];
+  n115 [label="-"];
+  n115 [label="-"];
+  n116 [label="ATTR"];
+  n116 [label="ATTR"];
+  n117 [label="seis"];
+  n118 [label="r"];
+  n119 [label="10"];
+  n120 [label="y"];
+  n120 [label="y"];
+  n121 [label="-"];
+  n121 [label="-"];
+  n122 [label="ATTR"];
+  n122 [label="ATTR"];
+  n123 [label="seis"];
+  n124 [label="y"];
+  n125 [label="10"];
+  n126 [label="parallel"];
+  n126 [label="parallel"];
+  n127 [label="ms"];
+  n127 [label="ms"];
+  n128 [label="500"];
+  n129 [label="LIST_INSTR"];
+  n129 [label="LIST_INSTR"];
+  n130 [label="show"];
+  n130 [label="show"];
+  n131 [label="siete"];
+  n132 [label="show"];
+  n132 [label="show"];
+  n133 [label="tres"];
+  n134 [label="show"];
+  n134 [label="show"];
+  n135 [label="cuatro"];
+  n136 [label="show"];
+  n136 [label="show"];
+  n137 [label="cinco"];
+  n138 [label="show"];
+  n138 [label="show"];
+  n139 [label="seis"];
+  n140 [label="modify"];
+  n140 [label="modify"];
+  n141 [label="siete"];
+  n142 [label="LIST_ATTR"];
+  n142 [label="LIST_ATTR"];
+  n143 [label="r"];
+  n143 [label="r"];
+  n144 [label="+"];
+  n144 [label="+"];
+  n145 [label="ATTR"];
+  n145 [label="ATTR"];
+  n146 [label="siete"];
+  n147 [label="r"];
+  n148 [label="20"];
+  n149 [label="modify"];
+  n149 [label="modify"];
+  n150 [label="tres"];
+  n151 [label="LIST_ATTR"];
+  n151 [label="LIST_ATTR"];
+  n152 [label="r"];
+  n152 [label="r"];
+  n153 [label="+"];
+  n153 [label="+"];
+  n154 [label="ATTR"];
+  n154 [label="ATTR"];
+  n155 [label="tres"];
+  n156 [label="r"];
+  n157 [label="20"];
+  n158 [label="modify"];
+  n158 [label="modify"];
+  n159 [label="cuatro"];
+  n160 [label="LIST_ATTR"];
+  n160 [label="LIST_ATTR"];
+  n161 [label="r"];
+  n161 [label="r"];
+  n162 [label="+"];
+  n162 [label="+"];
+  n163 [label="ATTR"];
+  n163 [label="ATTR"];
+  n164 [label="cuatro"];
+  n165 [label="r"];
+  n166 [label="20"];
+  n167 [label="modify"];
+  n167 [label="modify"];
+  n168 [label="cinco"];
+  n169 [label="LIST_ATTR"];
+  n169 [label="LIST_ATTR"];
+  n170 [label="r"];
+  n170 [label="r"];
+  n171 [label="+"];
+  n171 [label="+"];
+  n172 [label="ATTR"];
+  n172 [label="ATTR"];
+  n173 [label="cinco"];
+  n174 [label="r"];
+  n175 [label="20"];
 
   n0 -> n1 // "LIST_FUNCTIONS" -> "func"
   n1 -> n2 // "func" -> "main"
@@ -173,88 +293,162 @@ digraph {
   n10 -> n16 // "LIST_ATTR" -> "stroke"
   n16 -> n17 // "stroke" -> "COLORKEYWORD"
   n17 -> n18 // "COLORKEYWORD" -> "black"
-  n4 -> n19 // "LIST_INSTR" -> "move"
-  n19 -> n20 // "move" -> "dos"
-  n19 -> n21 // "move" -> "400"
-  n19 -> n22 // "move" -> "200"
-  n4 -> n23 // "LIST_INSTR" -> "modifyt"
-  n23 -> n24 // "modifyt" -> "dos"
-  n23 -> n25 // "modifyt" -> "ms"
-  n25 -> n26 // "ms" -> "500"
-  n23 -> n27 // "modifyt" -> "LIST_ATTR"
-  n27 -> n28 // "LIST_ATTR" -> "color"
-  n28 -> n29 // "color" -> "COLORHEXA"
-  n29 -> n30 // "COLORHEXA" -> "#123"
-  n27 -> n31 // "LIST_ATTR" -> "stroke"
-  n31 -> n32 // "stroke" -> "COLORKEYWORD"
-  n32 -> n33 // "COLORKEYWORD" -> "green"
-  n27 -> n34 // "LIST_ATTR" -> "r"
-  n34 -> n35 // "r" -> "20"
-  n4 -> n36 // "LIST_INSTR" -> "movet"
-  n36 -> n37 // "movet" -> "dos"
-  n36 -> n38 // "movet" -> "s"
-  n38 -> n39 // "s" -> "1"
-  n36 -> n40 // "movet" -> "300"
-  n36 -> n41 // "movet" -> "300"
-  n4 -> n42 // "LIST_INSTR" -> ":="
-  n42 -> n43 // ":=" -> "tres"
-  n42 -> n44 // ":=" -> "dos"
-  n4 -> n45 // "LIST_INSTR" -> ":="
-  n45 -> n46 // ":=" -> "cuatro"
-  n45 -> n47 // ":=" -> "dos"
-  n4 -> n48 // "LIST_INSTR" -> ":="
-  n48 -> n49 // ":=" -> "cinco"
-  n48 -> n50 // ":=" -> "tres"
-  n4 -> n51 // "LIST_INSTR" -> ":="
-  n51 -> n52 // ":=" -> "seis"
-  n51 -> n53 // ":=" -> "cinco"
-  n4 -> n54 // "LIST_INSTR" -> ":="
-  n54 -> n55 // ":=" -> "i"
-  n54 -> n56 // ":=" -> "0"
-  n4 -> n57 // "LIST_INSTR" -> "while"
-  n57 -> n58 // "while" -> "<"
-  n58 -> n59 // "<" -> "i"
-  n58 -> n60 // "<" -> "10"
-  n57 -> n61 // "while" -> "LIST_INSTR"
-  n61 -> n62 // "LIST_INSTR" -> "FUNCALL"
-  n62 -> n63 // "FUNCALL" -> "test"
-  n62 -> n64 // "FUNCALL" -> "ARGLIST"
-  n61 -> n65 // "LIST_INSTR" -> ":="
-  n65 -> n66 // ":=" -> "i"
-  n65 -> n67 // ":=" -> "+"
-  n67 -> n68 // "+" -> "i"
-  n67 -> n69 // "+" -> "1"
-  n0 -> n70 // "LIST_FUNCTIONS" -> "func"
-  n70 -> n71 // "func" -> "test"
-  n70 -> n72 // "func" -> "PARAMS"
-  n70 -> n73 // "func" -> "LIST_INSTR"
-  n73 -> n74 // "LIST_INSTR" -> "create"
-  n74 -> n75 // "create" -> "dos"
-  n74 -> n76 // "create" -> "circle"
-  n74 -> n77 // "create" -> "100"
-  n74 -> n78 // "create" -> "100"
-  n74 -> n79 // "create" -> "LIST_ATTR"
-  n79 -> n80 // "LIST_ATTR" -> "color"
-  n80 -> n81 // "color" -> "COLORHEXA"
-  n81 -> n82 // "COLORHEXA" -> "#129fa3"
-  n79 -> n83 // "LIST_ATTR" -> "r"
-  n83 -> n84 // "r" -> "40"
-  n79 -> n85 // "LIST_ATTR" -> "stroke"
-  n85 -> n86 // "stroke" -> "COLORKEYWORD"
-  n86 -> n87 // "COLORKEYWORD" -> "black"
-  n73 -> n88 // "LIST_INSTR" -> "movet"
-  n88 -> n89 // "movet" -> "dos"
-  n88 -> n90 // "movet" -> "s"
-  n90 -> n91 // "s" -> "1"
-  n88 -> n92 // "movet" -> "+"
-  n92 -> n93 // "+" -> "ATTR"
-  n93 -> n94 // "ATTR" -> "dos"
-  n93 -> n95 // "ATTR" -> "x"
-  n92 -> n96 // "+" -> "10"
-  n88 -> n97 // "movet" -> "+"
-  n97 -> n98 // "+" -> "ATTR"
-  n98 -> n99 // "ATTR" -> "dos"
-  n98 -> n100 // "ATTR" -> "y"
-  n97 -> n101 // "+" -> "10"
+  n4 -> n19 // "LIST_INSTR" -> ":="
+  n19 -> n20 // ":=" -> "tres"
+  n19 -> n21 // ":=" -> "dos"
+  n4 -> n22 // "LIST_INSTR" -> ":="
+  n22 -> n23 // ":=" -> "cuatro"
+  n22 -> n24 // ":=" -> "dos"
+  n4 -> n25 // "LIST_INSTR" -> ":="
+  n25 -> n26 // ":=" -> "cinco"
+  n25 -> n27 // ":=" -> "tres"
+  n4 -> n28 // "LIST_INSTR" -> ":="
+  n28 -> n29 // ":=" -> "seis"
+  n28 -> n30 // ":=" -> "cinco"
+  n4 -> n31 // "LIST_INSTR" -> ":="
+  n31 -> n32 // ":=" -> "siete"
+  n31 -> n33 // ":=" -> "dos"
+  n4 -> n34 // "LIST_INSTR" -> "destroy"
+  n34 -> n35 // "destroy" -> "dos"
+  n4 -> n36 // "LIST_INSTR" -> "while"
+  n36 -> n37 // "while" -> "<"
+  n37 -> n38 // "<" -> "ATTR"
+  n38 -> n39 // "ATTR" -> "siete"
+  n38 -> n40 // "ATTR" -> "r"
+  n37 -> n41 // "<" -> "100"
+  n36 -> n42 // "while" -> "LIST_INSTR"
+  n42 -> n43 // "LIST_INSTR" -> "parallel"
+  n43 -> n44 // "parallel" -> "ms"
+  n44 -> n45 // "ms" -> "250"
+  n43 -> n46 // "parallel" -> "LIST_INSTR"
+  n46 -> n47 // "LIST_INSTR" -> "hide"
+  n47 -> n48 // "hide" -> "siete"
+  n46 -> n49 // "LIST_INSTR" -> "hide"
+  n49 -> n50 // "hide" -> "tres"
+  n46 -> n51 // "LIST_INSTR" -> "hide"
+  n51 -> n52 // "hide" -> "cuatro"
+  n46 -> n53 // "LIST_INSTR" -> "hide"
+  n53 -> n54 // "hide" -> "cinco"
+  n46 -> n55 // "LIST_INSTR" -> "hide"
+  n55 -> n56 // "hide" -> "seis"
+  n46 -> n57 // "LIST_INSTR" -> "modify"
+  n57 -> n58 // "modify" -> "siete"
+  n57 -> n59 // "modify" -> "LIST_ATTR"
+  n59 -> n60 // "LIST_ATTR" -> "r"
+  n60 -> n61 // "r" -> "-"
+  n61 -> n62 // "-" -> "ATTR"
+  n62 -> n63 // "ATTR" -> "siete"
+  n62 -> n64 // "ATTR" -> "r"
+  n61 -> n65 // "-" -> "10"
+  n46 -> n66 // "LIST_INSTR" -> "modify"
+  n66 -> n67 // "modify" -> "tres"
+  n66 -> n68 // "modify" -> "LIST_ATTR"
+  n68 -> n69 // "LIST_ATTR" -> "r"
+  n69 -> n70 // "r" -> "-"
+  n70 -> n71 // "-" -> "ATTR"
+  n71 -> n72 // "ATTR" -> "tres"
+  n71 -> n73 // "ATTR" -> "r"
+  n70 -> n74 // "-" -> "10"
+  n68 -> n75 // "LIST_ATTR" -> "x"
+  n75 -> n76 // "x" -> "+"
+  n76 -> n77 // "+" -> "ATTR"
+  n77 -> n78 // "ATTR" -> "tres"
+  n77 -> n79 // "ATTR" -> "x"
+  n76 -> n80 // "+" -> "10"
+  n46 -> n81 // "LIST_INSTR" -> "modify"
+  n81 -> n82 // "modify" -> "cuatro"
+  n81 -> n83 // "modify" -> "LIST_ATTR"
+  n83 -> n84 // "LIST_ATTR" -> "r"
+  n84 -> n85 // "r" -> "-"
+  n85 -> n86 // "-" -> "ATTR"
+  n86 -> n87 // "ATTR" -> "cuatro"
+  n86 -> n88 // "ATTR" -> "r"
+  n85 -> n89 // "-" -> "10"
+  n83 -> n90 // "LIST_ATTR" -> "x"
+  n90 -> n91 // "x" -> "-"
+  n91 -> n92 // "-" -> "ATTR"
+  n92 -> n93 // "ATTR" -> "cuatro"
+  n92 -> n94 // "ATTR" -> "x"
+  n91 -> n95 // "-" -> "10"
+  n46 -> n96 // "LIST_INSTR" -> "modify"
+  n96 -> n97 // "modify" -> "cinco"
+  n96 -> n98 // "modify" -> "LIST_ATTR"
+  n98 -> n99 // "LIST_ATTR" -> "r"
+  n99 -> n100 // "r" -> "-"
+  n100 -> n101 // "-" -> "ATTR"
+  n101 -> n102 // "ATTR" -> "cinco"
+  n101 -> n103 // "ATTR" -> "r"
+  n100 -> n104 // "-" -> "10"
+  n98 -> n105 // "LIST_ATTR" -> "y"
+  n105 -> n106 // "y" -> "+"
+  n106 -> n107 // "+" -> "ATTR"
+  n107 -> n108 // "ATTR" -> "cinco"
+  n107 -> n109 // "ATTR" -> "y"
+  n106 -> n110 // "+" -> "10"
+  n46 -> n111 // "LIST_INSTR" -> "modify"
+  n111 -> n112 // "modify" -> "seis"
+  n111 -> n113 // "modify" -> "LIST_ATTR"
+  n113 -> n114 // "LIST_ATTR" -> "r"
+  n114 -> n115 // "r" -> "-"
+  n115 -> n116 // "-" -> "ATTR"
+  n116 -> n117 // "ATTR" -> "seis"
+  n116 -> n118 // "ATTR" -> "r"
+  n115 -> n119 // "-" -> "10"
+  n113 -> n120 // "LIST_ATTR" -> "y"
+  n120 -> n121 // "y" -> "-"
+  n121 -> n122 // "-" -> "ATTR"
+  n122 -> n123 // "ATTR" -> "seis"
+  n122 -> n124 // "ATTR" -> "y"
+  n121 -> n125 // "-" -> "10"
+  n42 -> n126 // "LIST_INSTR" -> "parallel"
+  n126 -> n127 // "parallel" -> "ms"
+  n127 -> n128 // "ms" -> "500"
+  n126 -> n129 // "parallel" -> "LIST_INSTR"
+  n129 -> n130 // "LIST_INSTR" -> "show"
+  n130 -> n131 // "show" -> "siete"
+  n129 -> n132 // "LIST_INSTR" -> "show"
+  n132 -> n133 // "show" -> "tres"
+  n129 -> n134 // "LIST_INSTR" -> "show"
+  n134 -> n135 // "show" -> "cuatro"
+  n129 -> n136 // "LIST_INSTR" -> "show"
+  n136 -> n137 // "show" -> "cinco"
+  n129 -> n138 // "LIST_INSTR" -> "show"
+  n138 -> n139 // "show" -> "seis"
+  n129 -> n140 // "LIST_INSTR" -> "modify"
+  n140 -> n141 // "modify" -> "siete"
+  n140 -> n142 // "modify" -> "LIST_ATTR"
+  n142 -> n143 // "LIST_ATTR" -> "r"
+  n143 -> n144 // "r" -> "+"
+  n144 -> n145 // "+" -> "ATTR"
+  n145 -> n146 // "ATTR" -> "siete"
+  n145 -> n147 // "ATTR" -> "r"
+  n144 -> n148 // "+" -> "20"
+  n129 -> n149 // "LIST_INSTR" -> "modify"
+  n149 -> n150 // "modify" -> "tres"
+  n149 -> n151 // "modify" -> "LIST_ATTR"
+  n151 -> n152 // "LIST_ATTR" -> "r"
+  n152 -> n153 // "r" -> "+"
+  n153 -> n154 // "+" -> "ATTR"
+  n154 -> n155 // "ATTR" -> "tres"
+  n154 -> n156 // "ATTR" -> "r"
+  n153 -> n157 // "+" -> "20"
+  n129 -> n158 // "LIST_INSTR" -> "modify"
+  n158 -> n159 // "modify" -> "cuatro"
+  n158 -> n160 // "modify" -> "LIST_ATTR"
+  n160 -> n161 // "LIST_ATTR" -> "r"
+  n161 -> n162 // "r" -> "+"
+  n162 -> n163 // "+" -> "ATTR"
+  n163 -> n164 // "ATTR" -> "cuatro"
+  n163 -> n165 // "ATTR" -> "r"
+  n162 -> n166 // "+" -> "20"
+  n129 -> n167 // "LIST_INSTR" -> "modify"
+  n167 -> n168 // "modify" -> "cinco"
+  n167 -> n169 // "modify" -> "LIST_ATTR"
+  n169 -> n170 // "LIST_ATTR" -> "r"
+  n170 -> n171 // "r" -> "+"
+  n171 -> n172 // "+" -> "ATTR"
+  n172 -> n173 // "ATTR" -> "cinco"
+  n172 -> n174 // "ATTR" -> "r"
+  n171 -> n175 // "+" -> "20"
 
 }
