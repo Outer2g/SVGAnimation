@@ -272,43 +272,22 @@ public class Interp {
         
         for (String objecte : objs){
             value = Stack.getVariable(objecte);
-            if (value.getAttribute("objectType") == "circle"){
+            if (value.getAttribute("objectType").equals( "circle")){
                 sumax += Integer.parseInt(value.getAttribute("cx"));
                 sumay += Integer.parseInt(value.getAttribute("cy"));
             }
             else{
-        System.out.println("computa2");
+                System.out.println("computa2");
                 int width = Integer.parseInt(value.getAttribute("width")) / 2;
                 int height = Integer.parseInt(value.getAttribute("height")) / 2;
                 sumax += Integer.parseInt(value.getAttribute("x")) + width;
                 sumay += Integer.parseInt(value.getAttribute("y")) + height;
-        System.out.println("computa3");
+                System.out.println("computa3");
             }
         }
 
         x = sumax/objs.size();
         y = sumay/objs.size();
-    }
-
-    private AslTree createParallel(ArrayList<AslTree> instructions){
-        AslTree ret,timeNode,instrNodes,instr;
-        Token tokenx,tokeny,tokentime;
-        ret = (AslTree) instructions.get(0).dupNode();
-        ret.myType = AslLexer.PARALLEL;
-        timeNode = (AslTree)instructions.get(0).dupNode();
-        timeNode = timeNode.getChild(1);
-        ret.addChild(0,timeNode);
-        instrNodes = ret.getChild(1);
-        for (int i=0;i<instructions.size();++i){
-            instr = instructions.get(i);
-            tokenx = instr.getChild(2).getToken();
-            tokeny = instr.getChild(3).getToken();
-            tokentime = instr.getChild(1).getToken();
-            tokentime.setText(tokenx.getText());
-            tokenx.setText(tokeny.getText());
-            instrNodes.addChild(i,instr);
-        }
-        return ret;
     }
 
     private Data executeBlock(AslTree t,Boolean time){

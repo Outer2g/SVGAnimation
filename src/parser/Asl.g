@@ -339,7 +339,7 @@ CIRCLE  : 'circle';
 STROKE : 'stroke';
 WIDTH   : 'width';
 HEIGHT  : 'height';
-RECTANGLE : 'rectangle';
+RECTANGLE : 'rect';
 TEXT : 'text';
 
 
