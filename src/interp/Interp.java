@@ -268,6 +268,7 @@ public class Interp {
         int sumax = 0;
         int sumay = 0;
         Data value;
+        System.out.println("computa");
         
         for (String objecte : objs){
             value = Stack.getVariable(objecte);
@@ -275,7 +276,16 @@ public class Interp {
                 sumax += Integer.parseInt(value.getAttribute("cx"));
                 sumay += Integer.parseInt(value.getAttribute("cy"));
             }
+            else{
+        System.out.println("computa2");
+                int width = Integer.parseInt(value.getAttribute("width")) / 2;
+                int height = Integer.parseInt(value.getAttribute("height")) / 2;
+                sumax += Integer.parseInt(value.getAttribute("x")) + width;
+                sumay += Integer.parseInt(value.getAttribute("y")) + height;
+        System.out.println("computa3");
+            }
         }
+
         x = sumax/objs.size();
         y = sumay/objs.size();
     }
@@ -343,6 +353,13 @@ public class Interp {
 
         // A big switch for all type of instructions
         switch (t.getType()) {
+            case AslLexer.RECALC:
+                value = Stack.getVariable(t.getChild(0).getText());
+                x = 0;
+                y = 0;
+                computeCenter(value.getSetObjects(),x,y);
+                value.addCenter(x,y);
+                return null;
             case AslLexer.BLOCK:
                 HashSet<String> objs = new HashSet();
                 for (int i =1; i<t.getChildCount();++i){
@@ -442,8 +459,9 @@ public class Interp {
                             tokenx = t.getChild(1).getToken();
                             tokeny = t.getChild(2).getToken();
                             tokenid.setText(obj);
-                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute("cx"))));
-                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute("cy"))));
+                            prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute(prefixPosition + "x"))));
+                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute(prefixPosition + "y"))));
                             System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
                             executeInstruction(t);
                         }
@@ -455,6 +473,7 @@ public class Interp {
                 return null;
 
             case AslLexer.MOVE_T:
+            System.out.println("MOVET");
                 try {
                     if(!Stack.getVariable(t.getChild(0).getText()).isBlock()){
                         id = t.getChild(0).getText();
@@ -493,8 +512,9 @@ public class Interp {
                             tokenx = t.getChild(2).getToken();
                             tokeny = t.getChild(3).getToken();
                             tokenid.setText(obj);
-                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute("cx"))));
-                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute("cy"))));
+                            prefixPosition = (Stack.getVariable(t.getChild(0).getText()).getListAttributes().get("objectType").equals("circle") ? "c" : "");
+                            tokenx.setText(String.valueOf(x + Integer.parseInt(aux.getAttribute(prefixPosition + "x"))));
+                            tokeny.setText(String.valueOf(y + Integer.parseInt(aux.getAttribute(prefixPosition + "y"))));
                             System.out.println("obj "+ t.getChild(0) +"x: "+ t.getChild(1).getText());
                             executeInstruction(t);
                             States.deltaTime -= elapsedTime;

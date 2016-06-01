@@ -112,6 +112,7 @@ instruction_spc
         |   show
         |   hide
         |   delay
+        |   recalcCentro
         |                   // Nothing
         ;
 
@@ -168,7 +169,8 @@ modify_no_time : MODIFY^ ID list_attributes
 
 block : BLOCK^ ID '{'! (create ';'!)+ '}'!
         ;
-
+recalcCentro :  RECALC^ ID 
+        ;
 parallel : parallel_time | parallel_no_time;
 
 instructions_notime : move_no_time | modify_no_time | show_no_time | hide_no_time;
@@ -216,6 +218,8 @@ attribute_name_color    : COLOR
 
 attribute_name_expr : POSX
                     | POSY
+                    | WIDTH
+                    | HEIGHT
                     | 'r'
                     ;
 
@@ -312,6 +316,8 @@ MODIFY  : 'modify';
 RGBPRCTJ: 'rgbp';
 RGB     : 'rgb';
 
+RECALC  : 'reComputeCenter';
+
 SHOW_T   : 'showt';
 SHOW    : 'show';
 HIDE_T   : 'hidet';
@@ -331,6 +337,8 @@ POSX    : 'x';
 POSY    : 'y';
 CIRCLE  : 'circle';
 STROKE : 'stroke';
+WIDTH   : 'width';
+HEIGHT  : 'height';
 RECTANGLE : 'rectangle';
 TEXT : 'text';
 

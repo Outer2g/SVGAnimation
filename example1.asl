@@ -1,12 +1,7 @@
 func main()
   block holi {
-    create dos (circle,50,200, (color : #129fa3 , r : 40,stroke : black) );
+    create dos (rectangle,50,200, (color : #129fa3 , width : 40, height : 50,stroke : black) );
     create tres (circle,100,300, (color : #129fa3,r : 40,stroke : black) );
     }
-  modify holi (color : black);
-  hidet holi 1s;
-  show holi;
-  delay 1s;
-  hide holi;
-  showt holi 1s;
+    movet holi 1s (300,300);
 endfunc
