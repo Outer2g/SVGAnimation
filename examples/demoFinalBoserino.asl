@@ -1,12 +1,15 @@
 func main()
 
   create dos (circle,300,300, (color : #129fa3 , r : 40,stroke : black) );
+   move dos (400, 200);
+  modifyt dos 500ms (color:#123,stroke:green, r:20);
   tres = dos;
-  cuatro = dos;
+  destroy (dos);
+  cuatro = tres;
   cinco  = tres;
   seis = cinco;
-  siete = dos;
-  destroy (dos);
+  siete = tres;
+
   while siete.r < 100 do
     parallel 250ms {
       hide siete;hide tres;hide cuatro;hide cinco;hide seis;
