@@ -93,7 +93,7 @@ public class Data {
     public boolean isBlock(){ return type == Type.BLOCK;}
 
     /** Indicates whether the data is an Object */
-    public boolean isObject() { return type == Type.OBJECT; }
+    public boolean isObject() { return type == Type.OBJECT && attributes.size() > 0; }
 
     /** Indicates whether the data is Boolean */
     public boolean isBoolean() { return type == Type.BOOLEAN; }

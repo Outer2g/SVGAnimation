@@ -546,6 +546,7 @@ public class Interp {
 
                         AslTree listAttributes = t.getChild(2);
                         for (int i = 0; i< listAttributes.getChildCount();++i){
+                            System.out.println("modifyt attribute >>> " + listAttributes.getChild(i).getText() + " <<< of the objet >>> " + id );
                             value = evaluateExpression(listAttributes.getChild(i).getChild(0));
                             value = new Data(value.toString());
                             checkString(value);
@@ -554,9 +555,10 @@ public class Interp {
                             // from = Stack.getVariable(t.getChild(0).getText()).getListAttributes().get(listAttributes.getChild(i).getText());
                             // states.get(nChange).add(states.get(nChange).size()-1, Change.toString(listAttributes.getChild(i).getText(), deltaTime, elapsedTime, from,listAttributes.getChild(i).getChild(0).getText()));
                             // Stack.getVariable(t.getChild(0).getText()).getListAttributes().put(listAttributes.getChild(i).getText(),value.toString());
+                            System.out.println("acabado de modificar ^ ");
+                        }
                     }
-                }
-                else  value = executeBlock(t,true);
+                    else value = executeBlock(t,true);
                 }
 
                     // deltaTime += elapsedTime;
@@ -689,11 +691,8 @@ public class Interp {
                     for (int i = 0; i < t.getChild(1).getChildCount(); ++i) {
                         States.deltaTime = currentDeltaTime;
                         AslTree treeAux = t.getChild(1).getChild(i);
-                        System.out.println("test " + treeAux.getText() + " " + treeAux.getType());
                         treeAux.myType = treeAux.getType() + 1; // Esto depnede del AslLexer. Si se generan los "static final int .... en orden diferente, peta"
-                        System.out.println("size " + treeAux.getChildCount());
                         treeAux.addChild(1,t.getChild(0));
-                        System.out.println("size " + treeAux.getChildCount());
                         useless = executeInstruction(treeAux);
                         treeAux.myType = treeAux.getType() - 1;
                         treeAux.removeChild(1);
@@ -827,7 +826,7 @@ private Boolean isColorAttribute(String attribute){
         setLineNumber(t);
         int type = t.getType();
 
-        System.out.println("aqui empieza el arbol\n"+ t);
+        // System.out.println("aqui empieza el arbol\n"+ t);
 
         Data value = null;
         String string;

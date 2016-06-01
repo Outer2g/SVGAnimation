@@ -21,7 +21,7 @@ class States {
     }
 
     void create(String id,String type) {
-    	String idaux = id;
+    	String idaux = new String(id);
     	id = id+Stack.getCurrentActivationRecordNumber();
     	int nChange = states.size();
         changePos.put(id,nChange);
@@ -36,7 +36,7 @@ class States {
     }
 
     void modify(String id, String attribute, Double duration, String from, String to) {
-    	String idaux = id;
+    	String idaux = new String(id);
     	id = id+Stack.getCurrentActivationRecordNumber();
     	Data value = Stack.getVariable(idaux);
     	checkObject(value);
@@ -52,11 +52,18 @@ class States {
     }
 
     void modify(String id, String attribute, Double duration, String to) {
-    	String idaux = id;
+    	String idaux = new String(id);
     	id = id+Stack.getCurrentActivationRecordNumber();
     	Data value = Stack.getVariable(idaux);
     	checkObject(value);
-    	attribute = (value.getListAttributes().get("objectType").equals("circle") && (attribute.equals("x") || attribute.equals("y"))? "c" : "") + attribute;
+        System.out.println(idaux);
+    	attribute = (value
+            .getListAttributes()
+            .get("objectType")
+            .equals("circle") 
+            && (attribute.equals("x") 
+
+                || attribute.equals("y"))? "c" : "") + attribute;
 
     	String from = value.getListAttributes().get(attribute);
         if (from == null) from = "";
@@ -70,9 +77,11 @@ class States {
     }
 
     void destroy(String id) {
-    	String idaux = id;
+        System.out.println("la id es " + id);
+    	String idaux = new String(id);
     	id = id+Stack.getCurrentActivationRecordNumber();
-    	System.out.println(id + " " + idaux);
+        System.out.println("la nueva id es " + id + " la vieja es " + idaux);
+    	// System.out.println(id + " " + idaux);
     	Data value = Stack.getVariable(idaux);
     	checkObject(value);
 
